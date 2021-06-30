@@ -1,0 +1,174 @@
+[
+  {
+    "world": "Blockchain",
+    "img": "/images/blockchain.svg",
+    "contributionTypes": [
+      {
+        "name": "Educational content",
+        "img": "/images/koios-icon.svg",
+        "contributionTypeProperties": [
+          {
+            "property": "Video",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Image",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Audio",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Other",
+            "img": "/images/koios-icon.svg"
+          }
+        ]
+      },
+      {
+        "name": "Work Learning enviroment",
+        "img": "/images/koios-icon.svg"
+      },
+      {
+        "name": "Paid (micro) challenges",
+        "img": "/images/koios-icon.svg"
+      },
+      {
+        "name": "Social activity",
+        "img": "/images/koios-icon.svg"
+      },
+      {
+        "name": "Network",
+        "img": "/images/koios-icon.svg"
+      }
+    ]
+  },
+  {
+    "world": "trading Digital & Financial Assets",
+    "img": "/images/trading.svg",
+    "contributionTypes": [
+      {
+        "name": "Educational content",
+        "img": "/images/koios-icon.svg",
+        "contributionTypeProperties": [
+          {
+            "property": "Video",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Image",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Audio",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Other",
+            "img": "/images/koios-icon.svg"
+          }
+        ]
+      },
+      {
+        "name": "Work Learning enviroment",
+        "img": "/images/koios-icon.svg"
+      },
+      {
+        "name": "Paid (micro) challenges",
+        "img": "/images/koios-icon.svg"
+      },
+      {
+        "name": "Social activity",
+        "img": "/images/koios-icon.svg"
+      },
+      {
+        "name": "Network",
+        "img": "/images/koios-icon.svg"
+      }
+    ]
+  },
+  {
+    "world": "Datascience & Python",
+    "img": "/images/python.svg",
+    "contributionTypes": [
+      {
+        "name": "Educational content",
+        "img": "/images/koios-icon.svg",
+        "contributionTypeProperties": [
+          {
+            "property": "Video",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Image",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Audio",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Other",
+            "img": "/images/koios-icon.svg"
+          }
+        ]
+      },
+      {
+        "name": "Work Learning enviroment",
+        "img": "/images/koios-icon.svg"
+      },
+      {
+        "name": "Paid (micro) challenges",
+        "img": "/images/koios-icon.svg"
+      }
+    ]
+  },
+  {
+    "world": "Programming DAPPS",
+    "img": "/images/Dapps.svg",
+    "contributionTypes": [
+      {
+        "name": "Educational content",
+        "img": "/images/koios-icon.svg",
+        "contributionTypeProperties": [
+          {
+            "property": "Video",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Image",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Audio",
+            "img": "/images/koios-icon.svg"
+          },
+          {
+            "property": "Other",
+            "img": "/images/koios-icon.svg"
+          }
+        ]
+      },
+      {
+        "name": "Social activity",
+        "img": "/images/koios-icon.svg"
+      },
+      {
+        "name": "Network",
+        "img": "/images/koios-icon.svg"
+      }
+    ]
+  },
+  {
+    "world": "New World",
+    "img": "/images/koios-icon.svg"
+  },
+  {
+    "world": "Proposal for platform",
+    "img": "/images/koios-icon.svg"
+  },
+  {
+    "world": "Governance",
+    "img": "/images/koios-icon.svg"
+  }
+]

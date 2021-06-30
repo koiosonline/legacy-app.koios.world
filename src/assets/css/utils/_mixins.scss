@@ -1,0 +1,11 @@
+@mixin for-size($size, $max-size: null) {
+    @if ($max-size) {
+        @media only screen and (min-width: $size) and (max-width: $max-size) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $size) {
+            @content;
+        }
+    }
+}

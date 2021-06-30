@@ -1,0 +1,21 @@
+.errorContainer {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__img {
+    width: 60%;
+    margin: 0 auto 1em;
+  }
+  &__title {
+    font-family: Righteous, sans-serif;
+    font-size: 2em;
+    color: $color-text;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+}

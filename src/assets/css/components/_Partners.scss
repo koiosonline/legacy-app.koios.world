@@ -1,0 +1,42 @@
+.partnersContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 4em 0 0 1rem;
+  &__title {
+    font-family: Righteous, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+    color: $color-text;
+  }
+  &__partner {
+    display: flex;
+    flex-direction: row;
+    //flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-between;
+    @include for-size($desktop) {
+      justify-content: flex-start;
+    }
+    &__title {
+      font-family: Righteous, sans-serif;
+      font-size: 1.5em;
+      color: $color-text;
+    }
+    &__link {
+      width: 5em;
+      height: 5em;
+      margin: 0 5em 5em 0;
+      filter: grayscale(100%);
+      opacity: 0.2;
+      transition: all 0.2s ease;
+      &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+      &__img {
+        width: 5em;
+        height: 5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "chapter": "#bc-2-1-1-intro-dlt-an-overview",
+    "question": "What is the difference between a tangible and intangible asset?",
+    "answers": [
+      {
+        "A": "Tangible assets can be touched physicaly and intangible assets can't be touched",
+        "correct": true
+      },
+      {
+        "B": "Tangible assets have more value then intangible asssets"
+      },
+      {
+        "C": "Your own assets are tangible and intangible assets are controlled by the bank"
+      },
+      {
+        "D": "Tangible assets are private and intangible assets are public"
+      }
+    ]
+  },
+  {
+    "chapter": "#bc-2-1-1-intro-dlt-an-overview",
+    "question": "Ledgers conform _____ and ledgers conform _____ (fill in the blanks)",
+    "answers": [
+      {
+        "A": "Language and age"
+      },
+      {
+        "B": "Height and speed"
+      },
+      {
+        "C": "Ownership and identity",
+        "correct": true
+      },
+      {
+        "D": "Home adres and identity"
+      }
+    ]
+  }
+]

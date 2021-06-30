@@ -1,0 +1,111 @@
+.outer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 5;
+  animation: fadeIn 0.2s ease forwards;
+}
+.modalContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  animation: fadeIn 0.2s ease forwards;
+  overflow: auto;
+  &__content {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    border-radius: $radius;
+    width: 95%;
+    margin: 5vh auto;
+    padding: 1em;
+    animation: slideIn 0.2s ease forwards;
+    @include for-size($desktop) {
+      width: 55%;
+    }
+    &__closeButton {
+      svg {
+        right: 0;
+        top: 0;
+        margin-left: auto;
+        width: 1.5em;
+        height: 1.5em;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    &__title {
+      text-align: center;
+      font-family: Righteous, sans-serif;
+      font-size: 3em;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 3em auto;
+      &__number {
+        margin: auto 0;
+        font-family: Righteous, sans-serif;
+        font-size: 3em;
+        text-align: center;
+        min-width: 5em;
+      }
+      &__column {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        @include for-size($desktop) {
+          margin-top: 0;
+        }
+        &__videoTitle {
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 600;
+          font-size: 1.125em;
+          margin-bottom: 1em;
+        }
+        iframe {
+          border-radius: $radius;
+          width: 100%;
+          height: 100%;
+          @include for-size($desktop) {
+            width: 560px;
+            height: 315px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:  0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-5em);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

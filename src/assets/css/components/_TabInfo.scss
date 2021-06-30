@@ -1,0 +1,68 @@
+.tabContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-bottom: 5em;
+  width: 100%;
+  @include for-size($desktop) {
+    margin-top: 0;
+    width: 27%;
+  }
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    margin-left: -0.5rem;
+    @include for-size($desktop) {
+      margin-left: 0;
+    }
+    &__button {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 600;
+      font-size: 1.125em;
+      opacity: 0.25;
+      color: $color-text;
+      cursor: pointer;
+      &--active {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 1.125em;
+        opacity: 1;
+        color: $color-text;
+      }
+    }
+  }
+}
+
+.contentContainer {
+  margin: 1rem 1rem 0;
+  @include for-size($desktop) {
+    margin: 1rem 1.5rem;
+  }
+  &__list {
+    //list-style-position: inside;
+    list-style-type: disc;
+    @include for-size($desktop) {
+      list-style-position: outside;
+    }
+    &__item {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 1.125em;
+      max-width: 30em;
+      &__link {
+        display: block;
+        //background: $gradient-koios;
+        //-webkit-background-clip: text;
+        //-webkit-text-fill-color: transparent;
+        color: grey;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

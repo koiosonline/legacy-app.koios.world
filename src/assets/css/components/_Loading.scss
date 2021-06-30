@@ -1,0 +1,28 @@
+.loadingContainer {
+  width: 8em;
+  margin: auto;
+  &__img {
+    animation: logo-anim 5s ease infinite;
+    animation-direction: alternate;
+    transform-origin: 50% 49.1%;
+  }
+  h2 {
+    text-align: center;
+    background: $gradient-koios;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1em;
+  }
+}
+
+@keyframes logo-anim {
+  0% {
+    transform: rotate(0) rotate3d(0, 0, -5, 0deg);
+  }
+  50% {
+    transform: rotate(180deg) rotate3d(0, 100, 5, 180deg);
+  }
+  100% {
+    transform: rotate(360deg) rotate3d(0, 0, -5, 0deg);
+  }
+}

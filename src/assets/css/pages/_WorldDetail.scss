@@ -1,0 +1,223 @@
+.world-detail {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh auto;
+  max-width: 1080px;
+  .content-player {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #282c34;
+    //padding: 0.5rem;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0 auto 2em;
+    @include for-size($desktop) {
+      flex-wrap: nowrap;
+      height: 27.5em;
+    }
+    &__video-container {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+      .youtube-api {
+        width: 100%;
+        height: 52.3vw;
+        @include for-size($desktop) {
+          height: 100%;
+          width: 100%;
+        }
+        iframe {
+          width: 100%;
+          height: 100%;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          border-bottom-left-radius: 0;
+          @include for-size($desktop) {
+            width: 98%;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+    }
+    &__listContainer {
+      width: 23.7em;
+      overflow: auto;
+      padding: 0.5rem;
+      @include for-size($desktop) {
+        padding: 0.5rem 0.5rem 0.5rem 0;
+      }
+      @include for-size($tablet, $desktop) {
+        width: 100%;
+      }
+      &__video-list {
+        max-height: 10em;
+        overflow: auto;
+        @include for-size($desktop) {
+          max-height: 100%;
+          padding: 0.5rem 0.5rem 0.5rem 0;
+        }
+        @include for-size($tablet, $desktop) {
+          width: 100%;
+        }
+        h2 {
+          color: white;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 600;
+          font-size: 1.125em;
+          margin: 0.5em 0;
+        }
+        li {
+          padding: 0.25em;
+          margin-bottom: 0.5em;
+          background: #1c1f24;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          transition: all 0.2s ease;
+          &:hover {
+            background-color: gray;
+          }
+          svg {
+            min-width: 15px;
+            min-height: 15px;
+            width: 15px;
+            height: 15px;
+            margin: auto 0.5em auto 0.25em;
+            fill: white;
+            cursor: pointer;
+            &:hover {
+              //fill: $koios-green--hover;
+              fill: url(#gradient-koios);
+            }
+          }
+          p {
+            color: white;
+            padding-left: 0.5em;
+            margin: auto 0;
+          }
+          a {
+            text-decoration: none;
+            color: lightgray;
+            width: 100%;
+          }
+        }
+        &::-webkit-scrollbar {
+          width: 0;
+          @include for-size($desktop) {
+            width: 8px;
+          }
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: white;
+          border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+      }
+    }
+  }
+  .ctaContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2em;
+    &__button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 1em;
+      text-decoration: none;
+      color: $color-text;
+      margin-bottom: 1em;
+      margin-right: 1em;
+      &:hover {
+        img {
+          border: 3px solid $color-koios-pink;
+        }
+        p {
+          color: $color-koios-pink;
+        }
+      }
+      p {
+        align-self: center;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5em;
+        margin-left: 0.5em;
+        cursor: pointer;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+        border: 3px solid lightgray;
+        border-radius: $radius;
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+    &__textContainer {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      @include for-size($desktop) {
+        max-width: 60%;
+      }
+      &__title {
+        font-family: Righteous, sans-serif;
+        font-weight: 400;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+      }
+      &__description {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+        min-height: 15vh;
+        overflow: hidden;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.watched {
+  opacity: 0.25;
+  svg {
+    fill: url(#gradient-koios) !important;
+  }
+}
+
+.active-state {
+  opacity: 1 !important;
+  background-color: gray !important;
+}
+
+#test {
+  height: 5em;
+  overflow: scroll;
+}

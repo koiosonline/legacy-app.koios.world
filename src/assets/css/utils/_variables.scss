@@ -1,0 +1,42 @@
+/* Main colors */
+$color-koios-blue: #2f12dc;
+$color-koios-pink: #ff0bac;
+$color-koios-dark-grey: #424242;
+$color-text: #262626;
+
+/* Secondairy colors */
+$koios-green--hover: #20ffb1;
+
+/* Gradients */
+$gradient-koios: linear-gradient(to right, $color-koios-pink, $color-koios-blue);
+$gradient-green-to-pink: linear-gradient(to right, #8FFFB5, #EBDC55, #FF0BAC);
+$gradient-koios-transparent: linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5));
+$gradient-koios-transparent-02: linear-gradient(to right, rgba(255, 11, 172, 0.3), rgba(47, 18, 220, 0.3));
+$gradient-koios-transparent-03: linear-gradient(to right, rgba(255, 11, 172, 0.05), rgba(47, 18, 220, 0.05));
+
+/* Course colors */
+$course-blockchain: linear-gradient(to right, $color-koios-pink, $color-koios-blue);
+$course-trading: linear-gradient(to right, #12c2e9, #f64f59);
+$course-data-science: linear-gradient(to right, #43C6AC, #191654);
+
+/* Button shadow */
+$button-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);
+$button-shadow-hover: -2px 2px 4px rgba(0, 0, 0, 0.3);
+//$button-shadow-hover: 0px 1px 9px rgba(0, 0, 0, 0.3);
+//$button-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+
+/* Button shadow */
+$button-active-color: #fafafa;
+
+/* Button radius */
+$radius: 11px;
+
+/* Screen size definitions */
+$mobile: 320px;
+$tablet: 480px;
+$desktop: 769px;
+
+/* Fonts */
+$font-family-headings: Righteous, Arial, sans-serif;
+$font-family-base: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+

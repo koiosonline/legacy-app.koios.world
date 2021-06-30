@@ -1,0 +1,287 @@
+.contributeContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5vh auto;
+  padding-bottom: 5vh;
+  max-width: 900px;
+  overflow: hidden;
+  &__title {
+    font-family: Righteous, sans-serif;
+    font-size: 3em;
+    color: $color-text;
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    background-color: #e8e8e8;
+    padding: 0.35em;
+    border-radius: $radius;
+    margin-left: auto;
+    margin-right: auto;
+    &__tab {
+      display: flex;
+      align-items: center;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      &__mid {
+        display: flex;
+        align-items: center;
+        padding: 0.5em 1em;
+        border-radius: 8px;
+        p {
+          font-family: "Source Sans Pro", sans-serif;
+          font-size: 0.6em;
+          color: gray;
+          @include for-size($desktop) {
+            font-size: 1.125em;
+          }
+          @include for-size($tablet) {
+            font-size: 1.125em;
+          }
+        }
+      }
+      p {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 0.6em;
+        color: gray;
+        @include for-size($desktop) {
+          font-size: 1.125em;
+        }
+        @include for-size($tablet) {
+          font-size: 1.125em;
+        }
+      }
+    }
+  }
+  &__content {
+    padding: 1em;
+    &__title {
+      font-family: Righteous, sans-serif;
+      font-weight: 400;
+      margin-bottom: 1em;
+      color: $color-koios-dark-grey;
+    }
+    .formContainer {
+      animation: slide-fade 0.5s ease forwards;
+      &__title {
+        font-family: Righteous, sans-serif;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        color: $color-text;
+        max-width: 90%;
+        @include for-size($desktop) {
+          max-width: 100%;
+        }
+        span {
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 400;
+          margin-bottom: 1rem;
+          color: $color-koios-pink;
+        }
+      }
+      &__fieldset {
+        display: flex;
+        flex-direction: column;
+        h2 {
+          margin: 2em 0 1em;
+        }
+        &__inputContainer {
+          height: 5em;
+          margin-bottom: 1em;
+          &__radio {
+            display: none;
+            &:checked {
+              &+label {
+                border: 3px solid $color-koios-pink;
+                color: $color-koios-pink;
+                img {
+                  mix-blend-mode: multiply;
+                }
+              }
+            }
+          }
+          &__label {
+            display: flex;
+            padding: 1em 1em;
+            cursor: pointer;
+            background: white;
+            border-radius: $radius;
+            box-shadow: $button-shadow;
+            transition: all 0.2s ease;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 1.125em;
+            font-weight: 600;
+            width: 100%;
+            align-items: center;
+            border: 3px solid transparent;
+            img {
+              width: 2em;
+              height: 2em;
+              margin-right: 2em;
+            }
+            &:hover {
+              border: 3px solid $color-koios-pink;
+              color: $color-koios-pink;
+            }
+          }
+        }
+      }
+      &__textInput {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.125em;
+        box-shadow: $button-shadow;
+        padding: 0.5em 0.5em;
+        border-radius: $radius;
+        border: 3px solid transparent;
+        -webkit-appearance: none;
+        &:focus {
+          outline: none;
+          border: 3px solid $color-koios-pink;
+        }
+      }
+      &__textArea {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.125em;
+        box-shadow: $button-shadow;
+        padding: 0.5em 0.5em;
+        border-radius: $radius;
+        border: 3px solid transparent;
+        min-height: 10em;
+        -webkit-appearance: none;
+        &:focus {
+          outline: none;
+          border: 3px solid $color-koios-pink;
+        }
+      }
+    }
+    &__button {
+      margin-top: 1em;
+      margin-left: auto;
+      font-family: Righteous, sans-serif;
+      font-weight: 400;
+      font-size: 1.125em;
+      box-shadow: $button-shadow;
+      border-radius: $radius;
+      padding: 0.5em 1em;
+      transition: all 0.2s ease;
+      border: 3px solid transparent;
+      color: lightgrey;
+      pointer-events: none;
+    }
+    &__buttonContainer {
+      display: flex;
+      justify-content: space-between;
+      &__button {
+        margin-top: 1em;
+        box-shadow: $button-shadow;
+        border-radius: $radius;
+        padding: 0.5em 1em;
+        transition: all 0.2s ease;
+        border: 3px solid transparent;
+        pointer-events: none;
+        font-size: 1.125em;
+        font-family: Righteous, sans-serif;
+        font-weight: 400;
+        p {
+          color: lightgrey;
+        }
+      }
+    }
+  }
+}
+
+.activeButton {
+  color: $color-koios-dark-grey;
+  cursor: pointer;
+  pointer-events: all;
+  transition: all 0.2s ease;
+  p {
+    background: $gradient-koios;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+  &:active {
+    background-color: $button-active-color;
+  }
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  animation: fade 0.5s ease forwards;
+  p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 0.6em;
+    background: $gradient-koios;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include for-size($desktop) {
+      font-size: 1.125em;
+    }
+    @include for-size($tablet) {
+      font-size: 1.125em;
+    }
+  }
+}
+
+.error {
+  color: red;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  h2 {
+    font-family: Righteous, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    color: red;
+    margin: auto;
+  }
+}
+
+.confirmationContainer {
+  display: flex;
+  justify-content: center;
+  h2 {
+    font-family: Righteous, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    color: lightgreen;
+    margin: auto;
+  }
+}
+
+@keyframes slide-fade {
+  0% {
+    opacity: 0;
+    transform: translateX(5em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: translateX(-5em);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

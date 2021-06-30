@@ -1,0 +1,59 @@
+.exploreMoreContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: $gradient-koios-transparent, url("https://i.imgur.com/VpLJxrH.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  width: 100%;
+  height: 20em;
+  &__title {
+    font-family: Righteous, sans-serif;
+    font-size: 3em;
+    color: white;
+    margin: 0 auto 1em;
+    text-align: center;
+  }
+  &__world {
+    font-family: Righteous, sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: white;
+    margin: 0 auto 1em;
+    text-align: center;
+  }
+  &__buttonContainer {
+    margin: 0 auto;
+    //background-color: white;
+    padding: 0.35em 0;
+    border-radius: $radius;
+    transition: all 0.2s ease;
+    a {
+      text-decoration: none;
+      padding: 0.35em 2em;
+      border-radius: $radius;
+      background: white;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      margin: 0 !important;
+      flex-wrap: nowrap;
+      display: flex;
+      box-shadow: $button-shadow;
+      &:hover {
+        box-shadow: $button-shadow-hover;
+      }
+      &:active {
+        background: $button-active-color;
+      };
+      p {
+        background: $gradient-koios;
+        //background-clip: unset;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+      }
+    }
+  }
+}

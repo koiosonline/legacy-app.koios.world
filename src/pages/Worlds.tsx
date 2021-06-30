@@ -1,0 +1,45 @@
+import worldsData from '../assets/data/courseinfo.json';
+import Card from "../components/Card";
+import {useLocation} from "react-router-dom";
+import Button from "../components/Button";
+import store from 'store';
+
+export const Worlds = () => {
+    const data = worldsData;
+    const allowed = ['blockchain', 'tdfa01', 'datascience01', 'programmingdapps01'];
+    const continueLearning = store.get('lastWatched');
+    const location = useLocation();
+
+    const filtered = Object.keys(data)
+        .filter(key => allowed.includes(key))
+        .reduce((obj, key) => {
+            obj[key] = data[key];
+            return obj;
+        }, {});
+
+  return (
+    <div className="container worlds">
+        <h1>Select a world</h1>
+        <p className={'worlds__subtitle'}>Discover new worlds and expand your knowledge about different topics or continue  where you left off</p>
+        {continueLearning &&
+        <Button title={'Continue Learning'} link={'/worlds/' + continueLearning.world + '/' + continueLearning.level + continueLearning.video}/>
+        }
+        <div className="cardContainer">
+          {Object.keys(filtered).map((data, i) => (
+              <Card
+                  key={i}
+                  image={worldsData[data].image}
+                  title={worldsData[data].course}
+                  description={worldsData[data].description}
+                  linkTitle={'Enter world'}
+                  // linkUrl={location.pathname + "/" + worldsData[data].link}
+                  linkUrl={worldsData[data].link}
+                  duration={worldsData[data].duration}
+                  users={worldsData[data].users}
+
+              />
+          ))}
+      </div>
+    </div>
+  );
+}

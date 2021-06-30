@@ -1,0 +1,37 @@
+{
+  "nav": [
+    {
+      "title": "My profile",
+      "linkTo": "/profile",
+      "icon": "user-circle"
+    },
+    {
+      "title": "Worlds",
+      "linkTo": "/worlds",
+      "icon": "globe-europe"
+    },
+    {
+      "title": "Contribute",
+      "linkTo": "/contribute",
+      "icon": "handshake"
+    }
+  ],
+  "socials": [
+    {
+      "icon": "youtube",
+      "linkTo": "https://www.youtube.com/c/KOIOSMEDIA/featured"
+    },
+    {
+      "icon": "discord",
+      "linkTo": "https://discord.gg/jBjudugeBa"
+    },
+    {
+      "icon": "twitter",
+      "linkTo": "https://twitter.com/koiostweets"
+    },
+    {
+      "icon": "github",
+      "linkTo": "https://github.com/koiosonline"
+    }
+  ]
+}
