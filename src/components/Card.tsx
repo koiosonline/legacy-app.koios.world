@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import {Icon} from "./Util/Icon";
 
-const Card = (props: {image: string; title: string; description: string; linkUrl: string; linkTitle: string; duration: string; users: number;}) => {
+const Card = (props: {image: string; title: string; description: string; linkUrl: string; linkTitle: string; duration: string;}) => {
     return (
         <div className={"cardContainer__card"}>
             <img src={props.image} alt={'artwork'} className={"cardContainer__card__img"}/>
@@ -9,7 +9,6 @@ const Card = (props: {image: string; title: string; description: string; linkUrl
                 <h2 className={"cardContainer__card__text__title"}>{props.title}</h2>
                 <div className={'cardContainer__card__text__metaData'}>
                     <p><Icon type="time" className={'clock'}/>{Math.floor(parseInt(props.duration) / 60)} Min</p>
-                    {/*<p><Icon type="user" className={'clock'}/>{props.users}</p>*/}
                 </div>
             </div>
             <p className={"cardContainer__card__description"}>{props.description}</p>

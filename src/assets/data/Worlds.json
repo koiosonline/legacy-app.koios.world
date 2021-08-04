@@ -30,33 +30,6 @@
         "linkUrl": "/link"
       }
     ],
-    "partners": [
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      }
-    ],
     "content": [
       {
         "title": "Blockchain level 1",
@@ -76,7 +49,7 @@
     ],
     "earn": [
       {
-        "title": "SideJobs and internships",
+        "title": "Sidejobs and internships",
         "linkUrl": "/link"
       },
       {
@@ -141,33 +114,6 @@
         "linkUrl": "https://www.kiesopmaat.nl/modules/hhs/BFM/141244/"
       }
     ],
-    "partners": [
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      }
-    ],
     "content": [
       {
         "title": "Trading Digital level 1",
@@ -177,7 +123,7 @@
     ],
     "earn": [
       {
-        "title": "SideJobs and internships",
+        "title": "Sidejobs and internships",
         "linkUrl": "/link"
       },
       {
@@ -230,43 +176,9 @@
         "linkUrl": "https://www.kiesopmaat.nl/modules/hhs/BFM/141245/"
       }
     ],
-    "partners": [
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      }
-    ],
-    "content": [
-      {
-        "title": "Data Science level 1",
-        "videoInfo": "QmQoQk5zLkWjhTW8kAQRkgx65i5he1cq4oESEd6XyGmaR3",
-        "data":	"QmZDDygn5qGus5wGfu7oskjVQP4JLrAL4sMbeg1HijmUQu"
-      }
-    ],
     "earn": [
       {
-        "title": "SideJobs and internships",
+        "title": "Sidejobs and internships",
         "linkUrl": "/link"
       },
       {
@@ -309,33 +221,6 @@
     "course": "Programming Dapps",
     "url": "programmingdapps01",
     "description": "The course “Programming Dapps” teaches students to program distributed applications (DAPPS) for the public Ethereum blockchain.",
-    "partners": [
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      },
-      {
-        "name": "VeChain",
-        "img": "https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010",
-        "url": "https://vechain.com"
-      }
-    ],
     "content": [
       {
         "title": "Programming Dapps level 1",
@@ -345,7 +230,7 @@
     ],
     "earn": [
       {
-        "title": "SideJobs and internships",
+        "title": "Sidejobs and internships",
         "linkUrl": "/link"
       },
       {

@@ -15,8 +15,7 @@
     "image": "/images/blockchain.svg",
     "community": "https://discord.com/invite/SBpZhEDHFR",
     "communityinvite": "https://discord.com/invite/SBpZhEDHFR",
-    "link": "/worlds/blockchain",
-    "users": 78
+    "link": "/worlds/blockchain"
   },
   "tdfa01": {
     "course": "Trading Digital & Financial Assets",
@@ -31,8 +30,7 @@
     "community": "https://discord.com/invite/SBpZhEDHFR",
     "communityinvite": "https://discord.com/invite/SBpZhEDHFR",
     "description": "Learn everything about investing and trading in traditional and digital asset (crypto) markets. Everything from Fundamental to technical analysis to risk management and trading/investing psychology. From Amazon to Gold and from Bitcoin to Decentralized Finance (DeFi)",
-    "link": "/worlds/tdfa01",
-    "users": 61
+    "link": "/worlds/tdfa01"
   },
   "bclevel01": {
     "course": "Mastering Blockchain",
@@ -102,8 +100,7 @@
     "slides":	"QmZDDygn5qGus5wGfu7oskjVQP4JLrAL4sMbeg1HijmUQu",
     "community":"https://discord.com/invite/SBpZhEDHFR",
     "communityinvite":"https://discord.com/invite/SBpZhEDHFR",
-    "link": "/worlds/datascience01",
-    "users": 36
+    "link": "/worlds/datascience01"
   },
   "security01": {
     "course": "Security Essentials",
@@ -139,8 +136,7 @@
     "image": "/images/Dapps.svg",
     "community": "https://discord.com/invite/SBpZhEDHFR",
     "communityinvite": "https://discord.com/invite/SBpZhEDHFR",
-    "link": "/worlds/programmingdapps01",
-    "users": 0
+    "link": "/worlds/programmingdapps01"
   },
   "testing01": {
     "course": "Testing the viewer",
