@@ -1,7 +1,6 @@
 import worldsData from '../assets/data/Worlds.json';
 import {useParams} from "react-router-dom";
 import QuickLinks from "../components/QuickLinks";
-import Partners from "../components/Partners";
 import LinkCard from "../components/LinkCard";
 import { Slugify } from '../components/Util/Slugify';
 
@@ -29,7 +28,6 @@ const WorldOverview = () => {
             </div>
             <p className={'worldOverviewContainer__description'}>{world?.description}</p>
             <QuickLinks data={world?.quickLinks}/>
-            <Partners data={world?.partners}/>
             <div className={'linkCardContainer'}>
                 {console.log(world.content)}
                 <LinkCard data={world?.content} baseUrl={worldContent} title={'Learn'}/>
