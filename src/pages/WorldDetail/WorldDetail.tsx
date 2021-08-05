@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { FindCourseDetail } from "./useWorldDetail";
 import courseInfo from "../../assets/data/Worlds.json";
@@ -14,6 +14,8 @@ import Quiz from "../../components/quiz/Quiz";
 import store from "store"
 import Loading from "../../components/Loading";
 import { HashLink } from 'react-router-hash-link';
+import { Markdown } from "../../components/Markdown";
+import readme from "../../articles/blockchain/ledger.md";
 
 export const WorldDetail = () => {
   const { hash } = useLocation();
@@ -248,6 +250,10 @@ export const WorldDetail = () => {
             { quizState &&
               <Quiz quizData={quiz} modalState={openQuiz}/>
             }
+
+            <article>
+              <Markdown markdown={readme}/>
+            </article>
           </>
         )
       )}
