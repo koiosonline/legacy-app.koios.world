@@ -18,11 +18,18 @@ export const Markdown = (props) => {
       }
     })();
   }, []);
-  
+  // https://dev.to/anobjectisa/how-to-dynamically-load-markdown-files-in-react-markdown-to-jsx-53fl
+  // .then(res => {
+  //     fetch(readme)
+  //         .then(res => res.text())
+  //         .then(res => setPost(res))
+  //         .catch(err => console.log(err));
+  // })
+  // .catch(err => console.log(err));
 
   return (
     <>
-      <MarkdownToJsx>{post}</MarkdownToJsx>
+      <MarkdownToJsx >{post}</MarkdownToJsx>
     </>
   );
 };

@@ -3,13 +3,13 @@
   flex-direction: column;
   margin: 5vh auto;
   max-width: 1080px;
+
   .content-player {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #282c34;
-    //padding: 0.5rem;
     border-radius: 8px;
     width: 100%;
     margin: 0 auto 2em;
@@ -174,35 +174,67 @@
       }
     }
   }
-  &__content {
+
+  .content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 10vh;
-    &__textContainer {
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
-      @include for-size($desktop) {
-        max-width: 60%;
-      }
+
+    .article {
+      width: 70%;
+      margin-right: 10px;
+
       &__title {
-        font-family: Righteous, sans-serif;
+        font-family: $font-family-headings;
         font-weight: 400;
         font-size: 1.5em;
         margin-bottom: 1em;
       }
-      &__description {
-        font-family: "Source Sans Pro", sans-serif;
-        font-weight: 400;
-        font-size: 1em;
-        min-height: 15vh;
-        overflow: hidden;
-        max-width: 100%;
+
+      p {
+        margin-top: 20px;
+      }
+    }
+
+    .table-of-contents {
+      width: 30%;
+      align-self: flex-start;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+
+      &__title {
+        font-size: 0.875em; //14px;
       }
     }
   }
+  // &__content {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   flex-wrap: wrap;
+  //   margin-bottom: 10vh;
+  //   &__textContainer {
+  //     display: flex;
+  //     flex-direction: column;
+  //     max-width: 100%;
+  //     @include for-size($desktop) {
+  //       max-width: 60%;
+  //     }
+  //     &__title {
+  //       font-family: Righteous, sans-serif;
+  //       font-weight: 400;
+  //       font-size: 1.5em;
+  //       margin-bottom: 1em;
+  //     }
+  //     &__description {
+  //       font-family: "Source Sans Pro", sans-serif;
+  //       font-weight: 400;
+  //       font-size: 1em;
+  //       min-height: 15vh;
+  //       overflow: hidden;
+  //       max-width: 100%;
+  //     }
+  //   }
+  // }
 }
 
 .watched {
@@ -215,9 +247,4 @@
 .active-state {
   opacity: 1 !important;
   background-color: gray !important;
-}
-
-#test {
-  height: 5em;
-  overflow: scroll;
 }
