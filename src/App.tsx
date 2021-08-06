@@ -13,6 +13,7 @@ import { UserContext } from "./Context/UserContext";
 import {Error404} from "./pages/Error404";
 import Contribute from "./pages/Contribute";
 import ScrollToTop from "./components/Util/scrollTop";
+import ExplanationVideos from "./pages/ExplanationVideos";
 
 export const App = () => {
   const [user, setUser] = useState(null);
@@ -32,6 +33,7 @@ export const App = () => {
                 <Route path="/profile" exact component={Profile} />
                 <Route path="/leaderboard" exact component={Leaderboard}/>
                 <Route path="/contribute" exact component={Contribute}/>
+                <Route path="/explanation" exact component={ExplanationVideos}/>
                 <Route component={Error404}/>
             </Switch>
           </Layout>

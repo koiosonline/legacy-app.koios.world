@@ -1,0 +1,153 @@
+.banner {
+  background-image: linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5)), url(https://i.imgur.com/VpLJxrH.jpg);
+  height: 17rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -30px;
+
+  @include for-size($desktop) {
+    margin-top: unset;
+  }
+
+  &__text {
+    padding: $spacing-2x;
+
+    @include for-size($desktop) {
+      max-width: 30%;
+      padding: $spacing-2x $spacing-4x;
+    }
+
+    h1 {
+      font-family: $font-family-headings;
+      color: white;
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-weight: 700;
+      color: white;
+      margin-top: $spacing-2x;
+    }
+  }
+}
+
+.videos {
+  margin: -7.5rem auto;
+  padding: $spacing-2x;
+  background-color: white;
+  max-width: 1080px;
+  border-radius: 10px;
+  box-shadow: 0 0 21px -10px rgb(110 110 110 / 50%);
+
+  @include for-size($tablet) {
+    margin: -14rem auto;
+  }
+
+  @include for-size($desktop) {
+    margin: -7.5rem auto;
+  }
+
+  .introduction {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 960px;
+    border-bottom: 1px solid #e8e8e8;
+    padding: $spacing-2x;
+    border-radius: 10px;
+
+    h1 {
+      font-family: $font-family-headings;
+      margin-bottom: $spacing-2x;
+      color: $color-koios-dark-grey;
+    }
+
+    p {
+      max-width: 100%;
+      color: $color-koios-dark-grey;
+      font-weight: 700;
+
+      @include for-size($tablet) {
+        max-width: 50%;
+      }
+    }
+  }
+
+  .content-row {
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+    margin: $spacing-6x auto 0;
+    padding-bottom: $spacing-6x;
+    border-bottom: 1px solid #e8e8e8;
+
+    @include for-size($tablet) {
+      flex-flow: row;
+      justify-content: space-between;
+      max-width: 960px;
+    }
+
+    &__list {
+      margin-top: 2rem;
+
+      @include for-size($tablet) {
+        margin-top: 0;
+      }
+
+      .active-color {
+        color: $color-koios-dark-grey;
+        font-weight: 700;
+        transition: all .25s ease;
+      }
+
+      ul {
+        @include for-size($tablet) {
+          min-width: 15rem;
+          margin-right: -7rem;
+        }
+        @include for-size($desktop) {
+          margin-right: unset;
+          min-width: 15rem;
+        }
+        li {
+          padding: $spacing-1x;
+          color: #b8b8b8;
+        }
+      }
+    }
+
+    &__video {
+      width: 100%;
+      height: 100%;
+
+      @include for-size($desktop) {
+        width: 80%;
+        height: 100%;
+      }
+
+      iframe {
+        width: 100%;
+        height: 12.15rem;
+        border-radius: 10px;
+
+        @include for-size($tablet) {
+          width: 80%;
+          height: 16.7rem;
+          float: right;
+        }
+
+        @include for-size($desktop) {
+          width: 100%;
+          height: 25.3rem;
+          float: unset;
+        }
+      }
+    }
+  }
+
+  .vid2 {
+    margin-top: $spacing-8x;
+  }
+}
