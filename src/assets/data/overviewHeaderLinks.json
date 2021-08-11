@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Learn",
+    "description": "Learn from industry leaders and build meaningful relationships",
+    "icon": "book",
+    "link": "/#/worlds/blockchain/blockchain-level-1",
+    "linkTitle": "Start learning"
+  },
+  {
+    "title": "Earn",
+    "description": "Earn while building open source public goods projects that matter.",
+    "icon": "money",
+    "link": "/coming-soon",
+    "linkTitle": "Start earning"
+  },
+  {
+    "title": "Connect",
+    "description": "Team up with a community to take on open source projects",
+    "icon": "people",
+    "link": "/coming-soon",
+    "linkTitle": "Get connected"
+  }
+]

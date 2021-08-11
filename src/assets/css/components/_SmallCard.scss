@@ -1,0 +1,64 @@
+.smallCard-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: $spacing-4x;
+  margin: $spacing-7x auto;
+  max-width: 1060px;
+
+  @include for-size($tablet) {
+    padding: 0 $spacing-10x;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: $spacing-6x;
+  }
+
+  .smallCard {
+    background-color: white;
+    padding: $spacing-2x;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 $spacing-2x;
+
+    @include for-size($tablet) {
+      margin: unset;
+    }
+
+    &__title-row {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      margin-bottom: $spacing-2x;
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &__title {
+      font-family: $font-family-headings;
+      color: $color-koios-dark-grey;
+      font-size: 2rem;
+    }
+
+    &__description {
+      margin-bottom: $spacing-2x;
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      background-color: rgba(204, 8, 137, 40%);
+      padding: $spacing-1x;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color .25s ease;
+
+      &:hover {
+        background-color: rgba(204, 8, 137, 80%);
+      }
+    }
+  }
+}

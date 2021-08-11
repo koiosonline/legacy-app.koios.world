@@ -1,9 +1,48 @@
+.worldOverviewHeader {
+  background-image: linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5)), url(https://i.imgur.com/VpLJxrH.jpg);
+  background-size: cover;
+  height: 50vh;
+
+  @include for-size($desktop) {
+    height: 300px;
+  }
+
+  &__titleRow {
+    display: flex;
+    flex-flow: column;
+    padding: $spacing-4x $spacing-2x;
+    margin: 0 auto;
+
+    @include for-size($desktop) {
+      padding: $spacing-4x $spacing-10x;
+    }
+
+    &__title {
+      font-family: Righteous, sans-serif;
+      font-size: 48px;
+      color: white;
+      margin-bottom: $spacing-2x;
+    }
+    &__description {
+      font-family: "Source Sans Pro", sans-serif;
+      color: white;
+      font-size: 16px;
+
+      @include for-size($desktop) {
+        max-width: 635px;
+      }
+    }
+  }
+}
+
 .worldOverviewContainer {
   display: flex;
   flex-direction: column;
-  margin: 2em auto;
+  margin: 700px auto;
   @include for-size($desktop) {
-    max-width: 1080px;
+    margin: 250px auto 0;
+    max-width: 1200px;
+    padding: 0 $spacing-10x;
   }
   &__titleRow {
     display: flex;
@@ -32,3 +71,4 @@
     }
   }
 }
+
