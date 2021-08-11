@@ -1,0 +1,66 @@
+{
+  "introduction": {
+    "title": "Introduction",
+    "description": "This is an introduction on how to get you up and running into our community here at Koios.",
+    "videoId": "KOt0n0E3llw",
+    "timeCodeList": [
+      {
+        "time": 0,
+        "timestring": "0:00",
+        "label": "intro"
+      },
+      {
+        "time": 45,
+        "timestring": "0:45",
+        "label": "Metamask"
+      },
+      {
+        "time": 55,
+        "timestring": "0:55",
+        "label": "Metamask login"
+      },
+      {
+        "time": 94,
+        "timestring": "1:34",
+        "label": "3Box login"
+      },
+      {
+        "time": 116,
+        "timestring": "1:56",
+        "label": "3Box registration"
+      }
+    ]
+  },
+  "metamask": {
+    "title": "Metamask setup",
+    "description": "In this video we will take you through the process to get your Metamask wallet all set up. After completing this tutorial you will be eligable to receive our Titan tokens.",
+    "videoId": "KOt0n0E3llw",
+    "timeCodeList": [
+      {
+        "time": 0,
+        "timestring": "0:00",
+        "label": "Metamask intro"
+      },
+      {
+        "time": 45,
+        "timestring": "0:45",
+        "label": "Metamask install"
+      },
+      {
+        "time": 55,
+        "timestring": "0:55",
+        "label": "Metamask account"
+      },
+      {
+        "time": 94,
+        "timestring": "1:34",
+        "label": "Metamask login"
+      },
+      {
+        "time": 116,
+        "timestring": "1:56",
+        "label": "Your done!"
+      }
+    ]
+  }
+}

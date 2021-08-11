@@ -3,11 +3,10 @@ import Card from "../components/Card";
 import {useLocation} from "react-router-dom";
 import Button from "../components/Button";
 import store from 'store';
-import cardImageIntroduction from "../assets/images/worlds/world_introduction.svg"
 
 export const Worlds = () => {
     const data = worldsData;
-    const allowed = ['blockchain', 'tdfa01', 'datascience01', 'programmingdapps01'];
+    const allowed = ['blockchain', 'tdfa01', 'datascience01', 'programmingdapps01', 'introduction'];
     const continueLearning = store.get('lastWatched');
     const location = useLocation();
 
@@ -26,14 +25,6 @@ export const Worlds = () => {
         <Button title={'Continue Learning'} link={'/worlds/' + continueLearning.world + '/' + continueLearning.level + continueLearning.video}/>
         }
         <div className="cardContainer">
-          <Card 
-          image={cardImageIntroduction}
-          title='Introduction to Koios'
-          description='A quick introduction about the Koios platform itself and how you can use it to learn, earn and/or connect with a community to take on open source projects.'
-          linkTitle='Enter world'
-          linkUrl='/coming-soon'
-          duration='300'
-          />
           {Object.keys(filtered).map((data, i) => (
               <Card
                   key={i}
