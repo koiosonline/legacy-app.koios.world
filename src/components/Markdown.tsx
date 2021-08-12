@@ -9,7 +9,6 @@ export const Markdown = (props) => {
     (async () => {
       try {
         const mdFile = await import(`../articles/blockchain/${file_name}`);
-        console.log(mdFile.default)
         const getText =  await fetch(mdFile.default);
         const setText = await getText.text();
         setPost(setText);

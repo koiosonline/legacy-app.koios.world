@@ -3,7 +3,7 @@ An open public blockchain can be seen as a (1) "distributed", (2) "decentralized
 Let's start with the very first lesson: what is a ledger?
 
 
-💡  Ledgers play a vital role in societies. They are one of the backbones of current-day society. History has proven many times that when your ledger changes, new capabilities arise, and your community can change with it. With blockchain technology, we double this innovation fun:
+>💡  Ledgers play a vital role in societies. They are one of the backbones of current-day society. History has proven many times that when your ledger changes, new capabilities arise, and your community can change with it. With blockchain technology, we double this innovation fun:
 
 (1) the form of the ledgers changes. From centralized and closed towards decentralized and open.
 
@@ -28,7 +28,7 @@ And "value" can basically mean "anything, as long as we (humans) deem it valuabl
 
 You can see a ledger as a tool for humans. Not one to build a house, but one to record the transfers of value. The device can take different forms and has done so over time, like a book or a digital database. It used to be a clay tablet 7,000 years ago. The core of the ledger remains the same: it records transactions. How fast, reliable, etc., changes over time. We are now entering a new era of ledgers, the blockchain era, with increased security, reach, transparency, reliability, and more. A new form of trust 💡.
 
-**An example**
+**An example**  
 If you don't fully grasp the concept, not to worry 😊! Let's rephrase the entire idea of a ledger. Then, let's use one of our most potent tools: our imagination!  Imagine an open book in front of you. You will use this book to record transactions. "Record" or "register" is nothing more than to write something down on the paper of your book. The digital variant would be entering something in a computer or a "database". Transactions are, like said, nothing more than the transfer of "value" from A to B, where "value" can be anything like money or a house.
 
 So we now have this physical book (or digital database), where we record the transactions. But what kind of transactions? Close your eyes and imagine the following; just imagine that you are in a room with ten of your best friends. Your friends are just standing there, waiting for something to happen. You are stepping towards the sidelines of the room. You then drop a bag of $100 in the middle of the space to be equally divided between your 10 friends.

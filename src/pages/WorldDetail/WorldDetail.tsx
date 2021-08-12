@@ -15,7 +15,8 @@ import store from "store";
 import Loading from "../../components/Loading";
 import { HashLink } from "react-router-hash-link";
 import { Markdown } from "../../components/Markdown";
-import readme from "../../articles/blockchain/ledger.md";
+import MarkDownFile from "../../articles/blockchain/ledger.md";
+import { ArticlePageLinks } from "../../components/ArticlePageLinks";
 
 export const WorldDetail = () => {
   const { hash } = useLocation();
@@ -28,6 +29,20 @@ export const WorldDetail = () => {
   const [extraInfo, setExtraInfo] = useState<any[]>();
   const [quizState, setQuizState] = useState<boolean>(false);
   const [videoCheck, setVideoCheck] = useState<boolean>(false);
+  const [previousVideo, setPreviousVideo] = useState<string>();
+  const [nextVideo, setNextVideo] = useState<string>();
+  const { pathname } = useLocation();
+
+  const getPreviousAndNextVideo = () => {
+    const videoListWithoutChapters = videoList?.filter((item) => !item.chapter);
+    const videoTitles = videoListWithoutChapters?.map((video) => video.title);
+    const currentVideo = videoContent?.title;
+    const currentVideoIndex = videoTitles?.indexOf(currentVideo);
+    if (videoList) {
+      setPreviousVideo(videoTitles[currentVideoIndex - 1]);
+      setNextVideo(videoTitles[currentVideoIndex + 1]);
+    }
+  };
 
   const course = courseInfo.find(
     (item) =>
@@ -51,45 +66,6 @@ export const WorldDetail = () => {
     const getCourseData = await getVideoInfo(courseLevel.data);
     setCourseData(getCourseData);
     setIsLoading(false);
-  };
-
-  const getCourseId = () => {
-    const courseId = videoContent.title;
-    const splitted = courseId.split(" ");
-    return splitted[0];
-  };
-
-  const filterDataById = () => {
-    const all = courseData.filter((item) => getCourseId() === item.chapter);
-    const addedInfo = extraInfo.filter(
-      (item) => getCourseId() === item.chapter
-    );
-    const allFilter = courseData.filter((item) => "*" === item.chapter);
-    const merged = allFilter.concat(all, addedInfo);
-    const unique = merged.filter(
-      (v, i, a) =>
-        a.findIndex((t) => t.title === v.title && t.url === v.url) === i
-    );
-    const withoutPng = unique.filter((item) => !item.png);
-    if (withoutPng.length === 0) {
-      return false;
-    } else {
-      return withoutPng;
-    }
-  };
-
-  const onlyUrl = () => {
-    const data = filterDataById();
-    if (typeof data !== "boolean") {
-      return data.filter((item) => item.url);
-    }
-  };
-
-  const onlyLiterature = () => {
-    const data = filterDataById();
-    if (typeof data !== "boolean") {
-      return data.filter((item) => item.cid);
-    }
   };
 
   const filterDefaultLinks = () => {
@@ -120,8 +96,11 @@ export const WorldDetail = () => {
 
   const openQuiz = () => {
     setQuizState(!quizState);
-    console.log(quizState);
   };
+
+  useEffect(() => {
+    getPreviousAndNextVideo();
+  });
 
   useEffect(() => {
     data();
@@ -138,7 +117,6 @@ export const WorldDetail = () => {
   const activeVideo = (video, title) => {
     if (store.get(video)) {
       store.remove(video);
-      console.log("remove");
       setVideoCheck(!videoCheck);
     } else {
       store.set(video, { hash: hash, videoId: video });
@@ -153,7 +131,6 @@ export const WorldDetail = () => {
             replaceAmpersand: "and",
           }),
       });
-      console.log("set");
       setVideoCheck(!videoCheck);
     }
   };
@@ -162,6 +139,7 @@ export const WorldDetail = () => {
     window.open("https://discord.gg/jBjudugeBa", "_blank");
   };
 
+  
   return (
     <div className={"container"}>
       <div className="world-detail">
@@ -302,10 +280,23 @@ export const WorldDetail = () => {
               <section className="content">
                 <article className="article">
                   <h1 className="article__title">{videoContent.title}</h1>
-                  <Markdown markdown={readme} />
+
+                  <Markdown markdown={MarkDownFile} />
+
+                  {previousVideo && nextVideo && (
+                    <ArticlePageLinks
+                      pathname={pathname}
+                      previousVideo={previousVideo}
+                      nextVideo={nextVideo}
+                    />
+                  )}
+                  <a className="article__feedback-link">Was this page helpfull?</a>
                 </article>
+
                 <div className="table-of-contents">
-                  <h2 className="table-of-contents__title">Table of contents</h2>
+                  <h2 className="table-of-contents__title">
+                    Table of contents
+                  </h2>
                 </div>
               </section>
 
