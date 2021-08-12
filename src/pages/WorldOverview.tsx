@@ -5,6 +5,8 @@ import LinkCard from "../components/LinkCard";
 import {Slugify} from '../components/Util/Slugify';
 import SmallCard from "../components/SmallCard";
 import LearnToNavigate from "../components/LearnToNavigate";
+import LevelCards from "../components/LevelCards";
+import Team from "../components/Team";
 
 type CourseContentParams = {
   worldContent: string;
@@ -28,6 +30,8 @@ const WorldOverview = () => {
       </div>
       <div className={'container worldOverviewContainer'}>
         <LearnToNavigate world={world}/>
+        <LevelCards world={world} baseUrl={worldContent}/>
+        <Team world={world}/>
         {/*<QuickLinks data={world?.quickLinks}/>*/}
         {/*<div className={'linkCardContainer'}>*/}
         {/*  <LinkCard data={world?.content} baseUrl={worldContent} title={'Learn'}/>*/}

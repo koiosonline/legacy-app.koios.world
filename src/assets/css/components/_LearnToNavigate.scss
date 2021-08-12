@@ -16,6 +16,7 @@
     }
     &__description {
       margin-bottom: $spacing-2x;
+      color: $color-koios-dark-grey;
     }
 
     .links {
@@ -37,6 +38,8 @@
         @include for-size($tablet) {
           align-self: center;
           border-right: 1px solid lightgray;
+          padding-left: unset;
+          margin-bottom: unset;
         }
 
         a {

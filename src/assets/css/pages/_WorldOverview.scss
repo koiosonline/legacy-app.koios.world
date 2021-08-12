@@ -2,8 +2,9 @@
   background-image: linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5)), url(https://i.imgur.com/VpLJxrH.jpg);
   background-size: cover;
   height: 50vh;
+  position: relative;
 
-  @include for-size($desktop) {
+  @include for-size($tablet) {
     height: 300px;
   }
 
@@ -39,10 +40,15 @@
   display: flex;
   flex-direction: column;
   margin: 700px auto;
+
+  @include for-size($tablet) {
+    margin: 250px auto;
+  }
+
   @include for-size($desktop) {
-    margin: 250px auto 0;
+    margin: 250px auto;
     max-width: 1200px;
-    padding: 0 $spacing-10x;
+    padding: 0 $spacing-10x 250px;
   }
   &__titleRow {
     display: flex;
