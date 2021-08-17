@@ -17,6 +17,7 @@ import { HashLink } from "react-router-hash-link";
 import { Markdown } from "../../components/Markdown";
 import MarkDownFile from "../../articles/blockchain/ledger.md";
 import { ArticlePageLinks } from "../../components/ArticlePageLinks";
+import TwitterLinks from "./static/DiscussOnTwitter.json";
 
 export const WorldDetail = () => {
   const { hash } = useLocation();
@@ -139,7 +140,16 @@ export const WorldDetail = () => {
     window.open("https://discord.gg/jBjudugeBa", "_blank");
   };
 
-  
+  const hasTwitterDiscussion = () => {
+    const currentWorld = TwitterLinks[worldContent];
+    const currentClass = currentWorld.find((item) => item.videoTitle === videoContent?.title);
+    if (currentClass) {
+      return currentClass.twitterLink;
+    }
+  };
+
+
+  // https://css-tricks.com/parsing-markdown-into-an-automated-table-of-contents/
   return (
     <div className={"container"}>
       <div className="world-detail">
@@ -260,6 +270,8 @@ export const WorldDetail = () => {
                     )
                   );
                 })}
+
+                {!hasTwitterDiscussion() && 
                 <button
                   onClick={openDiscord}
                   className={"ctaContainer__button"}
@@ -267,6 +279,15 @@ export const WorldDetail = () => {
                   <img src={"/images/Discord-Logo-Black.svg"} alt={"sheets"} />
                   <p>Discuss on Discord</p>
                 </button>
+                }
+
+                {hasTwitterDiscussion() &&
+                <a href={hasTwitterDiscussion()} className={"ctaContainer__button"}>
+                  <img src={"/images/Discord-Logo-Black.svg"} alt={"sheets"} />
+                  <p>Discuss on Twitter</p>
+                </a>
+                }
+
                 {quiz && (
                   <button onClick={openQuiz} className={"ctaContainer__button"}>
                     <img src={"/images/scroll-solid.svg"} alt={"sheets"} />
@@ -290,7 +311,9 @@ export const WorldDetail = () => {
                       nextVideo={nextVideo}
                     />
                   )}
-                  <a className="article__feedback-link">Was this page helpfull?</a>
+                  <a className="article__feedback-link">
+                    Was this page helpfull?
+                  </a>
                 </article>
 
                 <div className="table-of-contents">
