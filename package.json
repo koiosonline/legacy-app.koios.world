@@ -15,6 +15,7 @@
     "@types/react-dom": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",
     "@walletconnect/web3-provider": "^1.4.1",
+    "@widgetbot/react-embed": "^1.4.0",
     "axios": "^0.21.1",
     "evm-chains": "^0.2.0",
     "ipfs-http-client": "^49.0.4",

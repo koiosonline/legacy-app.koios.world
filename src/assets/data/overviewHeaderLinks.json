@@ -4,7 +4,8 @@
     "description": "Learn from industry leaders and build meaningful relationships",
     "icon": "book",
     "link": "/#/worlds/blockchain/blockchain-level-1",
-    "linkTitle": "Start learning"
+    "linkTitle": "Start learning",
+    "ref": "learn"
   },
   {
     "title": "Earn",
@@ -18,6 +19,7 @@
     "description": "Team up with a community to take on open source projects",
     "icon": "people",
     "link": "/coming-soon",
-    "linkTitle": "Get connected"
+    "linkTitle": "Get connected",
+    "ref": "team"
   }
 ]

@@ -1,0 +1,29 @@
+.discordContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: $spacing-10x 0 $spacing-10x 0;
+  border-bottom: 1px solid #f2f2f2;
+
+  @include for-size($tablet) {
+    flex-flow: row;
+  }
+
+  .text-holder {
+    padding: 0 0 $spacing-4x 0;
+
+    @include for-size($tablet) {
+      max-width: 50%;
+    }
+
+    &__title {
+      font-family: $font-family-headings;
+      color: $color-koios-dark-grey;
+      padding-bottom: $spacing-2x;
+    }
+
+    &__description {
+      color: $color-koios-dark-grey;
+    }
+  }
+}

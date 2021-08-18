@@ -5,10 +5,16 @@
   @include for-size($tablet) {
     grid-template-columns: 50% 50%;
     grid-column-gap: $spacing-4x;
+    padding-top: $spacing-4x;
   }
 
   .learnToNavigate {
     overflow: hidden;
+
+    @include for-size($desktop) {
+      overflow: unset;
+    }
+
     &__title {
       font-family: $font-family-headings;
       color: $color-koios-dark-grey;
@@ -22,7 +28,8 @@
     .links {
       display: flex;
       flex-flow: column;
-      overflow: scroll;
+      position: relative;
+      min-height: 50px;
 
       @include for-size($tablet) {
         display: flex;
@@ -31,7 +38,7 @@
 
       .continue {
         align-self: flex-start;
-        padding-left: $spacing-2x;
+        //padding-left: $spacing-2x;
         margin-bottom: $spacing-2x;
         position: relative;
 

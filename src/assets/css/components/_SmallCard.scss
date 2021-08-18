@@ -4,7 +4,7 @@
   grid-row-gap: $spacing-4x;
   //margin: $spacing-7x auto;
   margin: 0 auto;
-  max-width: 1060px;
+  max-width: 1080px;
   position: absolute;
   top: 40vh;
   left: 0;
@@ -67,6 +67,8 @@
       border-radius: 10px;
       text-decoration: none;
       transition: background-color .25s ease;
+      font-size: 16px;
+      cursor: pointer;
 
       &:hover {
         background-color: rgba(204, 8, 137, 80%);
