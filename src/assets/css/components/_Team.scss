@@ -1,0 +1,90 @@
+.team-container {
+  display: flex;
+  flex-flow: column;
+  margin-top: $spacing-10x;
+
+  .text-holder {
+    margin-bottom: $spacing-5x;
+
+    @include for-size($desktop) {
+      max-width: 70%;
+    }
+    &__title {
+      font-family: $font-family-headings;
+      color: $color-koios-dark-grey;
+      font-size: 32px;
+      padding-bottom: $spacing-2x;
+    }
+
+    &__subtitle {
+      font-weight: 600;
+      padding-bottom: $spacing-2x;
+    }
+
+    &__paragraph {
+      padding-bottom: $spacing-2x;
+    }
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 155px);
+    grid-column-gap: $spacing-2x;
+    grid-row-gap: $spacing-3x;
+    justify-content: space-between;
+
+    .member {
+      display: flex;
+      flex-flow: column;
+      padding: $spacing-1x;
+      border: 1px solid #D7D7D7;
+      border-radius: 10px;
+
+      &__image {
+        width: 50px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50px;
+        object-fit: cover;
+        margin-bottom: $spacing-1x;
+      }
+
+      &__name {
+        color: $color-koios-dark-grey;
+        text-align: center;
+        margin-bottom: $spacing-1x;
+      }
+
+      &__description {
+        color: $color-koios-dark-grey;
+        font-size: 14px;
+        margin-bottom: $spacing-1x;
+      }
+
+      .socials {
+        display: flex;
+        flex-flow: row;
+
+        &__link {
+          display: flex;
+          flex-flow: row;
+          text-decoration: none;
+          color: #CC0889;
+          font-size: 10px;
+
+          svg {
+            width: 15px;
+            height: 15px;
+            margin-right: 4px;
+            fill: #CC0889;
+          }
+
+          p {
+            margin-right: $spacing-1x;
+          }
+        }
+      }
+    }
+  }
+}
