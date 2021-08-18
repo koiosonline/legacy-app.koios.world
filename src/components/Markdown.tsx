@@ -1,34 +1,11 @@
 import MarkdownToJsx from "markdown-to-jsx";
-import { useEffect, useState } from "react";
 
-export const Markdown = (props) => {
-  const file_name = "ledger.md";
-  const [post, setPost] = useState("");
+type MarkdownProps = {
+  value: string;
+};
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const mdFile = await import(`../articles/blockchain/${file_name}`);
-        const getText =  await fetch(mdFile.default);
-        const setText = await getText.text();
-        setPost(setText);
-      } catch (e) {
-        console.log(e);
-      }
-    })();
-  }, []);
-  // https://dev.to/anobjectisa/how-to-dynamically-load-markdown-files-in-react-markdown-to-jsx-53fl
-  // .then(res => {
-  //     fetch(readme)
-  //         .then(res => res.text())
-  //         .then(res => setPost(res))
-  //         .catch(err => console.log(err));
-  // })
-  // .catch(err => console.log(err));
-
+export const Markdown = (props: MarkdownProps) => {
   return (
-    <>
-      <MarkdownToJsx >{post}</MarkdownToJsx>
-    </>
+    <MarkdownToJsx options={{ forceBlock: true }}>{props.value}</MarkdownToJsx>
   );
 };

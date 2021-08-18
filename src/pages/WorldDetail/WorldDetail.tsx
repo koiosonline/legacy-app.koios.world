@@ -6,7 +6,7 @@ import { Slugify } from "../../components/Util/Slugify";
 import { YouTubeEmbed } from "../../components/YouTubeEmbed";
 import { SingleVideo } from "../../types/Courses/SingleVideo";
 import { CourseContentParams, CourseDetailParams } from "../../types/Params";
-import { getVideoInfo } from "../../api/Api";
+import { getLiterature, getVideoInfo } from "../../api/Api";
 import TabInfo from "../../components/TabInfo";
 import axios from "axios";
 import useQuiz from "../../components/quiz/useQuiz";
@@ -15,24 +15,25 @@ import store from "store";
 import Loading from "../../components/Loading";
 import { HashLink } from "react-router-hash-link";
 import { Markdown } from "../../components/Markdown";
-import MarkDownFile from "../../articles/blockchain/ledger.md";
 import { ArticlePageLinks } from "../../components/ArticlePageLinks";
 import TwitterLinks from "./static/DiscussOnTwitter.json";
+import { Icon } from "../../components/Util/Icon";
 
 export const WorldDetail = () => {
   const { hash } = useLocation();
+  const { pathname } = useLocation();
   const [videoContent, setVideoContent] = useState<SingleVideo>();
   const { worldContent } = useParams<CourseContentParams>();
   const { worldDetail } = useParams<CourseDetailParams>();
   const [isLoading, setIsLoading] = useState(false);
   const [courseData, setCourseData] = useState<any[]>();
+  const [literatureOfVideo, setliteratureOfVideo] = useState<string>();
   const [videoList, setVideoList] = useState<any[]>();
   const [extraInfo, setExtraInfo] = useState<any[]>();
   const [quizState, setQuizState] = useState<boolean>(false);
   const [videoCheck, setVideoCheck] = useState<boolean>(false);
   const [previousVideo, setPreviousVideo] = useState<string>();
   const [nextVideo, setNextVideo] = useState<string>();
-  const { pathname } = useLocation();
 
   const getPreviousAndNextVideo = () => {
     const videoListWithoutChapters = videoList?.filter((item) => !item.chapter);
@@ -64,9 +65,53 @@ export const WorldDetail = () => {
     const getVideoList = await getVideoInfo(courseLevel.videoInfo);
     setExtraInfo(getVideoList.literature);
     setVideoList(getVideoList.videos);
+    const literature = await getLiterature({
+      world: worldContent,
+      article: hash.replace("#", "") + ".md",
+    });
+    setliteratureOfVideo(literature);
     const getCourseData = await getVideoInfo(courseLevel.data);
     setCourseData(getCourseData);
     setIsLoading(false);
+  };
+
+  const getCourseId = () => {
+    const courseId = videoContent.title;
+    const splitted = courseId.split(" ");
+    return splitted[0];
+  };
+
+  const filterDataById = () => {
+    const all = courseData.filter((item) => getCourseId() === item.chapter);
+    const addedInfo = extraInfo.filter(
+      (item) => getCourseId() === item.chapter
+    );
+    const allFilter = courseData.filter((item) => "*" === item.chapter);
+    const merged = allFilter.concat(all, addedInfo);
+    const unique = merged.filter(
+      (v, i, a) =>
+        a.findIndex((t) => t.title === v.title && t.url === v.url) === i
+    );
+    const withoutPng = unique.filter((item) => !item.png);
+    if (withoutPng.length === 0) {
+      return false;
+    } else {
+      return withoutPng;
+    }
+  };
+
+  const onlyUrl = () => {
+    const data = filterDataById();
+    if (typeof data !== "boolean") {
+      return data.filter((item) => item.url);
+    }
+  };
+
+  const onlyLiterature = () => {
+    const data = filterDataById();
+    if (typeof data !== "boolean") {
+      return data.filter((item) => item.cid);
+    }
   };
 
   const filterDefaultLinks = () => {
@@ -142,12 +187,13 @@ export const WorldDetail = () => {
 
   const hasTwitterDiscussion = () => {
     const currentWorld = TwitterLinks[worldContent];
-    const currentClass = currentWorld.find((item) => item.videoTitle === videoContent?.title);
+    const currentClass = currentWorld?.find(
+      (item) => item.videoTitle === videoContent?.title
+    );
     if (currentClass) {
       return currentClass.twitterLink;
     }
   };
-
 
   // https://css-tricks.com/parsing-markdown-into-an-automated-table-of-contents/
   return (
@@ -271,22 +317,30 @@ export const WorldDetail = () => {
                   );
                 })}
 
-                {!hasTwitterDiscussion() && 
-                <button
-                  onClick={openDiscord}
-                  className={"ctaContainer__button"}
-                >
-                  <img src={"/images/Discord-Logo-Black.svg"} alt={"sheets"} />
-                  <p>Discuss on Discord</p>
-                </button>
-                }
-
-                {hasTwitterDiscussion() &&
-                <a href={hasTwitterDiscussion()} className={"ctaContainer__button"}>
-                  <img src={"/images/Discord-Logo-Black.svg"} alt={"sheets"} />
-                  <p>Discuss on Twitter</p>
-                </a>
-                }
+                {hasTwitterDiscussion() ? (
+                  <a
+                    href={hasTwitterDiscussion()}
+                    className={"ctaContainer__button"}
+                  >
+                    <img
+                      src={"/images/Discord-Logo-Black.svg"}
+                      alt={"sheets"}
+                    />
+                    {/* <Icon type="twitter"/> use Icon component instead of img*/}
+                    <p>Discuss on Twitter</p>
+                  </a>
+                ) : (
+                  <button
+                    onClick={openDiscord}
+                    className={"ctaContainer__button"}
+                  >
+                    <img
+                      src={"/images/Discord-Logo-Black.svg"}
+                      alt={"sheets"}
+                    />
+                    <p>Discuss on Discord</p>
+                  </button>
+                )}
 
                 {quiz && (
                   <button onClick={openQuiz} className={"ctaContainer__button"}>
@@ -300,9 +354,26 @@ export const WorldDetail = () => {
 
               <section className="content">
                 <article className="article">
-                  <h1 className="article__title">{videoContent.title}</h1>
+                  {/* <h1 className="article__title">{videoContent.title}</h1> */}
 
-                  <Markdown markdown={MarkDownFile} />
+                  {/* <Markdown world="blockchain" article={hash.replace('#', '') + ".md"} /> */}
+                  {literatureOfVideo ? (
+                    <Markdown value={literatureOfVideo} />
+                  ) : (
+                    <div className="world-detail__content">
+                      <div className="world-detail__content__textContainer">
+                        <h2
+                          className="world-detail__content__textContainer__title"
+                          id={"title"}
+                        >
+                          {videoContent.title}
+                        </h2>
+                        <p className="world-detail__content__textContainer__description">
+                          {videoContent.description.replace(/___(.*?)___/g, "")}
+                        </p>
+                      </div>
+                    </div>
+                  )}
 
                   {previousVideo && nextVideo && (
                     <ArticlePageLinks
@@ -317,23 +388,22 @@ export const WorldDetail = () => {
                 </article>
 
                 <div className="table-of-contents">
-                  <h2 className="table-of-contents__title">
-                    Table of contents
-                  </h2>
+                  {literatureOfVideo ? (
+                    <h2 className="table-of-contents__title">
+                      Table of contents
+                    </h2>
+                  ) : (
+                    courseData &&
+                    filterDataById() && (
+                      <TabInfo
+                        allLinks={filterDataById}
+                        urls={onlyUrl}
+                        literature={onlyLiterature}
+                      />
+                    )
+                  )}
                 </div>
               </section>
-
-              {/* <div className="world-detail__content">
-              <div className="world-detail__content__textContainer">
-                <h2 className="world-detail__content__textContainer__title" id={'title'}>{videoContent.title}</h2>
-                <p className="world-detail__content__textContainer__description">
-                  {videoContent.description.replace(/___(.*?)___/g,'')}
-                </p>
-              </div>
-            { courseData && filterDataById() &&
-                <TabInfo allLinks={filterDataById} urls={onlyUrl} literature={onlyLiterature}/>
-            }
-            </div> */}
             </>
           )
         )}

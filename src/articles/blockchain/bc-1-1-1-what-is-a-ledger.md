@@ -1,7 +1,8 @@
+# BC-1.1.1 What is a ledger?
+
 An open public blockchain can be seen as a (1) "distributed", (2) "decentralized", (3) "ledger". In this section, we will explain what a ledger is. The other two components are for classes further up ahead.
 
 Let's start with the very first lesson: what is a ledger?
-
 
 >💡  Ledgers play a vital role in societies. They are one of the backbones of current-day society. History has proven many times that when your ledger changes, new capabilities arise, and your community can change with it. With blockchain technology, we double this innovation fun:
 
