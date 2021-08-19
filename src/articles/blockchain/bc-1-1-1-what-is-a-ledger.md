@@ -17,15 +17,16 @@ All way too techie for class 1 😄 Just remember: blockchains are an innovation
 ## The basics of a ledger: recording a transaction
 Sorry students, let me get a hold of myself…. Let's start with the basics: you need to understand what a ledger is and grasp its concepts. So what is a ledger? A ledger is a tool we use to record transactions. But what are "transactions"? "Transactions" are nothing more than (economic) activities where people "exchange value". So "exchange" means that the value goes from "one person to the other person". Or instead of between people, between legal entities like foundations and corporations. Or even between machines nowadays!
 
-💡 Different 'entities' can exchange value in a ledger.
-❓ Can you think of other types of entities that can interact in a ledger?
+> 💡 Different 'entities' can exchange value in a ledger.
+
+<blockquote style="border-color: #ff0bac">❓ Can you think of other types of entities that can interact in a ledger?</blockquote>
 
 And "value" can basically mean "anything, as long as we (humans) deem it valuable". Many books are written about 'value' over time, and many would love to enter the philosophical spheres about what value is. What might be valuable to you now but not be beneficial to somebody else. Or is value always measurable? The types of value we are talking about are metrics by nature. So you can measure them. This is needed to record them in a ledger. Try to record 'love 💘' in a ledger? And no: not talking about paid love. So value is often represented as something metric, usually monetary. Still, it could also represent values like a house which can be expressed in economic terms.
 
-💡 value can take many forms. For example, in ledgers, we record measurable values. 
-❓ What do you think has value? Can that value be recorded?
-❓ Let your mind drift for a while: can you think of other values that have a hard time being measured? Are you sure they can not be measured, or do we need a new, improved ledger to measure them? Tip: thanks to blockchain technology, some of our planet's forests are recorded in ledgers nowadays!
-❓ What is 'intrinsic value'? What has intrinsic value (if anything has….)?
+💡 value can take many forms. For example, in ledgers, we record measurable values.  
+❓ What do you think has value? Can that value be recorded?  
+❓ Let your mind drift for a while: can you think of other values that have a hard time being measured? Are you sure they can not be measured, or do we need a new, improved ledger to measure them? Tip: thanks to blockchain technology, some of our planet's forests are recorded in ledgers nowadays!  
+❓ What is 'intrinsic value'? What has intrinsic value (if anything has….)?  
 
 You can see a ledger as a tool for humans. Not one to build a house, but one to record the transfers of value. The device can take different forms and has done so over time, like a book or a digital database. It used to be a clay tablet 7,000 years ago. The core of the ledger remains the same: it records transactions. How fast, reliable, etc., changes over time. We are now entering a new era of ledgers, the blockchain era, with increased security, reach, transparency, reliability, and more. A new form of trust 💡.
 

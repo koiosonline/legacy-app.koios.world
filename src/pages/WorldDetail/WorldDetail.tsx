@@ -323,8 +323,8 @@ export const WorldDetail = () => {
                     className={"ctaContainer__button"}
                   >
                     <img
-                      src={"/images/Discord-Logo-Black.svg"}
-                      alt={"sheets"}
+                      src={"/images/logo--twitter.svg"}
+                      alt={"Twitter logo"}
                     />
                     {/* <Icon type="twitter"/> use Icon component instead of img*/}
                     <p>Discuss on Twitter</p>
@@ -336,7 +336,7 @@ export const WorldDetail = () => {
                   >
                     <img
                       src={"/images/Discord-Logo-Black.svg"}
-                      alt={"sheets"}
+                      alt={"Discord logo"}
                     />
                     <p>Discuss on Discord</p>
                   </button>
@@ -353,39 +353,29 @@ export const WorldDetail = () => {
               {quizState && <Quiz quizData={quiz} modalState={openQuiz} />}
 
               <section className="content">
-                <article className="article">
-                  {/* <h1 className="article__title">{videoContent.title}</h1> */}
-
-                  {/* <Markdown world="blockchain" article={hash.replace('#', '') + ".md"} /> */}
-                  {literatureOfVideo ? (
-                    <Markdown value={literatureOfVideo} />
-                  ) : (
-                    <div className="world-detail__content">
-                      <div className="world-detail__content__textContainer">
-                        <h2
-                          className="world-detail__content__textContainer__title"
-                          id={"title"}
-                        >
-                          {videoContent.title}
-                        </h2>
-                        <p className="world-detail__content__textContainer__description">
+                <div className="literature">
+                  <article className="article">
+                    {literatureOfVideo ? (
+                      <Markdown value={literatureOfVideo} />
+                    ) : (
+                      <>
+                        <h2>{videoContent.title}</h2>
+                        <p>
                           {videoContent.description.replace(/___(.*?)___/g, "")}
                         </p>
-                      </div>
-                    </div>
-                  )}
+                      </>
+                    )}
+                  </article>
 
-                  {previousVideo && nextVideo && (
                     <ArticlePageLinks
                       pathname={pathname}
-                      previousVideo={previousVideo}
-                      nextVideo={nextVideo}
+                      previousVideo={previousVideo ? previousVideo : null}
+                      nextVideo={nextVideo ? nextVideo : null}
                     />
-                  )}
-                  <a className="article__feedback-link">
-                    Was this page helpfull?
-                  </a>
-                </article>
+                  
+
+                  <a className="feedback-link">Was this page helpfull?</a>
+                </div>
 
                 <div className="table-of-contents">
                   {literatureOfVideo ? (
