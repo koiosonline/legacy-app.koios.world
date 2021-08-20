@@ -1,0 +1,144 @@
+.earn-header {
+  height: 50vh;
+  background-size: cover;
+
+  @include for-size($tablet) {
+    height: 300px;
+  }
+
+  &__text-holder {
+    padding: $spacing-4x $spacing-2x;
+
+    @include for-size($desktop) {
+      padding: $spacing-4x $spacing-10x;
+    }
+
+    &__title {
+      font-family: Righteous, sans-serif;
+      font-size: 48px;
+      color: white;
+      margin-bottom: $spacing-2x;
+    }
+
+    &__description {
+      font-family: "Source Sans Pro", sans-serif;
+      color: white;
+      font-size: 16px;
+
+      @include for-size($desktop) {
+        max-width: 635px;
+      }
+    }
+  }
+}
+
+.selector-container {
+  display: flex;
+  flex-flow: row;
+  padding: $spacing-1x;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  border-radius: 20px;
+  transform: translateY(-$spacing-5x);
+  width: 100%;
+  box-shadow: 0px 0px 21px -10px rgb(110 110 110 / 50%);
+
+  @include for-size($tablet) {
+    width: 75%;
+  }
+
+  @include for-size($desktop) {
+    width: 50%;
+  }
+
+  .button {
+    width: 100%;
+    padding: $spacing-3x;
+    border-radius: 17px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .25s ease;
+    text-decoration: none;
+    color: $color-koios-dark-grey;
+    text-align: center;
+
+    &:hover {
+      background-color: #f2f2f2;
+      color: $color-koios-pink;
+    }
+
+    &--active {
+      background-color: #f2f2f2;
+      color: $color-koios-pink;
+    }
+  }
+}
+
+.vacancies {
+  max-width: 1080px;
+  margin: $spacing-10x auto;
+  padding: 0 $spacing-2x $spacing-10x;
+
+  @include for-size($desktop) {
+    padding: 0 $spacing-10x;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $spacing-2x;
+    grid-row-gap: $spacing-2x;
+    padding: $spacing-4x 0;
+    border-bottom: 1px solid #f2f2f2;
+
+    @include for-size($tablet) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include for-size($desktop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    &__button {
+      padding: $spacing-1x;
+      box-shadow: $button-shadow;
+      border-radius: $radius;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: color, border .25s ease;
+      font-size: 14px;
+      font-weight: 700;
+      color: #8e8e8e;
+
+      &:hover {
+        border: 2px solid $color-koios-pink;
+        color: $color-koios-pink;
+      }
+
+      &--active {
+        border: 2px solid $color-koios-pink;
+        color: $color-koios-pink;
+      }
+    }
+  }
+
+  .card-grid {
+    padding: $spacing-4x 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: $spacing-6x;
+    grid-row-gap: $spacing-6x;
+
+    @include for-size($tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include for-size($desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+

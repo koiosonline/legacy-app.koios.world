@@ -14,6 +14,8 @@ import {Error404} from "./pages/Error404";
 import Contribute from "./pages/Contribute";
 import ScrollToTop from "./components/Util/scrollTop";
 import ExplanationVideos from "./pages/ExplanationVideos";
+import Earn from "./pages/Earn";
+import VacancyDetail from "./pages/VacancyDetail";
 
 export const App = () => {
   const [user, setUser] = useState(null);
@@ -34,6 +36,8 @@ export const App = () => {
                 <Route path="/leaderboard" exact component={Leaderboard}/>
                 <Route path="/contribute" exact component={Contribute}/>
                 <Route path="/explanation" exact component={ExplanationVideos}/>
+                <Route path="/earn" exact component={Earn} />
+                <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
                 <Route component={Error404}/>
             </Switch>
           </Layout>

@@ -1,0 +1,25 @@
+.text-holder {
+  padding: $spacing-4x 0;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+
+  @include for-size($desktop) {
+    padding: $spacing-4x 0;
+  }
+
+  &__title {
+    font-family: Righteous, sans-serif;
+    font-size: 36px;
+    color: $color-koios-dark-grey;
+    margin-bottom: $spacing-2x;
+  }
+
+  &__description {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+
+    @include for-size($desktop) {
+      max-width: 635px;
+    }
+  }
+}
