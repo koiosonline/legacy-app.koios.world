@@ -18,6 +18,7 @@ import { Markdown } from "../../components/Markdown";
 import { ArticlePageLinks } from "../../components/ArticlePageLinks";
 import TwitterLinks from "./static/DiscussOnTwitter.json";
 import { Icon } from "../../components/Util/Icon";
+import { compiler } from "markdown-to-jsx";
 
 export const WorldDetail = () => {
   const { hash } = useLocation();
@@ -195,6 +196,28 @@ export const WorldDetail = () => {
     }
   };
 
+  const generateTableOfContents = async () => {
+    const compiledMarkdown = await compiler(`${literatureOfVideo}`, { forceBlock: true });
+    const filterHeadings = await compiledMarkdown.props.children.filter(
+      (item) =>
+        item.type === "h1" ||
+        item.type === "h2" ||
+        item.type === "h3" ||
+        item.type === "h4" ||
+        item.type === "h5" ||
+        item.type === "h6"
+    );
+    const headings = await filterHeadings.map(item => {
+      return {
+        id: item.props.id,
+        title: item.props.children[0],
+        type: item.type
+      }
+    })
+    console.log(headings);
+  };
+  generateTableOfContents();
+
   // https://css-tricks.com/parsing-markdown-into-an-automated-table-of-contents/
   return (
     <div className={"container"}>
@@ -367,12 +390,11 @@ export const WorldDetail = () => {
                     )}
                   </article>
 
-                    <ArticlePageLinks
-                      pathname={pathname}
-                      previousVideo={previousVideo ? previousVideo : null}
-                      nextVideo={nextVideo ? nextVideo : null}
-                    />
-                  
+                  <ArticlePageLinks
+                    pathname={pathname}
+                    previousVideo={previousVideo ? previousVideo : null}
+                    nextVideo={nextVideo ? nextVideo : null}
+                  />
 
                   <a className="feedback-link">Was this page helpfull?</a>
                 </div>
