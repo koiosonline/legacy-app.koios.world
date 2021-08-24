@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@3id/connect": "^0.1.6",
     "@babel/core": "^7.13.16",
     "@ceramicnetwork/http-client": "^0.10.2",
     "@ceramicstudio/idx": "^0.10.0",

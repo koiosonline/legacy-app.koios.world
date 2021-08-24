@@ -1,7 +1,8 @@
 import Web3 from "web3";
 import { web3Modal } from './WalletProvider';
-import { FindProfile } from './FindProfile';
+import { FindAuthenticatedProfile } from './Profiles';
 import { fetchImage } from "./Ipfs";
+import { authenticate } from "./Profiles";
 import { useEffect } from "react";
 
 export let provider;
@@ -17,7 +18,8 @@ const fetchAccountData = async () => {
 
   const accounts = await web3.eth.getAccounts();
   selectedAccount = accounts[0];
-  selectedProfile = await FindProfile(selectedAccount);
+  await authenticate();
+  selectedProfile = await FindAuthenticatedProfile(selectedAccount);
   if (selectedProfile.image) {
     profilePicture = await fetchImage(selectedProfile.image);
   }
