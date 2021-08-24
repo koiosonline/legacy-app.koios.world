@@ -13,7 +13,7 @@ export const ArticlePageLinks = (props: ArticlePageLinksProps) => {
         {props.previousVideo && (
           <a
             className={`page-link page-link__previous ${!props.nextVideo ? 'page-link--full-width' : ''}`}
-            href={`#${props.pathname}#${Slugify(props.previousVideo, {
+            href={`#${props.pathname}/${Slugify(props.previousVideo, {
               lowerCase: true,
               replaceDot: "-",
               replaceAmpersand: "and",
@@ -30,7 +30,7 @@ export const ArticlePageLinks = (props: ArticlePageLinksProps) => {
         {props.nextVideo && (
           <a
             className={`page-link ${!props.previousVideo ? 'page-link--full-width' : ''}`}
-            href={`#${props.pathname}#${Slugify(props.nextVideo, {
+            href={`#${props.pathname}/${Slugify(props.nextVideo, {
               lowerCase: true,
               replaceDot: "-",
               replaceAmpersand: "and",

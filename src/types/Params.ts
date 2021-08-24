@@ -5,3 +5,7 @@ export type CourseContentParams = {
 export type CourseDetailParams = {
     worldDetail: string;
   };
+
+  export type VideoSlugParams = {
+    videoSlug: string;
+  };

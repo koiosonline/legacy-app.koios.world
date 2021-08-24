@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useHistory, useLocation, useParams } from "react-router-dom";
 import { FindCourseDetail } from "./useWorldDetail";
 import courseInfo from "../../assets/data/Worlds.json";
 import { Slugify } from "../../components/Util/Slugify";
 import { YouTubeEmbed } from "../../components/YouTubeEmbed";
 import { SingleVideo } from "../../types/Courses/SingleVideo";
-import { CourseContentParams, CourseDetailParams } from "../../types/Params";
+import { CourseContentParams, CourseDetailParams, VideoSlugParams } from "../../types/Params";
 import { getLiterature, getVideoInfo } from "../../api/Api";
 import TabInfo from "../../components/TabInfo";
 import axios from "axios";
@@ -17,15 +17,14 @@ import { HashLink } from "react-router-hash-link";
 import { Markdown } from "../../components/Markdown";
 import { ArticlePageLinks } from "../../components/ArticlePageLinks";
 import TwitterLinks from "./static/DiscussOnTwitter.json";
-import { Icon } from "../../components/Util/Icon";
 import { compiler } from "markdown-to-jsx";
 
 export const WorldDetail = () => {
   const { hash } = useLocation();
-  const { pathname } = useLocation();
   const [videoContent, setVideoContent] = useState<SingleVideo>();
   const { worldContent } = useParams<CourseContentParams>();
   const { worldDetail } = useParams<CourseDetailParams>();
+  const { videoSlug } = useParams<VideoSlugParams>();
   const [isLoading, setIsLoading] = useState(false);
   const [courseData, setCourseData] = useState<any[]>();
   const [literatureOfVideo, setliteratureOfVideo] = useState<string>();
@@ -61,14 +60,14 @@ export const WorldDetail = () => {
 
   const data = async () => {
     setIsLoading(true);
-    const d = await FindCourseDetail(hash, courseLevel.videoInfo);
+    const d = await FindCourseDetail(videoSlug, courseLevel.videoInfo);
     setVideoContent(d);
     const getVideoList = await getVideoInfo(courseLevel.videoInfo);
     setExtraInfo(getVideoList.literature);
     setVideoList(getVideoList.videos);
     const literature = await getLiterature({
       world: worldContent,
-      article: hash.replace("#", "") + ".md",
+      article: videoSlug?.replace("#", "") + ".md",
     });
     setliteratureOfVideo(literature);
     const getCourseData = await getVideoInfo(courseLevel.data);
@@ -152,10 +151,10 @@ export const WorldDetail = () => {
   useEffect(() => {
     data();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hash, worldDetail]);
+  }, [videoSlug, worldDetail]);
 
   useEffect(() => {
-    const target = document.getElementById(hash);
+    const target = document.getElementById('#' + videoSlug);
     if (target) {
       target.scrollIntoView({ block: "center", inline: "end" });
     }
@@ -166,12 +165,12 @@ export const WorldDetail = () => {
       store.remove(video);
       setVideoCheck(!videoCheck);
     } else {
-      store.set(video, { hash: hash, videoId: video });
+      store.set(video, { hash: `/${videoSlug}`, videoId: video });
       store.set("lastWatched", {
         world: worldContent,
         level: worldDetail,
         video:
-          "#" +
+          "/" +
           Slugify(title, {
             lowerCase: true,
             replaceDot: "-",
@@ -214,7 +213,6 @@ export const WorldDetail = () => {
         type: item.type
       }
     })
-    console.log(headings);
   };
   generateTableOfContents();
 
@@ -246,8 +244,7 @@ export const WorldDetail = () => {
                             className={`${
                               store.get(video.videoid) ? "watched" : ""
                             } ${
-                              hash ===
-                              "#" +
+                              videoSlug ===
                                 Slugify(video.title, {
                                   lowerCase: true,
                                   replaceDot: "-",
@@ -282,8 +279,7 @@ export const WorldDetail = () => {
                             </svg>
                             <HashLink
                               to={
-                                worldDetail +
-                                "#" +
+                                '/worlds/' + worldContent + '/' + worldDetail + '/' +
                                 Slugify(video.title, {
                                   lowerCase: true,
                                   replaceDot: "-",
@@ -391,7 +387,7 @@ export const WorldDetail = () => {
                   </article>
 
                   <ArticlePageLinks
-                    pathname={pathname}
+                    pathname={'/worlds/' + worldContent + '/' + worldDetail}
                     previousVideo={previousVideo ? previousVideo : null}
                     nextVideo={nextVideo ? nextVideo : null}
                   />
