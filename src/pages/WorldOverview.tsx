@@ -34,7 +34,6 @@ const WorldOverview = () => {
           <h1 className={'worldOverviewHeader__titleRow__title'}>{world?.course}</h1>
           <p className={'worldOverviewHeader__titleRow__description'}>{world?.description}</p>
         </div>
-        {/*<SmallCard/>*/}
         <div className={"smallCard-container"}>
           {cardData.map((data) => {
             return (
@@ -64,16 +63,16 @@ const WorldOverview = () => {
           <LearnToNavigate world={world}/>
           <LevelCards world={world} baseUrl={worldContent}/>
         </div>
-        <DiscordEmbed/>
+        {/*<DiscordEmbed/>*/}
         <div ref={team}>
           <Team world={world}/>
         </div>
-        {/*<QuickLinks data={world?.quickLinks}/>*/}
-        {/*<div className={'linkCardContainer'}>*/}
-        {/*  <LinkCard data={world?.content} baseUrl={worldContent} title={'Learn'}/>*/}
-        {/*  <LinkCard data={world?.earn} baseUrl={worldContent} title={'Earn'}/>*/}
-        {/*  <LinkCard data={world?.connect} baseUrl={worldContent} title={'Connect'}/>*/}
-        {/*</div>*/}
+      </div>
+      <div className={'feedback'}>
+        <a className={'feedback__link'} href={'https://c0c6pmb4lmw.typeform.com/FeedbackButton'}>
+          <p>Feedback?</p>
+          <p>Let us know!</p>
+        </a>
       </div>
     </>
   )

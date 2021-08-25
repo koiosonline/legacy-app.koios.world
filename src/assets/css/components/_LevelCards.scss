@@ -4,13 +4,19 @@
   padding: $spacing-4x 0;
 
   @include for-size($tablet) {
-    //padding-top: $spacing-4x;
+    margin-top: $spacing-6x;
     padding-bottom: $spacing-10x;
     border-bottom: 1px solid #f2f2f2;
   }
 
   .text-holder {
     padding-bottom: $spacing-2x;
+    border-top: 1px solid #f2f2f2;
+
+    @include for-size($tablet) {
+      padding-top: $spacing-10x;
+    }
+
     &__title {
       font-size: 24px;
       padding-bottom: $spacing-2x;

@@ -20,6 +20,7 @@
     transition: all 0.2s ease;
     margin-bottom: 2em;
     background-color: white;
+    text-decoration: none;
     @include for-size($mobile, $desktop) {
       width: 19em;
     }
@@ -39,6 +40,7 @@
       flex-grow: 1;
       &__title {
         margin: 1rem 0 0.5em;
+        color: $color-koios-dark-grey;
       }
       &__metaData {
         display: flex;
@@ -69,6 +71,7 @@
       -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      color: $color-koios-dark-grey;
       @include for-size($desktop) {
         max-height: 6.2em;
       }
