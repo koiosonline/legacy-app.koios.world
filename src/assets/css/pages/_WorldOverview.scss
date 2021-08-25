@@ -46,7 +46,7 @@
   }
 
   @include for-size($desktop) {
-    margin: 250px auto;
+    margin: 250px auto 0;
     max-width: 1080px;
     padding: 0 $spacing-10x 250px;
   }
@@ -74,6 +74,25 @@
     padding: 0 1rem;
     @include for-size($desktop) {
       max-width: 60%;
+    }
+  }
+}
+
+.feedback {
+  position: fixed;
+  bottom: $spacing-4x;
+  right: $spacing-4x;
+
+  &__link {
+    color: #929292;
+    text-decoration: none;
+    width: $spacing-2x;
+    text-align: right;
+    font-weight: 700;
+    transition: color .25s ease;
+
+    &:hover {
+      color: $color-koios-pink;
     }
   }
 }

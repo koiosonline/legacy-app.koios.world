@@ -3,7 +3,7 @@ import {Icon} from "./Util/Icon";
 
 const Card = (props: {image: string; title: string; description: string; linkUrl: string; linkTitle: string; duration: string;}) => {
     return (
-        <div className={"cardContainer__card"}>
+        <Link to={props.linkUrl} className={"cardContainer__card"}>
             <img src={props.image} alt={'artwork'} className={"cardContainer__card__img"}/>
             <div className={"cardContainer__card__text"}>
                 <h2 className={"cardContainer__card__text__title"}>{props.title}</h2>
@@ -12,8 +12,8 @@ const Card = (props: {image: string; title: string; description: string; linkUrl
                 </div>
             </div>
             <p className={"cardContainer__card__description"}>{props.description}</p>
-            <Link to={props.linkUrl} className={"cardContainer__card__link"}><p>{props.linkTitle}</p></Link>
-        </div>
+            {/*<Link to={props.linkUrl} className={"cardContainer__card__link"}><p>{props.linkTitle}</p></Link>*/}
+        </Link>
     )
 }
 
