@@ -212,6 +212,10 @@
           margin-top: 16px;
         }
 
+        img {
+          width: 100%;
+        }
+
         blockquote {
           margin-top: 20px;
           border-radius: 5px;
@@ -335,7 +339,7 @@
       align-self: flex-start;
       position: -webkit-sticky; /* Safari */
       position: sticky;
-      top: 0;
+      top: 50px;
 
       @include for-size($desktop) {
         width: 30%;
@@ -343,6 +347,37 @@
 
       &__title {
         font-size: 0.875em; //14px;
+      }
+
+      &__list-item{
+        margin: 5px 0;
+
+        &--h2 {
+          margin-left: 10px;
+        }
+
+        &--h3 {
+          margin-left: 20px;
+        }
+
+        &--h4 {
+          margin-left: 30px;
+        }
+
+        &--h5 {
+          margin-left: 40px;
+        }
+
+        &--h6 {
+          margin-left: 50px;
+        }
+      }
+
+      &__link {
+        &:hover {
+          color: $color-koios-pink;
+          transition: all 0.2s ease;
+        }
       }
     }
   }

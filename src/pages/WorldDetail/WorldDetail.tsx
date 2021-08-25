@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import { useHistory, useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { FindCourseDetail } from "./useWorldDetail";
 import courseInfo from "../../assets/data/Worlds.json";
 import { Slugify } from "../../components/Util/Slugify";
 import { YouTubeEmbed } from "../../components/YouTubeEmbed";
 import { SingleVideo } from "../../types/Courses/SingleVideo";
-import { CourseContentParams, CourseDetailParams, VideoSlugParams } from "../../types/Params";
+import {
+  CourseContentParams,
+  CourseDetailParams,
+  VideoSlugParams,
+} from "../../types/Params";
 import { getLiterature, getVideoInfo } from "../../api/Api";
 import TabInfo from "../../components/TabInfo";
 import axios from "axios";
@@ -20,7 +24,6 @@ import TwitterLinks from "./static/DiscussOnTwitter.json";
 import { compiler } from "markdown-to-jsx";
 
 export const WorldDetail = () => {
-  const { hash } = useLocation();
   const [videoContent, setVideoContent] = useState<SingleVideo>();
   const { worldContent } = useParams<CourseContentParams>();
   const { worldDetail } = useParams<CourseDetailParams>();
@@ -34,6 +37,7 @@ export const WorldDetail = () => {
   const [videoCheck, setVideoCheck] = useState<boolean>(false);
   const [previousVideo, setPreviousVideo] = useState<string>();
   const [nextVideo, setNextVideo] = useState<string>();
+  const [tableOfContents, setTableOfContents] = useState<any[]>([]);
 
   const getPreviousAndNextVideo = () => {
     const videoListWithoutChapters = videoList?.filter((item) => !item.chapter);
@@ -144,6 +148,33 @@ export const WorldDetail = () => {
     setQuizState(!quizState);
   };
 
+  const generateTableOfContents = async () => {
+    const compiledMarkdown = await compiler(`${literatureOfVideo}`, {
+      forceBlock: true,
+    });
+    const filterHeadings = await compiledMarkdown.props.children.filter(
+      (item) =>
+        item.type === "h1" ||
+        item.type === "h2" ||
+        item.type === "h3" ||
+        item.type === "h4" ||
+        item.type === "h5" ||
+        item.type === "h6"
+    );
+    const headings = await filterHeadings.map((item) => {
+      return {
+        id: item.props.id,
+        title: item.props.children[0],
+        type: item.type,
+      };
+    });
+    setTableOfContents(headings);
+  };
+
+  useEffect(() => {
+    generateTableOfContents();
+  }, [literatureOfVideo]);
+
   useEffect(() => {
     getPreviousAndNextVideo();
   });
@@ -152,9 +183,10 @@ export const WorldDetail = () => {
     data();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoSlug, worldDetail]);
+  // const table = generateTableOfContents();
 
   useEffect(() => {
-    const target = document.getElementById('#' + videoSlug);
+    const target = document.getElementById("#" + videoSlug);
     if (target) {
       target.scrollIntoView({ block: "center", inline: "end" });
     }
@@ -195,27 +227,6 @@ export const WorldDetail = () => {
     }
   };
 
-  const generateTableOfContents = async () => {
-    const compiledMarkdown = await compiler(`${literatureOfVideo}`, { forceBlock: true });
-    const filterHeadings = await compiledMarkdown.props.children.filter(
-      (item) =>
-        item.type === "h1" ||
-        item.type === "h2" ||
-        item.type === "h3" ||
-        item.type === "h4" ||
-        item.type === "h5" ||
-        item.type === "h6"
-    );
-    const headings = await filterHeadings.map(item => {
-      return {
-        id: item.props.id,
-        title: item.props.children[0],
-        type: item.type
-      }
-    })
-  };
-  generateTableOfContents();
-
   // https://css-tricks.com/parsing-markdown-into-an-automated-table-of-contents/
   return (
     <div className={"container"}>
@@ -245,11 +256,11 @@ export const WorldDetail = () => {
                               store.get(video.videoid) ? "watched" : ""
                             } ${
                               videoSlug ===
-                                Slugify(video.title, {
-                                  lowerCase: true,
-                                  replaceDot: "-",
-                                  replaceAmpersand: "and",
-                                })
+                              Slugify(video.title, {
+                                lowerCase: true,
+                                replaceDot: "-",
+                                replaceAmpersand: "and",
+                              })
                                 ? "active-state"
                                 : ""
                             }`}
@@ -279,7 +290,11 @@ export const WorldDetail = () => {
                             </svg>
                             <HashLink
                               to={
-                                '/worlds/' + worldContent + '/' + worldDetail + '/' +
+                                "/worlds/" +
+                                worldContent +
+                                "/" +
+                                worldDetail +
+                                "/" +
                                 Slugify(video.title, {
                                   lowerCase: true,
                                   replaceDot: "-",
@@ -387,7 +402,7 @@ export const WorldDetail = () => {
                   </article>
 
                   <ArticlePageLinks
-                    pathname={'/worlds/' + worldContent + '/' + worldDetail}
+                    pathname={"/worlds/" + worldContent + "/" + worldDetail}
                     previousVideo={previousVideo ? previousVideo : null}
                     nextVideo={nextVideo ? nextVideo : null}
                   />
@@ -397,9 +412,22 @@ export const WorldDetail = () => {
 
                 <div className="table-of-contents">
                   {literatureOfVideo ? (
-                    <h2 className="table-of-contents__title">
-                      Table of contents
-                    </h2>
+                    <>
+                      <h2 className="table-of-contents__title">
+                        Table of contents
+                      </h2>
+                      {tableOfContents && (
+                        <ul className="table-of-contents__list">
+                          {tableOfContents.map((item, index) => (
+                            <li key={index} className={`table-of-contents__list-item table-of-contents__list-item--${item.type}`}>
+                              <HashLink to={`#${item.id}`} className="table-of-contents__link link">
+                                {item.title}
+                              </HashLink>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
                   ) : (
                     courseData &&
                     filterDataById() && (
