@@ -14,7 +14,7 @@ const LearnToNavigate = (props) => {
         <div className={'links'}>
           {continueLearning &&
           <div className={'continue'}>
-            <a href={'/worlds/' + continueLearning.world + '/' + continueLearning.level + continueLearning.video}>Continue learning</a>
+            <a href={'#/worlds/' + continueLearning.world + '/' + continueLearning.level + continueLearning.video}>Continue learning</a>
           </div>
           }
           <QuickLinks data={props.world?.quickLinks}/>
