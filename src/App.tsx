@@ -30,7 +30,7 @@ export const App = () => {
                 <Route path="/" exact component={Home}><Redirect to="/worlds"/></Route>
                 <Route path="/worlds" exact component={Worlds}/>
                 <Route path="/worlds/:worldContent" exact component={WorldOverview}/>
-                <Route path="/worlds/:worldContent/:worldDetail" exact component={WorldDetail}/>
+                <Route path="/worlds/:worldContent/:worldDetail/:videoSlug?" exact component={WorldDetail}/>
                 <Route path="/coming-soon" exact component={ComingSoon} />
                 <Route path="/profile" exact component={Profile} />
                 <Route path="/leaderboard" exact component={Leaderboard}/>

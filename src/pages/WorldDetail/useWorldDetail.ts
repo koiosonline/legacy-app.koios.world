@@ -7,10 +7,10 @@ import { Slugify } from "../../components/Util/Slugify";
 // };
 
 export const FindCourseDetail = async (hash, videoInfoAddress) => {
-  const slugifiedHash = Slugify(hash);
   const data = await getVideoInfo(videoInfoAddress);
-
+  
   if (hash) {
+    const slugifiedHash = Slugify(hash);
     const video = data.videos.find((v) =>
       Slugify(v.title, {
         lowerCase: true,
