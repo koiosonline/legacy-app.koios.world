@@ -1,0 +1,97 @@
+.learnToNavigate-container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include for-size($tablet) {
+    grid-template-columns: 50% 50%;
+    grid-column-gap: $spacing-4x;
+    padding-top: $spacing-4x;
+  }
+
+  .learnToNavigate {
+    //overflow: hidden;
+
+    @include for-size($desktop) {
+      overflow: unset;
+    }
+
+    &__title {
+      font-family: $font-family-headings;
+      color: $color-koios-dark-grey;
+      margin-bottom: $spacing-2x;
+    }
+    &__description {
+      margin-bottom: $spacing-2x;
+      color: $color-koios-dark-grey;
+    }
+
+    .links {
+      display: flex;
+      flex-flow: column;
+      //position: relative;
+      //min-height: 50px;
+
+      @include for-size($tablet) {
+        display: flex;
+        flex-flow: column;
+      }
+
+      .continue {
+        display: flex;
+        align-self: flex-start;
+        //padding-left: $spacing-2x;
+        margin-bottom: $spacing-2x;
+        position: relative;
+        left: 0;
+        width: 100%;
+
+        @include for-size($tablet) {
+          //align-self: center;
+          //border-right: 1px solid lightgray;
+          padding-left: unset;
+          margin: $spacing-4x 0;
+        }
+
+        a {
+          text-decoration: none;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 400;
+          //min-width: 9rem;
+          text-align: center;
+          padding: 8px 16px;
+          margin: 0 1rem 0 0;
+          border-radius: $radius;
+          box-shadow: $button-shadow;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+          background-image: $gradient-koios;
+          background-size: 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: $color-koios-pink;
+          border: 1px solid lightgray;
+          width: 100%;
+
+          &:hover {
+            border: 1px solid $color-koios-pink;
+            background-size: 150%;
+            //color: white;
+            box-shadow: $button-shadow-hover;
+          }
+          &:active {
+            background-color: $button-active-color;
+          }
+        }
+      }
+    }
+  }
+
+  .image {
+    margin: 0 auto;
+    img {
+      max-width: 350px;
+      max-height: 300px;
+      object-fit: cover;
+    }
+  }
+}

@@ -13,6 +13,9 @@ import { UserContext } from "./Context/UserContext";
 import {Error404} from "./pages/Error404";
 import Contribute from "./pages/Contribute";
 import ScrollToTop from "./components/Util/scrollTop";
+import ExplanationVideos from "./pages/ExplanationVideos";
+import Earn from "./pages/Earn";
+import VacancyDetail from "./pages/VacancyDetail";
 
 export const App = () => {
   const [user, setUser] = useState(null);
@@ -27,11 +30,14 @@ export const App = () => {
                 <Route path="/" exact component={Home}><Redirect to="/worlds"/></Route>
                 <Route path="/worlds" exact component={Worlds}/>
                 <Route path="/worlds/:worldContent" exact component={WorldOverview}/>
-                <Route path="/worlds/:worldContent/:worldDetail" exact component={WorldDetail}/>
+                <Route path="/worlds/:worldContent/:worldDetail/:videoSlug?" exact component={WorldDetail}/>
                 <Route path="/coming-soon" exact component={ComingSoon} />
                 <Route path="/profile" exact component={Profile} />
                 <Route path="/leaderboard" exact component={Leaderboard}/>
                 <Route path="/contribute" exact component={Contribute}/>
+                <Route path="/explanation" exact component={ExplanationVideos}/>
+                <Route path="/earn" exact component={Earn} />
+                <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
                 <Route component={Error404}/>
             </Switch>
           </Layout>

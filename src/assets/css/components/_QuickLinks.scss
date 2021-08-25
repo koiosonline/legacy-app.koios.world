@@ -1,18 +1,21 @@
 .quickLinkContainer {
-  display: flex;
+  display: grid;
   flex-direction: row;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  overflow: auto;
-  padding: 0 1rem;
-  margin-top: 1em;
-  &::-webkit-scrollbar {
-    display: none;
+  height: 100%;
+  //overflow: scroll;
+  position: relative;
+
+  @include for-size($desktop) {
+    //padding: 0 $spacing-2x;
+    grid-template-columns: repeat(3, 1fr);
   }
+
   &__link {
     text-decoration: none;
     font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
-    //min-width: 9rem;
+    font-weight: 400;
     text-align: center;
     padding: 0.25em 1em;
     margin: 1rem 1rem 1rem 0;

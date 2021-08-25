@@ -1,7 +1,7 @@
 .main {
-  height: 100vh;
+  min-height: 100vh;
   background-repeat: no-repeat;
-  margin-top: 90px;
+  margin-top: 60px;
 
   @include for-size($desktop) {
     margin-left: 300px;

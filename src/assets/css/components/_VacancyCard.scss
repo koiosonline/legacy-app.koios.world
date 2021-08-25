@@ -1,0 +1,69 @@
+.vacancyCard {
+  box-shadow: 0px 0px 21px -10px rgb(110 110 110 / 50%);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all .25s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-$spacing-2x);
+    box-shadow: 0px 0px 21px -10px rgb(110 110 110 / 100%);
+  }
+
+  &__banner {
+    height: $spacing-10x;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-size: cover;
+  }
+
+  .content-holder {
+    display: flex;
+    flex-flow: column;
+    padding: $spacing-2x;
+    height: 100%;
+    margin-bottom: $spacing-6x;
+
+    &__title {
+      color: $color-koios-dark-grey;
+      padding-bottom: $spacing-1x;
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      color: #bbbbbb;
+      font-size: 12px;
+      padding-bottom: $spacing-1x;
+    }
+
+    &__description {
+      color: $color-koios-dark-grey;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  .image-row  {
+    margin-top: $spacing-2x;
+    display: flex;
+    justify-content: flex-end;
+    align-self: stretch;
+    position: absolute;
+    bottom: $spacing-1x;
+    right: $spacing-2x;
+
+    img {
+      max-width: $spacing-5x;
+      max-height: $spacing-5x;
+      object-fit: cover;
+      background-color: white;
+
+      &:first-child {
+        margin-right: $spacing-2x;
+        padding: 3px;
+      }
+    }
+  }
+}
