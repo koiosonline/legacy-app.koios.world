@@ -46,6 +46,8 @@
       "description": "Build your blockchain dream! Within the Koios team and/or in collaboration with network partners, we have resources available to support you in executing your very own idea. If the concept aligns with Koios, you can ask us for time like guidance or specific skills, funds, hardware access, software access, etc. If it does not align with our own activities, no problem, but access to resources will be more limited. Dare to dream & dare to ask. Contact us via the assignment link or find us in the Discord.",
       "skillSet": "No specifics",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -61,13 +63,15 @@
     {
       "assignmentUrl": "/earn/donation-webshop",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
       "title": "Donation webshop",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Help us stream value to there where it matters. The Koios DAO, as well as the platform users, will earn different rewards. Some of them can be monetary by nature. We would like to facilitate the possibility of donating these rewards. We are in phase Zero. Everything needs to be built up from the ground. Possible activities: \nDesign and set up the processes \nFind suited charities, projects (that accept cryptocurrency & are approved by our community) \nDesign and/or build the front page with charities overview\nDesign the incentive mechanisms (donators receive badge xxx, or …., or ….)\nOther (we are open to ideas!)",
       "skillSet": "No specifics",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -86,13 +90,15 @@
     {
       "assignmentUrl": "/earn/Front-end-developer",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
       "title": "Front end developer",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Show the world what you got and help expand & improve the decentralized learning dream. \nAs you might have noticed, there is a lot to be done on the front-end of Koios; 404 pages, work from the action list with improvement suggestions, or perhaps your very own ideas. Select a very minor element or help in a more extensive task at hand. Everything is possible on the open-source platform. Join our team and secure your spot after the minor. Build up your web3 experience and resume in an open-source fashion (via Github). Front-end is built in React. In connection with the back end, you will encounter JavaScript and blockchain gimmicks.",
       "skillSet": "Language skills: React. JavaScript would be a plus",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -121,13 +127,15 @@
     {
       "assignmentUrl": "/earn/back-end-developer",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
       "title": "Back end developer",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Show the world what you got and help expand & improve the decentralized learning dream. This assignment is all about developing and improving the back-end of Koios. We tie the platform to all kinds of web2 applications (Discord, CMS, Twitter, etc.). And web3 applications (blockchains, tokens/contracts, defi tools, dao tools, tools from partners). You could work from our action list or bring your very own ideas to the table. Everything is possible on the open-source platform. So join our team & secure your spot after the minor. ",
       "skillSet": "Javascript (+ React would help)",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -162,6 +170,8 @@
       "description": "Hardware, hardware, hardware. If you are all about hardware, this is your chance. Explore the blockchain realm, select your favorite project, tools, etc., and start experimenting. Make an educational clip about it, or align in some other way with the Koios platform. We can talk about allocating some of our resources (cover costs, etc.). You could also work from our hit list or expand one of your own ideas. We’ve had digital bartenders, a lightning ATM, mining rigs, and even a token game arcade! The sky is the limit.",
       "skillSet": "Junior hardware experience",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -184,6 +194,8 @@
       "description": "To realize the decentralized dream with free learning for all, the Koios DAO needs to become self-sustainable. One way to possibly learn this is to mine and mint cryptocurrencies from (partner) protocols. The assignment is to search & select the suitable protocols and help us validate the software. Join our team & resources, and go wild! You could also work from our hit list or expand one of your own ideas. We’ve had all kinds of PoW or PoS protocols and are running some protocols now. ",
       "skillSet": "Junior hardware experience",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -202,13 +214,15 @@
     {
       "assignmentUrl": "/earn/visual-designer",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
       "title": "Visual designer",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Do your hands start to itch when you see the current Koios design (or slack in places where you would love to go all out). We need help with new or improved visual designs for the Koios web pages and content. Think website images, token & badges design, NFT’s, storyline visualizations, images for in the curriculum. You can bring your own ideas, style, and vision to the table. Show the world what you got!",
       "skillSet": "Junior design experience",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -230,13 +244,15 @@
     {
       "assignmentUrl": "/earn/ux-designer",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
-      "title": "Visual designer",
+      "title": "UX designer",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "You are currently experiencing V0.1 of Koios world, so there are still infinite possibilities. Help us improve the user experience in this adventure. You could work with the team from our hitlist, feedback from users, or tap from your own experiences and vision. Help us help people learn and build a genuinely incredible web2 and web3 experience. ",
       "skillSet": "Junior UX experience.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -265,6 +281,8 @@
       "description": "This job is all about tokens, focusing on the different Koios Tokens we will be using. Help us set up the token framework (which tokens for what purposes), the first incentive mechanisms, real-life use cases, the design (technical or visual), the metrics & possibly the launch. Or explore the crypto space and find new ideas or partners to incorporate/work within the token constellation. You will work with a team of token designers and will have a specific task of your choosing.",
       "skillSet": "Basic knowledge of cryptocurrencies is preferred. ",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -283,13 +301,15 @@
     {
       "assignmentUrl": "/earn/deep-dive-koios-dao-research",
       "category": "DAO",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://cryptoadventure.com/wp-content/uploads/2020/09/Knowing-the-difference-between-an-Open-Community-and-Closed-Network-Blockchain-1568x946.jpg",
       "provider": "Koios",
       "title": "Deep Dive Koios DAO Research",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "The Koios DAO is a newbie in the DAO space. We are in the orientation phase and taking our first baby steps as a DAO. We need help, a lot of information and good DAO examples are out there. This assignment is researching the DAO space and the different components (which you can select). Think voting processes, the tools to use, community engagement, mechanics. All ideas to expand on decentralization are welcome! ",
       "skillSet": "No specifics. ",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -312,6 +332,8 @@
       "description": "The Koios token has launched. It is time to start experimenting with it. Think incentives, in- en outflows, distributions and token mechanics, use-cases, python calculation. Select a topic of your liking and help us build the self-sustainable model. This assignment also heavily focusses on the research part: what examples & solutions for engagement can you find out there in the cryptocurrency space. ",
       "skillSet": "No specifics. ",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -330,13 +352,15 @@
     {
       "assignmentUrl": "/earn/minor-team-assistance",
       "category": "Curriculum",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://www.usnews.com/dims4/USNEWS/7ee04e4/2147483647/crop/1996x1331%2B3%2B0/resize/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2F0f%2F3e%2Fb10501f74fa6b123dad8dbc925a7%2F210416-stock.jpg",
       "provider": "Koios",
       "title": "Minor team assistance",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Grow into the next student assistant! \nWe are looking for assistance on several activities. It could be supporting (one of) the projects, help out with the curriculum, in the community, etc. You will start with a broad orientation of multiple weekly tasks but will grow into one that fits your skills and wishes. ",
       "skillSet": "An eager mind-set",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -356,6 +380,8 @@
       "description": "To realize the decentralized dream with free learning for all, the Koios DAO needs to become self-sustainable. One way to possibly discover this is to engage with partner protocols and exchange value. The assignment is to search & select the suitable protocols and help us find the win-wins. Join our team & resources, and expand your network! ",
       "skillSet": "No specifics",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -371,13 +397,15 @@
     {
       "assignmentUrl": "/earn/crypto-news",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
-      "title": "Curriculum",
+      "title": "Crypto news",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Are you reading every crypto news article, following every Twitter debate and are you active in many, many different communities? Than this is your moment to shine! Share & summarise your most important readings on a daily basis in the Blackbird Discord. If you are really talented and motivated we can move you towards the World Website and create your own blog there. Content is king! ",
       "skillSet": "Junior writing skills would help!",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -396,13 +424,15 @@
     {
       "assignmentUrl": "/earn/community-drive-value-exchange",
       "category": "Community",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://blog.ionixxtech.com/wp-content/uploads/2018/08/blockchain-community.png",
       "provider": "Koios",
       "title": "Community drive value exchange",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "The Koios DAO will be run by the community, facilitated by the Koios token which enables different types of value exchange. The community and types of value exchanges (use-cases) are therefore of the utmost importance. This job is about researching, finding and applying initiatives to grow the community and improve the quality of participation. Multiple angles can be chosen from (token design, use-cases, community quantity or quality improvements). Go all out in creating incentives, experiment with real-life usecases, host (online or offline) activities, and claim your front seat in the Koios community! ",
       "skillSet": "Junior writing skills would help!",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -424,13 +454,15 @@
     {
       "assignmentUrl": "/earn/legal–intellectual-property-(platform-or-curriculum)",
       "category": "Legal",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://travel.state.gov/content/travel/en/legal/_jcr_content/tsg-rwd-content-page-parsys/slideshow.img.jpg/1512169201172.jpg",
       "provider": "Koios",
       "title": "Legal – Intellectual Property (platform or curriculum) ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Koios is actively sharing content and the platform is build in open-source fashion. This screams legal intellectual property issues. It would be your job to find the IP bottle necks and propose possible solutions that work for involved (and future) parties. Many examples are out there, how did they solve these legal challenges? We have laid some of the groundworks already, you can take it from there! Your deliverable would be and advice and implementation track. ",
       "skillSet": "(Junior) legal skills would help!",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -449,13 +481,15 @@
     {
       "assignmentUrl": "/earn/legal–gdpr-&-badges",
       "category": "Legal",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://travel.state.gov/content/travel/en/legal/_jcr_content/tsg-rwd-content-page-parsys/slideshow.img.jpg/1512169201172.jpg",
       "provider": "Koios",
       "title": "Legal – GDPR & Badges",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Before we go live with badges per user, we need to make sure all is GDRP (AVG) proof. Many examples are out there, how did they solve these legal challenges? We have laid some of the groundworks already, you can take it from there! Your deliverable would be and advice and implementation track. ",
       "skillSet": "(Junior) legal skills would help!",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -474,13 +508,15 @@
     {
       "assignmentUrl": "/earn/legal–koios-token-sale",
       "category": "Legal",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://travel.state.gov/content/travel/en/legal/_jcr_content/tsg-rwd-content-page-parsys/slideshow.img.jpg/1512169201172.jpg",
       "provider": "Koios",
       "title": "Legal – Koios token sale ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "To realize the decentralized dream with free learning for all, the Koios DAO needs to become self-sustainable. One way to possibly realize this is to raise funds with selling governance tokens. Based on research in the crypto space, your task would be writing an advisory report that suits the needs of the ecosystem and confirms with the legal framework. Many examples are out there, how did they solve these legal challenges? We have laid some of the groundworks already, you can take it from there! ",
       "skillSet": "(Junior) legal skills would help!",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -505,13 +541,15 @@
     {
       "assignmentUrl": "/earn/koios-micro-challenges",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
       "title": "Legal – Koios token sale ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "We would love to reward users for tasks or link them to environments with loads of opportunities to apply their skills and reap rewards. Help us explore the realm of micro-challenge, in which we are currently in phase 0 (building from ground): \nExplore the realm of paid micro-challenges and help us select the right environments (for example gitcoin.co)\n Help design the earning page and fill it with assignments and links\nHelp create incentives for community members and partners to add challenges \nHelp create incentives for community members and partners to solve and earn from challenges \nStreamline the process, optimize UX (for micro-payments for example) \nHelp promote / tell the story ",
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -530,13 +568,15 @@
     {
       "assignmentUrl": "/earn/gamification-crew",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
       "title": "Gamification Crew ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Content is king and the curriculum crew is core business. We need help in gamifying our curriculum, increase the quality, increase engagement, etc. Bring your own ideas to the table or execute from our hit list. Extra benefit: if you want to align your weekly quiz and portfolio activities with your field assignment, this is a good track! ",
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -558,13 +598,15 @@
     {
       "assignmentUrl": "/earn/the-nft-webshop",
       "category": "Platform",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
       "provider": "Koios",
       "title": "Gamification Crew ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "NFT’s are a promising type of tokens. Koios aims to use them to incentivize users, to create a revenue source, to give certain users rights on the platform, etc. Help us discover the possibilities, find solutions for certain problems and apply the tech to solve the challenges! ",
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -590,6 +632,8 @@
       "description": "To realize the decentralized dream with free learning for all, the Koios DAO needs to become self-sustainable. There are many different possibilities, and we already laid some of the groundwork. Still, for this assignment, you help us select the correct model candidate. Or add your own ideas. The assignment contains high elements of token engineering, combined with finance. ",
       "skillSet": "(junior) business background would help!",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -610,11 +654,13 @@
       "category": "Hardware & software",
       "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
       "provider": "Koios",
-      "title": "Sustainable Business Model Koios ",
+      "title": "Build a trading bot",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Sometimes a title says it all…This is a joined project with students from the Trading Minors and some of our team members. You can work on the coding or on the technical analysis (variables). ",
       "skillSet": "Background in mathematics would help.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -642,13 +688,15 @@
     {
       "assignmentUrl": "/earn/Koios-investments",
       "category": "DAO",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://cryptoadventure.com/wp-content/uploads/2020/09/Knowing-the-difference-between-an-Open-Community-and-Closed-Network-Blockchain-1568x946.jpg",
       "provider": "Koios",
       "title": "Koios investments",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Fundamental analysis of crypto projects. Join the research team and shill the Discord community your ground-breaking research. Possibly in the future: create proposals for the DAO to invest and allow the community to vote on it. ",
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -664,13 +712,15 @@
     {
       "assignmentUrl": "/earn/marketing-&-media",
       "category": "Community",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://blog.ionixxtech.com/wp-content/uploads/2018/08/blockchain-community.png",
       "provider": "Koios",
       "title": "Koios investments",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "So far, Koios has operated very low-key. Now is the time to change that. We are looking for a marketing growth manager, somebody familiar with social media and willing to expand the reach in the crypto space. We already laid some of the groundwork, so you can work from our hitlist or bring your own approach and vision to the table. Let the Koios shill begin \uD83D\uDE0A!",
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -692,13 +742,15 @@
     {
       "assignmentUrl": "/earn/global-inclusive-learning",
       "category": "Community",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "https://blog.ionixxtech.com/wp-content/uploads/2018/08/blockchain-community.png",
       "provider": "Koios",
       "title": "Global inclusive learning",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
       "description": "Due to the open-source approach, people from all over the world can access the program. So far, we have mainly been focussing on Bachelor students from THUAS. But now is the time to expand to regions less familiar with web3 technology. Your task will be to improve the onboarding process for all kinds of students & discuss the Koios possibilities with entities around the globe. ",
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -724,6 +776,8 @@
       "description": "Help us choose strategies. Multiple dimensions of growth are possible (technical, financial, users, etc.)",
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
+      "reimbursement": "./images/bitcoin.svg",
+      "providerLogo": "./images/world_introduction.svg",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"

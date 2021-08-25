@@ -142,3 +142,73 @@
   }
 }
 
+.partner {
+  max-width: 1080px;
+  margin: $spacing-10x auto;
+  padding: 0 $spacing-2x $spacing-10x;
+
+  @include for-size($desktop) {
+    padding: 0 $spacing-10x;
+  }
+
+  &__header {
+    padding: $spacing-4x 0;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+
+    .title {
+      font-family: $font-family-headings;
+      padding-bottom: $spacing-2x;
+      color: $color-koios-dark-grey;
+    }
+
+    .sub-title {
+      font-size: 18px;
+      //font-weight: 700;
+      padding-bottom: $spacing-2x;
+    }
+
+    .appreciation {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .steps-row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: $spacing-8x;
+
+    &__number {
+      font-family: $font-family-headings;
+      font-size: 48px;
+    }
+
+    &__text-holder {
+      min-width: 75%;
+      min-height: $spacing-10x;
+      p {
+        font-size: 18px;
+        color: $color-koios-dark-grey;
+        padding-bottom: $spacing-4x;
+      }
+
+      a {
+        text-decoration: none;
+        color: $color-koios-dark-grey;
+        padding: $spacing-1x $spacing-4x;
+        box-shadow: 0px 0px 21px -10px rgb(110 110 110 / 50%);
+        border-radius: 20px;
+        border: 2px solid transparent;
+        transition: color, border .25s ease;
+
+        &:hover {
+          border: 2px solid $color-koios-pink;
+          color: $color-koios-pink;
+        }
+      }
+    }
+  }
+}
+

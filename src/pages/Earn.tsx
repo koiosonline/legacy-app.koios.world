@@ -1,6 +1,7 @@
 import {useState} from "react";
 import VacanciesIntro from "../components/VacanciesIntro";
 import earnData from "../assets/data/earn.json";
+import partnerData from "../assets/data/earnPartners.json";
 import VacancyCard from "../components/VacancyCard";
 import {Link} from "react-router-dom";
 
@@ -51,6 +52,8 @@ const Earn = () => {
                     imageUrl={data.imageUrl}
                     subTitle={data.subTitle}
                     description={data.description}
+                    reimbursement={data.reimbursement}
+                    providerLogo={data.providerLogo}
                   />
                 )
               }
@@ -62,6 +65,8 @@ const Earn = () => {
                     imageUrl={data.imageUrl}
                     subTitle={data.subTitle}
                     description={data.description}
+                    reimbursement={data.reimbursement}
+                    providerLogo={data.providerLogo}
                   />
                 )
               }
@@ -73,7 +78,38 @@ const Earn = () => {
       }
 
       {submissionsActive &&
-      <h1>Submissions</h1>
+        <div className={'partner'}>
+          <div className={'partner__header'}>
+            <h1 className={'title'}>{partnerData.title}</h1>
+            <p className={'sub-title'}>{partnerData.subTitle}</p>
+            <p className={'appreciation'}>{partnerData.appreciation}</p>
+          </div>
+          <div>
+
+            <div className={'steps-row'}>
+              <h2 className={'steps-row__number'}>1.</h2>
+              <div className={'steps-row__text-holder'}>
+                <p>{partnerData.one}</p>
+                <a href={partnerData.formUrl}>Take me to the form</a>
+              </div>
+            </div>
+
+            <div className={'steps-row'}>
+              <h2 className={'steps-row__number'}>2.</h2>
+              <div className={'steps-row__text-holder'}>
+                <p>{partnerData.two}</p>
+              </div>
+            </div>
+
+            <div className={'steps-row'}>
+              <h2 className={'steps-row__number'}>3.</h2>
+              <div className={'steps-row__text-holder'}>
+                <p>{partnerData.three}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
       }
     </>
   )

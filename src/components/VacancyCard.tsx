@@ -9,6 +9,14 @@ const VacancyCard = (props) => {
         <h3 className={'content-holder__subtitle'}>{props.subTitle}</h3>
         <p className={'content-holder__description'}>{props.description}</p>
       </div>
+      <div className={'image-row'}>
+        {props.reimbursement &&
+        <img src={props.reimbursement} alt={'image'}/>
+        }
+        {props.providerLogo &&
+        <img src={props.providerLogo} alt={'image'}/>
+        }
+      </div>
     </Link>
   )
 }
