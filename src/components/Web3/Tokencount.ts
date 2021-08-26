@@ -15,11 +15,11 @@ export const getTokenCountTDFA = async () => {
   for (let user of tokenholders.data.users) {
     if (tdfaAddresses.includes(user.address)) {
       if (user.address == selectedAccount.toLowerCase()) {
-        let entry = { "address": user.address, "balance": (user.balance / 10 ** 18), "image": "default", "index": i, "selectedAccount": true };
+        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": true };
         tokenholdersTDFA.push(entry);
         i++
       } else {
-        let entry = { "address": user.address, "balance": (user.balance / 10 ** 18), "image": "default", "index": i, "selectedAccount": false };
+        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": false };
         tokenholdersTDFA.push(entry);
         i++
       }  
@@ -61,11 +61,11 @@ export const getTokenCountBlockchain = async () => {
   for (let user of tokenholders.data.users) {
     if (blockchainAddresses.includes(user.address)) {
       if (user.address == selectedAccount?.toLowerCase()) {
-        let entry = { "address": user.address, "balance": (user.balance / 10 ** 18), "image": "default", "index": i, "selectedAccount": true };
+        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": true };
         tokenholdersBlockchain.push(entry);
         i++
       } else {
-        let entry = { "address": user.address, "balance": (user.balance / 10 ** 18), "image": "default", "index": i, "selectedAccount": false };
+        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": false };
         tokenholdersBlockchain.push(entry);
         i++
       }  

@@ -99,7 +99,7 @@ export const Profile = () => {
               <p>Logout</p>
               <Icon type="sign-out" className="profile__sign-out" />
             </div>
-            <a href={'https://3box.io/hub'} className={'actionContainer__actions__item'}>
+            <a href={'https://3box.io/hub'} target={'_blank'} rel={'noreferrer noopener'} className={'actionContainer__actions__item'}>
               <p>Edit profile</p>
               <Icon type="edit-profile" className="profile__sign-out" />
             </a>
