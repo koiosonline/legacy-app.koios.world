@@ -7,7 +7,7 @@ import { provider } from './Web3'
 
 declare const window: any;
 
-const CERAMIC_URL = process.env.CERAMIC_API || 'http://localhost:7007'
+const CERAMIC_URL = process.env.CERAMIC_API || 'https://gateway-clay.ceramic.network'
 
 export const authenticate = async () => {
   const ethProvider = provider;
@@ -43,11 +43,32 @@ export const authenticate = async () => {
 
 export const FindAuthenticatedProfile = async (address: string) => {
   try {
+
+    const profile = await window.idx.get("basicProfile", window.did);
+    console.log(profile)
+    let profilename: string = profile.name ? profile.name : address;
+    let picturesource;
+    if (profile.image) {
+      picturesource = profile.image.original.src;
+    }
+    let entry = { "name": profilename, "image": picturesource };
+    localStorage.setItem(address, JSON.stringify(entry));
+    return entry;
+  }
+  catch {
+    console.error("DID not found");
+  }
+}
+
+export const FindProfileLeaderboard = async (address: string) => {
+  try {
     if (localStorage.getItem(address)) {
       let entry = JSON.parse(localStorage.getItem(address));
       return entry;
     }
     else {
+      const caip10address = address + "@eip155:3";
+      console.log(caip10address)
       const profile = await window.idx.get("basicProfile", window.did);
       let profilename: string = profile.name ? profile.name : address;
       let picturesource;
@@ -62,13 +83,6 @@ export const FindAuthenticatedProfile = async (address: string) => {
   catch {
     console.error("DID not found");
   }
-}
-
-export const FindProfileLeaderboard = async (address: string) => {
-  console.log("in findprofile")
-  const profile = await window.idx.get("basicProfile", "did:3:kjzl6cwe1jw145t8az6xf1dd4rl94cd7h0yvly1xffj5vav5adiym6ncxb71jxp");
-
-  console.log(profile);
 }
 
 /*
