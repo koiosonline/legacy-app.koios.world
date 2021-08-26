@@ -337,12 +337,12 @@
     .table-of-contents {
       width: 100%;
       align-self: flex-start;
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
       top: 50px;
-
+      
       @include for-size($desktop) {
         width: 30%;
+        position: sticky;
+        position: -webkit-sticky; /* Safari */
       }
 
       &__title {
