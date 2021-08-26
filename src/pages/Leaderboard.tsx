@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import {
   getTokenCountTDFA,
   getTokenCountBlockchain,
-  getTokenCountOverall
 } from "../components/Web3/Tokencount";
 import Loading from "../components/Loading";
 
@@ -36,13 +35,6 @@ export const Leaderboard = () => {
     setIsLoading(false);
   };
 
-  const updateLeaderboardOverall = async () => {
-    setIsLoading(true);
-    const updatedRanking = await getTokenCountOverall();
-    showLeaderboard(updatedRanking);
-    setIsLoading(false);
-  };
-
   return (
     <div className="leaderboard container">
       <h1 className="leaderboard__header">Leaderboard</h1>
@@ -69,26 +61,17 @@ export const Leaderboard = () => {
         >
           <p>TDFA leaderboard</p>
         </button>
-        <button
-          className={`leaderboard-selector__button ${
-            !active ? "leaderboard-selector__button--active active-leaderboard" : ""
-          }`}
-          onClick={() => {
-            updateLeaderboardOverall();
-            setActive(!active);
-          }}
-        >
-          <p>Overall leaderboard</p>
-        </button>
       </div>
 
       <div className="ranking">
         <div className="ranking__metadata">
           <h2 className="ranking__metadata-title">Position</h2>
           <h2 className="ranking__metadata-title">Participants</h2>
+          {/*<h2 className="ranking__metadata-title"><span><img src={'/images/titan.png'}/></span>Amount</h2>*/}
           <h2 className="ranking__metadata-title">Titan-tokens</h2>
         </div>
 
+        {/*{isLoading && <p>Loading...</p>}*/}
         {isLoading && <Loading/>}
         {!isLoading && (
           <ul>
