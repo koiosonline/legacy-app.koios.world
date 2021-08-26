@@ -15,7 +15,7 @@ declare global {
 
 export const Leaderboard = () => {
   const [leaderboard, showLeaderboard] = useState<any[]>([]);
-  const [active, setActive] = useState<boolean>(true);
+  const [active, setActive] = useState<string>("Blockchain");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -49,33 +49,33 @@ export const Leaderboard = () => {
       <div className="leaderboard-selector">
         <button
           className={`leaderboard-selector__button ${
-            active ? "leaderboard-selector__button--active active-leaderboard" : ""
+            active === "Blockchain" ? "leaderboard-selector__button--active active-leaderboard" : ""
           }`}
           onClick={() => {
             updateLeaderboardBlockchain();
-            setActive(!active);
+            setActive("Blockchain");
           }}
         >
           <p>Blockchain leaderboard</p>
         </button>
         <button
           className={`leaderboard-selector__button ${
-            !active ? "leaderboard-selector__button--active active-leaderboard" : ""
+            active === "TDFA" ? "leaderboard-selector__button--active active-leaderboard" : ""
           }`}
           onClick={() => {
             updateLeaderboardTDFA();
-            setActive(!active);
+            setActive("TDFA");
           }}
         >
           <p>TDFA leaderboard</p>
         </button>
         <button
           className={`leaderboard-selector__button ${
-            !active ? "leaderboard-selector__button--active active-leaderboard" : ""
+            active === "Overall" ? "leaderboard-selector__button--active active-leaderboard" : ""
           }`}
           onClick={() => {
             updateLeaderboardOverall();
-            setActive(!active);
+            setActive("Overall");
           }}
         >
           <p>Overall leaderboard</p>
