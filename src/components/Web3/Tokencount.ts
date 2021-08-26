@@ -14,7 +14,7 @@ export const getTokenCountTDFA = async () => {
   let tdfaAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.tdfaAddresses);
   for (let user of tokenholders.data.users) {
     if (tdfaAddresses.includes(user.address)) {
-      if (user.address == selectedAccount.toLowerCase()) {
+      if (user.address == selectedAccount?.toLowerCase()) {
         let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": true };
         tokenholdersTDFA.push(entry);
         i++
