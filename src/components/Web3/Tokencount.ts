@@ -22,7 +22,7 @@ export const getTokenCountTDFA = async () => {
         let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": false };
         tokenholdersTDFA.push(entry);
         i++
-      }  
+      }
     }
   }
 
@@ -68,7 +68,7 @@ export const getTokenCountBlockchain = async () => {
         let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": false };
         tokenholdersBlockchain.push(entry);
         i++
-      }  
+      }
     }
   }
 
@@ -97,6 +97,52 @@ export const getTokenCountBlockchain = async () => {
   return tokenholdersBlockchain;
 }
 
+export const getTokenCountOverall = async () => {
+  const tokenholders = await GetTokenHoldersJSON();
+  const tokenholdersOverall: any = [];
+  let usernamePromises: any = [];
+  let exclusions: string[] = await stringArrayToLowerCase(LeaderboardAddresses.leaderboardExclusions);
+  let i = 1;
+
+  for (let user of tokenholders.data.users) {
+    if (!exclusions.includes(user.address)) {
+      if (user.address == selectedAccount?.toLowerCase()) {
+        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "index": i, "selectedAccount": true, "image": "default" };
+        tokenholdersOverall.push(entry);
+        i++;
+      } else {
+        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "index": i, "selectedAccount": false, "image": "default" };
+        tokenholdersOverall.push(entry);
+        i++;
+      }
+    }
+  }
+
+  for (let i = 20; i < tokenholdersOverall.length; i++) {
+    if (!tokenholdersOverall[i].selectedAccount) {
+      tokenholdersOverall.splice(i, 1);
+      i--;
+    }
+  }
+
+  for (let user of tokenholdersOverall) {
+    var usernamePromise = FindProfile(user.address);
+    usernamePromises.push(usernamePromise);
+  }
+  await Promise.all(usernamePromises).then(async (values: any) => {
+    for (let i = 0; i < values.length; i++) {
+      if (values[i] !== undefined) {
+        tokenholdersOverall[i].address = values[i].name;
+        if (values[i].image !== undefined) {
+          tokenholdersOverall[i].image = await fetchImage(values[i].image);
+        }
+      }
+    }
+  });
+
+  return tokenholdersOverall;
+}
+
 export const ProfileTokenInformation = async () => {
   const tokenHolders = await GetTokenHoldersJSON();
   let resultArray: any = [];
@@ -115,7 +161,7 @@ export const ProfileTokenInformation = async () => {
 }
 
 const stringArrayToLowerCase = async (array: string[]) => {
-  for(let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     array[i] = array[i].toLowerCase();
   }
   return array;
