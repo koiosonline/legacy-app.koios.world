@@ -318,7 +318,7 @@ export const WorldDetail = () => {
                 </div>
               </div>
               <div className={"ctaContainer"}>
-                {filterDefaultLinks().map((link, index) => {
+                {/* {filterDefaultLinks().map((link, index) => {
                   return (
                     link.title === "Sheets" && (
                       <button
@@ -349,7 +349,7 @@ export const WorldDetail = () => {
                       </button>
                     )
                   );
-                })}
+                })} */}
 
                 {hasTwitterDiscussion() ? (
                   <a
