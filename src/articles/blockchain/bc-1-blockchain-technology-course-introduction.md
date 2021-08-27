@@ -30,6 +30,7 @@ Perhaps even more convenient than all those tools is the Discord community. Ther
   
 ## 5. But, but, what exactly will we do then during this level?
 This level creates a basic understanding of the core concepts of blockchain technology. We sometimes need to oversimplify things to develop this basic understanding. Nuances and more details present themselves in the other levels of this course. 
+
 * 1.1   Ledgernomics
 * 1.2   How do blockchains work
 * 1.3   Satoshi’s cheat	
@@ -40,6 +41,7 @@ This level creates a basic understanding of the core concepts of blockchain tech
 
 ## 6. Not a student but would like to join and receive certificates? 
 Suppose you are not a student, no problem. The program is fully open, so you can still follow it for free and receive your certificate on the blockchain! 
+
 >👉 Action - Sign up via the Discord above and send us a message in #newbie-starthere 🎓
 
 ## 7. Final remarks
