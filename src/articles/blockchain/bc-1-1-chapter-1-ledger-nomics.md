@@ -4,16 +4,16 @@
 Blockchain technology is ledger technology. To understand blockchain technology, you need to understand the basics and importance of ledgers in general. This article introduces the chapter that will help you with this. Welcome to chapter "Ledgernomics 📒"!
 
 ## What will we discuss?
-BC 1.1.1 What is a ledger?
-BC 1.1.2 The importance of ledgers
-BC 1.1.3 The history of ledgers
-BC 1.1.4 Introducing the "perfect ledger."
-BC 1.1.5 What is a centralized ledger?
-BC 1.1.6 Problems with centralized ledgers
-BC 1.1.7 Distributed, decentralized ledgers
-BC 1.1.8 Problems with distributed and decentralized ledgers
-BC 1.1.9 The Byzantine General Problem (BGP)
-BC 1.1.10 Centralized and decentralized ledgers compared
+* BC 1.1.1 What is a ledger?
+* BC 1.1.2 The importance of ledgers
+* BC 1.1.3 The history of ledgers
+* BC 1.1.4 Introducing the "perfect ledger."
+* BC 1.1.5 What is a centralized ledger?
+* BC 1.1.6 Problems with centralized ledgers
+* BC 1.1.7 Distributed, decentralized ledgers
+* BC 1.1.8 Problems with distributed and decentralized ledgers
+* BC 1.1.9 The Byzantine General Problem (BGP)
+* BC 1.1.10 Centralized and decentralized ledgers compared
 
 ## Learning goals 
 **By the end of this chapter, I can**
