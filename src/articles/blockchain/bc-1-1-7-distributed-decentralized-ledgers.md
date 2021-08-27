@@ -70,7 +70,9 @@ This continuously keeps on happening. It is as easy as that. Miners will keep on
 
 No single entity, no TTP determining what the status of the ledger is or what valid is. Everybody can become a miner and record transactions according to a shared set of rules (protocol). So, a TTP needs to follow internal and external constraints. A decentralized ledger abides by a consensus protocol. 
 
->💡 It is a shift in trust, from centralized trust to ecosystem protocol trust. Blockchains can be seen as a ledger + protocol + ecosystem of entities. The blockchain provides trust, not the TTP. We rearranged trust!! We always needed a centralized TTP in a closed-off environment. In a decentralized world, we use a shared protocol in an open environment. This enables us to do peer-to-peer transactions (direct from one person to another person) without an intermediary, allowing us to create entirely new infrastructures! 
+>💡 It is a shift in trust, from centralized trust to ecosystem protocol trust. Blockchains can be seen as a ledger + protocol + ecosystem of entities. The blockchain provides trust, not the TTP. We rearranged trust!! We always needed a centralized TTP in a closed-off environment. In a decentralized world, we use a shared protocol in an open environment. This enables us to do peer-to-peer transactions (direct from one person to another person) without an intermediary, allowing us to create entirely new infrastructures!
+
+&nbsp;
 
 >💡 We currently use peer-intermediate TTP – peer in older systems. This new way of recording is not only more cost-efficient. It also allows the peers to own their data, with no TTP to take all the profit. Imagine all the applications on your phone, but without the intermediaries. So, an Uber application without Uber between you and the cab driver. Or whatsapping without Mark and where the profits of advertising flow to you. For the first time in human history, the ledgers not only stand between us, it is actually from us. Owned by nobody, owned by everybody. We rearranged trust and now have, just like the air we breathe, also the ledger as a Common
 
