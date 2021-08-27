@@ -317,7 +317,7 @@ export const WorldDetail = () => {
                   </ul>
                 </div>
               </div>
-              <div className={"ctaContainer"}>
+              <div className={"cta-button-container"}>
                 {/* {filterDefaultLinks().map((link, index) => {
                   return (
                     link.title === "Sheets" && (
@@ -351,7 +351,7 @@ export const WorldDetail = () => {
                   );
                 })} */}
 
-                {hasTwitterDiscussion() ? (
+                {/* {hasTwitterDiscussion() ? (
                   <a
                     href={hasTwitterDiscussion()}
                     className={"ctaContainer__button"}
@@ -360,7 +360,6 @@ export const WorldDetail = () => {
                       src={"/images/logo--twitter.svg"}
                       alt={"Twitter logo"}
                     />
-                    {/* <Icon type="twitter"/> use Icon component instead of img*/}
                     <p>Discuss on Twitter</p>
                   </a>
                 ) : (
@@ -374,12 +373,22 @@ export const WorldDetail = () => {
                     />
                     <p>Discuss on Discord</p>
                   </button>
-                )}
+                )} */}
+
+                <a
+                  href="https://c0c6pmb4lmw.typeform.com/FeedbackButton"
+                  className={"cta-button"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="cta-button__img cta-button__img--emoji">&#128176;</span>
+                  <p className="cta-button__text">Feedback</p>
+                </a>
 
                 {quiz && (
-                  <button onClick={openQuiz} className={"ctaContainer__button"}>
-                    <img src={"/images/scroll-solid.svg"} alt={"sheets"} />
-                    <p>Quiz</p>
+                  <button onClick={openQuiz} className={"cta-button"}>
+                    <img className="cta-button__img" src={"/images/scroll-solid.svg"} alt={"sheets"} />
+                    <p className="cta-button__text">Quiz</p>
                   </button>
                 )}
               </div>
@@ -406,8 +415,6 @@ export const WorldDetail = () => {
                     previousVideo={previousVideo ? previousVideo : null}
                     nextVideo={nextVideo ? nextVideo : null}
                   />
-
-                  <a className="feedback-link">Was this page helpfull?</a>
                 </div>
 
                 <div className="table-of-contents">
@@ -419,8 +426,14 @@ export const WorldDetail = () => {
                       {tableOfContents && (
                         <ul className="table-of-contents__list">
                           {tableOfContents.map((item, index) => (
-                            <li key={index} className={`table-of-contents__list-item table-of-contents__list-item--${item.type}`}>
-                              <HashLink to={`#${item.id}`} className="table-of-contents__link link">
+                            <li
+                              key={index}
+                              className={`table-of-contents__list-item table-of-contents__list-item--${item.type}`}
+                            >
+                              <HashLink
+                                to={`#${item.id}`}
+                                className="table-of-contents__link link"
+                              >
                                 {item.title}
                               </HashLink>
                             </li>
