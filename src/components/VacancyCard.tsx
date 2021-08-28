@@ -11,10 +11,10 @@ const VacancyCard = (props) => {
       </div>
       <div className={'image-row'}>
         {props.reimbursement &&
-        <img src={props.reimbursement} alt={'image'}/>
+        <img src={props.reimbursement} alt={'money icon'}/>
         }
         {props.providerLogo &&
-        <img src={props.providerLogo} alt={'image'}/>
+        <img src={props.providerLogo} alt={'provider icon'}/>
         }
       </div>
     </Link>

@@ -1,10 +1,7 @@
 import worldsData from '../assets/data/Worlds.json';
 import {useParams, Link} from "react-router-dom";
-import QuickLinks from "../components/QuickLinks";
-import LinkCard from "../components/LinkCard";
 import DiscordEmbed from '../components/discordEmbed';
 import {Slugify} from '../components/Util/Slugify';
-import SmallCard from "../components/SmallCard";
 import LearnToNavigate from "../components/LearnToNavigate";
 import LevelCards from "../components/LevelCards";
 import Team from "../components/Team";
@@ -35,9 +32,9 @@ const WorldOverview = () => {
           <p className={'worldOverviewHeader__titleRow__description'}>{world?.description}</p>
         </div>
         <div className={"smallCard-container"}>
-          {cardData.map((data) => {
+          {cardData.map((data, index) => {
             return (
-              <div className={"smallCard"}>
+              <div className={"smallCard"} key={index}>
                 <div className={"smallCard__title-row"}>
                   <h2 className={"smallCard__title"}>{data.title}</h2>
                   <Icon type={data.icon as keyof typeof SvgSprite}/>
@@ -50,7 +47,7 @@ const WorldOverview = () => {
                   <Link className={"smallCard__link"} to={'/earn'}>{data.linkTitle}</Link>
                 }
                 {data.title === 'Connect' &&
-                  <button className={"smallCard__link"} onClick={() => team.current.scrollIntoView({behavior: 'smooth'})}>{data.linkTitle}</button>
+                  <a className={"smallCard__link"} href={'https://discord.gg/jBjudugeBa'} target={'_blank'}>{data.linkTitle}</a>
                 }
               </div>
             )
@@ -59,6 +56,12 @@ const WorldOverview = () => {
         </div>
       </div>
       <div className={'container worldOverviewContainer'}>
+        <div className={'feedback'}>
+          <a className={'feedback__link'} href={'https://c0c6pmb4lmw.typeform.com/FeedbackButton'}>
+            <p>Feedback?</p>
+            <p>Let us know!</p>
+          </a>
+        </div>
         <div ref={learn}>
           <LearnToNavigate world={world}/>
           <LevelCards world={world} baseUrl={worldContent}/>
@@ -68,12 +71,12 @@ const WorldOverview = () => {
           <Team world={world}/>
         </div>
       </div>
-      <div className={'feedback'}>
-        <a className={'feedback__link'} href={'https://c0c6pmb4lmw.typeform.com/FeedbackButton'}>
-          <p>Feedback?</p>
-          <p>Let us know!</p>
-        </a>
-      </div>
+      {/*<div className={'feedback'}>*/}
+      {/*  <a className={'feedback__link'} href={'https://c0c6pmb4lmw.typeform.com/FeedbackButton'}>*/}
+      {/*    <p>Feedback?</p>*/}
+      {/*    <p>Let us know!</p>*/}
+      {/*  </a>*/}
+      {/*</div>*/}
     </>
   )
 }

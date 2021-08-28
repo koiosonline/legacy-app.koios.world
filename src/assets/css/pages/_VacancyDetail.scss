@@ -132,6 +132,15 @@
       flex-flow: row;
     }
 
+    &__discord {
+      flex-flow: column;
+      width: 100%;
+
+      @include for-size($desktop) {
+        width: 50%;
+      }
+    }
+
     &__title {
       font-family: $font-family-headings;
       font-weight: 400;
@@ -152,6 +161,14 @@
 
       span {
         font-weight: 700;
+      }
+
+      &--discord {
+        width: 100%;
+
+        span {
+          font-weight: 700;
+        }
       }
     }
 
