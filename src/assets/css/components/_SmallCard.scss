@@ -5,8 +5,8 @@
   //margin: $spacing-7x auto;
   margin: 0 auto;
   max-width: 1080px;
-  position: absolute;
-  top: 40vh;
+  //position: absolute;
+  //top: 40vh;
   left: 0;
   right: 0;
 
@@ -14,13 +14,15 @@
     padding: 0 $spacing-2x;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: $spacing-6x;
-    top: 250px;
+    //top: 250px;
+    transform: translateY(50px);
   }
 
   @include for-size($desktop) {
     padding: 0 $spacing-10x;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: $spacing-6x;
+    transform: translateY(50px);
   }
 
   .smallCard {
@@ -43,6 +45,7 @@
       svg {
         width: 50px;
         height: 50px;
+        fill: #6D59E6;
       }
     }
     &__title {

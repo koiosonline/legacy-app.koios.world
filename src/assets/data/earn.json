@@ -2,7 +2,7 @@
   "headerTitle": "Earn",
   "headerDescription": "Koios offers a various amount of assignments that student’s can participate in. Each assignment gives the students a different compensation. Select a track below that fit’s you to see the available assignments",
   "title": "Assignments",
-  "description": "Koios offers a various amount of assignments that student’s can participate in. Each assignment gives the students a different compensation. Select a track below that fit’s you to see the available assignments",
+  "description": "\u2028\u2028Koios offers various tracks and assignments submitted by ecosystem partners. Each project allows the learner to scale their ability and earn different compensations. So please select a track below that matches your interest, join one of the assignments, and reap the rewards!",
   "categories": [
     {
       "title": "Community"
@@ -47,7 +47,7 @@
       "skillSet": "No specifics",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -71,7 +71,7 @@
       "skillSet": "No specifics",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -98,7 +98,7 @@
       "skillSet": "Language skills: React. JavaScript would be a plus",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -135,7 +135,7 @@
       "skillSet": "Javascript (+ React would help)",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -171,7 +171,7 @@
       "skillSet": "Junior hardware experience",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -195,7 +195,7 @@
       "skillSet": "Junior hardware experience",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -222,7 +222,7 @@
       "skillSet": "Junior design experience",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -252,7 +252,7 @@
       "skillSet": "Junior UX experience.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -282,7 +282,7 @@
       "skillSet": "Basic knowledge of cryptocurrencies is preferred. ",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -309,7 +309,7 @@
       "skillSet": "No specifics. ",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -333,7 +333,7 @@
       "skillSet": "No specifics. ",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -360,7 +360,7 @@
       "skillSet": "An eager mind-set",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -381,7 +381,7 @@
       "skillSet": "No specifics",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -405,7 +405,7 @@
       "skillSet": "Junior writing skills would help!",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -432,7 +432,7 @@
       "skillSet": "Junior writing skills would help!",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -462,7 +462,7 @@
       "skillSet": "(Junior) legal skills would help!",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -489,7 +489,7 @@
       "skillSet": "(Junior) legal skills would help!",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -516,7 +516,7 @@
       "skillSet": "(Junior) legal skills would help!",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -549,7 +549,7 @@
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -576,7 +576,7 @@
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -606,7 +606,7 @@
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -633,7 +633,7 @@
       "skillSet": "(junior) business background would help!",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -660,7 +660,7 @@
       "skillSet": "Background in mathematics would help.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -696,7 +696,7 @@
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -720,7 +720,7 @@
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -750,7 +750,7 @@
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"
@@ -777,7 +777,7 @@
       "skillSet": "No specifics mentioned.",
       "typeTitle": "This challenge can be executed as:",
       "reimbursement": "./images/bitcoin.svg",
-      "providerLogo": "./images/world_introduction.svg",
+      "providerLogo": "./images/titan.png",
       "type": [
         {
           "typeItem": "Individual or group assignment for study credits & Titan Tokens"

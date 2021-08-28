@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 
 const LevelCards = (props) => {
 
-  console.log(props.world);
   return (
     <div className={'levelCards-container'}>
       <div className={'text-holder'}>
@@ -13,9 +12,9 @@ const LevelCards = (props) => {
 
       <div className={'cards-container'}>
         {props.world.content &&
-          props.world.content.map((cardData) => {
+          props.world.content.map((cardData, index) => {
               return (
-                <Link className={'card'} to={props.baseUrl + '/' + Slugify(cardData.title, {lowerCase: true})}>
+                <Link className={'card'} to={props.baseUrl + '/' + Slugify(cardData.title, {lowerCase: true})} key={index}>
                   <h4 className={'card__title'}>{cardData.title}</h4>
                   <p className={'card__subtitle'}>{cardData.subtitle}</p>
                 </Link>
