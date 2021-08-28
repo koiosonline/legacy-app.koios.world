@@ -13,10 +13,10 @@ const Team = (props) => {
         </div>
 
         <div className={'team-grid'}>
-          {props.world.team[0].members.map((memberData) => {
+          {props.world.team[0].members.map((memberData, index) => {
           return (
-            <div className={'member'}>
-              <img src={memberData.imageUrl} className={'member__image'}/>
+            <div className={'member'} key={index}>
+              <img src={memberData.imageUrl} className={'member__image'} alt={'member profile'}/>
               <h5 className={'member__name'}>{memberData.name}</h5>
               <p className={'member__description'}>{memberData.description}</p>
               <div className={'socials'}>

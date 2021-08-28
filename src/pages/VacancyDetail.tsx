@@ -16,8 +16,8 @@ const VacancyDetail = ({ match }) => {
           <div className={'content__header'}>
             <h2 className={'content__title'}>{currentVacancy.title}</h2>
             <div className={'content__image-container'}>
-              <img className={'content__image'} src={currentVacancy.reimbursement}/>
-              <img className={'content__image'} src={currentVacancy.providerLogo}/>
+              <img className={'content__image'} src={currentVacancy.reimbursement} alt={'money icon'}/>
+              <img className={'content__image'} src={currentVacancy.providerLogo} alt={'provider icon'}/>
             </div>
           </div>
           <p className={'content__descriptionTitle'}>Description:</p>
@@ -33,7 +33,7 @@ const VacancyDetail = ({ match }) => {
             })}
           </ul>
           <div className={'content__buttonContainer'}>
-            <a className={'content__button'} href={defaultInfo.form_link}>I'm interrested!</a>
+            <a className={'content__button'} href={defaultInfo.form_link}>I'm interested!</a>
           </div>
         </div>
       </div>
@@ -77,9 +77,9 @@ const VacancyDetail = ({ match }) => {
 
         <div className={'block'}>
           <h2 className={'block__title'}>Contact info</h2>
-          <div className={'block__description'}>
+          <div className={'block__discord'}>
             <a className={'block__link'} href={defaultInfo.contact_info}><span>Find us in the Discord:</span> <img src={'./images/Discord-Logo-Black.svg'} alt={'discord'}/></a>
-            <p className={'block__description'}><span>And contact user:</span> Jordi Jansen #3497</p>
+            <p className={'block__description--discord'}><span>And contact user:</span> Jordi Jansen #3497</p>
           </div>
         </div>
 

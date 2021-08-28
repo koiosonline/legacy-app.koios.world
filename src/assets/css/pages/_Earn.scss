@@ -186,8 +186,10 @@
     }
 
     &__text-holder {
-      min-width: 75%;
+      width: 75%;
+      text-align: left;
       min-height: $spacing-10x;
+
       p {
         font-size: 18px;
         color: $color-koios-dark-grey;

@@ -1,5 +1,5 @@
 import Youtube from 'react-youtube';
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import videoData from '../assets/data/explanation.json';
 
 const ExplanationVideos = () => {
