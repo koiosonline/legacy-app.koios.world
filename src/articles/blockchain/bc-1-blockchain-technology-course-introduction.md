@@ -11,13 +11,6 @@ But first things first. To understand the depth of this technology, you need to 
 
 >💡 We don't have all the answers. This course is about finding your questions and providing you with a basic framework, mindset, and network. And have fun while joining this shared exploration for possible answers!
 
-
-![Sponge Bob](https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1%20Sponge%20Bob.png)
-
-![Sponge Bob](https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1%20Sponge%20Bob.jpg)
-
->💡 Before you change the world, you need to learn it first - [Source Spongebob](https://en.wikipedia.org/wiki/SpongeBob_SquarePants_(character)
-
 ## 3. Help is on its way
 Due to the newness and difficulty of materials, it can be challenging at times. Or the sheer size and fast-developing pace of the blockchain ecosystem can give you an overwhelming feeling. Don't worry: help is on its way. We've added all kinds of tools on Koios that will help you. For example, will you find extra literature, slides, quizzes & question, and even a debate and help button per lesson. Another pro-tip: use the video subtitles and read the chapter's literature for added nuances.
 
@@ -30,18 +23,16 @@ Perhaps even more convenient than all those tools is the Discord community. Ther
   
 ## 5. But, but, what exactly will we do then during this level?
 This level creates a basic understanding of the core concepts of blockchain technology. We sometimes need to oversimplify things to develop this basic understanding. Nuances and more details present themselves in the other levels of this course. 
+1.1   Ledgernomics
+1.2   How do blockchains work
+1.3   Satoshi’s cheat	
+1.4   So why care? 
+1.5   Bitcoin
+1.6   Introduction to smart contracts
+1.7   Socio-economic consequences
 
-* 1.1   Ledgernomics
-* 1.2   How do blockchains work
-* 1.3   Satoshi’s cheat	
-* 1.4   So why care? 
-* 1.5   Bitcoin
-* 1.6   Introduction to smart contracts
-* 1.7   Socio-economic consequences
-
-## 6. Not a student but would like to join and receive certificates? 
+## 6. Not a student, but would like to join and receive certificates? 
 Suppose you are not a student, no problem. The program is fully open, so you can still follow it for free and receive your certificate on the blockchain! 
-
 >👉 Action - Sign up via the Discord above and send us a message in #newbie-starthere 🎓
 
 ## 7. Final remarks
@@ -58,3 +49,7 @@ Don't wait any longer and dive into this new world of digital possibilities 🌍
  
 >💡  "The man who asks a question is a fool for a minute. The man who does not ask is a fool for life."
 ― Confucius
+
+
+[Check out Twitter for the FAQ’s 🦉🦉🦉](https://twitter.com/JordiJansen101/status/1431236972832514048?s=20)
+

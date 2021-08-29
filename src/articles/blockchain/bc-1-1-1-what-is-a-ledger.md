@@ -1,8 +1,6 @@
 # BC-1.1.1 What is a ledger?
 
-
-An open public blockchain can be seen as a (1) "distributed", (2) "decentralized", (3) "ledger". In this section, we will explain what a ledger is. The other two components are for classes further up ahead. 
-![Slide 1]( https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-1-what-is-a-ledger-image1.PNG)
+Blockchain technology is ledger technology, where a blockchain is a “distributed” and “decentralized” “ledger”. We will explain all three components, starting with the foundation: ledger technology. For the first time in thousands (!!) of years, we can use ledgers in a new trust system. We will explain how blockchain technology is a new form and enables new possibilities in accounting and governance (= governing processes). You will learn all about the role, history, trade-offs, and the importance of different forms of ledgers. After this chapter will you understand the gravity of these implications (enabling new systems in society). This is the true revolution: bringing the ledger and accounting, the not-so-sexy tools and recording data, to the internet and next level, Creating new possibilities for humanity with it. 
 
 >💡 Ledgers play a vital role in societies. They are one of the backbones of current-day society. History has proven many times that when your ledger changes, new capabilities arise, and your community can change with it. With blockchain technology, we double this innovation fun: 
 (1) the form of the ledgers changes. From centralized and closed towards decentralized and open
@@ -10,27 +8,37 @@ An open public blockchain can be seen as a (1) "distributed", (2) "decentralized
 
 All way too techie for class 1 😄. Remember: blockchains are an innovation of ledgers and enable new capabilities. The chances are that they will have a very substantial impact on society. And you are currently knocking on the front door of this new technology, clever you! An exciting time in human history, where we are possibly turning towards new forms of (community-driven) societies. Societies where blockchains play the role of "trust tool", recording transactions in an improved fashion.
 
-Let's start with the very first lesson: what is a ledger?
-![Slide 2]( https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-1-what-is-a-ledger-image2.PNG)
+## Let's start with the very first lesson: what is a ledger?
+
+![Slide 1]( https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-1-what-is-a-ledger-image1.PNG)
+
+<blockquote style="border-color: #ff0bac"> ❓ In your own words: what is a ledger? 
+[Check answers 🦉](https://twitter.com/JordiJansen101/status/1431241479666733061?s=20
+)</blockquote>
 
 
-## The basics of a ledger: recording a transaction
-Sorry students, let me get a hold of myself. Let's start with the basics: understand what a ledger is and grasp its concepts. So what is it? A ledger is a tool we use to record transactions. But what are "transactions"? "Transactions" are nothing more than (economic) activities where people "exchange value". So "exchange" means that the value goes from "one person to the other person". Or instead of between people, between legal entities like foundations and corporations. Or even between machines nowadays!
+## The basics of a ledger: start with recording a transaction
+Let's start with the basics: understand what a ledger is and grasp its concepts. So what is it? A ledger is a tool we use to record transactions. But what are "transactions"? "Transactions" are nothing more than (economic) activities where people "exchange value". So "exchange" means that the value goes from "one person to the other person". Or instead of between people, between legal entities like foundations and corporations. Or even between machines nowadays!
 
 >💡 Different 'entities' can exchange value in a ledger.
-
-<blockquote style="border-color: #ff0bac"> ❓ Can you think of other types of entities that can interact in a ledger? </blockquote>
+<blockquote style="border-color: #ff0bac"> ❓ Can you think of other types of entities that can interact in a ledger? [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431241847578501125?s=20)
+</blockquote>
 
 And "value" can mean "anything, as long as we (humans) deem it valuable". Many books write about 'value' over time, and many would love to enter the philosophical spheres about value. What might be valuable to you now but not be beneficial to somebody else. Or is value always measurable? **The types of value we are talking about are metric by nature**. So you can measure them, which is needed to record them in a ledger. Try to record the value 'love 💘'? And no: not talking about paid love. So value is often represented as something metric, usually monetary. Still, it could also represent values in other notations. 
 
->💡 value can take many forms. For example, in ledgers, we record measurable values.
+>💡 Value can take many forms. For example, in ledgers, we record measurable values. 
+<blockquote style="border-color: #ff0bac"> ❓ What do you deem valuable? Can that value be recorded in a ledger? [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431242496168927234?s=20)</blockquote>
 
-<blockquote style="border-color: #ff0bac"> ❓ What do you think has value? Can that value be recorded? </blockquote>
 
-<blockquote style="border-color: #ff0bac"> ❓ Let your mind drift for a while: can you think of other values that have a hard time being measured? Are you sure they can not be measured, or do we need a new, improved ledger to measure them? Tip: thanks to blockchain technology, some of our planet's forests are recorded in ledgers nowadays! </blockquote>
-<blockquote style="border-color: #ff0bac"> ❓ What is 'intrinsic value'? What has intrinsic value (if anything has….)?</blockquote>
+<blockquote style="border-color: #ff0bac"> ❓ Let your mind drift for a while: can you think of other values that have a hard time being measured? Are you sure they can not be measured, or do we need a new, improved ledger to measure them? Pro-Tip: thanks to blockchain technology, some of our planet's forests are recorded in ledgers nowadays! [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431247963452477443?s=20)</blockquote>
+
+
+<blockquote style="border-color: #ff0bac"> ❓ What is 'intrinsic value'? What has intrinsic value (if anything has….)? [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431242105112956933?s=20)</blockquote>
+
+
 
 You can see a ledger as a tool for humans to record the transfers of value. The device can take different forms and has done so over time, like a book or a digital database. It used to be a clay tablet 7,000 years ago. The core of the ledger remains the same: it records transactions. How fast, reliable, etc., changes over time. We are now entering a new era of ledgers. The blockchain era, with increased security, reach, transparency, reliability, and more. 
+
 >💡 A new form of trust arises with updates in ledger technology.
 
 ## An example
@@ -53,22 +61,23 @@ You must record the transfer of this 1$ from friend B to friend D. Not only does
 Value in the previous example was in dollars, but it can be many things, also commonly known as "assets". There are two main categories of assets: (1) tangible assets & (2) intangible assets. Assets can also be divided into current assets & fixed/long-term assets. Tangible assets are physical things you can touch, and intangible assets are things you can't feel. Examples of tangible assets are cash, such as a banknote, a car, or a house. Examples of intangible assets are the money on your bank account, which is only available in the digital ledgers of banks, or copyrights. It is important to note that intangible, a.k.a. untouchable assets, only exist because of ledgers. Most of our current records hold intangible assets, like our money or stocks. You would have no way to check the record-state with a real-life physical supply as was possible in the previous example with your friends. Intangible assets are not there in the "real" physical world. They only exist according to the registers. They are imaginary, a 'story' we humans tell each other. And that is why it is essential to keep a record of transactions. 
 >💡 A ledger records the story and the current 'state' of who owns what. With each transaction this story, this state of the ledger changes.
 
-<blockquote style="border-color: #ff0bac"> ❓ Challenge yourself before the next class: what makes a ledger important? </blockquote> 
+<blockquote style="border-color: #ff0bac"> ❓ Challenge yourself before the next class: what makes a ledger important? [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431242703438815236?s=20) 
+ </blockquote> 
 
 ## Conclusion 
 Ledgers are tools to record economic activities, known as transactions, which transfer value. These tools, these ledgers, can take many different forms and evolve from clay tablets to digital blockchains in 7,000 years. As ledgers develop, communities/society tends to involve as well because new options introduce themselves. Just as we use regular books to record our stories, like Cinderella, we use ledgers to record our stories of value exchanges. New ways of recording have enabled us to tell better stories. These new ways impact regular stories. Just try to write Game of Thrones on a clay tablet if you don't believe me. But also for stories of value exchange. Just try to set up the current world economy without digital ledgers. 
 
 In the next class, we will explain WHY ledgers have an essential role.
 
-## 📖🖋 Homework 1.1 Ledgernomics
+## Homework 1.1 Ledgernomics
 Which transfers of value from your everyday life are recorded in a ledger? Think beyond the examples mentioned in the video and come up with at least five new examples. Pro-tip: check out the answers for inspiration in the class Twitter thread.
 
-## 📓🤓 Further readings (sources or support)
+## Further readings (sources or support)
 * [What is a ledger?](https://en.wikipedia.org/wiki/Ledger)
 * [What is a transaction?](https://en.wikipedia.org/wiki/Transaction)
 * [What are assets?](https://en.wikipedia.org/wiki/Asset)
 * [What are assets?](https://www.youtube.com/watch?v=nHg4IPX59JE) 
 
-## 😋🍽️ Food for thought (= answers ❓)
+## Food for thought
 Post your answers in the class Twitter Thread. You can pretend to help us improve the quality of conversation and help your fellow peers learn. But in the meantime, take a sneak peek at the answers…😉
 

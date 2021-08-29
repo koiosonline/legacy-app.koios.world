@@ -10,9 +10,17 @@ So you know now what a ledger is, a tool to record transactions that transfer va
 
 It is a bit like the chicken or the egg story of which one came first. Sometimes society (chicken) demands a new form of the ledger (egg). But sometimes, a fresh egg creates a new society (chicken). New forms enable us to reorganize ourselves. So it seems like it can go both ways. History has proven again and again that ledgers and society change hand in hand. But it takes more research to be sure which one initiates the other.
 
-<blockquote style="border-color: #ff0bac"> ❓ What do you think: did blockchains arise to solve the challenges we faced? </blockquote>
-<blockquote style="border-color: #ff0bac"> ❓ What is the origin of the world's very first open public blockchain, Bitcoin? Was that even the world's first blockchain or were there other different ones before (yes, there were)? </blockquote>
-<blockquote style="border-color: #ff0bac"> ❓ What challenges would you like to tackle with this new ledger? Write them down somewhere. You can use this for later assignments!  </blockquote>
+<blockquote style="border-color: #ff0bac"> ❓ What do you think: did blockchains arose because of the challenges we face? [Check answers🦉]( https://twitter.com/JordiJansen101/status/1431252140123725829?s=20)
+</blockquote>
+
+
+<blockquote style="border-color: #ff0bac"> ❓ What is the origin of the world's very first open public blockchain, Bitcoin? [Check answers🦉](https://twitter.com/JordiJansen101/status/1431252519074807810?s=20)
+</blockquote>
+
+
+<blockquote style="border-color: #ff0bac"> ❓ What challenges would you like to tackle with blockchain technology? Use your answer for later assignments! [Check answers🦉](https://twitter.com/JordiJansen101/status/1431252878983843852?s=20)</blockquote>
+
+
 
 ## A few examples
 Imagine running current society on clay tablets: our global banking systems and all their transactions on a physical clay tablet will not happen. So the form we use enables and limits our capabilities. Improvements allow us to reshape society. Just think about the impact of introducing digital ones last century.
@@ -26,7 +34,9 @@ Another famous example brings us back to 494 AD. An Italian monk named Luca Paci
 (1)  By enhancing the ledger itself 
 (2) By improving how you record transactions
 
-<blockquote style="border-color: #ff0bac"> ❓ Are we overseeing something here, is there another way?  </blockquote>
+<blockquote style="border-color: #ff0bac"> ❓ Are we overseeing something here, is there another way?[Check answers🦉](https://twitter.com/JordiJansen101/status/1431253405901758470?s=20)
+</blockquote>
+
 
 One thousand five hundred years ago, Luca invented "double-entry accounting". A new way of recording each transaction twice. In two different places instead of the previous single place (more about this later!). For now: why is this important? This upgrade in transaction recording enabled us to lend out money! Previous versions could not do this. Re-imagine the example where you recorded the txs of friends. That example was single-entry accounting. You only entered each transaction once. Try to visualize a recording of debt in that type? The money was either with friend A or friend B. You had no system in place to record debt. How to structure these transactions, like lending out money (you physically give it away, but it is still yours), was solved 1500 years ago.
 
@@ -62,12 +72,12 @@ Ledgers keep evolving. History has proven that every time a ledger develops, soc
 
 But to what end goal, where do we stop? In other words, how might a perfect ledger look like? That we will see in the next course 😊!
 
-## 📖🖋 Homework assignment 
+## Homework assignment 
 Before we move forward to the next lesson, brainstorm with yourself, a friend, or a Koios member what you think a perfect ledger could and should look like. How would it function, and which unique characteristics would it have in an ideal world? Tip: you can look up papers online about this topic. During class, you might be invited to discuss why you think your perfect ledger is perfect. Remember, opinions can change, and it's not bad if yours does too. We are here to learn with each other.
 
 >💡  "The greatest teacher failure is" — Yoda
 
-## 📓🤓 Further readings (sources or support) 
+## Further readings (sources or support) 
 * [Who was Luca Pacioli?](https://en.wikipedia.org/wiki/Luca_Pacioli)
 * [What is double-entry accounting?](https://en.wikipedia.org/wiki/Double-entry_bookkeeping_system)
 * [Ledgernomics](https://bitemycoin.com/opinion/ledger-nomics/)
@@ -76,5 +86,5 @@ Before we move forward to the next lesson, brainstorm with yourself, a friend, o
 * [Medici's TV series](https://en.wikipedia.org/wiki/Medici_(TV_series))
 * [Trusted Third Party](https://en.wikipedia.org/wiki/Trusted_third_party)
 
-## 😋🍽️ Food for thought (= answers ❓)
-Post your answers in the class Twitter Thread. You can pretend to help us improve the quality of conversation and help your fellow peers learn. But in the meantime, take a sneak peek at the answers…😉
+## Food for thought
+Post your answers in the class Twitter Thread. You can pretend to help us improve the quality of conversation and help your fellow peers learn. But in the meantime, take a sneak peek at the answers…

@@ -6,13 +6,15 @@ You can imagine that distributing and decentralizing a ledger will cause several
 
 In other words: "do I need a blockchain?". As we will discuss further on this is quite a famous question in the blockchain scene.
 
->💡 The three main problems distributing a ledger are:
-1 Timing
-2 Ordering 
-3 Failure
+>💡 The three main challenges distributing a ledger are:
+1. Timing
+2. Ordering 
+3. Failure
 
 >💡 Decentralizing a ledger adds: 
-4 Coordinating the State
+4. Coordinating the State
+
+<blockquote style="border-color: #ff0bac"> ❓ Could you explain these challenges in your own words and provide an example for each? [Check answers🦉](https://twitter.com/JordiJansen101/status/1431300372707041284?s=20)</blockquote>
 
 Where exclusion, dishonesty, and loss of records are downsides of centralized systems, distributed systems have a problem of (1) timing, (2) ordering, and (3) failure. Add (4) the coordination problem in the mix because you don't have a coordinating third party to rely on. The ledger's goal of mimicking the world by recording the transfer of value doesn't change! However, the way to reach that goal, representing the world as best as possible, changed. To mimic the real world, you need to tackle these challenges. A bit more elaborated on the challenges:
 
@@ -45,19 +47,17 @@ Another example of failure is good old-fashioned downtime. For example, if there
 
 We first repeat an essential key element before we start the next session to explain this Byzantine General Problem and why it is crucial for Distributed Decentralized Ledgers. In distributed decentralized ledgers, we remove the TTP and replace it with a consensus protocol we trust. We still need to deal with the three distribution problems, only this time. We don't have the help of a TTP. So by removing the TTP, you decrease efficiency. The design becomes more inefficient because it takes more time, more people, more power to record transactions. Instead of one party maintaining the ledger, we could have a thousand parties supporting it. But the benefits are that you reduce the downsides of 1) loss of records, 2) dishonesty, and 3) exclusion. You need to ask yourself if this reduction of risks outweighs the inefficiency. 
 
-## 📖🖋 Homework 1.1.7 Distributed Decentralized Ledgers 
+## Homework 1.1.8 Problems with distributed decentralised ledgers 
 The three main problems of distributing a ledger are:
 - timing
 - ordering
 - failure
 
 Explain how you think Bitcoin could deal with these problems. Remember, there is no coordinating party but a coordinating protocol. 
-## 📓🤓 Further readings (sources or support) 
+
+## Further readings (sources or support) 
 * [Double spending problem](https://www.mycryptopedia.com/double-spending-explained/)
 
-## Conclusion 
-![Slide 1](https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-8-problems-with-distributed-decentralized-ledgers-image1.PNG)
-![Slide 2](https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-8-problems-with-distributed-decentralized-ledgers-image2.PNG)
-
-## 😋🍽️ Food for thought (= answers ❓)
+## Food for thought 
 Post your answers in the class Twitter Thread. You can pretend to help us improve the quality of conversation and help your fellow peers learn. But in the meantime, take a sneak peek at the answers…😉
+
