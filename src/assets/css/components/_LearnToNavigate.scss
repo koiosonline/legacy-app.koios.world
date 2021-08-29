@@ -71,10 +71,6 @@
           border: 1px solid lightgray;
           width: 100%;
 
-          @include for-size($desktop) {
-            margin: 0 1rem 0 0;
-          }
-
           &:hover {
             border: 1px solid $color-koios-pink;
             background-size: 150%;

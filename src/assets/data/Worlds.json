@@ -92,9 +92,9 @@
           {
             "name": "Jamie Jansen",
             "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D03AQFuxf2ASN9pyA/profile-displayphoto-shrink_200_200/0/1580551129552?e=1635379200&v=beta&t=bk-lrt4kbXck9N-zI1IwNM074aaVOCUWfCZKaVrX7S4",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
+            "description": "Gamified (digital) Education | DLT & DeFi Lecturer & Researcher",
+            "twitterLink": "https://twitter.com/JamieJansen333",
+            "twitterHandle": "JamieJansen333",
             "discordLink": "https://discord.gg/jBjudugeBa",
             "discordHandle": "Jamie.koios"
           },
@@ -121,16 +121,16 @@
             "imageUrl": "https://cdn.discordapp.com/avatars/772534923406999603/b8a84a8551fa8fa238718507bb08165a.png?size=256",
             "description": "2 years in developer relations in blockchain",
             "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
+            "twitterHandle": "",
             "discordLink": "https://discord.gg/jBjudugeBa",
             "discordHandle": "Hans.koios"
           },
           {
             "name": "Jordi Jansen",
             "imageUrl": "https://cdn.discordapp.com/avatars/355982565288574977/cac5ed2fa3bf5bb2e36dd1f03a09189b.png?size=256",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
+            "description": "Researcher combining Education, DeFi and Web3",
+            "twitterLink": "https://www.twitter.com/jordijansen101",
+            "twitterHandle": "jordijansen101",
             "discordLink": "https://discord.gg/jBjudugeBa",
             "discordHandle": "Jordi.koios"
           }
@@ -145,7 +145,7 @@
     "quickLinks": [
       {
         "linkTitle": "Course information",
-        "linkUrl": "https://docs.google.com/document/d/1Baby83z9EVOOxBef1sgTUQ9YXwGKpBod/edit"
+        "linkUrl": "https://docs.google.com/document/d/1LBIBqyxI-yzfgwOvGiZZQNl0NPesElWo/edit"
       },
       {
         "linkTitle": "Assignments",
@@ -229,9 +229,9 @@
           {
             "name": "Ricardo Eradus",
             "imageUrl": "https://media-exp1.licdn.com/dms/image/C5603AQG-ZrRkvfq5Pg/profile-displayphoto-shrink_200_200/0/1599399278857?e=1635379200&v=beta&t=QPxadx36MObXXc91ZAY2SgS3UduweB0Y70kDFb6kQm8",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "",
+            "description": "Co-initiator Koios & lecturer TDFA/FIT",
+            "twitterLink": "https://twitter.com/tdfatweets",
+            "twitterHandle": "tdfatweets",
             "discordLink": "https://discord.gg/jBjudugeBa",
             "discordHandle": "Ricardo.koios"
           },
@@ -247,9 +247,9 @@
           {
             "name": "Jordi Jansen",
             "imageUrl": "https://cdn.discordapp.com/avatars/355982565288574977/cac5ed2fa3bf5bb2e36dd1f03a09189b.png?size=256",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "",
+            "description": "Researcher combining Education, DeFi and Web3",
+            "twitterLink": "https://www.twitter.com/jordijansen101",
+            "twitterHandle": "jordijansen101",
             "discordLink": "https://discord.gg/jBjudugeBa",
             "discordHandle": "Jordi.koios"
           }
@@ -310,87 +310,6 @@
         "title": "Local communities",
         "linkUrl": "/link"
       }
-    ],
-    "team": [
-      {
-        "subtitle": "When you join KERNEL, you're immediately put in a room with 200 top builders in Web 3.",
-        "p1": "This includes builders at leading Web 3 companies, founders, gamers, designers, artists, and musicians. All are talented individuals exploring what's next for our internet culture. All are genuinely interested in exploring themselves, first, in order to build a better Web.",
-        "p2": "Here are some examples of KERNEL Fellows you'll be joining and the Web 3 projects they are building.",
-        "members": [
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          }
-        ]
-      }
     ]
   },
   {
@@ -442,87 +361,6 @@
       {
         "title": "Local communities",
         "linkUrl": "/link"
-      }
-    ],
-    "team": [
-      {
-        "subtitle": "When you join KERNEL, you're immediately put in a room with 200 top builders in Web 3.",
-        "p1": "This includes builders at leading Web 3 companies, founders, gamers, designers, artists, and musicians. All are talented individuals exploring what's next for our internet culture. All are genuinely interested in exploring themselves, first, in order to build a better Web.",
-        "p2": "Here are some examples of KERNEL Fellows you'll be joining and the Web 3 projects they are building.",
-        "members": [
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          },
-          {
-            "name": "Derek de Jong",
-            "imageUrl": "https://images.unsplash.com/photo-1543984613-f55ca6a1ba35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "DerekDJ",
-            "discordLink": "https://discord.com",
-            "discordHandle": "DerekDJ"
-          }
-        ]
       }
     ]
   }
