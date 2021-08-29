@@ -92,8 +92,7 @@ const Earn = () => {
         <div className={'partner'}>
           <div className={'partner__header'}>
             <h1 className={'title'}>{partnerData.title}</h1>
-            <p className={'sub-title'}>{partnerData.description}</p>
-            {/*<p className={'appreciation'}>{partnerData.appreciation}</p>*/}
+            <p className={'sub-title'}>{partnerData.description} <span>&#x1F680;</span></p>
           </div>
           <div>
 

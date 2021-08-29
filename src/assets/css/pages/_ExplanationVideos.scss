@@ -33,7 +33,7 @@
 }
 
 .videos {
-  margin: -7.5rem auto;
+  margin: -7.5rem auto $spacing-10x;
   padding: $spacing-2x;
   background-color: white;
   max-width: 1080px;
@@ -41,11 +41,11 @@
   box-shadow: 0 0 21px -10px rgb(110 110 110 / 50%);
 
   @include for-size($tablet) {
-    margin: -14rem auto;
+    margin: -14rem auto $spacing-10x;
   }
 
   @include for-size($desktop) {
-    margin: -7.5rem auto;
+    margin: -7.5rem auto $spacing-10x;
   }
 
   .introduction {
@@ -56,7 +56,7 @@
     max-width: 960px;
     border-bottom: 1px solid #e8e8e8;
     padding: $spacing-2x;
-    border-radius: 10px;
+    //border-radius: 10px;
 
     h1 {
       font-family: $font-family-headings;
@@ -82,6 +82,10 @@
     margin: $spacing-6x auto 0;
     padding-bottom: $spacing-6x;
     border-bottom: 1px solid #e8e8e8;
+
+    &:last-child {
+      border-bottom: unset;
+    }
 
     @include for-size($tablet) {
       flex-flow: row;

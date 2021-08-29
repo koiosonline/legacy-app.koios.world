@@ -2,7 +2,7 @@
   "introduction": {
     "title": "Introduction",
     "description": "This is an introduction on how to get you up and running into our community here at Koios.",
-    "videoId": "KOt0n0E3llw",
+    "videoId": "0gY4vzjTGaY",
     "timeCodeList": [
       {
         "time": 0,
@@ -10,31 +10,51 @@
         "label": "intro"
       },
       {
-        "time": 45,
-        "timestring": "0:45",
-        "label": "Metamask"
+        "time": 10,
+        "timestring": "0:10",
+        "label": "Koios.world"
       },
       {
-        "time": 55,
-        "timestring": "0:55",
-        "label": "Metamask login"
+        "time": 40,
+        "timestring": "0:40",
+        "label": "Learning application"
       },
       {
-        "time": 94,
-        "timestring": "1:34",
-        "label": "3Box login"
+        "time": 50,
+        "timestring": "0:50",
+        "label": "Start learning"
       },
       {
-        "time": 116,
-        "timestring": "1:56",
-        "label": "3Box registration"
+        "time": 83,
+        "timestring": "1:23",
+        "label": "Earn"
+      },
+      {
+        "time": 103,
+        "timestring": "1:43",
+        "label": "Connect to community"
+      },
+      {
+        "time": 120,
+        "timestring": "2:00",
+        "label": "Continue learning"
+      },
+      {
+        "time": 134,
+        "timestring": "2:14",
+        "label": "Profile"
+      },
+      {
+        "time": 180,
+        "timestring": "3:00",
+        "label": "Feedback"
       }
     ]
   },
   "metamask": {
     "title": "Metamask setup",
     "description": "In this video we will take you through the process to get your Metamask wallet all set up. After completing this tutorial you will be eligable to receive our Titan tokens.",
-    "videoId": "KOt0n0E3llw",
+    "videoId": "Wc-Hgn1QUjA",
     "timeCodeList": [
       {
         "time": 0,
@@ -42,24 +62,46 @@
         "label": "Metamask intro"
       },
       {
-        "time": 45,
-        "timestring": "0:45",
-        "label": "Metamask install"
+        "time": 10,
+        "timestring": "0:10",
+        "label": "What is Metamask?"
       },
       {
-        "time": 55,
-        "timestring": "0:55",
-        "label": "Metamask account"
+        "time": 20,
+        "timestring": "0:20",
+        "label": "Install Metamask"
       },
       {
-        "time": 94,
+        "time": 125,
+        "timestring": "2:05",
+        "label": "Restore your wallet"
+      }
+    ]
+  },
+  "profileCreation": {
+    "title": "3Box profile creation",
+    "description": "In this video we will take you through the process to create a 3Box profile.",
+    "videoId": "QIFDMaiOAIU",
+    "timeCodeList": [
+      {
+        "time": 0,
+        "timestring": "0:00",
+        "label": "What is 3Box?"
+      },
+      {
+        "time": 28,
+        "timestring": "0:28",
+        "label": "Creating a 3Box profile"
+      },
+      {
+        "time": 70,
+        "timestring": "1:10",
+        "label": "Signature requests"
+      },
+      {
+        "time": 84,
         "timestring": "1:34",
-        "label": "Metamask login"
-      },
-      {
-        "time": 116,
-        "timestring": "1:56",
-        "label": "Your done!"
+        "label": "Add your details"
       }
     ]
   }
