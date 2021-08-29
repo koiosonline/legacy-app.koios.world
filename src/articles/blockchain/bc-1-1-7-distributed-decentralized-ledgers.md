@@ -4,8 +4,6 @@ The centralized entities in control and responsible for the trust and efficiency
 
 But we have never been able to do transactions with each other globally without using an intermediary. History has shown us that we can do peer-to-peer transactions without an intermediary, but that was always on regional or local scales. It is all about trusting the other party, which was doable on a local scale in the past. But we now operate globally, which keeps increasing thanks to new technologies like digitalization and the internet. But we don't trust other people and need the confidence to transact. 
 
-<blockquote style="border-color: #ff0bac"> ❓ Have you ever encountered internet fraud? Was there a TTP in place, and what was their role? Why did they not succeed in preventing this fraud? </blockquote>
-
 In other words: if I don't know you, if I can't trust you, we both appoint someone that we can trust. Hence, the TTP entered the scene and provided trust. You are probably familiar with the model: that person or entity will manage our transactions for a small fee. And other benefits that arise from controlling the ledger! The role of the TTP resulted in more efficient transactions. Otherwise, if I don't trust you as my peer, I would have needed to check on you, do a background check, etc. By appointing a TTP, we bypassed this process, creating a more efficient way and, unfortunately, initiating/enabling centralization of power and introducing the world to the three main risk categories.
 
 
@@ -13,7 +11,8 @@ In other words: if I don't know you, if I can't trust you, we both appoint someo
 
 Keep in mind for now that we removed you as the bookkeeper from the friend example. No hard feelings. But how do we record these transactions then? The exact details on how we will explain later. 
 
-<blockquote style="border-color: #ff0bac"> ❓ Can you explain the centralized and decentralized image from below? </blockquote>
+<blockquote style="border-color: #ff0bac"> ❓ Explain in your own words the image below? [Check answers🦉]( https://twitter.com/JordiJansen101/status/1431295756925812738?s=20)
+</blockquote>
 
 ![Overview distributed systems](https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-6-problems-with-centralized-ledgers-image1.png)
 [Source](https://en.wikipedia.org/wiki/Distributed_economy) 
@@ -23,7 +22,7 @@ Keep in mind for now that we removed you as the bookkeeper from the friend examp
 
 >💡 Distributed implies that the ledgers are "distributed" (spread out) across certain regions. So instead of being in just one location, a distributed ledger is spread out over multiple areas. For example, across the globe or certain parts of the country. Or in certain digital places. 
 
-Imagine once more the example where you are the TTP entity, registering your friends their transactions. Suddenly, it is not only you recording the transactions, but let's say you copied your DNA and cloned yourself 100 fold. So there are 100 versions of you. What a world that would be…😉. All of you are still in the room but spread across the sidelines of the room. So in every corner, there are a bunch of you's. You are recording the transactions, which don't change. Your friends and their transactions are not influenced by the fact that there are now 100 bookkeepers instead of one. This new version of the ledger, where you have spread out over 99 other places along the sidelines, is what we call the distribution—a distributed ledger.
+Imagine once more the example where you are the TTP entity, registering your friends with their transactions. Suddenly, it is not only you recording the transactions, but let's say you copied your DNA and cloned yourself 100 fold. So there are 100 versions of you. What a world that would be…😉. All of you are still in the room but spread across the sidelines of the room. So in every corner, there are a bunch of you's. You are recording the transactions, which don't change. Your friends and their transactions are not influenced by the fact that there are now 100 bookkeepers instead of one. This new version of the ledger, where you have spread out over 99 other places along the sidelines, is what we call the distribution—a distributed ledger.
 
 >💡 So, a distributed ledger means that multiple entities are recording the transactions. We call these entities " nodes " in the blockchain realm, viewing and presenting the transactions, the 100 versions of you, we call "[nodes](https://en.wikipedia.org/wiki/Node_(networking))" in the blockchain realm. The entities recording transactions are called ["miners"]( https://www.danielefavi.com/blog/what-is-the-mining-who-is-the-miner) in the blockchain realm. So miners [validate and record transactions](https://www.youtube.com/watch?v=GmOzih6I1zs). They check if every transaction is valid, and nobody cheats. Nodes collect and check miners' work and update the ledger by adding the page to the book. In other words: the node is the book, the miner writes the pages. 
 
@@ -59,7 +58,9 @@ So, by removing a controlling third party, we create a new problem: How do we re
 
 So once more, to be sure: you are removed, no more TTP. We each do the validation work individually instead of only you. And we check each other's work because we each use the same set of rules. So I think it suffices to say that this consensus protocol plays a crucial role in distributed ledger technology. 
 
-<blockquote style="border-color: #ff0bac"> ❓ If you check the distribution of nodes across the world, what do you notice? </blockquote>
+<blockquote style="border-color: #ff0bac"> ❓ If you check the distribution of nodes across the world, what do you notice? [Check answers🦉]( https://twitter.com/JordiJansen101/status/1431297821777567750?s=20)
+ 
+ </blockquote>
 
 ## A high-level overview
 What happens when entities transfer value, for example, person A to person B? When a transaction occurs, the ledgers need an update because there is a new state. When we mention 'state', we mean who owns what. Miners individually construct the transaction, independently (!!), on a new page. This means that when a miner finishes a page with recent transactions, the miner presents the page to the nodes. If the nodes all agree, the page is added to the book. A.k.a. the block (page) to the blockchain (book). And the show starts all over again with the miners creating the next page (for which they receive rewards). Finally, everybody (nearly) simultaneously turns on to the new page and starts recording recent transactions.
@@ -70,17 +71,17 @@ This continuously keeps on happening. It is as easy as that. Miners will keep on
 
 No single entity, no TTP determining what the status of the ledger is or what valid is. Everybody can become a miner and record transactions according to a shared set of rules (protocol). So, a TTP needs to follow internal and external constraints. A decentralized ledger abides by a consensus protocol. 
 
->💡 It is a shift in trust, from centralized trust to ecosystem protocol trust. Blockchains can be seen as a ledger + protocol + ecosystem of entities. The blockchain provides trust, not the TTP. We rearranged trust!! We always needed a centralized TTP in a closed-off environment. In a decentralized world, we use a shared protocol in an open environment. This enables us to do peer-to-peer transactions (direct from one person to another person) without an intermediary, allowing us to create entirely new infrastructures!
+>💡 It is a shift in trust, from centralized trust to ecosystem protocol trust. Blockchains can be seen as a ledger + protocol + ecosystem of entities. The blockchain provides trust, not the TTP. We rearranged trust!! We always needed a centralized TTP in a closed-off environment. In a decentralized world, we use a shared protocol in an open environment. This enables us to do peer-to-peer transactions (direct from one person to another person) without an intermediary, allowing us to create entirely new infrastructures! 
 
 &nbsp;
 
->💡 We currently use peer-intermediate TTP – peer in older systems. This new way of recording is not only more cost-efficient. It also allows the peers to own their data, with no TTP to take all the profit. Imagine all the applications on your phone, but without the intermediaries. So, an Uber application without Uber between you and the cab driver. Or whatsapping without Mark and where the profits of advertising flow to you. For the first time in human history, the ledgers not only stand between us, it is actually from us. Owned by nobody, owned by everybody. We rearranged trust and now have, just like the air we breathe, also the ledger as a Common
+>💡 We currently use peer-intermediate TTP – peer in older systems. This new way of recording is not only more cost-efficient. It also allows the peers to own their data, with no TTP to take all the profit. Imagine all the applications on your phone, but without the intermediaries. So, an Uber application without Uber between you and the cab driver. Or whatsapping without Mark and where the profits of advertising flow to you. For the first time in human history, the ledgers not only stand between us, it is actually from us. Owned by nobody, owned by everybody. We rearranged trust and now have, just like the air we breathe, also the ledger as a Common.
 
 <blockquote style="border-color: #ff0bac"> ❓ What is a Common? </blockquote>
 
-<blockquote style="border-color: #ff0bac"> ❓ Far from perfect, but an exciting development is receiving rewards for surfing the web. Go check out the Brave Browser and see how they reward users with tokens. Still very much centralized and not always that ethical, it provides insight into how the new internet could look. What applications or ideas would you like to see improved with these new possibilities? </blockquote>
+<blockquote style="border-color: #ff0bac"> ❓ Far from perfect, but an exciting development is receiving rewards for surfing the web. Go check out the Brave Browser and see how they reward users with tokens. They are still very much centralized and not always act ethically, but it provides insight into how the new internet could look. What applications or ideas would you like to see improved with these new possibilities? </blockquote>
 
-The final slide from class gives you a decent overview of centralized, decentralized, and distributed ledgers. Read the source from Vitalik. If you didn't fully understand what we just explained, re-watch the clip or read the source. Or ask us for help via the Twitter Thread or Discord! It is not a problem if you don't fully grasp the idea. We will discuss all of the details in upcoming classes. 
+The final slide from this class gives you a decent overview of centralized, decentralized, and distributed ledgers. Read the source from Vitalik. If you didn't fully understand what we just explained, re-watch the clip or read the source. Or ask us for help via the Twitter Thread or Discord! It is not a problem if you don't fully grasp the idea. We will discuss all of the details in upcoming classes. 
 
 KABOOM!
 Take a second here…
@@ -89,19 +90,12 @@ Take a second here…
 
 A long class…sorry for this…but an important one. Take your time to digest everything we just told you. We will wait for you in the next class. There we will describe the problems you encounter when a ledger is decentralized and distributed 😊 
 
-## Conclusion
-
-![Slide 1](https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-7-distributed-decentralized-ledgers-image3.PNG)
-![Slide 2](https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-7-distributed-decentralized-ledgers-image4.PNG)
-![Slide 3](https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-7-distributed-decentralized-ledgers-image5.PNG)
-
-
-## 📖🖋 Homework 1.1.7 Distributed Decentralized Ledgers 
+## Homework 1.1.7 Distributed Decentralized Ledgers 
 We touched upon what distribution and decentralization mean in the context of ledgers. Investigate the level of distribution and decentralization of Bitcoin as of today. Take your time answering this question. Try to refrain from empty claims, support your opinion as well as possible! 
-The minimum amount of words: 500.
+The minimum amount of words: 500. 
 
 
-## 📓🤓 Further readings (sources or support) 
+## Further readings (sources or support) 
 * [Distributed systems Wiki](https://en.wikipedia.org/wiki/Distributed_economy)
 * [Distributed systems simply explained](https://www.youtube.com/watch?v=Fy8BfVrj4dk) 
 * [What is a node](https://en.wikipedia.org/wiki/Node_(networking))
@@ -115,5 +109,6 @@ The minimum amount of words: 500.
 * [Overview documentation protocol](https://en.bitcoin.it/wiki/Protocol_documentation)
 * [Deep dive bitcoin protocol (level 2)](http://www.michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/)
 
-## 😋🍽️ Food for thought (= answers ❓)
+##  Food for thought
 Post your answers in the class Twitter Thread. You can pretend to help us improve the quality of conversation and help your fellow peers learn. But in the meantime, take a sneak peek at the answers…😉
+
