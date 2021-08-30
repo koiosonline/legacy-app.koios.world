@@ -83,10 +83,10 @@
           {
             "name": "Gerard Persoon",
             "imageUrl": "https://cdn.discordapp.com/avatars/525687122233917471/a5206ac46ce91d176a22b99ce947ef2d.png?size=256",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "",
-            "discordLink": "https://discord.gg/jBjudugeBa",
+            "description": "Deep into the technical details of blockchains",
+            "twitterLink": "https://twitter.com/gpersoon",
+            "twitterHandle": "@gpersoon",
+            "discordLink": "https://discord.com/users/525687122233917471",
             "discordHandle": "Gerard Persoon"
           },
           {
@@ -94,8 +94,8 @@
             "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D03AQFuxf2ASN9pyA/profile-displayphoto-shrink_200_200/0/1580551129552?e=1635379200&v=beta&t=bk-lrt4kbXck9N-zI1IwNM074aaVOCUWfCZKaVrX7S4",
             "description": "Gamified (digital) Education | DLT & DeFi Lecturer & Researcher",
             "twitterLink": "https://twitter.com/JamieJansen333",
-            "twitterHandle": "JamieJansen333",
-            "discordLink": "https://discord.gg/jBjudugeBa",
+            "twitterHandle": "@JamieJansen333",
+            "discordLink": "https://discord.com/users/452760677418008617",
             "discordHandle": "Jamie.koios"
           },
           {
@@ -104,7 +104,7 @@
             "description": "2 years in developer relations in blockchain",
             "twitterLink": "https://twitter.com",
             "twitterHandle": "",
-            "discordLink": "https://discord.gg/jBjudugeBa",
+            "discordLink": "https://discord.com/users/801485039611150416",
             "discordHandle": "Malva.koios"
           },
           {
@@ -113,24 +113,15 @@
             "description": "2 years in developer relations in blockchain",
             "twitterLink": "https://twitter.com",
             "twitterHandle": "",
-            "discordLink": "https://discord.gg/jBjudugeBa",
+            "discordLink": "https://discord.com/users/801334609915805696",
             "discordHandle": "Dennis.koios"
-          },
-          {
-            "name": "Hans Xiang",
-            "imageUrl": "https://cdn.discordapp.com/avatars/772534923406999603/b8a84a8551fa8fa238718507bb08165a.png?size=256",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "",
-            "discordLink": "https://discord.gg/jBjudugeBa",
-            "discordHandle": "Hans.koios"
           },
           {
             "name": "Jordi Jansen",
             "imageUrl": "https://cdn.discordapp.com/avatars/355982565288574977/cac5ed2fa3bf5bb2e36dd1f03a09189b.png?size=256",
             "description": "Researcher combining Education, DeFi and Web3",
             "twitterLink": "https://www.twitter.com/jordijansen101",
-            "twitterHandle": "jordijansen101",
+            "twitterHandle": "@jordijansen101",
             "discordLink": "https://discord.gg/jBjudugeBa",
             "discordHandle": "Jordi.koios"
           }
@@ -223,7 +214,7 @@
             "description": "Coordinator minor",
             "twitterLink": "https://twitter.com",
             "twitterHandle": "",
-            "discordLink": "https://discord.gg/jBjudugeBa",
+            "discordLink": "https://discord.com/users/801485039611150416",
             "discordHandle": "Malva.koios"
           },
           {
@@ -231,26 +222,17 @@
             "imageUrl": "https://media-exp1.licdn.com/dms/image/C5603AQG-ZrRkvfq5Pg/profile-displayphoto-shrink_200_200/0/1599399278857?e=1635379200&v=beta&t=QPxadx36MObXXc91ZAY2SgS3UduweB0Y70kDFb6kQm8",
             "description": "Co-initiator Koios & lecturer TDFA/FIT",
             "twitterLink": "https://twitter.com/tdfatweets",
-            "twitterHandle": "tdfatweets",
-            "discordLink": "https://discord.gg/jBjudugeBa",
+            "twitterHandle": "@tdfatweets",
+            "discordLink": "https://discord.com/users/758707515772239933",
             "discordHandle": "Ricardo.koios"
-          },
-          {
-            "name": "Hans Xiang",
-            "imageUrl": "https://cdn.discordapp.com/avatars/772534923406999603/b8a84a8551fa8fa238718507bb08165a.png?size=256",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
-            "twitterHandle": "",
-            "discordLink": "https://discord.gg/jBjudugeBa",
-            "discordHandle": "Hans.koios"
           },
           {
             "name": "Jordi Jansen",
             "imageUrl": "https://cdn.discordapp.com/avatars/355982565288574977/cac5ed2fa3bf5bb2e36dd1f03a09189b.png?size=256",
             "description": "Researcher combining Education, DeFi and Web3",
             "twitterLink": "https://www.twitter.com/jordijansen101",
-            "twitterHandle": "jordijansen101",
-            "discordLink": "https://discord.gg/jBjudugeBa",
+            "twitterHandle": "@jordijansen101",
+            "discordLink": "https://discord.com/users/355982565288574977",
             "discordHandle": "Jordi.koios"
           }
         ]
