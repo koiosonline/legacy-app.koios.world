@@ -7,16 +7,19 @@ export const MarkdownEditor = () => {
   return (
     <div className="markdown-editor">
       <h1 className="markdown-editor__title">Markdown editor</h1>
-      <section>
-        <div>
-          <h2>Markdown</h2>
+
+      <section className="editor-wrapper">
+        <div className="editor">
+          <h2 className="editor__title">Markdown</h2>
           <textarea onChange={(e) => setInput(e.target.value)} />
         </div>
-        <div>
+
+        <div className="preview">
           <h2>Preview</h2>
           <Markdown value={input} />
         </div>
       </section>
+
     </div>
   );
 };

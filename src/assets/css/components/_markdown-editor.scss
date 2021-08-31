@@ -1,0 +1,13 @@
+.markdown-editor {
+    .editor-wrapper {
+        display: flex;
+        border: 1px solid red;
+
+        .editor,
+        .preview {
+            width: 50%;
+        }
+
+
+    }
+}
