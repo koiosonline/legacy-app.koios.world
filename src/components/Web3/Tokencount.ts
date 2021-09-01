@@ -1,7 +1,7 @@
 import LeaderboardAddresses from "./static/addresses.json";
 import { fetchImage, fetchJson } from "./Ipfs";
 import { FindProfile } from "./FindProfile";
-import { selectedAccount, selectedProfile } from "./Web3";
+import { selectedAccount } from "./Web3";
 import { GetTokenHoldersJSON } from "./GraphQueries";
 
 
@@ -14,7 +14,7 @@ export const getTokenCountTDFA = async () => {
   let tdfaAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.tdfaAddresses);
   for (let user of tokenholders.data.users) {
     if (tdfaAddresses.includes(user.address)) {
-      if (user.address == selectedAccount?.toLowerCase()) {
+      if (user.address === selectedAccount?.toLowerCase()) {
         let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": true };
         tokenholdersTDFA.push(entry);
         i++
@@ -60,7 +60,7 @@ export const getTokenCountBlockchain = async () => {
   let blockchainAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.blockchainAddresses);
   for (let user of tokenholders.data.users) {
     if (blockchainAddresses.includes(user.address)) {
-      if (user.address == selectedAccount?.toLowerCase()) {
+      if (user.address === selectedAccount?.toLowerCase()) {
         let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": true };
         tokenholdersBlockchain.push(entry);
         i++
@@ -106,7 +106,7 @@ export const getTokenCountOverall = async () => {
 
   for (let user of tokenholders.data.users) {
     if (!exclusions.includes(user.address)) {
-      if (user.address == selectedAccount?.toLowerCase()) {
+      if (user.address === selectedAccount?.toLowerCase()) {
         let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "index": i, "selectedAccount": true, "image": "default" };
         tokenholdersOverall.push(entry);
         i++;
