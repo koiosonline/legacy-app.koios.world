@@ -28,10 +28,11 @@ jobs:
         run: CI='' npm run build
 
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: AbleLincoln/push-to-sftp@v1.0
         with:
-          ftp-username: '${{ secrets.USERNAME }}'
-          ftp-server: '${{ secrets.SERVER }}'
-          ftp-password: '${{ secrets.PASSWORD }}'
-          local-dir: './build/'
-          git-ftp-args: --insecure
+          username: '${{ secrets.USERNAME }}'
+          password: '${{ secrets.PASSWORD }}'
+          host: 'crown.dreamhost.com'
+          port: 22
+          sourceDir: './build/*'
+          targetDir: '/dev-app.koios.world/'
