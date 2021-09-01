@@ -46,12 +46,14 @@ export const Profile = () => {
     } else {
       disconnectProvider();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
-  
+
 
   useEffect(() => {
     getBadges();
     getTokens();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAccount]);
 
   const getTokens = async () => {

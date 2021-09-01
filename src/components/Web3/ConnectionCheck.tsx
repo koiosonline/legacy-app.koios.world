@@ -2,10 +2,6 @@ import {
   connectWeb3,
   disconnectWeb3,
   provider,
-  selectedAccount,
-  profilePicture,
-  selectedProfile,
-  profileName,
 } from "./Web3";
 
 // export const ConnectionCheck = async () => {
@@ -22,12 +18,12 @@ import {
 
 export const Connect = async () => {
   await connectWeb3();
-  console.log("connected");
+  // console.log("connected");
   return provider;
 };
 
 export const Disconnect = async () => {
   await disconnectWeb3();
-  console.log("disconnected");
+  // console.log("disconnected");
   return provider;
 };

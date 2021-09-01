@@ -1,6 +1,5 @@
 import YouTube from 'react-youtube';
-import {useEffect, useState} from "react";
-import {useLocation, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import store from "store"
 import {CourseContentParams, CourseDetailParams, VideoSlugParams} from "../types/Params";
 
