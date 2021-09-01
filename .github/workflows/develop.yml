@@ -34,4 +34,4 @@ jobs:
           server: '${{ secrets.SERVER }}'
           password: '${{ secrets.PASSWORD }}'
           local-dir: './build/'
-          server-dir: '/${{ secrets.DEV_DIR }}'
+          server-dir: '/dev-app.koios.world'
