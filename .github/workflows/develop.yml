@@ -34,3 +34,4 @@ jobs:
           ftp-server: '${{ secrets.SERVER }}'
           ftp-password: '${{ secrets.PASSWORD }}'
           local-dir: './build/'
+          git-ftp-args: --insecure
