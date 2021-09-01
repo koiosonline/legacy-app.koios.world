@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Development deploy
+name: Production deploy
 
 # Controls when the action will run.
 on:
@@ -25,7 +25,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: CI='' npm run build
+        run: npm run build
 
       - name: FTP-Deploy-Action
         uses: AbleLincoln/push-to-sftp@v1.0
