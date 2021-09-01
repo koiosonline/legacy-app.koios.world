@@ -4,7 +4,6 @@ import { Home } from "./pages/Home";
 import { Worlds } from "./pages/Worlds";
 import { WorldDetail } from "./pages/WorldDetail/WorldDetail";
 import { Layout } from "./components/Layout/Layout";
-import { WithoutLayout } from "./components/Layout/WithoutLayout";
 import { Leaderboard } from "./pages/Leaderboard";
 import WorldOverview from "./pages/WorldOverview";
 import { Profile } from "./pages/Profile";
@@ -29,16 +28,12 @@ export const App = () => {
         <UserContext.Provider value={providerValue}>
         <ScrollToTop/>
       <Switch>
-        
-        
         <Route path={["/editor"]} exact >
-            <WithoutLayout >
                 <Switch>
                   <Route path="/editor" exact component={MarkdownEditor}/>
                 </Switch>
-            </WithoutLayout>
         </Route>
-
+        
         <Route>
           <Layout>
             <Switch>
@@ -57,7 +52,6 @@ export const App = () => {
             </Switch>
           </Layout>
           </Route>
-
       </Switch>
         </UserContext.Provider>
     </Router>

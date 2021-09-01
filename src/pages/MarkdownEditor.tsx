@@ -5,6 +5,7 @@ export const MarkdownEditor = () => {
   const [input, setInput] = useState("");
 
   return (
+    <main>
     <div className="markdown-editor">
       <h1 className="markdown-editor__title">Markdown editor</h1>
 
@@ -21,5 +22,6 @@ export const MarkdownEditor = () => {
       </section>
 
     </div>
+    </main>
   );
 };
