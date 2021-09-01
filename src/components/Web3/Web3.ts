@@ -2,7 +2,6 @@ import Web3 from "web3";
 import { web3Modal } from './WalletProvider';
 import { FindProfile } from './FindProfile';
 import { fetchImage } from "./Ipfs";
-import { useEffect } from "react";
 
 export let provider;
 export let selectedAccount;
@@ -42,7 +41,7 @@ const firstRun = async () => {
     await connectWeb3();
   }
   }
-  
+
   firstRun();
 
 export const disconnectWeb3 = async () => {
