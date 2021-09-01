@@ -9,8 +9,6 @@ export let selectedProfile;
 export let profilePicture;
 export let profileName;
 
-
-
 const fetchAccountData = async () => {
   const web3 = new Web3(provider);
 
@@ -28,7 +26,6 @@ const fetchAccountData = async () => {
 export const connectWeb3 = async () => {
   try {
     provider = await web3Modal.connect();
-    console.log(selectedAccount);
     if(!selectedAccount)
       await fetchAccountData();
   } catch (e) {
@@ -49,6 +46,6 @@ export const disconnectWeb3 = async () => {
     await web3Modal.clearCachedProvider();
     provider = null;
   }
-
+  localStorage.removeItem(selectedAccount);
   selectedAccount = null;
 };
