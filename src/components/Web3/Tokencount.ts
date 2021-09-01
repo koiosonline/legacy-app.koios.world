@@ -1,6 +1,6 @@
 import LeaderboardAddresses from "./static/addresses.json";
 import { fetchImage, fetchJson } from "./Ipfs";
-import { FindProfileLeaderboard } from "./Profiles";
+import { FindProfile } from "./Profiles";
 import { selectedAccount, selectedProfile } from "./Web3";
 import { GetTokenHoldersJSON } from "./GraphQueries";
 
@@ -34,7 +34,7 @@ export const getTokenCountTDFA = async () => {
   }
 
   for (let user of tokenholdersTDFA) {
-    var usernamePromise = FindProfileLeaderboard(user.address);
+    var usernamePromise = FindProfile(user.address);
     usernamePromises.push(usernamePromise);
   }
   await Promise.all(usernamePromises).then(async (values: any) => {
@@ -80,7 +80,7 @@ export const getTokenCountBlockchain = async () => {
   }
 
   for (let user of tokenholdersBlockchain) {
-    var usernamePromise = FindProfileLeaderboard(user.address);
+    var usernamePromise = FindProfile(user.address);
     usernamePromises.push(usernamePromise);
   }
   await Promise.all(usernamePromises).then(async (values: any) => {
