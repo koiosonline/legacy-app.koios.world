@@ -28,7 +28,6 @@ export const FindProfile = async (address: string) => {
     const profile = await getLegacy3BoxProfileAsBasicProfile(address);
     if (localStorage.getItem(address)) {
       let entry = JSON.parse(localStorage.getItem(address));
-      console.log(entry);
       return entry;
     }
     else {
