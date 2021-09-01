@@ -34,5 +34,5 @@ jobs:
           password: '${{ secrets.PASSWORD }}'
           host: 'crown.dreamhost.com'
           port: 22
-          sourceDir: './build/*'
+          sourceDir: './build/'
           targetDir: '/home/${{ secrets.USERNAME }}/dev-app.koios.world/'
