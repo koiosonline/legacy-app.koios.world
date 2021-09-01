@@ -1,12 +1,22 @@
 .markdown-editor {
+    background-color: red;
     .editor-wrapper {
         display: flex;
         border: 1px solid red;
+        height: auto;
 
         .editor,
         .preview {
             width: 50%;
         }
+
+        .editor {
+            &__text-area {
+                width: 100%;
+                height: 80vh;
+            }
+        }
+
 
 
     }

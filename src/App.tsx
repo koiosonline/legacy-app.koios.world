@@ -27,18 +27,19 @@ export const App = () => {
   return (
     <Router>
       <Switch>
-      <UserContext.Provider value={providerValue}>
+        <UserContext.Provider value={providerValue}>
         <ScrollToTop/>
+        
+            <EmptyLayout >
+                <Switch>
+                  <Route path="/editor" exact component={MarkdownEditor}/>
+                </Switch>
+            </EmptyLayout>
 
-        <Route path={['/editor']}>
-          <EmptyLayout >
-              <Route path="/editor" exact component={MarkdownEditor}/>
-          </EmptyLayout>
-        </Route>
 
-        <Route path={['/', '/worlds']}>
           <Layout>
-                <Route path="/" exact component={Home}><Redirect to="/worlds"/></Route>
+            <Switch>
+                <Route path="/"  exact component={Home}><Redirect to="/worlds"/></Route>
                 <Route path="/worlds" exact component={Worlds}/>
                 <Route path="/worlds/:worldContent" exact component={WorldOverview}/>
                 <Route path="/worlds/:worldContent/:worldDetail/:videoSlug?" exact component={WorldDetail}/>
@@ -50,11 +51,11 @@ export const App = () => {
                 <Route path="/earn" exact component={Earn} />
                 <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
                 <Route component={Error404}/>
-         
+            </Switch>
           </Layout>
-          </Route>
-      </UserContext.Provider>
-          </Switch>
+
+        </UserContext.Provider>
+      </Switch>
     </Router>
   );
 };

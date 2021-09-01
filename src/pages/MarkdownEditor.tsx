@@ -11,11 +11,11 @@ export const MarkdownEditor = () => {
       <section className="editor-wrapper">
         <div className="editor">
           <h2 className="editor__title">Markdown</h2>
-          <textarea onChange={(e) => setInput(e.target.value)} />
+          <textarea className="editor__text-area" onChange={(e) => setInput(e.target.value)} />
         </div>
 
         <div className="preview">
-          <h2>Preview</h2>
+          <h2 className="preview__title">Preview</h2>
           <Markdown value={input} />
         </div>
       </section>
