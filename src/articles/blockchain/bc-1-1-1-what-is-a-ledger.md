@@ -10,7 +10,13 @@ All way too techie for class 1 😄. Remember: blockchains are an innovation of 
 
 ## Let's start with the very first lesson: what is a ledger?
 
-![Slide 1]( https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-1-what-is-a-ledger-image1.PNG)
+* Imagine a book in which activities (“exchanges in value”) are recorded. Chronologically. Ledgers mirror the world, reconstructing transactions in the same sequence as real-life transactions. So: Ledgers record transfers in “value” in chronological ordering and reflect the real world as best as possible.
+
+* Financial ledgers are the most common ledgers, and they represent a complete record of an entity’s economic activities. They are used to keep track of transferring and ownership of assets, like money, among stakeholders such as the entity itself, consumers, suppliers, and producers.
+
+* Different activities (exchanges) equals different ledgers, for example: economic, social, political activities could all have different ledgers.
+
+* Ledgers can record tangible assets and intangible assets.
 
 <blockquote style="border-color: #ff0bac"> ❓ In your own words: what is a ledger? 
 [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431241479666733061?s=20
