@@ -4,7 +4,7 @@ import { Home } from "./pages/Home";
 import { Worlds } from "./pages/Worlds";
 import { WorldDetail } from "./pages/WorldDetail/WorldDetail";
 import { Layout } from "./components/Layout/Layout";
-import { EmptyLayout } from "./components/Layout/EmptyLayout";
+import { WithoutLayout } from "./components/Layout/WithoutLayout";
 import { Leaderboard } from "./pages/Leaderboard";
 import WorldOverview from "./pages/WorldOverview";
 import { Profile } from "./pages/Profile";
@@ -26,20 +26,22 @@ export const App = () => {
 
   return (
     <Router>
-      <Switch>
         <UserContext.Provider value={providerValue}>
         <ScrollToTop/>
+      <Switch>
         
-            <EmptyLayout >
+        
+        <Route path={["/editor"]} exact >
+            <WithoutLayout >
                 <Switch>
                   <Route path="/editor" exact component={MarkdownEditor}/>
                 </Switch>
-            </EmptyLayout>
+            </WithoutLayout>
+        </Route>
 
-
+        <Route>
           <Layout>
             <Switch>
-                <Route path="/"  exact component={Home}><Redirect to="/worlds"/></Route>
                 <Route path="/worlds" exact component={Worlds}/>
                 <Route path="/worlds/:worldContent" exact component={WorldOverview}/>
                 <Route path="/worlds/:worldContent/:worldDetail/:videoSlug?" exact component={WorldDetail}/>
@@ -50,12 +52,14 @@ export const App = () => {
                 <Route path="/explanation" exact component={ExplanationVideos}/>
                 <Route path="/earn" exact component={Earn} />
                 <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
+                <Route path="/" exact component={Home}><Redirect to="/worlds"/></Route>
                 <Route component={Error404}/>
             </Switch>
           </Layout>
+          </Route>
 
-        </UserContext.Provider>
       </Switch>
+        </UserContext.Provider>
     </Router>
   );
 };
