@@ -12,7 +12,6 @@ Like a delay, some threshold or fee is created by some form of limitation. The l
 
 
 <blockquote style="border-color: #ff0bac"> ❓ Do you know other examples of open-source software that play an essential role? Or examples of any other wall-less economies? [Check answers🦉](https://twitter.com/JordiJansen101/status/1431256079934103554?s=20)
- 
  </blockquote>
 
 

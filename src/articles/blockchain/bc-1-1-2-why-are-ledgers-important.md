@@ -104,5 +104,3 @@ Take two of the transfers of value you identified in your own life from the prev
 
 ##  Food for thought
 Post your answers in the class Twitter Thread. You can pretend to help us improve the quality of conversation and help your fellow peers learn. But in the meantime, take a sneak peek at the answers…😉
-
-
