@@ -31,6 +31,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           ftp-username: '${{ secrets.USERNAME }}'
-          ftp-server: 'sftp://${{ secrets.SERVER }}:22/dev-app.koios.world/'
+          ftp-server: '${{ secrets.SERVER }}'
           ftp-password: '${{ secrets.PASSWORD }}'
           local-dir: './build/'
