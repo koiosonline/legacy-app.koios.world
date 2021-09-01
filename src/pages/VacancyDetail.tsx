@@ -26,9 +26,9 @@ const VacancyDetail = ({ match }) => {
           <p className={'content__skillset'}>{currentVacancy.skillSet}</p>
           <p className={'content__typeTitle'}>{currentVacancy.typeTitle}</p>
           <ul className={'content__typeList'}>
-            {currentVacancy.type.map((types) => {
+            {currentVacancy.type.map((types, index) => {
               return (
-                <li>{types.typeItem}</li>
+                <li key={index}>{types.typeItem}</li>
               )
             })}
           </ul>

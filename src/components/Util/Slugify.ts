@@ -6,7 +6,7 @@ type SlugifyProps = {
 };
 
 export const Slugify = (text: string, props?: SlugifyProps) => {
-  let slug = text.replace(/[\\#,+!()$~%'":*<>{}?]/g, "").replace(/\//g, "-");
+  let slug = text.replace(/[\\#,+!()$~%'":*<>{}?|]/g, "").replace(/\//g, "-");
 
   props?.replaceSpaceWith
     ? (slug = slug.replace(/\s+/g, props.replaceSpaceWith))

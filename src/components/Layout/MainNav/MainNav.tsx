@@ -4,12 +4,8 @@ import { Icon } from "../../Util/Icon";
 import { useSizes } from "../../Util/useSizes";
 import koiosLogo from "../../../assets/images/logos/koios-logo.svg";
 import {
-  connectWeb3,
-  disconnectWeb3,
-  provider,
   selectedAccount,
   profilePicture,
-  selectedProfile,
   profileName,
 } from "../../Web3/Web3";
 import MainNavData from "./static/MainNavData.json";
@@ -58,6 +54,7 @@ export const MainNav = () => {
     } else {
       disconnectProvider();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
 
 

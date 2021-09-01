@@ -1,6 +1,6 @@
 import worldsData from '../assets/data/Worlds.json';
 import {useParams, Link} from "react-router-dom";
-import DiscordEmbed from '../components/discordEmbed';
+// import DiscordEmbed from '../components/discordEmbed';
 import {Slugify} from '../components/Util/Slugify';
 import LearnToNavigate from "../components/LearnToNavigate";
 import LevelCards from "../components/LevelCards";
@@ -47,7 +47,7 @@ const WorldOverview = () => {
                   <Link className={"smallCard__link"} to={'/earn'}>{data.linkTitle}</Link>
                 }
                 {data.title === 'Connect' &&
-                  <a className={"smallCard__link"} href={'https://discord.gg/jBjudugeBa'} target={'_blank'}>{data.linkTitle}</a>
+                  <a className={"smallCard__link"} href={'https://discord.gg/jBjudugeBa'} target={'_blank'} rel={'noreferrer'}>{data.linkTitle}</a>
                 }
               </div>
             )

@@ -12,7 +12,7 @@ import {
 } from "../../types/Params";
 import { getLiterature, getVideoInfo } from "../../api/Api";
 import TabInfo from "../../components/TabInfo";
-import axios from "axios";
+// import axios from "axios";
 import useQuiz from "../../components/quiz/useQuiz";
 import Quiz from "../../components/quiz/Quiz";
 import store from "store";
@@ -20,7 +20,7 @@ import Loading from "../../components/Loading";
 import { HashLink } from "react-router-hash-link";
 import { Markdown } from "../../components/Markdown";
 import { ArticlePageLinks } from "../../components/ArticlePageLinks";
-import TwitterLinks from "./static/DiscussOnTwitter.json";
+// import TwitterLinks from "./static/DiscussOnTwitter.json";
 import { compiler } from "markdown-to-jsx";
 
 export const WorldDetail = () => {
@@ -118,29 +118,29 @@ export const WorldDetail = () => {
     }
   };
 
-  const filterDefaultLinks = () => {
-    return courseData.filter((item) => "*" === item.chapter);
-  };
+  // const filterDefaultLinks = () => {
+  //   return courseData.filter((item) => "*" === item.chapter);
+  // };
 
-  const fetchPDF = (link, title, world) => {
-    let a = document.createElement("a");
-    document.body.appendChild(a);
-    axios(`https://ipfs.io/ipfs/` + link, {
-      method: "GET",
-      responseType: "blob",
-    })
-      .then((response) => {
-        const file = new Blob([response.data], { type: "application/pdf" });
-        const fileURL = URL.createObjectURL(file);
-        a.href = fileURL;
-        a.download = world + "-" + title;
-        a.click();
-        window.URL.revokeObjectURL(fileURL);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const fetchPDF = (link, title, world) => {
+  //   let a = document.createElement("a");
+  //   document.body.appendChild(a);
+  //   axios(`https://ipfs.io/ipfs/` + link, {
+  //     method: "GET",
+  //     responseType: "blob",
+  //   })
+  //     .then((response) => {
+  //       const file = new Blob([response.data], { type: "application/pdf" });
+  //       const fileURL = URL.createObjectURL(file);
+  //       a.href = fileURL;
+  //       a.download = world + "-" + title;
+  //       a.click();
+  //       window.URL.revokeObjectURL(fileURL);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   const quiz = useQuiz();
 
@@ -173,6 +173,7 @@ export const WorldDetail = () => {
 
   useEffect(() => {
     generateTableOfContents();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [literatureOfVideo]);
 
   useEffect(() => {
@@ -213,19 +214,19 @@ export const WorldDetail = () => {
     }
   };
 
-  const openDiscord = () => {
-    window.open("https://discord.gg/jBjudugeBa", "_blank");
-  };
+  // const openDiscord = () => {
+  //   window.open("https://discord.gg/jBjudugeBa", "_blank");
+  // };
 
-  const hasTwitterDiscussion = () => {
-    const currentWorld = TwitterLinks[worldContent];
-    const currentClass = currentWorld?.find(
-      (item) => item.videoTitle === videoContent?.title
-    );
-    if (currentClass) {
-      return currentClass.twitterLink;
-    }
-  };
+  // const hasTwitterDiscussion = () => {
+  //   const currentWorld = TwitterLinks[worldContent];
+  //   const currentClass = currentWorld?.find(
+  //     (item) => item.videoTitle === videoContent?.title
+  //   );
+  //   if (currentClass) {
+  //     return currentClass.twitterLink;
+  //   }
+  // };
 
   // https://css-tricks.com/parsing-markdown-into-an-automated-table-of-contents/
   return (
