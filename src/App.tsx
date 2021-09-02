@@ -1,6 +1,5 @@
 import { Route, HashRouter as Router, Switch, Redirect } from "react-router-dom";
 import "./assets/css/koios.scss";
-import { Home } from "./pages/Home";
 import { Worlds } from "./pages/Worlds";
 import { WorldDetail } from "./pages/WorldDetail/WorldDetail";
 import { Layout } from "./components/Layout/Layout";
@@ -47,7 +46,7 @@ export const App = () => {
                 <Route path="/explanation" exact component={ExplanationVideos}/>
                 <Route path="/earn" exact component={Earn} />
                 <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
-                <Route path="/" exact component={Home}><Redirect to="/worlds"/></Route>
+                <Route path="/" exact><Redirect to="/worlds"/></Route>
                 <Route component={Error404}/>
             </Switch>
           </Layout>
