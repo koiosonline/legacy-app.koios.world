@@ -53,13 +53,13 @@ And you can join all of them by downloading and maintaining the software.
 
 
 
-## Homework 1.1.9 The Byzantine General Problem 
+## Portfolio assignment 1.1.9 The Byzantine General Problem 
 Explain in your own words, on video (!!), what the Byzantine General Problem is and how this problem relates to a distributed decentralized ledger. 
 
 **This goes for all the video's in future portfolio assignments:**
-Note 1: upload your video on YouTube or another platform of your liking and copy the link in your portfolio. Don't forget to adjust the privacy settings. We suggest opt-in for the unlisted option. We can't see the video if you set it private, and everybody can see it if you put it in public. 
-Note 2: REFRAIN FROM READING A SCRIPT. Explain it, don't read it. 
-Note 3: you should be visible for us to know that it was you.
+* Note 1: upload your video on YouTube or another platform of your liking and copy the link in your portfolio. Don't forget to adjust the privacy settings. We suggest opt-in for the unlisted option. We can't see the video if you set it private, and everybody can see it if you put it in public. 
+* Note 2: REFRAIN FROM READING A SCRIPT. Explain it, don't read it. 
+* Note 3: you should be visible for us to know that it was you.
 
 ## Further readings (sources or support) 
 * [The Byzantine Generals Problem](Paper:https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf) 

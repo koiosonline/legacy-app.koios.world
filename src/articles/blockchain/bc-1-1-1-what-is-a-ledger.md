@@ -10,7 +10,13 @@ All way too techie for class 1 😄. Remember: blockchains are an innovation of 
 
 ## Let's start with the very first lesson: what is a ledger?
 
-![Slide 1]( https://raw.githubusercontent.com/koiosonline/literature-images/main/blockchain-level1/BC-1-1-1-what-is-a-ledger-image1.PNG)
+* Imagine a book in which activities (“exchanges in value”) are recorded. Chronologically. Ledgers mirror the world, reconstructing transactions in the same sequence as real-life transactions. So: Ledgers record transfers in “value” in chronological ordering and reflect the real world as best as possible.
+
+* Financial ledgers are the most common ledgers, and they represent a complete record of an entity’s economic activities. They are used to keep track of transferring and ownership of assets, like money, among stakeholders such as the entity itself, consumers, suppliers, and producers.
+
+* Different activities (exchanges) equals different ledgers, for example: economic, social, political activities could all have different ledgers.
+
+* Ledgers can record tangible assets and intangible assets.
 
 <blockquote style="border-color: #ff0bac"> ❓ In your own words: what is a ledger? 
 [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431241479666733061?s=20
@@ -21,12 +27,16 @@ All way too techie for class 1 😄. Remember: blockchains are an innovation of 
 Let's start with the basics: understand what a ledger is and grasp its concepts. So what is it? A ledger is a tool we use to record transactions. But what are "transactions"? "Transactions" are nothing more than (economic) activities where people "exchange value". So "exchange" means that the value goes from "one person to the other person". Or instead of between people, between legal entities like foundations and corporations. Or even between machines nowadays!
 
 >💡 Different 'entities' can exchange value in a ledger.
+
+
 <blockquote style="border-color: #ff0bac"> ❓ Can you think of other types of entities that can interact in a ledger? [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431241847578501125?s=20)
 </blockquote>
 
 And "value" can mean "anything, as long as we (humans) deem it valuable". Many books write about 'value' over time, and many would love to enter the philosophical spheres about value. What might be valuable to you now but not be beneficial to somebody else. Or is value always measurable? **The types of value we are talking about are metric by nature**. So you can measure them, which is needed to record them in a ledger. Try to record the value 'love 💘'? And no: not talking about paid love. So value is often represented as something metric, usually monetary. Still, it could also represent values in other notations. 
 
 >💡 Value can take many forms. For example, in ledgers, we record measurable values. 
+
+
 <blockquote style="border-color: #ff0bac"> ❓ What do you deem valuable? Can that value be recorded in a ledger? [Check answers 🦉](https://twitter.com/JordiJansen101/status/1431242496168927234?s=20)</blockquote>
 
 
@@ -69,7 +79,7 @@ Ledgers are tools to record economic activities, known as transactions, which tr
 
 In the next class, we will explain WHY ledgers have an essential role.
 
-## Homework 1.1 Ledgernomics
+## Portfolio assignment 1.1.1 What is a ledger 
 Which transfers of value from your everyday life are recorded in a ledger? Think beyond the examples mentioned in the video and come up with at least five new examples. Pro-tip: check out the answers for inspiration in the class Twitter thread.
 
 ## Further readings (sources or support)

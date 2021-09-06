@@ -72,7 +72,7 @@ Ledgers keep evolving. History has proven that every time a ledger develops, soc
 
 But to what end goal, where do we stop? In other words, how might a perfect ledger look like? That we will see in the next course 😊!
 
-## Homework assignment 
+## Portfolio assignment 1.1.3 The history of ledgers
 Before we move forward to the next lesson, brainstorm with yourself, a friend, or a Koios member what you think a perfect ledger could and should look like. How would it function, and which unique characteristics would it have in an ideal world? Tip: you can look up papers online about this topic. During class, you might be invited to discuss why you think your perfect ledger is perfect. Remember, opinions can change, and it's not bad if yours does too. We are here to learn with each other.
 
 >💡  "The greatest teacher failure is" — Yoda
@@ -83,7 +83,7 @@ Before we move forward to the next lesson, brainstorm with yourself, a friend, o
 * [Ledgernomics](https://bitemycoin.com/opinion/ledger-nomics/)
 * [The beautiful Florence](https://en.wikipedia.org/wiki/Florence)
 * [House of Medici](https://en.wikipedia.org/wiki/House_of_Medici)
-* [Medici's TV series](https://en.wikipedia.org/wiki/Medici_(TV_series))
+* [Medici's TV series](https://en.wikipedia.org/wiki/Medici_(TV_series)
 * [Trusted Third Party](https://en.wikipedia.org/wiki/Trusted_third_party)
 
 ## Food for thought

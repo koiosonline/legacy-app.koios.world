@@ -73,7 +73,7 @@ No single entity, no TTP determining what the status of the ledger is or what va
 
 >💡 It is a shift in trust, from centralized trust to ecosystem protocol trust. Blockchains can be seen as a ledger + protocol + ecosystem of entities. The blockchain provides trust, not the TTP. We rearranged trust!! We always needed a centralized TTP in a closed-off environment. In a decentralized world, we use a shared protocol in an open environment. This enables us to do peer-to-peer transactions (direct from one person to another person) without an intermediary, allowing us to create entirely new infrastructures! 
 
-&nbsp;
+
 
 >💡 We currently use peer-intermediate TTP – peer in older systems. This new way of recording is not only more cost-efficient. It also allows the peers to own their data, with no TTP to take all the profit. Imagine all the applications on your phone, but without the intermediaries. So, an Uber application without Uber between you and the cab driver. Or whatsapping without Mark and where the profits of advertising flow to you. For the first time in human history, the ledgers not only stand between us, it is actually from us. Owned by nobody, owned by everybody. We rearranged trust and now have, just like the air we breathe, also the ledger as a Common.
 
@@ -90,7 +90,7 @@ Take a second here…
 
 A long class…sorry for this…but an important one. Take your time to digest everything we just told you. We will wait for you in the next class. There we will describe the problems you encounter when a ledger is decentralized and distributed 😊 
 
-## Homework 1.1.7 Distributed Decentralized Ledgers 
+## Portfolio assignment 1.1.7 Distributed decentralized ledgers 
 We touched upon what distribution and decentralization mean in the context of ledgers. Investigate the level of distribution and decentralization of Bitcoin as of today. Take your time answering this question. Try to refrain from empty claims, support your opinion as well as possible! 
 The minimum amount of words: 500. 
 

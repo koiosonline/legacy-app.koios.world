@@ -19,19 +19,19 @@
         "title": "Blockchain level 1",
         "videoInfo": "QmT9vZ78djiZrQixsfTjWqDgbMZs7m6crrUj1hqgYLnY2E",
         "data": "QmTPZUavGLVspuoPHHwJwxbsrkt6V3bJPL7Q2ikLUNTS1c",
-        "subtitle": "Economics"
+        "subtitle": "Basic introduction"
       },
       {
         "title": "Blockchain level 2",
         "videoInfo": "QmVS36BRyF68YNS46dQ9xM3MLRnD2vgM84iV8w1mspyAyJ",
         "data": "QmXa6GF9MLBtpeE1dGpwm3GWvMbFYNh5whaaZuYjvyzErP",
-        "subtitle": "Distributed Ledger Technology"
+        "subtitle": "The fundamentals"
       },
       {
         "title": "Blockchain level 3",
         "videoInfo": "QmPMMaPkekVioCSPHmERYpJ7EdcUZGdSUNm5yGJEmouRji",
         "data": "QmNyDU4KauqoXQSHQphcbP8M6rsmaZcP5JEssRSULuw7Eg",
-        "subtitle": "Disruptive innovation"
+        "subtitle": "Disruptive economics"
       }
     ],
     "earn": [
@@ -204,9 +204,9 @@
     ],
     "team": [
       {
-        "subtitle": "When you join KERNEL, you're immediately put in a room with 200 top builders in Web 3.",
-        "p1": "This includes builders at leading Web 3 companies, founders, gamers, designers, artists, and musicians. All are talented individuals exploring what's next for our internet culture. All are genuinely interested in exploring themselves, first, in order to build a better Web.",
-        "p2": "Here are some examples of KERNEL Fellows you'll be joining and the Web 3 projects they are building.",
+        "subtitle": "When you join Koios, you're immediately put in a room with 1000+ people active in Web3.",
+        "p1": "This includes field experts, teachers, researchers, builders, gamers, designers, moon boys & girls, and artists. Many are talented individuals exploring what's next for our internet culture. \nHere are some examples of the most active community members in this world whom you'll be joining.",
+        "p2": "",
         "members": [
           {
             "name": "Malva Ahmed",
