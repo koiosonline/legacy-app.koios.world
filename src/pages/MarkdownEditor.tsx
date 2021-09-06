@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { Markdown } from "../components/Markdown";
+import { Header } from "../components/Layout/Header";
+
 
 export const MarkdownEditor = () => {
   const [input, setInput] = useState("");
 
   return (
+    <>
+    <Header />
     <main>
     <div className="markdown-editor">
       <h1 className="markdown-editor__title">Markdown editor</h1>
@@ -23,5 +27,6 @@ export const MarkdownEditor = () => {
 
     </div>
     </main>
+    </>
   );
 };

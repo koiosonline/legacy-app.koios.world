@@ -6,7 +6,7 @@ export const Layout: React.FC = (props) => {
   return (
     <>
       <MainNav />
-      <main className="main">
+      <main className="main-side-nav">
         {props.children}
       </main>
     </>
