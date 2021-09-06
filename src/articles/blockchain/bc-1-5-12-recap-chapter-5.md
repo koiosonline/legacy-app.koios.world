@@ -6,3 +6,12 @@ By now, it is more than time to do a recap! What we have discussed so far in 1.2
 
 Hopefully, you understood everything so far, but if you still have questions or have no idea where we are talking about. Then, you know where to find us! 
 
+
+## Portfolio Assignments 1.5.12 Recap
+
+Proof you master the learning goals of chapter 1.5:
+* Explain in my own words what money is, partially by naming the functions and properties (understand)
+ * Explain in 5 sentences what the first use case of Bitcoin was? (understand)
+ * Evaluate by experiencing if Bitcoin is the future of money by buying my first Satoshis, where I evaluate the benefits and shortcomings of the current network (evaluate)
+ * I can also support what shortcomings seem technically temporarily and what drawbacks and benefits seem to be fundamental (evaluate)
+

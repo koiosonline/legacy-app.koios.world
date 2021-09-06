@@ -23,6 +23,7 @@ Before we start, we describe ten different properties of blockchain technology. 
 
 ## The properties 
 
+
 #1 we have an immutable ledger. You can't alter the blockchain, also known as "append-only". Anders showed us already: if we change history, we change the hash. So the hash of our node will be different from the hash of other nodes. This allows us to efficiently and securely compare our history with the history of all the other nodes.
 
 #2 It is decentralized, which means there is no single party in control: the more decentralization, the less centralized risks of dishonesty, loss of records, or exclusion. 
@@ -65,8 +66,10 @@ Ask yourself this when confronted with the question “do I need a blockchain?�
 Different blockchains each have a different trade-off between the properties. You can’t have them all. Remember: despite some of the hype, blockchains are “incredibly inefficient,” (remember all the power in the lost power in blocks that did not get published in the miner race?). It’s worth paying the cost when you need the decentralization, but it’s not when you don’t need properties of decentralization. If trust in a third party > cost of inefficiency = no blockchain. Note: on a global scale the efficiency often turns around and is one public blockchain often more efficient then all the separate centralized ledgers.
 But what then are examples where we do need more decentralization? Why should I bother with blockchains?! Read up about it in the next chapters. 
 
-## Homework 1.4.1 So why care? Properties of a blockchain  
+## Portfolio assignments 1.4.1 Properties of a blockchain  
 No blockchain currently covers it all. This might change in the future, but for now: each blockchain has its properties and, therefore, its use-cases. Make a comparison between the Bitcoin, Ethereum, and Monero blockchains. Use the characteristics we used in this video and grade each blockchain per property; 
+
+
 1. Immutable
 2. Decentralized
 3. Open & public

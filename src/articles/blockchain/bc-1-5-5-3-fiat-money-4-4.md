@@ -17,5 +17,8 @@ We recorded some benefits and downsides, the pros and cons of a cashless society
 
 For now, we would like to challenge you to form your own opinion and think about what it would mean for you. You personally, but of course also for your children and your children's children, because monetary reformation is something that might carry a very, very long way! We are currently building the infrastructure for the future, so you might offer yourself the chance to think about this topic for more than one minute 😉
 
+
 ## Further Readings
 * [Money and freedom of speech](https://twitter.com/AriDavidPaul/status/1095687626059857923)
+
+

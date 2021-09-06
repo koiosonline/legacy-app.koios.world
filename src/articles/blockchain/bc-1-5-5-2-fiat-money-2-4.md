@@ -35,6 +35,7 @@ To close this session, [added]( https://www.youtube.com/watch?v=3oXMGeEQfeg&feat
 ## Conclusion
 Fractional Reserve Banking allows banks to lend out more money than they own, spurring economic growth but making the overall system more fragile. Banks previously had the support from governments or centralized banks that helped them out when they failed, protected partially by legislation. However, this same legislation prevents them from competing with new competitors, like Facebook, Central Banks, or Bitcoin. So the question remains whether to de-legislate banks, opening up the banking market, making them personally accountable for their actions, and enabling them to innovate. 
 
+
 ## Further readings 
 * [Fun watch (4 minutes)](https://www.youtube.com/watch?v=iPkJH6BT7dM)
 * [Bank runs explained in one minute](https://www.youtube.com/watch?v=xa75BfmXQH4)

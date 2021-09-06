@@ -22,11 +22,14 @@ We are most definitely not sure of the future course of data ownership. Still, i
 >💡  The decentralized vision is to redistribute that centralized power over an ecosystem of entities. From centralized powerhouses that grow out of control to sustainable commons for all. 
 
 
-## Homework 1.4.2 Data ownership & personal freedom  
+## Portfolio assignment 1.4.2 Data ownership & personal freedom  
 1.	What is your opinion on data ownership and the personal freedom that is associated with it? Do you mind sharing your data in return for the ability to use Facebook, e.g.? And if you are concerned, what are you prepared to do about it? Can you do something about it?
 
 2.	Sit back and relax while watching The Great Hack. Then, record your findings in the FilmForm. 
+
+
 ## Further readings (sources or support) 
+
 * [ADISummit: Self-Sovereign Identity Panel](https://www.youtube.com/watch?v=DZbyiJqKT8c)
 * [Harari & Lagarde about the 21st century](https://www.youtube.com/watch?v=t5Y2CwCsnbA&feature=youtu.be)
 * [Trailer the great hack](https://www.youtube.com/watch?v=iX8GxLP1FHo)

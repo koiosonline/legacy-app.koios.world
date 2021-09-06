@@ -21,6 +21,12 @@ But why did Satoshi invent Bitcoin? In the first block, called the "Genesis bloc
 
 But this is not a given: is bitcoin truly money, or is it something else? So if you would like to know the answer to that question, you would first need to understand what money is clearly.  And for that, I will see you in the next session: "What is money?"
 
+## Portfolio assignment 1.5.1 First use case: money
+
+
+Before we start, write down the answer of what you think "money" should be and for what functions it should or could be used. You are allowed to think outside the box, so we dare you ;-)
+
+
 
 ## Further readings
 

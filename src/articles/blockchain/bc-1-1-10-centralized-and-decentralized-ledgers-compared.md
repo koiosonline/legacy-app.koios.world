@@ -110,7 +110,7 @@ New forms of sharing information & Less information asymmetry
 * Therefore, let's first see how a blockchain works on one node to better understand the technology and possibilities. Then, after we showed you how blockchains work in an example of only one node, we will show you how Satoshi gathered a set of tools. And how he created consensus rules, which are used to determine how to reach consensus between all the different nodes. We will also show you the (very important!) benefits, but why this is inefficient compared with centrally coordinated ledgers. 
 
 
-## Homework 1.1.10 Centralized and decentralized ledgers compared 
+## Portfolio assignment 1.1.10 Centralized and decentralized ledgers compared 
 Research online into at least three blockchains. Determine whether a blockchain could be a suitable solution for the problems these projects describe. Is decentralization needed, or is using a (partially) centralized ledger a better solution? 
 
 ## Further readings (sources or support) 

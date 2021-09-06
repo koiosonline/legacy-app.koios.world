@@ -37,7 +37,11 @@ What Elon Musk was telling relates to this life's family tree. **We might all gr
 See you in the next session, the last session, about a personal head, start :-)!
 
 ## Conclusion
+
 When you look at life's family tree, depicting life on planet earth for the last 400,000,000 years, you will see that we are all gradually moving to a single interconnected entity, as history has shown us. This is one of the main reasons I firmly believe that decentralized ledgers will be the future. Because they allow us / enable us in way better ways to be interconnected with each other than ledgers that have walls around them! Acting alongside a tendency displayed in nature and history alike.
+
+
+
 ## Further readings
 
 * [Life's family tre](https://www.evogeneao.com/learn/tree-of-life)

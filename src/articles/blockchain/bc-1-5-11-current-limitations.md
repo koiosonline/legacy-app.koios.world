@@ -1,5 +1,5 @@
 
-# BC1.5.11 Current limitations
+# BC-1.5.11 Current limitations
 
 After this piece of sci-fi, we think it is more than enough time to bring us back to reality and the here & now. Therefore, the final section of part 1.5:  "current limitations & what is needed for adoption". Bottom line: open public blockchains are in their infancy. As you know, blockchains already existed in the '70s from the previous century. Currently, we have open public blockchains, but only for ten years so far. So, it's best to compare this technology with a 10-year-old kid. There are, of course, a multitude of limitations at this age. You can compare the status of blockchain technology best with the internet technologies of the mid-90s. It doesn't work all that well, a bit, but has a lot of potential. It needs to scale, and every time it scales, somebody else invents something new. And then we need to scale again.
 
@@ -45,6 +45,7 @@ Etc. etc., we will discuss the others in depth in levels 2 and 3! Next up, it is
 ## Conclusion
 
 Public blockchains are in their infancy and harbor several limitations discussed in this session. However, time will tell if gifted developers from the open-source community can harbor enough skills to realize this new digital infrastructure of the future. I do not doubt that they will succeed. Still, the question remains: will this be a decentralized future or once again a centralized spin-off of something that was once intended to be decentralized (like the internet once was).
+
 
 ## Further readings
 
