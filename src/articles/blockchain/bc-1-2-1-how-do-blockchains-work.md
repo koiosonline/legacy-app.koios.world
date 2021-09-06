@@ -155,9 +155,18 @@ Arigato!
 ## Conclusion
 If you want to understand how a blockchain works, watch the video clips on https://andersbrownworth.com/blockchain/. 
 
-## Homework 1.2.1 How do blockchains work 
-You just learned how blockchains work. Explain in your very own (!) video (!) that you now understand how a blockchain works on a high level by using the [Blockchain Demo]( https://andersbrownworth.com/blockchain/blockchain). 
+## Portfolio assignment 1.2.1 How do blockchains work 
+1. You just learned how blockchains work. Explain in your very own (!) video (!) that you now understand how a blockchain works on a high level by using the [Blockchain Demo]( https://andersbrownworth.com/blockchain/blockchain). 
+
+2. Chapter check: can you accomplish the chapter learning goals? Free of format.
+* Explain in my own words what a blockchain is (understand)
+* Explain why the explanation of what a blockchain is could differ per perspective (understand)
+* Illustrate how a blockchain works on a very high non-programming level by using an online web-based tool (analyze)
+
+
+
 ## Further readings (sources or support) 
+
 * [What is a blockchain](https://en.wikipedia.org/wiki/Blockchain)
 
 * [Bitcoin source code explaining blockchain](https://github.com/bitcoin/bitcoin/blob/master/src/primitives/block.h)  

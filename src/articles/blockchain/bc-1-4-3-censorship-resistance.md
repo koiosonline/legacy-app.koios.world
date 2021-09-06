@@ -14,8 +14,8 @@ American norms and values are in the above scenario imposed on Dutch culture. Be
 We gradually get more dependent on Software, so the dependency on the other norms and values will increase. Software is eating the world. Money will be an application. Money can be seen as speech, a way to express yourself. For example, with what you buy and with whom you transact. Do you want that speech to be monitored by a governmental agency or by a commercial party? What happens if you don't want to follow the rules anymore? You could be switched off in the money system. Censorship resistance = freedom of the individual and freedom of culture (etc.). Freedom to interact the way you want. 
 
 
-## Homework 1.4.3 Censorship resistance  
-Give five examples of censorship that apply to the country you live in. And yes, even the Netherlands has censorship! What is your personal opinion about censorship from a controlling party like the government? And how about censorship by a commercial entity? Let's debate in class! 
+## Portfolio assignment 1.4.3 Censorship resistance  
+Give five examples of censorship that apply to the country you live in. And yes, even the Netherlands has censorship! What is your opinion about censorship from a controlling party like the government? And how about censorship by a commercial entity? Let's debate in class or Discord! 
 
 ## Further readings (sources or support) 
 * [The price of losing privacy](https://www.youtube.com/watch?v=2G8IgiLbT_4) 

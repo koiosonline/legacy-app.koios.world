@@ -10,6 +10,7 @@ BC 1.2.1 How do blockchains work?
 
 
 ## Learning goals
+
 By the end of this chapter, I can: 
 
 

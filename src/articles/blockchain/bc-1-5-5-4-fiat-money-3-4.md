@@ -11,6 +11,14 @@ So single-point-of-failures are very much applicable to our current banking syst
 ## Conclusion
 The current banking system operates with many different intermediaries, all of which have access to your data (even if you make a 1$ payment). So if one of them gets hacked, your data is available to the hacker. Having a centralized ledger makes it interesting to attack that kind of a ledger because of the "single-point-of-failure" risk.  
 
+
+## OPTIONAL (!) Portfolio assignments 1.5.5 Fiat money 
+
+1. What is your opinion on the current monetary system and what the future of monetary systems should look like? Create a plea for your position (no size limits).
+
+2. Watch the (first part of the) series of videos “hidden secrets of money” via Youtube. Record your findings on the FilmForm.
+
+
 ## Further reading
 * [How the Carbanak cyber gang stole one bln dollar](https://eu.usatoday.com/story/tech/2015/02/16/bank-hesit-cybersecurity-kaspersky-report/23509937/)
 

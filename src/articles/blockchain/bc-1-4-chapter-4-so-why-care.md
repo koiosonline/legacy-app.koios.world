@@ -17,5 +17,6 @@ This chapter states some personal reasons why we think this technology is vital 
 ## Learning goals
 
 By the end of this chapter, I can: 
+
 1. state why I think blockchain will or will not play an essential role in the world and my personal life (analyze)
 

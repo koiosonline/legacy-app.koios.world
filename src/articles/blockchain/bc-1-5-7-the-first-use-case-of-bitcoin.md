@@ -1,4 +1,3 @@
-
 # BC-1.5.7 The first use case of bitcoin 
 
 Bitcoin, the money app! First use case. I like this one because people often think that the first use of bitcoin is decentralized money, cross borders transferring, self-sovereign, etc. But basically, the very first use case of Bitcoin is to incentivize miners 😊! 

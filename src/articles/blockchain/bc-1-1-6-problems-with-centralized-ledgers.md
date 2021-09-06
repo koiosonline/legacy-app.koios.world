@@ -52,7 +52,7 @@ Remember these three categories of downsides of centralized ledgers. They are in
 The next session will be about the distributed decentralized ledgers. We first explain the benefits of those types compared with the centralized counterparts—afterward, the downsides and challenges. 
 
 
-## Homework assignment 
+## Portfolio assignment 1.1.6 Problems with centralized ledgers
 Select a centralized ledger from your own country and find examples of the three main categories of downsides. If you need inspiration, think of government agencies, commercial parties, public institutions like your University, etc. Build from your own experience and connect the content with your everyday life. 
 
 ## Further readings (sources or support) 

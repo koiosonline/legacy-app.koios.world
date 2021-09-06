@@ -2,6 +2,10 @@
 
 So now you have seen and possibly already understand that humanity keeps striving to improve its current ledger. You might have noticed; the same goes for other topics. We are quite the inventive species (imagination!). We need to define what a "perfect" version is in our thrive towards perfection. That is what this session is all about!
 
+
+
+
+
 >💡 A perfect ledger - is the analogy of a zero transaction cost economy. Or a world in which institutions do not matter. There is no friction when transacting. (e.g., enabling [Coase theorem](https://www.youtube.com/watch?app=desktop&v=00HPak2RLlQ)). 
 
 Like a delay, some threshold or fee is created by some form of limitation. The limitation can be a physical wall a few centuries ago that prevented you from trading. Like a castle wall. Or a digital wall age that prevents you from seeing the data that other entities can see. These limitations create opportunities for intermediaries, which can manage these limitations (like a gatekeeper)—often creating benefits for some individuals (castle owners) but losing tremendous value for others.
@@ -12,6 +16,7 @@ Like a delay, some threshold or fee is created by some form of limitation. The l
 
 
 <blockquote style="border-color: #ff0bac"> ❓ Do you know other examples of open-source software that play an essential role? Or examples of any other wall-less economies? [Check answers🦉](https://twitter.com/JordiJansen101/status/1431256079934103554?s=20)
+ 
  </blockquote>
 
 
@@ -40,7 +45,7 @@ And we are in dire need of that. Why? We will see in the subsequent two sessions
 ## Conclusion
 A perfect ledger has no transaction costs. Transaction cost can be seen as a "friction" that limits entities when transferring value. Examples of this friction are fee, time/delays, lack of transparency, accessibility, etc. So what is a perfect ledger? It mimics the exact real physical and digital world (no transaction costs/frictions). Our strive to improve has brought us many improvements. Keep in mind that a blockchain is far from perfect. It is "just" another (big) step towards that perfection.
 
-## Homework assignment 
+## Portfolio assignment 1.1.4 The perfect ledger
 Compare your answers about "what do you think a perfect ledger is" with what you have learned in this lesson. For example, were you close? Did you miss something? And do you agree with the perfect ledger that was described in the paper discussed in this lesson? Again, remain critical but constructive.
 
 ## Further readings (sources or support) 

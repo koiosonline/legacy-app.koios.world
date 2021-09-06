@@ -1,5 +1,5 @@
 
-# BC1.5.3 The functions of money
+# BC-1.5.3 The functions of money
 
 
 ## Money is a "human institution".
@@ -63,6 +63,11 @@ We are reducing time, reducing costs, creating less friction, and enabling new f
 * A repository of purchasing power over time.
 * Highly liquid – i.e., convertible into cash or medium of exchange
 * A store of value is a mechanism by which wealth can be saved and retrieved in the future. With some predictability about its future value. Store of value is not a function solely of currencies but of assets in general.
+
+
+## Portfolio assignment 1.5.3 The functions of money
+
+How do the Euro and Bitcoin compare in the three functions of money?
 
 
 ## Further readings

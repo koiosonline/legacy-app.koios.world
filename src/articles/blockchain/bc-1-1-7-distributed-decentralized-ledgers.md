@@ -90,7 +90,7 @@ Take a second here…
 
 A long class…sorry for this…but an important one. Take your time to digest everything we just told you. We will wait for you in the next class. There we will describe the problems you encounter when a ledger is decentralized and distributed 😊 
 
-## Homework 1.1.7 Distributed Decentralized Ledgers 
+## Portfolio assignment 1.1.7 Distributed decentralized ledgers 
 We touched upon what distribution and decentralization mean in the context of ledgers. Investigate the level of distribution and decentralization of Bitcoin as of today. Take your time answering this question. Try to refrain from empty claims, support your opinion as well as possible! 
 The minimum amount of words: 500. 
 
