@@ -18,6 +18,36 @@ Once more: if you have questions, comments, or remarks, please let us know in Di
 Hopefully, see you in the Discord 
 or in the comments of the YouTube clips.
 
+
+## Portfolio assignment 1.4.8 Get a personal head start
+
+
+Prove ownership of this chapter's learning goal (free format).
+‍
+*‍ Compare the stated reasons of why blockchain technology might be important on the world stage as well as for me personally, with my very own personal motivations, whereby I can support my alignments / other additional reasons, or I can defend why I disagree.
+
+
+
+
+**Additional OPTIONAL (!) assignments for the blockchain junkies**
+
+
+1. Watch the movie "The four horsemen". Record your findings in the FilmForm.
+
+2. Watch the film Banking on bitcoin. Record your findings in the FilmForm.
+
+3. View the first part (60 minutes) of the interview at London Real with Andreas Antonopoulos. Use the FilmForm to record your findings. PS The YouTube channel of Antonopoulos is, in any case, an excellent source of information!!! Questions to be answered are not in line with the video / not in order:
+* With what arguments do you agree?
+* With what arguments don't you agree?
+* What can you tell about inflation?
+* What can you tell about money and Greece?
+* How many people have minimal banking capabilities?
+* Is Antonopoulos telling us that bitcoin is going to save us at this moment?
+* Is Antonopoulos against cash? Yes or no? Explain why?
+
+4. View the documentary The Third Industrial Revolution. Use the FilmForm to record your findings.
+
+
 ## Further readings
 
 * [Why is blockchain hard to grasp?](https://www.youtube.com/watch?time_continue=23&v=hYip_Vuv8J0&feature=emb_logo)

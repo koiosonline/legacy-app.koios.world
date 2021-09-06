@@ -1,4 +1,3 @@
-
 # BC-1.5.8 The money app: other use cases 
 
 This section of "use cases of Bitcoin" can send you in multiple directions. Perhaps even into the universe, when you lose track of time and enter the bitcoin-goes-Star-Trek-mode. We will therefore stick to some major overviews in this introductory level. Then, in later levels, we will discuss all the bitcoin and blockchain paradigms. 
@@ -34,6 +33,14 @@ It is not a wrap yet. I want to discuss one benefit which might not have been fu
 
 ## Conclusion 
 The most important one is that you realize that before we use bitcoin as interplanetary, cross-galactical multi-dimensional money, we first need to get the money application right! Next, we need to master digital money, the digital value transfer (remember: money can be everything). Finally, after we have learned digital money, it is time to look at other use cases, which we all discuss at later levels. 
+
+
+## Portfolio assignments 1.5.8 The money app: other use cases 
+
+1. What efforts have already been made to reduce transaction costs in the Bitcoin blockchain the past 5 years? Provide at least two examples. 
+
+2. OPTIONAL, NOT MANDATORY: Describe three other applications that have been built on Bitcoin, other than the money application. What other future applications do you see built within the next three years? And within 20 years? If any? 
+
 
 ## Further readings
 

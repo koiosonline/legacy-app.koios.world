@@ -36,9 +36,6 @@ Hopefully, you came across a few ledgers. As mentioned, this is relatively easy 
 
 <blockquote style="border-color: #ff0bac">❓ What would you miss most if all the ledgers in the world went down? [Check answers🦉](https://twitter.com/JordiJansen101/status/1431286238124904452?s=20)</blockquote>
 
-## Homework assignment 
-Lucky you, no homework! 
-
 ## Further readings (sources or support) 
 * [What is a centralized ledger?](https://medium.com/@shyamshankar/centralized-ledgers-vs-distributed-ledgers-layman-understanding-52449264ae23)
 * [Banking rules](https://thefinanser.com/2017/01/bank-regulations-change-every-12-minutes.html/) 

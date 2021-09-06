@@ -47,6 +47,15 @@ Don't get stuck in your current time period. Try to have an open mind and see wh
 
 Where do we use money for?!
 
+## Portfolio assignments 1.5.2 What is money 
+
+
+1. What is money? 
+Money = any asset that's widely accepted as payment for goods and services or any repayment for debt. Give three examples of assets in your environment that fit with this definition of money.
+
+2 Compare the Euro to Bitcoin in regard to the properties of money. Also explain why you think this is or isn't a fair comparison.
+
+
 ## Further readings
 
 * [Money is a language](https://www.youtube.com/watch?v=4wa2YRdLyV4)

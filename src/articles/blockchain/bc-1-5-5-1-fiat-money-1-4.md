@@ -100,6 +100,7 @@ Our current monetary system isn't flawless. It has a very high percentage of unb
 
 We also discussed hyperinflation, where money is being circulated in too much abundance, and people lose their trust in the institution, resulting in tremendous loss of purchasing power of the money.
 
+
 ## Further Readings
 * [What is inflation?](https://www.youtube.com/watch?v=beAvFHP4wDI)
 * [What is hyperinflation?](https://www.youtube.com/watch?v=o-PNlhhVhZ8)

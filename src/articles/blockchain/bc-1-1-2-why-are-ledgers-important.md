@@ -95,7 +95,7 @@ A ledger is crucial because it:
 
 Ledgers in their core still record transactions and transfer value, only the extent increases in time. Different ledgers play different roles. Additional roles are created when ledgers can do more. But that is better shown when you examine ledgers of the past. Let's explore this in the next session. On to the history of ledgers!
 
-## Homework assignment 
+## Portfolio assignment 1.1.2 Why are ledgers important? 
 Take two of the transfers of value you identified in your own life from the previous question. Then, for each transfer of value, determine how the four properties that make ledgers necessary are applicable. If you're unsure whether they are good answers, contact your Koios community members in Discord.
 
 ## Further readings (sources or support) 
@@ -104,3 +104,5 @@ Take two of the transfers of value you identified in your own life from the prev
 
 ##  Food for thought
 Post your answers in the class Twitter Thread. You can pretend to help us improve the quality of conversation and help your fellow peers learn. But in the meantime, take a sneak peek at the answers…😉
+
+

@@ -23,12 +23,21 @@ Because you can be easily switched off by controlling powers if you do not abide
 
 Watch the [video](https://www.youtube.com/watch?v=7p-6c692Zbw) from Andreas Antonopoulos. He can explain this way better than I can. However, keep in mind that reality is always more nuanced. So apply the complementary opposite approach and approach challenges from multiple different directions. 
 
+**“Freedom, in any case, is only possible by constantly struggling for it”- Jordi Jansen 
+(and possibly Albert Einstein as well…)**
+
+
+
+
 Note: if this chapter went too fast, no worries. We will cover a lot more about money and how it functions in chapter 1.5! 
 
 We will see you in the next session, where we will discuss "software & eating the world!".
 
-## Homework 1.4.5 The fiat experiment (2/2)  
+
+## Portfolio assignment 1.4.5 The fiat experiment (2/2)  
 Research online how much the country's currency where you live has devalued over the past 20 years. Tip: Search for purchasing power + your currency. What is your opinion about this inflation?
+
+
 ## Further readings (sources or support) 
 * [The dangers of eliminating cash](https://www.youtube.com/watch?v=7p-6c692Zbw)
 * [Politicians are slowly eradicating cash](https://www.youtube.com/watch?v=Sf65WKeTWig) 

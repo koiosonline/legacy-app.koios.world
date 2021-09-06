@@ -23,6 +23,11 @@ It means that you can create the same applications as current centralized applic
 
 We are desperately in need of global economies because we have global problems that need a global solution. Think climate change, think plastic oceans. These problems are problems of the commons. And therefore, we need tools for the commons (in this case) to build on open-source protocols. It is leading us, humanity, into the future. See you in the next class, where we will discuss the first platform that enabled smart contracts & dApps: Ethereum :-)!!
 
+## Portfolio assignments 1.6.2 Smart contracts explained
+
+1. Go to [Etherscan](https://etherscan.io/) (different blockchains and different explorers allowed!) and figure out how to find the code of smart contracts. Don’t worry, it’s normal you don’t understand anything that is in the smart contract. It’s meant to give you an idea of the reality behind applications. Make a print screen of some parts of the code from the contract / dApp you have chosen and write down your first impressions / initial thoughts. 
+
+
 ## Further reading
 
 * [Smart contracts, Szabo](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)

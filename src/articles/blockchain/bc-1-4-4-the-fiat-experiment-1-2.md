@@ -87,11 +87,11 @@ Because of digitalization and the internet, banks now operate on a way more comp
 >💡 Money is created by centralized commercial banks and mixed up with central bank money with the same denominations. 
 
 The debt is increasing, so everybody is lending to each other, and there is not much to back it up (< 20%). So in 2008, this bubble shook, governments stepped in with taxpayer's money (and inflation!!). Satoshi referred to this in the first block (Genesis block) by adding the headline of the London Times of that day: Chancellor on Brink of Second Bailout for Banks. This was most likely one of the main reasons to create global sound money, bitcoin, which can't be printed by a centralized authority. And which is owned by the owner of the private key in a shared ledger. 
-## Homework 
+
+## Portfolio assignment 
 Lucky you, no homework (see part 2) 
 
 ## Further readings (sources or support) 
-
 * [The end of banking](https://www.amazon.co.uk/End-Banking-Credit-Digital-Revolution/dp/3952438510?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-brave-uk-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=3952438510)
 * [The banking system is explained in short clips](https://www.youtube.com/playlist?list=PLyl80QTKi0gPBcb32paMvXxcq7UUeJskV)
 * [The FIAT experiment](http://woodcoin.info/2019/02/26/the-grand-fiat-experiment-in-2019/)
