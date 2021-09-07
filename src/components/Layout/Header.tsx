@@ -7,7 +7,6 @@ export const Header = () => {
       <Link to="/" className="header__img-container">
         <img className="header__img" src={koiosLogo} alt="Koios logo" />
       </Link>
-      <Link to="/">Launch app</Link>
     </header>
   );
 };
