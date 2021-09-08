@@ -1,3 +1,4 @@
+import React from "react";
 import MarkdownToJsx from "markdown-to-jsx";
 
 type MarkdownProps = {
@@ -6,6 +7,8 @@ type MarkdownProps = {
 
 export const Markdown = (props: MarkdownProps) => {
   return (
-    <MarkdownToJsx options={{ forceBlock: true }}>{props.value}</MarkdownToJsx>
+    <div className="markdown">
+    <MarkdownToJsx options={{ forceBlock: true, wrapper: React.Fragment }}>{props.value}</MarkdownToJsx>
+    </div>
   );
 };

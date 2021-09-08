@@ -1,4 +1,12 @@
 .main {
+  width: 100%;
+  height: calc(100% - 58px);
+  height: -o-calc(100% - 58px); /* opera */
+  height: -webkit-calc(100% - 58px); /* google, safari */
+  height: -moz-calc(100% - 58px); /* firefox */
+}
+
+.main-side-nav {
   min-height: 100vh;
   background-repeat: no-repeat;
   margin-top: 60px;

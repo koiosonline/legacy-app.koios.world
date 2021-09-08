@@ -23,8 +23,10 @@
 @import "./pages/ExplanationVideos";
 @import "./pages/Earn";
 @import "./pages/VacancyDetail";
+@import "./pages/markdown-editor";
 
 /* Layout */
+@import "./layout/header";
 @import "./layout/main-nav";
 
 /* Components */
@@ -44,3 +46,4 @@
 @import "src/assets/css/components/DiscordEmbed";
 @import "src/assets/css/components/vacanciesIntro";
 @import "src/assets/css/components/VacancyCard";
+@import "src/assets/css/components/markdown";
