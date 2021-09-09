@@ -22,7 +22,7 @@ export const ArticlePageLinks = (props: ArticlePageLinksProps) => {
             <Icon type="arrow-left" className="page-link-icon" />
             <div className="page-link-text">
               <span className="page-link-text__sub-title">Previous</span>
-              <span className="page-link-text__video-title">{`${props.previousVideo}`}</span>
+              <span className="page-link-text__video-title">{`${props.previousVideo.split(" ")[0]}`}</span>
             </div>
           </a>
         )}
@@ -38,7 +38,7 @@ export const ArticlePageLinks = (props: ArticlePageLinksProps) => {
           >
             <div className="page-link-text">
               <span className="page-link-text__sub-title">Next</span>
-              <span className="page-link-text__video-title">{`${props.nextVideo}`}</span>
+              <span className="page-link-text__video-title">{`${props.nextVideo.split(" ")[0]}`}</span>
             </div>
             <Icon type="arrow-right" className="page-link-icon" />
           </a>

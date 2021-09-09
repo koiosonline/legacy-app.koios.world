@@ -163,7 +163,7 @@ export const MainNav = () => {
             </p>
           )}
           {user && (
-            <>
+            <Link to={'/profile'} className={'user-profile__link'}>
               {!profilePicture ?
                   <img className="user-profile__profile-picture" src={"/images/pepe.png"} alt="Pepe the frog"/>
                   :
@@ -173,7 +173,7 @@ export const MainNav = () => {
                 <p className="user-profile__textContainer__profile-name">{profileName}</p>
                 <p className="user-profile__textContainer__pubkey">{selectedAccount}</p>
               </div>
-            </>
+            </Link>
           )}
         </div>
       </nav>
