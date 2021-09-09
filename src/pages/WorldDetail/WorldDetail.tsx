@@ -71,6 +71,7 @@ export const WorldDetail = () => {
     setVideoList(getVideoList.videos);
     const literature = await getLiterature({
       world: worldContent,
+      worldLevel: worldDetail,
       article: videoSlug?.replace("#", "") + ".md",
     });
     setliteratureOfVideo(literature);
@@ -184,7 +185,6 @@ export const WorldDetail = () => {
     data();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoSlug, worldDetail]);
-  // const table = generateTableOfContents();
 
   useEffect(() => {
     const target = document.getElementById("#" + videoSlug);
@@ -228,7 +228,8 @@ export const WorldDetail = () => {
   //   }
   // };
 
-  // https://css-tricks.com/parsing-markdown-into-an-automated-table-of-contents/
+
+
   return (
     <div className={"container"}>
       <div className="world-detail">
