@@ -8,84 +8,84 @@ const Contribute = () => {
   const [selectedContribution, setSelectedContribution] = useState<string>();
   const [selectedContributionProp, setSelectedContributionProp] = useState<string>();
   const [filteredByWorld, setFilteredByWorld] = useState<any>();
-  const [filteredByContribution, setFilteredContribution] = useState<any>();
-  const [email, setEmail] = useState<string>();
-  const [extraInfo, setExtraInfo] = useState<string>();
+  // const [filteredByContribution, setFilteredContribution] = useState<any>();
+  // const [email, setEmail] = useState<string>();
+  // const [extraInfo, setExtraInfo] = useState<string>();
 
-  const [worldTab, setWorldTab] = useState<boolean>(true);
-  const [contributeTab, setContributeTab] = useState<boolean>(false);
-  const [infoTab, setInfoTab] = useState<boolean>(false);
-  const [confirmationTab, setConfirmationTab] = useState<boolean>(false);
+  // const [worldTab, setWorldTab] = useState<boolean>(true);
+  // const [contributeTab, setContributeTab] = useState<boolean>(false);
+  // const [infoTab, setInfoTab] = useState<boolean>(false);
+  // const [confirmationTab, setConfirmationTab] = useState<boolean>(false);
+  //
+  // const [error, setError] = useState<string>();
+  // const [sendSuccess, setSendSuccess] = useState<boolean>();
+  // const [sendFail, setSendFail] = useState<boolean>();
 
-  const [error, setError] = useState<string>();
-  const [sendSuccess, setSendSuccess] = useState<boolean>();
-  const [sendFail, setSendFail] = useState<boolean>();
+  // const selectWorld = (world) => {
+  //   setSelectedWorld(world);
+  //   filterBySelectedWorld(world);
+  // }
 
-  const selectWorld = (world) => {
-    setSelectedWorld(world);
-    filterBySelectedWorld(world);
-  }
+  // const selectContribution = (contribution) => {
+  //   setSelectedContribution(contribution);
+  //   filterBySelectedContribution(contribution);
+  // }
 
-  const selectContribution = (contribution) => {
-    setSelectedContribution(contribution);
-    filterBySelectedContribution(contribution);
-  }
+  // const selectContributionProp = (contributionProp) => {
+  //   setSelectedContributionProp(contributionProp);
+  // }
+  //
+  // const filterBySelectedWorld = (world) => {
+  //   const filteredWorld = worldData.filter(worldData => worldData.world === world);
+  //   setFilteredByWorld(filteredWorld);
+  // }
+  //
+  // const filterBySelectedContribution = (contribution) => {
+  //   const filteredContribution = filteredByWorld[0].contributionTypes.filter(data => data.name === contribution);
+  //   setFilteredContribution(filteredContribution);
+  // }
 
-  const selectContributionProp = (contributionProp) => {
-    setSelectedContributionProp(contributionProp);
-  }
-
-  const filterBySelectedWorld = (world) => {
-    const filteredWorld = worldData.filter(worldData => worldData.world === world);
-    setFilteredByWorld(filteredWorld);
-  }
-
-  const filterBySelectedContribution = (contribution) => {
-    const filteredContribution = filteredByWorld[0].contributionTypes.filter(data => data.name === contribution);
-    setFilteredContribution(filteredContribution);
-  }
-
-  const setTabs = (world, contribution, info, confirmation) => {
-    if (selectedWorld && contribution) {
-      setWorldTab(world);
-      setContributeTab(contribution);
-      setInfoTab(info);
-      setConfirmationTab(confirmation);
-      setError('');
-      if (selectedWorld === 'New World' || selectedWorld === 'Proposal for platform' || selectedWorld === 'Governance') {
-        setWorldTab(false);
-        setContributeTab(false);
-        setInfoTab(true);
-        setConfirmationTab(false);
-      }
-    } else if (selectedWorld && selectedContribution) {
-      setWorldTab(world);
-      setContributeTab(contribution);
-      setInfoTab(info);
-      setConfirmationTab(confirmation);
-      setError('');
-    } else {
-      setError('Please select a value first');
-    }
-  }
-
-  const send = () => {
-    axios.post('contactform.php', {
-      world: selectedWorld,
-      contribution: selectedContribution,
-      contributionProp: selectedContributionProp,
-      email: email,
-      extraInfo: extraInfo
-    }).then((response) => {
-      console.log(response);
-      setTabs(false, false, false, true);
-      setSendSuccess(true);
-    }).catch((error) => {
-      console.log(error)
-      setTabs(false, false, false, true);
-      setSendFail(true);
-    })
-  }
+  // const setTabs = (world, contribution, info, confirmation) => {
+  //   if (selectedWorld && contribution) {
+  //     setWorldTab(world);
+  //     setContributeTab(contribution);
+  //     setInfoTab(info);
+  //     setConfirmationTab(confirmation);
+  //     setError('');
+  //     if (selectedWorld === 'New World' || selectedWorld === 'Proposal for platform' || selectedWorld === 'Governance') {
+  //       setWorldTab(false);
+  //       setContributeTab(false);
+  //       setInfoTab(true);
+  //       setConfirmationTab(false);
+  //     }
+  //   } else if (selectedWorld && selectedContribution) {
+  //     setWorldTab(world);
+  //     setContributeTab(contribution);
+  //     setInfoTab(info);
+  //     setConfirmationTab(confirmation);
+  //     setError('');
+  //   } else {
+  //     setError('Please select a value first');
+  //   }
+  // }
+  //
+  // const send = () => {
+  //   axios.post('contactform.php', {
+  //     world: selectedWorld,
+  //     contribution: selectedContribution,
+  //     contributionProp: selectedContributionProp,
+  //     email: email,
+  //     extraInfo: extraInfo
+  //   }).then((response) => {
+  //     console.log(response);
+  //     setTabs(false, false, false, true);
+  //     setSendSuccess(true);
+  //   }).catch((error) => {
+  //     console.log(error)
+  //     setTabs(false, false, false, true);
+  //     setSendFail(true);
+  //   })
+  // }
 
   return (
     // <div className={'content-container'}>
