@@ -60,10 +60,11 @@ And that's where you & your ledger start to become active. Because you, from the
 
 >💡 This overview of **'who owns what, when in time'** is also known as the **'state of the ledger'**. A good ledger mimics the world as best as possible.
 
-With each transaction, the state of the ledger changes. A trade would be;
-* Friend B: "can you scratch my back? I have an itch there."
-* Friend D: "Yeah, sure. But it will cost you $1."
-* Friend B: "I will give you a dollar if you scratch my back."
+With each transaction, the state of the ledger changes. A trade would be:
+
+- Friend B: "can you scratch my back? I have an itch there."
+- Friend D: "Yeah, sure. But it will cost you $1."
+- Friend B: "I will give you a dollar if you scratch my back."
 
 You must record the transfer of this 1$ from friend B to friend D. Not only does the dollar physically transfer, from hand to hand, where your friend D now has $11, and your friend B has $9. It also needs to be recorded in your ledger. You are on the sidelines, witnessing the transaction, so you register $ -1 at friend B en $+1 for friend D. The ledger is the tool you use to record the transfer of value. You mimic the world, the world of physical cash in this case, as best as possible. We will explain later why you want to keep track of those transactions / why this is important! So far, remember that a ledger is a tool we use to record transactions, a.k.a. value exchanges.
 
