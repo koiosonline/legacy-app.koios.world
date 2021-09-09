@@ -1,13 +1,13 @@
-import worldData from '../assets/data/contribute/formData.json'
-import {useState} from "react";
-import axios from "axios";
+// import worldData from '../assets/data/contribute/formData.json'
+// import {useState} from "react";
+// import axios from "axios";
 import partnerData from "../assets/data/earnPartners.json";
 
 const Contribute = () => {
-  const [selectedWorld, setSelectedWorld] = useState<string>();
-  const [selectedContribution, setSelectedContribution] = useState<string>();
-  const [selectedContributionProp, setSelectedContributionProp] = useState<string>();
-  const [filteredByWorld, setFilteredByWorld] = useState<any>();
+  // const [selectedWorld, setSelectedWorld] = useState<string>();
+  // const [selectedContribution, setSelectedContribution] = useState<string>();
+  // const [selectedContributionProp, setSelectedContributionProp] = useState<string>();
+  // const [filteredByWorld, setFilteredByWorld] = useState<any>();
   // const [filteredByContribution, setFilteredContribution] = useState<any>();
   // const [email, setEmail] = useState<string>();
   // const [extraInfo, setExtraInfo] = useState<string>();
