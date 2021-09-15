@@ -11,11 +11,23 @@ const OpenLinkInNewTab = ({ href, children }) => (
   </a>
 );
 
+const ResponsiveIframe = ({ src, title }) => (
+  <div className="responsive-iframe-container">
+    <iframe
+      className="responsive-iframe"
+      src={src}
+      title={title}
+      aria-hidden="true"
+    />
+  </div>
+);
+
 const markDownToJsxOptions = {
   forceBlock: true,
   wrapper: React.Fragment,
   overrides: {
     a: OpenLinkInNewTab,
+    iframe: ResponsiveIframe,
   },
 };
 
