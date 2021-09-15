@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { FindCourseDetail } from "./useWorldDetail";
 import courseInfo from "../../assets/data/Worlds.json";
 import { Slugify } from "../../components/Util/Slugify";
@@ -38,6 +38,11 @@ export const WorldDetail = () => {
   const [previousVideo, setPreviousVideo] = useState<string>();
   const [nextVideo, setNextVideo] = useState<string>();
   const [tableOfContents, setTableOfContents] = useState<any[]>([]);
+  const history = useHistory();
+
+  const showFirstVideo = (firstVideo: string) => {
+      history.push(`${worldDetail}/${Slugify(firstVideo, { lowerCase: true, replaceAmpersand: "and" })}`);
+  }
 
   const getPreviousAndNextVideo = () => {
     const videoListWithoutChapters = videoList?.filter((item) => !item.chapter);
@@ -65,7 +70,7 @@ export const WorldDetail = () => {
   const data = async () => {
     setIsLoading(true);
     const d = await FindCourseDetail(videoSlug, courseLevel.videoInfo);
-    setVideoContent(d);
+    videoSlug ? setVideoContent(d) : showFirstVideo(d.title);
     const getVideoList = await getVideoInfo(courseLevel.videoInfo);
     setExtraInfo(getVideoList.literature);
     setVideoList(getVideoList.videos);
@@ -180,6 +185,9 @@ export const WorldDetail = () => {
   useEffect(() => {
     getPreviousAndNextVideo();
   });
+
+  
+
 
   useEffect(() => {
     data();

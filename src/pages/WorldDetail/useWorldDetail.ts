@@ -1,11 +1,6 @@
 import { getVideoInfo } from "../../api/Api";
 import { Slugify } from "../../components/Util/Slugify";
 
-// type FindCourseDetailProps = {
-//   hash: string;
-//   videoInfoAddress: string;
-// };
-
 export const FindCourseDetail = async (hash, videoInfoAddress) => {
   const data = await getVideoInfo(videoInfoAddress);
   
@@ -21,6 +16,7 @@ export const FindCourseDetail = async (hash, videoInfoAddress) => {
     const checkIsVideo = video ? video : data.videos.find(v => !v.chapter);
     return checkIsVideo;
   } else {
-    return data.videos.find(v => !v.chapter);
+    const firstLesson = data.videos.find(v => !v.chapter);
+    return firstLesson;
   }
 };
