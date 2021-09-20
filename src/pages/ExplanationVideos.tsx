@@ -1,12 +1,14 @@
 import Youtube from 'react-youtube';
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import videoData from '../assets/data/explanation.json';
 
 const ExplanationVideos = () => {
   const [playerTimeVid1, setPlayerTimeVid1] = useState<number>()
   const [playerTimeVid2, setPlayerTimeVid2] = useState<number>()
+  const [playerTimeVid3, setPlayerTimeVid3] = useState<number>()
   const [intervalUpdateVid1, setIntervalUpdateVid1] = useState(true)
   const [intervalUpdateVid2, setIntervalUpdateVid2] = useState(true)
+  const [intervalUpdateVid3, setIntervalUpdateVid3] = useState(true)
 
 
   const opts = {
@@ -49,6 +51,22 @@ const ExplanationVideos = () => {
       setIntervalUpdateVid2(false);
     }
     if (!intervalUpdateVid2) {
+      clearInterval();
+    }
+  }
+
+  const updateTimeVid3 = (event) => {
+
+    const checkVid3EverySecond = () => {
+      const roundedTime = Math.round(event.target.getCurrentTime());
+      setPlayerTimeVid3(roundedTime);
+    }
+
+    if (intervalUpdateVid3) {
+      setInterval(checkVid3EverySecond, 1000);
+      setIntervalUpdateVid3(false);
+    }
+    if (!intervalUpdateVid3) {
       clearInterval();
     }
   }
@@ -115,6 +133,33 @@ const ExplanationVideos = () => {
             <div className={'content-row__video'}>
               { // @ts-ignore is needed because of option types are not working for some reason.
                 <Youtube videoId={videoData.metamask.videoId} opts={opts} onPlay={updateTimeVid2}/>
+              }
+            </div>
+          </div>
+
+          {/*Third video*/}
+          <div className={'introduction vid2'}>
+            <h1>{videoData.profileCreation.title}</h1>
+            <p>{videoData.profileCreation.description}</p>
+          </div>
+
+          <div className={'content-row'}>
+            <div className={'content-row__list'}>
+              <ul>
+                {
+                  videoData.profileCreation.timeCodeList.map((data) => {
+                    return (
+                      <li className={playerTimeVid3 >= data.time ? 'active-color' : ''}>
+                        {data.timestring + ' ' + data.label}
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </div>
+            <div className={'content-row__video'}>
+              { // @ts-ignore is needed because of option types are not working for some reason.
+                <Youtube videoId={videoData.profileCreation.videoId} opts={opts} onPlay={updateTimeVid3}/>
               }
             </div>
           </div>

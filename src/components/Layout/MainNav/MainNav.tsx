@@ -1,15 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Icon } from "../../Util/Icon";
 import { useSizes } from "../../Util/useSizes";
 import koiosLogo from "../../../assets/images/logos/koios-logo.svg";
 import {
-  connectWeb3,
-  disconnectWeb3,
-  provider,
   selectedAccount,
   profilePicture,
-  selectedProfile,
   profileName,
 } from "../../Web3/Web3";
 import MainNavData from "./static/MainNavData.json";
@@ -58,6 +54,7 @@ export const MainNav = () => {
     } else {
       disconnectProvider();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
 
 
@@ -166,7 +163,7 @@ export const MainNav = () => {
             </p>
           )}
           {user && (
-            <>
+            <Link to={'/profile'} className={'user-profile__link'}>
               {!profilePicture ?
                   <img className="user-profile__profile-picture" src={"/images/pepe.png"} alt="Pepe the frog"/>
                   :
@@ -176,7 +173,7 @@ export const MainNav = () => {
                 <p className="user-profile__textContainer__profile-name">{profileName}</p>
                 <p className="user-profile__textContainer__pubkey">{selectedAccount}</p>
               </div>
-            </>
+            </Link>
           )}
         </div>
       </nav>

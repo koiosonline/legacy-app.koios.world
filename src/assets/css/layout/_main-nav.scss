@@ -1,8 +1,3 @@
-// .menu-is-open {
-//   background-color: rgba(0,0,0,0.8);
-//   z-index: 99;
-// }
-
 .body-overlay {
   width: 100vw;
   height: 100vh;
@@ -36,11 +31,6 @@
     svg {
       width: 30px;
       height: 30px;
-    }
-
-    &--rotate {
-
-      //transform: rotate(-90deg);
     }
   }
 
@@ -166,7 +156,7 @@
       font-weight: bold;
       color: #424242;
       fill: #424242;
-      
+
       &:hover {
         box-shadow: $button-shadow;
         transition: box-shadow 0.3s ease-in-out;
@@ -239,6 +229,12 @@
     justify-content: center;
     align-items: center;
     height: 80px;
+
+    &__link {
+      display: flex;
+      flex-flow: row;
+      text-decoration: none;
+    }
 
     &__text--inactive {
       color: #d7d7d7;

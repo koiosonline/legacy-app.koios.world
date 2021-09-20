@@ -1,6 +1,6 @@
 [
   {
-    "chapter": "#bc-1-1-1-what-is-a-ledger",
+    "chapter": "bc-1-1-1-what-is-a-ledger",
     "question": "What is the difference between a tangible and intangible asset?",
     "multipleAnswers": true,
     "answers": [
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-2-why-are-ledgers-important",
+    "chapter": "bc-1-1-2-why-are-ledgers-important",
     "question": "Ledgers conform _____ and ledgers conform _____ (fill in the blanks)",
     "multipleAnswers": false,
     "answers": [
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-3-the-history-of-ledgers",
+    "chapter": "bc-1-1-3-the-history-of-ledgers",
     "question": "What type of accounting was invented 1500 years ago, but is still used anno 2020?",
     "multipleAnswers": true,
     "answers": [
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-4-the-perfect-ledger",
+    "chapter": "bc-1-1-4-the-perfect-ledger",
     "question": "What is a perfect ledger?",
     "multipleAnswers": true,
     "answers": [
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-5-centralized-ledgers",
+    "chapter": "bc-1-1-5-centralized-ledgers",
     "question": "What are the three main risk categories of centralized ledgers? (multiple answers possible)",
     "multipleAnswers": true,
     "answers": [
@@ -115,7 +115,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-6-problems-with-centralized-ledgers",
+    "chapter": "bc-1-1-6-problems-with-centralized-ledgers",
     "question": "What do we mean with ''single point of failure''?",
     "multipleAnswers": true,
     "answers": [
@@ -138,7 +138,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-7-distributed-decentralized-ledgers",
+    "chapter": "bc-1-1-7-distributed-decentralized-ledgers",
     "question": "What are NOT properties of a decentralized ledger? (multiple answers possible)",
     "multipleAnswers": true,
     "answers": [
@@ -161,7 +161,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-8-problems-with-distributed-decentralized-ledgers",
+    "chapter": "bc-1-1-8-problems-with-distributed-decentralized-ledgers",
     "question": "What are the three main problems with a distributed system? (multiple answers possible)",
     "multipleAnswers": true,
     "answers": [
@@ -184,7 +184,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-9-the-byzantine-general-problem",
+    "chapter": "bc-1-1-9-the-byzantine-general-problem",
     "question": "What is the name of the anonymous entity that introduced Bitcoin in 2008?",
     "multipleAnswers": true,
     "answers": [
@@ -207,7 +207,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-10-centralized-and-decentralized-ledgers-compared",
+    "chapter": "bc-1-1-10-centralized-and-decentralized-ledgers-compared",
     "question": "What is correct with Bitcoin blocks? Choose the best answer",
     "multipleAnswers": true,
     "answers": [
@@ -230,7 +230,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-1-11-ledgernomics-recap",
+    "chapter": "bc-1-1-11-ledgernomics-recap",
     "question": "When was the very first Bitcoin block mined and how do we call this block?",
     "multipleAnswers": true,
     "answers": [
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-2-chapter-2-how-do-blockchains-work",
+    "chapter": "bc-1-2-chapter-2-how-do-blockchains-work",
     "question": "How did Satoshi Nakamoto practically solved the BGP?",
     "multipleAnswers": true,
     "answers": [
@@ -276,7 +276,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-3-chapter-3-satoshi’s-cheat",
+    "chapter": "bc-1-3-chapter-3-satoshi’s-cheat",
     "question": "How many blocks do you need to wait if you want to know the single source of truth?",
     "multipleAnswers": true,
     "answers": [
@@ -299,7 +299,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-4-1-properties-of-a-blockchain",
+    "chapter": "bc-1-4-1-properties-of-a-blockchain",
     "question": "How much Satoshi's go in ''one'' Bitcoin?",
     "multipleAnswers": true,
     "answers": [
@@ -322,7 +322,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-4-2-data-ownership-and-individual-freedom",
+    "chapter": "bc-1-4-2-data-ownership-and-individual-freedom",
     "question": "Decentralized ledger is not controlled by a third party. So no third party owns your data. So who owns your data?",
     "multipleAnswers": true,
     "answers": [
@@ -345,7 +345,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-4-3-censorship-resistance",
+    "chapter": "bc-1-4-3-censorship-resistance",
     "question": "Is Bitcoin fully anonymous?",
     "multipleAnswers": true,
     "answers": [
@@ -368,7 +368,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-4-4-the-fiat-experiment-1/2",
+    "chapter": "bc-1-4-4-the-fiat-experiment-1/2",
     "question": "Who creates the most amount of our current money?",
     "multipleAnswers": true,
     "answers": [
@@ -391,7 +391,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-4-5-the-fiat-experiment-2/2",
+    "chapter": "bc-1-4-5-the-fiat-experiment-2/2",
     "question": "Which cryptographic hash algorithm is used for the encryption of Bitcoin transactions?",
     "multipleAnswers": true,
     "answers": [
@@ -414,7 +414,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-4-6-software-is-eating-the-world",
+    "chapter": "bc-1-4-6-software-is-eating-the-world",
     "question": "What is a public key?",
     "multipleAnswers": true,
     "answers": [
@@ -437,7 +437,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-4-7-interconnectivity",
+    "chapter": "bc-1-4-7-interconnectivity",
     "question": "What percentage of the mining power should one entity in minimum have, to attack a blockchain?",
     "multipleAnswers": true,
     "answers": [
@@ -460,7 +460,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-4-8-get-a-personal-head-start",
+    "chapter": "bc-1-4-8-get-a-personal-head-start",
     "question": "How many Bitcoins does a miner per block currently receive for a block reward?",
     "multipleAnswers": true,
     "answers": [
@@ -483,7 +483,7 @@
     ]
   },
   {
-    "chapter": "#bc-1-5-1-the-worlds-first-use-case-money",
+    "chapter": "bc-1-5-1-the-worlds-first-use-case-money",
     "question": "What was the hidden message in the ''Genesis block'' of Bitcoin?",
     "multipleAnswers": true,
     "answers": [

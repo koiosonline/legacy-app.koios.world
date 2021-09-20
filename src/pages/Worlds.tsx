@@ -1,6 +1,5 @@
 import worldsData from '../assets/data/courseinfo.json';
 import Card from "../components/Card";
-import {useLocation} from "react-router-dom";
 import Button from "../components/Button";
 import store from 'store';
 
@@ -8,7 +7,6 @@ export const Worlds = () => {
     const data = worldsData;
     const allowed = ['blockchain', 'tdfa01', 'datascience01', 'programmingdapps01', 'introduction'];
     const continueLearning = store.get('lastWatched');
-    const location = useLocation();
 
     const filtered = Object.keys(data)
         .filter(key => allowed.includes(key))

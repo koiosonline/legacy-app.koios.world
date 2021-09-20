@@ -9,7 +9,7 @@
   }
 
   .learnToNavigate {
-    overflow: hidden;
+    //overflow: hidden;
 
     @include for-size($desktop) {
       overflow: unset;
@@ -28,43 +28,53 @@
     .links {
       display: flex;
       flex-flow: column;
-      position: relative;
-      min-height: 50px;
+      //position: relative;
+      //min-height: 50px;
 
       @include for-size($tablet) {
         display: flex;
-        flex-flow: row;
+        flex-flow: column;
       }
 
       .continue {
+        display: flex;
         align-self: flex-start;
         //padding-left: $spacing-2x;
         margin-bottom: $spacing-2x;
         position: relative;
+        left: 0;
+        width: 100%;
 
         @include for-size($tablet) {
-          align-self: center;
-          border-right: 1px solid lightgray;
+          //align-self: center;
+          //border-right: 1px solid lightgray;
           padding-left: unset;
-          margin-bottom: unset;
+          margin: $spacing-4x 0;
         }
 
         a {
           text-decoration: none;
           font-family: "Source Sans Pro", sans-serif;
-          font-weight: 600;
+          font-weight: 400;
           //min-width: 9rem;
           text-align: center;
-          padding: 0.25em 1em;
-          margin: 1rem 1rem 1rem 0;
+          padding: 8px 16px;
           border-radius: $radius;
           box-shadow: $button-shadow;
           transition: all 0.2s ease;
           white-space: nowrap;
-          background: $gradient-koios;
+          background-image: $gradient-koios;
+          background-size: 100%;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          color: $color-koios-pink;
+          border: 1px solid lightgray;
+          width: 100%;
+
           &:hover {
+            border: 1px solid $color-koios-pink;
+            background-size: 150%;
+            //color: white;
             box-shadow: $button-shadow-hover;
           }
           &:active {

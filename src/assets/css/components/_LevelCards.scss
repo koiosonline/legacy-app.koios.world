@@ -4,13 +4,19 @@
   padding: $spacing-4x 0;
 
   @include for-size($tablet) {
-    //padding-top: $spacing-4x;
+    margin-top: $spacing-6x;
     padding-bottom: $spacing-10x;
     border-bottom: 1px solid #f2f2f2;
   }
 
   .text-holder {
     padding-bottom: $spacing-2x;
+    border-top: 1px solid #f2f2f2;
+
+    @include for-size($tablet) {
+      padding-top: $spacing-10x;
+    }
+
     &__title {
       font-size: 24px;
       padding-bottom: $spacing-2x;
@@ -26,10 +32,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: $spacing-2x;
-    grid-template-rows: 150px 150px 150px;
+    //grid-template-rows: 150px 150px 150px;
+    grid-template-rows: repeat(auto-fill, 150px);
 
     @include for-size($tablet) {
-      grid-template-columns: 162px 162px 162px;
+      grid-template-columns: repeat(auto-fill, 162px);
       grid-column-gap: $spacing-2x;
       grid-template-rows: 223px;
     }

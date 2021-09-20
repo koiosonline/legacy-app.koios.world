@@ -6,7 +6,6 @@
   width: 100%;
   @include for-size($desktop) {
     margin-top: 0;
-    width: 27%;
   }
   &__tabs {
     display: flex;

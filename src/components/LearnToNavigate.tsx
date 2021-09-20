@@ -1,6 +1,5 @@
 import data from '../assets/data/learnToNavigate.json'
 import QuickLinks from "./QuickLinks";
-import Button from "./Button";
 import store from "store";
 
 const LearnToNavigate = (props) => {
@@ -14,14 +13,14 @@ const LearnToNavigate = (props) => {
         <div className={'links'}>
           {continueLearning &&
           <div className={'continue'}>
-            <a href={'/worlds/' + continueLearning.world + '/' + continueLearning.level + continueLearning.video}>Continue learning</a>
+            <a href={'#/worlds/' + continueLearning.world + '/' + continueLearning.level + continueLearning.video}>Continue learning</a>
           </div>
           }
           <QuickLinks data={props.world?.quickLinks}/>
         </div>
       </div>
       <div className={'image'}>
-        <img src={'/images/artwork_blockchain.png'}/>
+        <img src={'/images/artwork_blockchain.png'} alt={'blockchain'}/>
       </div>
     </div>
   )

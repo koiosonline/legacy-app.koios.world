@@ -49,6 +49,6 @@ export const disconnectWeb3 = async () => {
     await web3Modal.clearCachedProvider();
     provider = null;
   }
-
+  localStorage.removeItem(selectedAccount);
   selectedAccount = null;
 };

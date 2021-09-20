@@ -1,0 +1,206 @@
+.vacancyDetail {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 $spacing-2x;
+  transform: translateY(-$spacing-5x);
+
+  @include for-size($desktop) {
+    padding: 0 $spacing-10x;
+  }
+
+  .content {
+    padding: $spacing-2x $spacing-2x $spacing-4x $spacing-2x;
+    background-color: white;
+    box-shadow: 0px 0px 21px -10px rgb(110 110 110 / 50%);
+    border-radius: 20px;
+
+    &__header {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    &__image-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__image {
+      width: $spacing-4x;
+      height: $spacing-4x;
+
+      &:first-child {
+        margin-right: $spacing-2x;
+      }
+    }
+
+    &__title {
+      font-family: $font-family-headings;
+      font-size: 28px;
+      color: $color-koios-dark-grey;
+      padding: 0 0 $spacing-2x 0;
+      font-weight: 400;
+    }
+
+    &__descriptionTitle {
+      color: $color-koios-dark-grey;
+      padding: $spacing-2x 0 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__description {
+      color: $color-koios-dark-grey;
+      padding: $spacing-2x 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    &__skillsetTitle {
+      color: $color-koios-dark-grey;
+      padding: $spacing-2x 0 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__skillset {
+      color: $color-koios-dark-grey;
+      padding: $spacing-2x 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    &__typeTitle {
+      color: $color-koios-dark-grey;
+      padding: $spacing-2x 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__typeList {
+      color: $color-koios-dark-grey;
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+
+    &__buttonTitle {
+      color: $color-koios-dark-grey;
+      padding: $spacing-2x 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__buttonContainer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: $spacing-4x;
+    }
+
+    &__button {
+      text-decoration: none;
+      font-weight: 700;
+      padding: $spacing-1x $spacing-4x;
+      color: $color-koios-dark-grey;
+      border-radius: 20px;
+      border: 2px solid lightgray;
+      transition: color, border .25s ease;
+
+      &:hover {
+        color: $color-koios-pink;
+        border: 2px solid $color-koios-pink;
+      }
+    }
+  }
+}
+
+.defaultInfo {
+  max-width: 1080px;
+  margin: $spacing-5x auto;
+  padding: 0 $spacing-2x;
+
+  @include for-size($desktop) {
+    padding: 0 $spacing-10x;
+  }
+
+  .block {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    padding: $spacing-4x 0;
+    border-bottom: 1px solid #f2f2f2;
+
+    @include for-size($tablet) {
+      flex-flow: row;
+    }
+
+    &__discord {
+      flex-flow: column;
+      width: 100%;
+
+      @include for-size($desktop) {
+        width: 50%;
+      }
+    }
+
+    &__title {
+      font-family: $font-family-headings;
+      font-weight: 400;
+      padding-bottom: $spacing-2x;
+      color: $color-koios-dark-grey;
+
+      @include for-size($tablet) {
+        max-width: 40%;
+      }
+    }
+
+    &__description {
+      color: $color-koios-dark-grey;
+
+      @include for-size($tablet) {
+        width: 50%;
+      }
+
+      span {
+        font-weight: 700;
+      }
+
+      &--discord {
+        width: 100%;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__url {
+      width: 50%;
+      color: $color-koios-pink;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $color-koios-dark-grey;
+      display: flex;
+      flex-flow: column;
+
+      span {
+        font-weight: 700;
+      }
+
+      img {
+        padding: $spacing-2x;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: $button-shadow;
+        width: 50px;
+        height: 50px;
+        transition: box-shadow .25s ease;
+        margin: $spacing-4x 0;
+
+        &:hover {
+          box-shadow: $button-shadow-hover;
+        }
+      }
+    }
+  }
+}

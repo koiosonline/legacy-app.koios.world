@@ -6498,7 +6498,6 @@
     "setimmediate" "^1.0.5"
 
 "ethereumjs-abi@git+https://github.com/ethereumjs/ethereumjs-abi.git":
-  "integrity" "sha512-IA4lM/EAhHCmgR0uepm5PJ4b5/zcONaHZbBVlPbSbPT2+Mqbhj01vl11bupQPovWF6gHA3cDNkanFuaD3LTh5Q=="
   "resolved" "git+ssh://git@github.com/ethereumjs/ethereumjs-abi.git#1a27c59c15ab1e95ee8e5c4ed6ad814c49cc439e"
   "version" "0.6.8"
   dependencies:
@@ -9811,6 +9810,11 @@
   dependencies:
     "object-visit" "^1.0.0"
 
+"markdown-to-jsx@^7.1.3":
+  "integrity" "sha512-jtQ6VyT7rMT5tPV0g2EJakEnXLiPksnvlYtwQsVVZ611JsWGN8bQ1tVSDX4s6JllfEH6wmsYxNjTUAMrPmNA8w=="
+  "resolved" "https://registry.npmjs.org/markdown-to-jsx/-/markdown-to-jsx-7.1.3.tgz"
+  "version" "7.1.3"
+
 "md5.js@^1.3.4":
   "integrity" "sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg=="
   "resolved" "https://registry.npmjs.org/md5.js/-/md5.js-1.3.5.tgz"
@@ -12436,7 +12440,7 @@
     "prop-types" "15.7.2"
     "youtube-player" "5.5.2"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.5.2", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=0.14.1", "react@>=15", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.5.2", "react@^17.0.2", "react@>= 0.14.0", "react@>= 16", "react@>= 16.8.0", "react@>=0.14.1", "react@>=15", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

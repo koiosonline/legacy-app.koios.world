@@ -11,7 +11,6 @@
 @import "./base/typography";
 
 /* Pages */
-//@import "./pages/world-detail";
 @import "src/assets/css/pages/Worlds";
 @import "src/assets/css/pages/WorldOverview";
 @import "./pages/coming-soon";
@@ -22,8 +21,12 @@
 @import "./pages/404";
 @import "./pages/Contribute";
 @import "./pages/ExplanationVideos";
+@import "./pages/Earn";
+@import "./pages/VacancyDetail";
+@import "./pages/markdown-editor";
 
 /* Layout */
+@import "./layout/header";
 @import "./layout/main-nav";
 
 /* Components */
@@ -39,5 +42,15 @@
 @import "src/assets/css/components/SmallCard";
 @import "src/assets/css/components/LearnToNavigate";
 @import "src/assets/css/components/LevelCards";
-@import "src/assets/css/components/team";
+@import "src/assets/css/components/Team";
 @import "src/assets/css/components/DiscordEmbed";
+@import "src/assets/css/components/vacanciesIntro";
+@import "src/assets/css/components/VacancyCard";
+@import "src/assets/css/components/markdown";
+
+/* Font awesome */
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/v4-shims";

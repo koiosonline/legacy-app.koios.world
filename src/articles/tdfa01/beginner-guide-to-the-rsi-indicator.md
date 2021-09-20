@@ -1,0 +1,3 @@
+# TDFA-3.3.11 (External video) Beginner Guide to the RSI Indicator
+
+The Relative Strength Index is arguably the most popular technical indicator when it comes to trading. But being popular doesn’t always make you right or easy. David Jones knows this and is here to give a helping hand to those just starting their journey in the world of the markets, as well as those who’ve had a bit more experience. He goes over the way it’s calculated, its parameters and default settings and goes on to show it in real examples. There you can see it at peak performance but more importantly - when a bit more attention or caution is necessary to use it properly. 

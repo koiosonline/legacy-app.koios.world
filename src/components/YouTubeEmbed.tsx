@@ -1,25 +1,25 @@
 import YouTube from 'react-youtube';
-import {useEffect, useState} from "react";
-import {useLocation, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import store from "store"
-import {CourseContentParams, CourseDetailParams} from "../types/Params";
+import {CourseContentParams, CourseDetailParams, VideoSlugParams} from "../types/Params";
 
 type YouTubeEmbedProps = {
   videoId: string;
 }
 
 export const YouTubeEmbed = (props: YouTubeEmbedProps) => {
-  const { hash } = useLocation();
+  // const { hash } = useLocation();
   const { worldDetail } = useParams<CourseDetailParams>();
   const { worldContent } = useParams<CourseContentParams>();
+  const { videoSlug } = useParams<VideoSlugParams>();
 
   const watched = () => {
-    store.set(props.videoId, { hash: hash, videoId: props.videoId });
-    store.set('lastWatched', { world: worldContent, level: worldDetail, video: hash });
+    store.set(props.videoId, { hash: `/${videoSlug}`, videoId: props.videoId });
+    store.set('lastWatched', { world: worldContent, level: worldDetail, video: `/${videoSlug}` });
   }
 
   const activeVideo = () => {
-    store.set('active', { hash: hash, videoId: props.videoId });
+    store.set('active', { hash: `/${videoSlug}`, videoId: props.videoId });
   }
 
   const opts = {
