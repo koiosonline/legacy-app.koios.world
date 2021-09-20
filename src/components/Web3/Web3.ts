@@ -16,7 +16,12 @@ const fetchAccountData = async () => {
 
   const accounts = await web3.eth.getAccounts();
   selectedAccount = accounts[0];
-  await setupIDX();
+  if (localStorage.getItem(selectedAccount + "authenticated") !== "authenticated") {
+    await authenticate();
+    localStorage.setItem(selectedAccount + "authenticated", "authenticated");
+  } else {
+    await setupIDX();
+  }
   selectedProfile = await FindProfile(selectedAccount);
   if (selectedProfile.image) {
     profilePicture = await fetchImage(selectedProfile.image);
@@ -50,5 +55,6 @@ export const disconnectWeb3 = async () => {
     provider = null;
   }
   localStorage.removeItem(selectedAccount);
+  localStorage.removeItem(selectedAccount + "authenticated");
   selectedAccount = null;
 };
