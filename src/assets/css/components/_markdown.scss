@@ -40,27 +40,41 @@
     color: $color-koios-pink;
   }
 
-  ul li a {
-    display: block;
-    text-decoration: none;
-    border: 1px solid #e6ecf1;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px 0 rgb(116 129 141 / 10%);
-    padding: 16px 15px;
-    margin-top: 10px;
-    color: $color-koios-pink;
+  ul,
+  ol {
+    list-style-position: inside;
+  }
 
-    &:hover {
-      color: $color-koios-blue;
-      border-color: $color-koios-blue;
-      transition: all 0.2s ease;
-    }
+  ul {
+    list-style-type: disc;
+  }
 
-    &::before {
-      font-family: "Font Awesome 5 Free", sans-serif;
-      font-weight: 900;
-      content: "\f061";
-      padding-right: 20px;
+  #further-readings + ul,
+  #-further-readings-sources-or-support + ul {
+    list-style-type: none;
+
+    li a {
+      display: block;
+      text-decoration: none;
+      border: 1px solid #e6ecf1;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px 0 rgb(116 129 141 / 10%);
+      padding: 16px 15px;
+      margin-top: 10px;
+      color: $color-koios-pink;
+
+      &:hover {
+        color: $color-koios-blue;
+        border-color: $color-koios-blue;
+        transition: all 0.2s ease;
+      }
+
+      &::before {
+        font-family: "Font Awesome 5 Free", sans-serif;
+        font-weight: 900;
+        content: "\f061";
+        padding-right: 20px;
+      }
     }
   }
 
