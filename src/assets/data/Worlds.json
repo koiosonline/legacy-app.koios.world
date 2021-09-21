@@ -105,8 +105,9 @@
           {
             "name": "Malva Ahmed",
             "imageUrl": "https://cdn.discordapp.com/avatars/801485039611150416/b091019dd6f35c6fe690480eb7992d53.png?size=256",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
+            "description": "Coordinator Koios minors",
+            "linkedinLink": "https://linkedin.com/in/malva-ahmed",
+            "twitterLink": "",
             "twitterHandle": "",
             "discordLink": "https://discord.com/users/801485039611150416",
             "discordHandle": "Malva.koios"
@@ -115,7 +116,7 @@
             "name": "Dennis IJlst",
             "imageUrl": "https://cdn.discordapp.com/avatars/801334609915805696/ae53525397d14f769f154c465ebded2a.png?size=256",
             "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
+            "twitterLink": "",
             "twitterHandle": "",
             "discordLink": "https://discord.com/users/801334609915805696",
             "discordHandle": "Dennis.koios"
@@ -216,7 +217,8 @@
             "name": "Malva Ahmed",
             "imageUrl": "https://cdn.discordapp.com/avatars/801485039611150416/b091019dd6f35c6fe690480eb7992d53.png?size=256",
             "description": "Coordinator minor",
-            "twitterLink": "https://twitter.com",
+            "linkedinLink": "https://linkedin.com/in/malva-ahmed",
+            "twitterLink": "",
             "twitterHandle": "",
             "discordLink": "https://discord.com/users/801485039611150416",
             "discordHandle": "Malva.koios"
