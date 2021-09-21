@@ -55,6 +55,17 @@ export const WorldDetail = () => {
     }
   };
 
+// https://www.npmjs.com/package/react-router-hash-link
+  // useEffect(() => {
+  //   const { hash } = window.location;
+  //   if (hash) {
+  //     console.log(hash)
+  //     const id = hash.replace('#', '');
+  //     const element = document.getElementById(id);
+  //     if (element) element.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  //   }
+  // }, [isLoading]);
+
   const course = courseInfo.find(
     (item) =>
       Slugify(item.url, { lowerCase: true, replaceAmpersand: "and" }) ===
@@ -436,6 +447,8 @@ export const WorldDetail = () => {
                       {tableOfContents && (
                         <ul className="table-of-contents__list">
                           {tableOfContents.map((item, index) => (
+                            <>
+                            <HashLink to='#further-readings-sources-or-support'>TEST</HashLink>
                             <li
                               key={index}
                               className={`table-of-contents__list-item table-of-contents__list-item--${item.type}`}
@@ -447,6 +460,7 @@ export const WorldDetail = () => {
                                 {item.title}
                               </HashLink>
                             </li>
+                            </>
                           ))}
                         </ul>
                       )}
