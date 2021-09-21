@@ -42,7 +42,7 @@
 
   ul,
   ol {
-    list-style-position: inside;
+    margin-left: 20px;
   }
 
   ul {
@@ -50,8 +50,10 @@
   }
 
   #further-readings + ul,
+  #further-readings-sources-or-support + ul,
   #-further-readings-sources-or-support + ul {
     list-style-type: none;
+    margin-left: 0;
 
     li a {
       display: block;
