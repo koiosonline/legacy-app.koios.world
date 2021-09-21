@@ -93,9 +93,9 @@ const ExplanationVideos = () => {
             <div className={'content-row__list'}>
               <ul>
                 {
-                  videoData.introduction.timeCodeList.map((data) => {
+                  videoData.introduction.timeCodeList.map((data, i) => {
                     return (
-                      <li className={playerTimeVid1 >= data.time ? 'active-color' : ''}>
+                      <li className={playerTimeVid1 >= data.time ? 'active-color' : ''} key={i}>
                         {data.timestring + ' ' + data.label}
                       </li>
                     )
@@ -120,9 +120,9 @@ const ExplanationVideos = () => {
             <div className={'content-row__list'}>
               <ul>
                 {
-                  videoData.metamask.timeCodeList.map((data) => {
+                  videoData.metamask.timeCodeList.map((data, i) => {
                     return (
-                      <li className={playerTimeVid2 >= data.time ? 'active-color' : ''}>
+                      <li className={playerTimeVid2 >= data.time ? 'active-color' : ''} key={i}>
                         {data.timestring + ' ' + data.label}
                       </li>
                     )
@@ -147,9 +147,9 @@ const ExplanationVideos = () => {
             <div className={'content-row__list'}>
               <ul>
                 {
-                  videoData.profileCreation.timeCodeList.map((data) => {
+                  videoData.profileCreation.timeCodeList.map((data, i) => {
                     return (
-                      <li className={playerTimeVid3 >= data.time ? 'active-color' : ''}>
+                      <li className={playerTimeVid3 >= data.time ? 'active-color' : ''} key={i}>
                         {data.timestring + ' ' + data.label}
                       </li>
                     )
