@@ -1,9 +1,3 @@
-.wd {
-  height: 200vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .world-detail {
   display: flex;
   flex-direction: column;
@@ -63,7 +57,7 @@
         max-height: 10em;
         overflow: auto;
         position: relative;
-        
+
         @include for-size($desktop) {
           max-height: 100%;
           padding: 0.5rem 0.5rem 0.5rem 0;
