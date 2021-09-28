@@ -11,7 +11,7 @@ import { useMemo, useState } from "react";
 import { UserContext } from "./Context/UserContext";
 import { Error404 } from "./pages/Error404";
 import Contribute from "./pages/Contribute";
-// import ScrollToTop from "./components/Util/scrollTop";
+import ScrollToTop from "./components/Util/scrollTop";
 import ExplanationVideos from "./pages/ExplanationVideos";
 import Earn from "./pages/Earn";
 import VacancyDetail from "./pages/VacancyDetail";
@@ -25,7 +25,7 @@ export const App = () => {
   return (
     <Router>
         <UserContext.Provider value={providerValue}>
-        {/* <ScrollToTop/> */}
+        <ScrollToTop/>
       <Switch>
         <Route path={["/editor"]} exact >
                 <Switch>
