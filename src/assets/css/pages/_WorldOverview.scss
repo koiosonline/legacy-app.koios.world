@@ -1,14 +1,8 @@
 .worldOverviewHeader {
   background-image: linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5)), url(https://i.imgur.com/VpLJxrH.jpg);
-  //background-size: cover;
   background-size: 100% 300px;
   background-repeat: no-repeat;
-  //height: 50vh;
   position: relative;
-
-  @include for-size($tablet) {
-    //height: 300px;
-  }
 
   &__titleRow {
     display: flex;
