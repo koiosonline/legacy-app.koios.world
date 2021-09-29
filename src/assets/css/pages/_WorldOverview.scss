@@ -1,12 +1,8 @@
 .worldOverviewHeader {
   background-image: linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5)), url(https://i.imgur.com/VpLJxrH.jpg);
-  background-size: cover;
-  height: 50vh;
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
   position: relative;
-
-  @include for-size($tablet) {
-    height: 300px;
-  }
 
   &__titleRow {
     display: flex;
@@ -20,11 +16,14 @@
 
     &__title {
       font-family: Righteous, sans-serif;
-      font-size: 40px;
       color: white;
       margin-bottom: $spacing-2x;
 
-      @include for-size($desktop) {
+      @include for-size(990px) {
+        font-size: unset;
+      }
+
+      @include for-size(991px) {
         font-size: 48px;
       }
     }
@@ -43,14 +42,14 @@
 .worldOverviewContainer {
   display: flex;
   flex-direction: column;
-  margin: 700px auto 150px;
+  margin: 0 auto 150px;
 
   @include for-size($tablet) {
-    margin: 250px auto;
+    margin: 0 auto;
   }
 
   @include for-size($desktop) {
-    margin: 250px auto 0;
+    margin: 0 auto 0;
     max-width: 1080px;
     padding: 0 $spacing-10x 250px;
   }
@@ -83,8 +82,6 @@
 }
 
 .feedback {
-  //position: sticky;
-  //top: 60px;
   background-color: white;
   padding: $spacing-2x;
   margin-bottom: $spacing-8x;
@@ -104,7 +101,6 @@
 
   &__link {
     color: $color-koios-dark-grey;
-    //color: #6D59E6;
     text-decoration: none;
     width: $spacing-2x;
     text-align: center;
@@ -113,8 +109,6 @@
 
     &:hover {
       color: $color-koios-pink;
-      //border-top: 1px solid $color-koios-pink;
-      //border-bottom: 1px solid $color-koios-pink;
     }
   }
 }
