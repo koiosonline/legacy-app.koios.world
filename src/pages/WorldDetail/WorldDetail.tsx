@@ -35,7 +35,6 @@ export const WorldDetail = () => {
   const [nextVideo, setNextVideo] = useState<string>();
   const [tableOfContents, setTableOfContents] = useState<any[]>([]);
   const history = useHistory();
-  // const { hash } = useLocation();
 
   const showFirstVideo = (firstVideo: string) => {
     history.push(
