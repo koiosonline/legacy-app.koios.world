@@ -25,7 +25,7 @@ export const WorldDetail = () => {
   const { worldContent } = useParams<CourseContentParams>();
   const { worldDetail } = useParams<CourseDetailParams>();
   const { videoSlug } = useParams<VideoSlugParams>();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [courseData, setCourseData] = useState<any[]>();
   const [literatureOfVideo, setliteratureOfVideo] = useState<string>();
   const [videoList, setVideoList] = useState<any[]>();
@@ -183,9 +183,14 @@ export const WorldDetail = () => {
         ) : (
           videoContent && (
             <>
-              <ContentPlayer worldContent={worldContent} worldDetail={worldDetail} videoSlug={videoSlug} videoContent={videoContent} videoList={videoList} />
+              <ContentPlayer
+                worldContent={worldContent}
+                worldDetail={worldDetail}
+                videoSlug={videoSlug}
+                videoContent={videoContent}
+                videoList={videoList}
+              />
               <div className={"cta-button-container"}>
-
                 <a
                   href="https://c0c6pmb4lmw.typeform.com/FeedbackButton"
                   className={"cta-button"}
@@ -216,7 +221,7 @@ export const WorldDetail = () => {
                 <div className="literature">
                   <article className="article">
                     {literatureOfVideo ? (
-                        <Markdown value={literatureOfVideo} />
+                      <Markdown value={literatureOfVideo} />
                     ) : (
                       <>
                         <h2>{videoContent.title}</h2>

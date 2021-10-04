@@ -33,9 +33,6 @@
       height: 10em;
       margin: auto;
     }
-    &__top {
-
-    }
     &__text {
       flex-grow: 1;
       &__title {
@@ -56,7 +53,7 @@
             margin-right: 0.5em;
             width: 1em;
             height: 1em;
-            fill: red;
+            fill: currentColor;
           }
         }
       }
@@ -88,6 +85,7 @@
       align-self: flex-end;
       p {
         background: $gradient-koios;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }

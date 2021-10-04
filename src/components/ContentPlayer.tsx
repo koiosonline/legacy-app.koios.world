@@ -3,6 +3,7 @@ import { YouTubeEmbed } from "./YouTubeEmbed";
 import { HashLink } from "react-router-hash-link";
 import store from "store";
 import { useEffect, useState } from "react";
+import { Icon } from "./Util/Icon";
 
 type ContentPlayerProps = {
   worldContent: string;
@@ -38,6 +39,12 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
   const [videoCheck, setVideoCheck] = useState<boolean>(false);
 
   const activeVideo = (video, title) => {
+    const slugifiedTitle = Slugify(title, {
+      lowerCase: true,
+      replaceDot: "-",
+      replaceAmpersand: "and",
+    });
+
     if (store.get(video)) {
       store.remove(video);
       setVideoCheck(!videoCheck);
@@ -46,13 +53,7 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
       store.set("lastWatched", {
         world: props.worldContent,
         level: props.worldDetail,
-        video:
-          "/" +
-          Slugify(title, {
-            lowerCase: true,
-            replaceDot: "-",
-            replaceAmpersand: "and",
-          }),
+        video: `/${slugifiedTitle}`,
       });
       setVideoCheck(!videoCheck);
     }
@@ -69,71 +70,35 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
       <div className="content-player__video-container">
         <YouTubeEmbed videoId={props.videoContent.videoid} />
       </div>
+
       <div className="content-player__listContainer">
-        <ul
-          className="content-player__listContainer__video-list"
-          id={"videoList"}
-        >
+        <ul className="content-player__listContainer__video-list" id="videoList">
           {props.videoList &&
-            props.videoList.map((video, index) =>
-              video.chapter ? (
+            props.videoList.map((video, index) => {
+              const slugifiedVideoTitle = Slugify(video.title, {
+                lowerCase: true,
+                replaceDot: "-",
+                replaceAmpersand: "and",
+              });
+
+              return video.chapter ? (
                 <h2 key={index}>{video.title}</h2>
               ) : (
                 <li
                   key={index}
-                  className={`${store.get(video.videoid) ? "watched" : ""} ${
-                    props.videoSlug ===
-                    Slugify(video.title, {
-                      lowerCase: true,
-                      replaceDot: "-",
-                      replaceAmpersand: "and",
-                    })
-                      ? "active-state"
-                      : ""
-                  }`}
-                  id={`${Slugify(video.title, {
-                    lowerCase: true,
-                    replaceDot: "-",
-                    replaceAmpersand: "and",
-                  })}`}
+                  className={`
+                    ${store.get(video.videoid) ? "watched" : ""} 
+                    ${props.videoSlug === slugifiedVideoTitle ? "active-state" : ""}`}
+                  id={slugifiedVideoTitle}
                 >
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="check-circle"
-                    onClick={() => activeVideo(video.videoid, video.title)}
-                    className="svg-inline--fa fa-check-circle fa-w-16"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
-                  </svg>
-                  <HashLink
-                    to={
-                      "/worlds/" +
-                      props.worldContent +
-                      "/" +
-                      props.worldDetail +
-                      "/" +
-                      Slugify(video.title, {
-                        lowerCase: true,
-                        replaceDot: "-",
-                        replaceAmpersand: "and",
-                      })
-                    }
-                  >
+                  <Icon type="check-in-circle" onClick={() => activeVideo(video.videoid, video.title)} />
+                  <HashLink to={`/worlds/${props.worldContent}/${props.worldDetail}/${slugifiedVideoTitle}`}>
                     {video.title}
                   </HashLink>
-                  <p>
-                    {Math.floor(video.duration / 60) +
-                      ":" +
-                      ("0" + Math.floor(video.duration % 60)).slice(-2)}
-                  </p>
+                  <p>{Math.floor(video.duration / 60) + ":" + ("0" + Math.floor(video.duration % 60)).slice(-2)}</p>
                 </li>
-              )
-            )}
+              );
+            })}
         </ul>
       </div>
     </div>
