@@ -105,8 +105,9 @@
           {
             "name": "Malva Ahmed",
             "imageUrl": "https://cdn.discordapp.com/avatars/801485039611150416/b091019dd6f35c6fe690480eb7992d53.png?size=256",
-            "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
+            "description": "Coordinator Koios minors",
+            "linkedinLink": "https://linkedin.com/in/malva-ahmed",
+            "twitterLink": "",
             "twitterHandle": "",
             "discordLink": "https://discord.com/users/801485039611150416",
             "discordHandle": "Malva.koios"
@@ -115,14 +116,14 @@
             "name": "Dennis IJlst",
             "imageUrl": "https://cdn.discordapp.com/avatars/801334609915805696/ae53525397d14f769f154c465ebded2a.png?size=256",
             "description": "2 years in developer relations in blockchain",
-            "twitterLink": "https://twitter.com",
+            "twitterLink": "",
             "twitterHandle": "",
             "discordLink": "https://discord.com/users/801334609915805696",
             "discordHandle": "Dennis.koios"
           },
           {
             "name": "Jordi Jansen",
-            "imageUrl": "https://cdn.discordapp.com/avatars/355982565288574977/cac5ed2fa3bf5bb2e36dd1f03a09189b.png?size=256",
+            "imageUrl": "https://www.bspd.nl/sites/default/files/Jordi%20Jansen.PNG",
             "description": "Researcher combining Education, DeFi and Web3",
             "twitterLink": "https://www.twitter.com/jordijansen101",
             "twitterHandle": "@jordijansen101",
@@ -216,7 +217,8 @@
             "name": "Malva Ahmed",
             "imageUrl": "https://cdn.discordapp.com/avatars/801485039611150416/b091019dd6f35c6fe690480eb7992d53.png?size=256",
             "description": "Coordinator minor",
-            "twitterLink": "https://twitter.com",
+            "linkedinLink": "https://linkedin.com/in/malva-ahmed",
+            "twitterLink": "",
             "twitterHandle": "",
             "discordLink": "https://discord.com/users/801485039611150416",
             "discordHandle": "Malva.koios"
@@ -232,7 +234,7 @@
           },
           {
             "name": "Jordi Jansen",
-            "imageUrl": "https://cdn.discordapp.com/avatars/355982565288574977/cac5ed2fa3bf5bb2e36dd1f03a09189b.png?size=256",
+            "imageUrl": "https://www.bspd.nl/sites/default/files/Jordi%20Jansen.PNG",
             "description": "Researcher combining Education, DeFi and Web3",
             "twitterLink": "https://www.twitter.com/jordijansen101",
             "twitterHandle": "@jordijansen101",

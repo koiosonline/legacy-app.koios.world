@@ -20,14 +20,23 @@ const Team = (props) => {
               <h5 className={'member__name'}>{memberData.name}</h5>
               <p className={'member__description'}>{memberData.description}</p>
               <div className={'socials'}>
-                <a href={memberData.twitterLink} className={'socials__link'}>
-                  <Icon className={'socials__icon'} type={'twitter'}/>
-                  <p className={'socials__handle'}>{memberData.twitterHandle}</p>
-                </a>
-                <a href={memberData.discordLink} className={'socials__link'}>
-                  <Icon className={'socials__icon'} type={'discord'} />
-                  <p className={'socials__handle'}>{memberData.discordHandle}</p>
-                </a>
+                {memberData.linkedinLink &&
+                  <a href={memberData.linkedinLink} className={'socials__link'}>
+                    <Icon className={'socials__icon'} type={'linkedin'} />
+                  </a>
+                }
+                {memberData.twitterLink &&
+                  <a href={memberData.twitterLink} className={'socials__link'}>
+                    <Icon className={'socials__icon'} type={'twitter'}/>
+                    <p className={'socials__handle'}>{memberData.twitterHandle}</p>
+                  </a>
+                }
+                {memberData.discordLink &&
+                  <a href={memberData.discordLink} className={'socials__link'}>
+                    <Icon className={'socials__icon'} type={'discord'} />
+                    <p className={'socials__handle'}>{memberData.discordHandle}</p>
+                  </a>
+                }
               </div>
             </div>
             )
