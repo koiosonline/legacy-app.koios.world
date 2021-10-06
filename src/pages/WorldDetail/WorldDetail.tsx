@@ -4,11 +4,7 @@ import { FindCourseDetail } from "./useWorldDetail";
 import courseInfo from "../../assets/data/Worlds.json";
 import { Slugify } from "../../components/Util/Slugify";
 import { SingleVideo } from "../../types/Courses/SingleVideo";
-import {
-  CourseContentParams,
-  CourseDetailParams,
-  VideoSlugParams,
-} from "../../types/Params";
+import { CourseContentParams, CourseDetailParams, VideoSlugParams } from "../../types/Params";
 import { getLiterature, getVideoInfo } from "../../api/Api";
 import TabInfo from "../../components/TabInfo";
 import useQuiz from "../../components/quiz/useQuiz";
@@ -57,15 +53,11 @@ export const WorldDetail = () => {
   };
 
   const course = courseInfo.find(
-    (item) =>
-      Slugify(item.url, { lowerCase: true, replaceAmpersand: "and" }) ===
-      worldContent
+    (item) => Slugify(item.url, { lowerCase: true, replaceAmpersand: "and" }) === worldContent
   );
 
   const courseLevel = course.content.find(
-    (item) =>
-      Slugify(item.title, { lowerCase: true, replaceAmpersand: "and" }) ===
-      worldDetail
+    (item) => Slugify(item.title, { lowerCase: true, replaceAmpersand: "and" }) === worldDetail
   );
 
   const data = async () => {
@@ -94,15 +86,10 @@ export const WorldDetail = () => {
 
   const filterDataById = () => {
     const all = courseData.filter((item) => getCourseId() === item.chapter);
-    const addedInfo = extraInfo.filter(
-      (item) => getCourseId() === item.chapter
-    );
+    const addedInfo = extraInfo.filter((item) => getCourseId() === item.chapter);
     const allFilter = courseData.filter((item) => "*" === item.chapter);
     const merged = allFilter.concat(all, addedInfo);
-    const unique = merged.filter(
-      (v, i, a) =>
-        a.findIndex((t) => t.title === v.title && t.url === v.url) === i
-    );
+    const unique = merged.filter((v, i, a) => a.findIndex((t) => t.title === v.title && t.url === v.url) === i);
     const withoutPng = unique.filter((item) => !item.png);
     if (withoutPng.length === 0) {
       return false;
@@ -197,19 +184,13 @@ export const WorldDetail = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="cta-button__img cta-button__img--emoji">
-                    &#128176;
-                  </span>
+                  <span className="cta-button__img cta-button__img--emoji">&#128176;</span>
                   <p className="cta-button__text">Feedback</p>
                 </a>
 
                 {quiz && (
                   <button onClick={openQuiz} className={"cta-button"}>
-                    <img
-                      className="cta-button__img"
-                      src={"/images/scroll-solid.svg"}
-                      alt={"sheets"}
-                    />
+                    <img className="cta-button__img" src={"/images/scroll-solid.svg"} alt={"sheets"} />
                     <p className="cta-button__text">Quiz</p>
                   </button>
                 )}
@@ -225,9 +206,7 @@ export const WorldDetail = () => {
                     ) : (
                       <>
                         <h2>{videoContent.title}</h2>
-                        <p>
-                          {videoContent.description.replace(/___(.*?)___/g, "")}
-                        </p>
+                        <p>{videoContent.description.replace(/___(.*?)___/g, "")}</p>
                       </>
                     )}
                   </article>
@@ -242,9 +221,7 @@ export const WorldDetail = () => {
                 <div className="table-of-contents">
                   {literatureOfVideo ? (
                     <>
-                      <h2 className="table-of-contents__title">
-                        Table of contents
-                      </h2>
+                      <h2 className="table-of-contents__title">Table of contents</h2>
                       {tableOfContents && (
                         <ul className="table-of-contents__list">
                           {tableOfContents.map((item, index) => (
@@ -252,10 +229,7 @@ export const WorldDetail = () => {
                               key={index}
                               className={`table-of-contents__list-item table-of-contents__list-item--${item.type}`}
                             >
-                              <HashLink
-                                to={`#${item.id}`}
-                                className="table-of-contents__link link"
-                              >
+                              <HashLink to={`#${item.id}`} className="table-of-contents__link link">
                                 {item.title}
                               </HashLink>
                             </li>
@@ -265,13 +239,7 @@ export const WorldDetail = () => {
                     </>
                   ) : (
                     courseData &&
-                    filterDataById() && (
-                      <TabInfo
-                        allLinks={filterDataById}
-                        urls={onlyUrl}
-                        literature={onlyLiterature}
-                      />
-                    )
+                    filterDataById() && <TabInfo allLinks={filterDataById} urls={onlyUrl} literature={onlyLiterature} />
                   )}
                 </div>
               </section>

@@ -86,10 +86,10 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
               ) : (
                 <li
                   key={index}
+                  id={slugifiedVideoTitle}
                   className={`
                     ${store.get(video.videoid) ? "watched" : ""} 
                     ${props.videoSlug === slugifiedVideoTitle ? "active-state" : ""}`}
-                  id={slugifiedVideoTitle}
                 >
                   <Icon type="check-in-circle" onClick={() => activeVideo(video.videoid, video.title)} />
                   <HashLink to={`/worlds/${props.worldContent}/${props.worldDetail}/${slugifiedVideoTitle}`}>
