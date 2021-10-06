@@ -7,28 +7,27 @@ import { provider } from './Web3'
 
 declare const window: any;
 
-const CERAMIC_URL = process.env.CERAMIC_API || 'https://ceramic-clay.3boxlabs.com'
+const CERAMIC_URL = process.env.CERAMIC_API || 'http://localhost:7007'
 
-export const authenticate = async () => {
+export const authenticate = async (address) => {
   const ethProvider = provider;
-  const addresses = await ethProvider.enable();
 
   const threeIdConnect = new ThreeIdConnect()
-  const authProvider = new EthereumAuthProvider(ethProvider, addresses[0])
+  const authProvider = new EthereumAuthProvider(ethProvider, address)
   await threeIdConnect.connect(authProvider)
 
   const ceramic = new Ceramic(CERAMIC_URL)
 
-  const did = new DID({
+  ceramic.did = new DID({
     provider: threeIdConnect.getDidProvider(),
     resolver: ThreeIdResolver.getResolver(ceramic)
   })
 
-  await did.authenticate()
+  await ceramic.did.authenticate()
 
   window.idx = new IDX({ ceramic })
   window.ceramic = ceramic
-  window.did = did.id
+  window.did = ceramic.did.id
 }
 
 export const setupIDX = async () => {
@@ -39,14 +38,13 @@ export const setupIDX = async () => {
 
 export const FindProfile = async (address: string) => {
   try {
-    const profile = await window.idx.get("basicProfile", `${address}@eip155:1`);
+    const profile = await window.idx.get("basicProfile", `${address}@eip155:3`);
     let profilename: string = profile.name ? profile.name : address;
     let picturesource;
     if (profile.image) {
       picturesource = profile.image.original.src;
     }
     let entry = { "name": profilename, "image": picturesource };
-    localStorage.setItem(address, JSON.stringify(entry));
     return entry;
   }
   catch {
