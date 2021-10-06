@@ -1,4 +1,4 @@
-import { EthereumAuthProvider, ThreeIdConnect } from '@3id/connect'
+import { EthereumAuthProvider, ThreeIdConnect } from '@3id/connect';
 import ThreeIdResolver from '@ceramicnetwork/3id-did-resolver'
 import Ceramic from '@ceramicnetwork/http-client'
 import { IDX } from '@ceramicstudio/idx'
@@ -7,7 +7,7 @@ import { provider } from './Web3'
 
 declare const window: any;
 
-const CERAMIC_URL = process.env.CERAMIC_API || 'http://localhost:7007'
+const CERAMIC_URL = process.env.CERAMIC_API || 'https://gateway-clay.ceramic.network'
 
 export const authenticate = async (address) => {
   const ethProvider = provider;
@@ -38,7 +38,7 @@ export const setupIDX = async () => {
 
 export const FindProfile = async (address: string) => {
   try {
-    const profile = await window.idx.get("basicProfile", `${address}@eip155:3`);
+    const profile = await window.idx.get("basicProfile", `${address}@eip155:4`);
     let profilename: string = profile.name ? profile.name : address;
     let picturesource;
     if (profile.image) {
