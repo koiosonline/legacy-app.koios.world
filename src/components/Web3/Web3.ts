@@ -15,12 +15,12 @@ const fetchAccountData = async () => {
 
   const accounts = await web3.eth.getAccounts();
   selectedAccount = accounts[0];
-  //if (localStorage.getItem(selectedAccount + "authenticated") !== "authenticated") {
-  await authenticate(selectedAccount);
-  //  localStorage.setItem(selectedAccount + "authenticated", "authenticated");
-  //} else {
-  //  await setupIDX();
-  //}
+  if (localStorage.getItem(selectedAccount + "authenticated") !== "authenticated") {
+    await authenticate(selectedAccount);
+    localStorage.setItem(selectedAccount + "authenticated", "authenticated");
+  } else {
+    await setupIDX();
+  }
   selectedProfile = await FindProfile(selectedAccount);
   if (selectedProfile.image) {
     profilePicture = await fetchImage(selectedProfile.image);
