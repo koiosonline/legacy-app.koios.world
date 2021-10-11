@@ -20,7 +20,7 @@ const LearnToNavigate = (props) => {
         </div>
       </div>
       <div className={'image'}>
-        <img src={'/images/artwork_blockchain.png'} alt={'blockchain'}/>
+        <img src={'/images/blockchain.svg'} alt={'blockchain'}/>
       </div>
     </div>
   )
