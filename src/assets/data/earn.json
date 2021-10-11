@@ -39,7 +39,7 @@
     {
       "assignmentUrl": "/earn/bring-your-own-idea",
       "category": "Your own idea",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Bring your own idea",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -63,7 +63,7 @@
     {
       "assignmentUrl": "/earn/donation-webshop",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Donation webshop",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -90,7 +90,7 @@
     {
       "assignmentUrl": "/earn/Front-end-developer",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Front end developer",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -127,7 +127,7 @@
     {
       "assignmentUrl": "/earn/back-end-developer",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Back end developer",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -163,7 +163,7 @@
     {
       "assignmentUrl": "/earn/the-hardware-lab",
       "category": "Hardware & software",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "The hardware lab",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -187,7 +187,7 @@
     {
       "assignmentUrl": "/earn/hardware-setups-for-koios-dao",
       "category": "Hardware & software",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Hardware setups for koios dao",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -214,7 +214,7 @@
     {
       "assignmentUrl": "/earn/visual-designer",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Visual designer",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -244,7 +244,7 @@
     {
       "assignmentUrl": "/earn/ux-designer",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "UX designer",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -274,7 +274,7 @@
     {
       "assignmentUrl": "/earn/token-engineer-koios-tokens",
       "category": "Tokens",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Token engineer Koios Tokens",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -301,7 +301,7 @@
     {
       "assignmentUrl": "/earn/general-dao-research",
       "category": "DAO",
-      "imageUrl": "https://cryptoadventure.com/wp-content/uploads/2020/09/Knowing-the-difference-between-an-Open-Community-and-Closed-Network-Blockchain-1568x946.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "General DAO research",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -325,7 +325,7 @@
     {
       "assignmentUrl": "/earn/deep-dive-koios-token-research",
       "category": "Token",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Deep Dive Koios DAO Research",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -352,7 +352,7 @@
     {
       "assignmentUrl": "/earn/minor-team-assistance",
       "category": "Curriculum",
-      "imageUrl": "https://www.usnews.com/dims4/USNEWS/7ee04e4/2147483647/crop/1996x1331%2B3%2B0/resize/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2F0f%2F3e%2Fb10501f74fa6b123dad8dbc925a7%2F210416-stock.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Minor team assistance",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -373,7 +373,7 @@
     {
       "assignmentUrl": "/earn/fundamental-research-group",
       "category": "Tokens",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Fundamental Research group ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -397,7 +397,7 @@
     {
       "assignmentUrl": "/earn/crypto-news",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Crypto news",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -424,7 +424,7 @@
     {
       "assignmentUrl": "/earn/community-driven-value-exchange",
       "category": "Community",
-      "imageUrl": "https://blog.ionixxtech.com/wp-content/uploads/2018/08/blockchain-community.png",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Community driven value exchange",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -454,7 +454,7 @@
     {
       "assignmentUrl": "/earn/legal–intellectual-property-(platform-or-curriculum)",
       "category": "Legal",
-      "imageUrl": "https://travel.state.gov/content/travel/en/legal/_jcr_content/tsg-rwd-content-page-parsys/slideshow.img.jpg/1512169201172.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Legal – Intellectual Property (platform or curriculum) ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -481,7 +481,7 @@
     {
       "assignmentUrl": "/earn/legal–gdpr-&-badges",
       "category": "Legal",
-      "imageUrl": "https://travel.state.gov/content/travel/en/legal/_jcr_content/tsg-rwd-content-page-parsys/slideshow.img.jpg/1512169201172.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Legal – GDPR & Badges",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -508,7 +508,7 @@
     {
       "assignmentUrl": "/earn/legal–koios-token-sale",
       "category": "Legal",
-      "imageUrl": "https://travel.state.gov/content/travel/en/legal/_jcr_content/tsg-rwd-content-page-parsys/slideshow.img.jpg/1512169201172.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Legal – Koios token sale ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -541,7 +541,7 @@
     {
       "assignmentUrl": "/earn/koios-micro-challenges",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Legal – Koios token sale ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -568,7 +568,7 @@
     {
       "assignmentUrl": "/earn/gamification-crew",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Gamification Crew ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -598,7 +598,7 @@
     {
       "assignmentUrl": "/earn/the-nft-webshop",
       "category": "Platform",
-      "imageUrl": "https://i.imgur.com/WxVvpF1.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Gamification Crew ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -625,7 +625,7 @@
     {
       "assignmentUrl": "/earn/sustainable-business-model-koios",
       "category": "Business Models",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Sustainable Business Model Koios ",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -652,7 +652,7 @@
     {
       "assignmentUrl": "/earn/build-trading-bot",
       "category": "Hardware & software",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Build a trading bot",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -688,7 +688,7 @@
     {
       "assignmentUrl": "/earn/Koios-investments",
       "category": "DAO",
-      "imageUrl": "https://cryptoadventure.com/wp-content/uploads/2020/09/Knowing-the-difference-between-an-Open-Community-and-Closed-Network-Blockchain-1568x946.jpg",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Koios investments",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -712,7 +712,7 @@
     {
       "assignmentUrl": "/earn/marketing-&-media",
       "category": "Community",
-      "imageUrl": "https://blog.ionixxtech.com/wp-content/uploads/2018/08/blockchain-community.png",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Koios Marketing & Media",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -742,7 +742,7 @@
     {
       "assignmentUrl": "/earn/global-inclusive-learning",
       "category": "Community",
-      "imageUrl": "https://blog.ionixxtech.com/wp-content/uploads/2018/08/blockchain-community.png",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Global inclusive learning",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
@@ -769,7 +769,7 @@
     {
       "assignmentUrl": "/earn/strategy-scaling-koios",
       "category": "Research",
-      "imageUrl": "https://observer.com/wp-content/uploads/sites/2/2021/03/pexels-alesia-kozik-6771899.jpg?quality=80",
+      "imageUrl": "",
       "provider": "Koios",
       "title": "Strategy scaling Koios",
       "subTitle": "The Koios DAO, in collaboration with The Hague University of Applied Sciences. ",
