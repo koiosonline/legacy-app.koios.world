@@ -60,7 +60,7 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
 
   useEffect(() => {
     const activeVideoItem = document.getElementById(props.videoSlug);
-    const offset = activeVideoItem.offsetTop - 100;
+    const offset = activeVideoItem?.offsetTop - 100;
     document.getElementById("videoList").scrollTop = offset;
   }, [props.videoSlug]);
 
