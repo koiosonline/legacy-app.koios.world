@@ -9,7 +9,7 @@ declare const window: any;
 
 const CERAMIC_URL = process.env.CERAMIC_API || 'https://gateway-clay.ceramic.network'
 
-export const authenticate = async (address) => {
+export const authenticate = async (address: string) => {
   const ethProvider = provider;
 
   const threeIdConnect = new ThreeIdConnect()
