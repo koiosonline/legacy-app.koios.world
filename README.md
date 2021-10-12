@@ -1,3 +1,7 @@
+# Migrating legacy 3box to IDX profile
+
+If everything goes well 3ID-connect should handle this automatically. It can however happen that a profile is not migrated correctly when using the 3ID-Connect in Koios. If this is the case just press 'Edit profile', this should take you to clay.self.id which will migrate your profile if it hasn't already happened and also makes it possible to change profile data.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
