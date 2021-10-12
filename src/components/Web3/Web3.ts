@@ -2,7 +2,6 @@ import Web3 from "web3";
 import { web3Modal } from './WalletProvider';
 import { FindProfile, authenticate, setupIDX } from './Profiles';
 import { fetchImage } from "./Ipfs";
-import { useEffect } from "react";
 
 export let provider;
 export let selectedAccount;
