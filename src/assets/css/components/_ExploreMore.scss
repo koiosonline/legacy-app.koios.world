@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: $gradient-koios-transparent, url("https://i.imgur.com/VpLJxrH.jpg");
+  background-image: $gradient-koios-transparent, url("https://images.unsplash.com/photo-1534996858221-380b92700493?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1931&q=80");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 50%;
@@ -48,7 +48,7 @@
       };
       p {
         background: $gradient-koios;
-        //background-clip: unset;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: "Source Sans Pro", sans-serif;
