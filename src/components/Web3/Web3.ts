@@ -1,6 +1,6 @@
 import Web3 from "web3";
 import { web3Modal } from './WalletProvider';
-import { FindProfile } from './FindProfile';
+import { FindProfile, authenticate, setupIDX } from './Profiles';
 import { fetchImage } from "./Ipfs";
 
 export let provider;
@@ -14,6 +14,12 @@ const fetchAccountData = async () => {
 
   const accounts = await web3.eth.getAccounts();
   selectedAccount = accounts[0];
+  if (localStorage.getItem(selectedAccount + "authenticated") !== "authenticated") {
+    await authenticate(selectedAccount);
+    localStorage.setItem(selectedAccount + "authenticated", "authenticated");
+  } else {
+    await setupIDX();
+  }
   selectedProfile = await FindProfile(selectedAccount);
   if (selectedProfile.image) {
     profilePicture = await fetchImage(selectedProfile.image);
@@ -26,8 +32,9 @@ const fetchAccountData = async () => {
 export const connectWeb3 = async () => {
   try {
     provider = await web3Modal.connect();
-    if(!selectedAccount)
+    if (!selectedAccount) {
       await fetchAccountData();
+    }
   } catch (e) {
     console.log("Could not get a wallet connection", e);
   }
@@ -37,9 +44,9 @@ const firstRun = async () => {
   if (web3Modal.cachedProvider) {
     await connectWeb3();
   }
-  }
+}
 
-  firstRun();
+firstRun();
 
 export const disconnectWeb3 = async () => {
   if (provider) {
@@ -47,5 +54,6 @@ export const disconnectWeb3 = async () => {
     provider = null;
   }
   localStorage.removeItem(selectedAccount);
+  localStorage.removeItem(selectedAccount + "authenticated");
   selectedAccount = null;
 };
