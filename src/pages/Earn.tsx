@@ -26,7 +26,7 @@ const Earn = () => {
 
   return (
     <>
-      <div className={'earn-header'} style={{backgroundImage: 'linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5)), url(https://i.imgur.com/VpLJxrH.jpg)'}}>
+      <div className={'earn-header'} style={{backgroundImage: 'linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5)), url(https://images.unsplash.com/photo-1534996858221-380b92700493?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1931&q=80)'}}>
         <div className={'earn-header__text-holder'}>
           <h1 className={'earn-header__text-holder__title'}>{earnData.headerTitle}</h1>
           {/*<p className={'earn-header__text-holder__description'}>{earnData.headerDescription}</p>*/}
