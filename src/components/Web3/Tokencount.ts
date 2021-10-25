@@ -1,6 +1,6 @@
 import LeaderboardAddresses from "./static/addresses.json";
 import { fetchImage, fetchJson } from "./Ipfs";
-import { FindProfile } from "./FindProfile";
+import { FindProfile } from "./Profiles";
 import { selectedAccount } from "./Web3";
 import { GetTokenHoldersJSON } from "./GraphQueries";
 
