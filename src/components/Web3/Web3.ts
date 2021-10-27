@@ -6,7 +6,7 @@ import { fetchImage } from "./Ipfs";
 export let provider;
 export let selectedAccount;
 export let selectedProfile;
-export let profilePicture;
+export let profilePicture
 export let profileName;
 
 const fetchAccountData = async () => {

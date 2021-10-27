@@ -130,6 +130,7 @@
         font-size: 16px;
         font-weight: 600;
         background: $gradient-koios;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -275,6 +276,7 @@
       margin: 0.3em;
       p {
         background: $gradient-koios;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }

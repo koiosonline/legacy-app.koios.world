@@ -3,21 +3,15 @@ import { Link, NavLink } from "react-router-dom";
 import { Icon } from "../../Util/Icon";
 import { useSizes } from "../../Util/useSizes";
 import koiosLogo from "../../../assets/images/logos/koios-logo.svg";
-import {
-  selectedAccount,
-  profilePicture,
-  profileName,
-} from "../../Web3/Web3";
+import { selectedAccount, profilePicture, profileName } from "../../Web3/Web3";
 import MainNavData from "./static/MainNavData.json";
 import { SvgSprite } from "../../Util/SvgSprite";
 import { Connect, Disconnect } from "../../Web3/ConnectionCheck";
 import { web3Modal } from "../../Web3/WalletProvider";
 import { UserContext } from "../../../Context/UserContext";
 
-
-
 export const MainNav = () => {
-  const {user, setUser} = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   const { width } = useSizes();
   const isMobile = width < 769;
@@ -28,35 +22,29 @@ export const MainNav = () => {
       setIsMenuOpen(!isMenuOpen);
     }
   };
-  isMenuOpen
-    ? (document.body.className = "menu-is-open")
-    : (document.body.className = "");
+  isMenuOpen ? (document.body.className = "menu-is-open") : (document.body.className = "");
 
-  let initialDisconnectText = selectedAccount;
-  const [disconnectButtonText, setDisconnectButtonText] = useState(
-    "loading"
-  );
-
+  const initialDisconnectText = selectedAccount;
+  const [disconnectButtonText, setDisconnectButtonText] = useState("loading");
 
   const connectProvider = async () => {
     const checkProvider = await Connect();
-    setUser(checkProvider)
-  }
+    setUser(checkProvider);
+  };
 
   const disconnectProvider = async () => {
     const checkProvider = await Disconnect();
-    setUser(checkProvider)
-  }
+    setUser(checkProvider);
+  };
 
-  useEffect( () => {
+  useEffect(() => {
     if (web3Modal.cachedProvider) {
-    connectProvider();
+      connectProvider();
     } else {
       disconnectProvider();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user])
-
+  }, [user]);
 
   useEffect(() => {
     setDisconnectButtonText(initialDisconnectText);
@@ -64,34 +52,23 @@ export const MainNav = () => {
 
   return (
     <>
-      <div
-        onClick={toggleMenu}
-        className={`body-overlay ${isMenuOpen ? "body-overlay--active" : ""}`}
-      ></div>
+      <div onClick={toggleMenu} className={`body-overlay ${isMenuOpen ? "body-overlay--active" : ""}`}></div>
       {isMobile && (
         <header className="header-mobile container">
           <button
-            className={`header-mobile__toggle ${isMenuOpen ? "header-mobile__toggle--rotate" : ""
-              }`}
+            className={`header-mobile__toggle ${isMenuOpen ? "header-mobile__toggle--rotate" : ""}`}
             onClick={toggleMenu}
           >
             <Icon type={isMenuOpen ? "close" : "hamburger"} />
           </button>
           <Link to="/" className="header-mobile__img-container">
-            <img
-              className="header-mobile__logo"
-              src={koiosLogo}
-              alt="Koios logo"
-            />
+            <img className="header-mobile__logo" src={koiosLogo} alt="Koios logo" />
           </Link>
         </header>
       )}
 
       <nav className={`main-nav ${isMenuOpen ? "main-nav--open" : ""}`}>
-        <button
-            className={`main-nav__mobile__toggle ${!isMenuOpen ? "hidden" : ""}`}
-            onClick={toggleMenu}
-        >
+        <button className={`main-nav__mobile__toggle ${!isMenuOpen ? "hidden" : ""}`} onClick={toggleMenu}>
           <Icon type={isMenuOpen ? "close" : "hamburger"} />
         </button>
         <Link to="/" className="main-nav__img-container">
@@ -107,7 +84,7 @@ export const MainNav = () => {
           <>
             <div
               id="disconnect-wallet"
-              className={'main-nav__wallet main-nav__wallet--disconnect'}
+              className={"main-nav__wallet main-nav__wallet--disconnect"}
               onClick={disconnectProvider}
               onMouseEnter={() => setDisconnectButtonText("Disconnect")}
               onMouseLeave={() => setDisconnectButtonText(initialDisconnectText)}
@@ -126,10 +103,7 @@ export const MainNav = () => {
                 to={item.linkTo}
                 onClick={toggleMenu}
               >
-                <Icon
-                  className="nav-list__icon gradient"
-                  type={item.icon as keyof typeof SvgSprite}
-                />
+                <Icon className="nav-list__icon gradient" type={item.icon as keyof typeof SvgSprite} />
                 <p>{item.title}</p>
               </NavLink>
             </li>
@@ -140,16 +114,8 @@ export const MainNav = () => {
           <ul className="social__list">
             {MainNavData.socials.map((item, index) => (
               <li className="social__list-item" key={index}>
-                <a
-                  className="social__link link"
-                  href={item.linkTo}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Icon
-                    className="social__icon"
-                    type={item.icon as keyof typeof SvgSprite}
-                  />
+                <a className="social__link link" href={item.linkTo} target="_blank" rel="noreferrer">
+                  <Icon className="social__icon" type={item.icon as keyof typeof SvgSprite} />
                 </a>
               </li>
             ))}
@@ -157,19 +123,15 @@ export const MainNav = () => {
         </div>
 
         <div className="user-profile">
-          {!user && (
-            <p className="user-profile__text--inactive">
-              Please connect your wallet first
-            </p>
-          )}
+          {!user && <p className="user-profile__text--inactive">Please connect your wallet first</p>}
           {user && (
-            <Link to={'/profile'} className={'user-profile__link'}>
-              {!profilePicture ?
-                  <img className="user-profile__profile-picture" src={"/images/pepe.png"} alt="Pepe the frog"/>
-                  :
-                  <img className="user-profile__profile-picture" src={profilePicture} alt="404"/>
-              }
-              <div className={'user-profile__textContainer'}>
+            <Link to={"/profile"} className={"user-profile__link"}>
+              {!profilePicture ? (
+                <img className="user-profile__profile-picture" src={"/images/pepe.png"} alt="Pepe the frog" />
+              ) : (
+                <img className="user-profile__profile-picture" src={profilePicture} alt="404" />
+              )}
+              <div className={"user-profile__textContainer"}>
                 <p className="user-profile__textContainer__profile-name">{profileName}</p>
                 <p className="user-profile__textContainer__pubkey">{selectedAccount}</p>
               </div>

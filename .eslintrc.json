@@ -1,0 +1,20 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "react", 
+      "react-hooks"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "indent": ["error", 2],
+        "no-multi-spaces": ["error"],
+        "semi": ["error", "always"]
+        // "quotes": ["error", "double"]
+    }
+}
