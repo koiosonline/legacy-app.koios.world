@@ -127,7 +127,7 @@ export const Profile = () => {
               <h1 className={"profile__name"}>{profileName}</h1>
           }
           <div className="profile__network">
-            <p className="profile__address">{FormatPublicKey(selectedAccount)}</p>
+            <p className="profile__address">{FormatPublicKey(selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount)}</p>
           </div>
 
           <div className={"collectibles"}>

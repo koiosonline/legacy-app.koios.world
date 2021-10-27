@@ -25,7 +25,7 @@ export const MainNav = () => {
   };
   isMenuOpen ? (document.body.className = "menu-is-open") : (document.body.className = "");
 
-  let initialDisconnectText = FormatPublicKey(selectedAccount);
+  let initialDisconnectText = selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount;
   const [disconnectButtonText, setDisconnectButtonText] = useState("loading");
 
   const connectProvider = async () => {
@@ -134,7 +134,7 @@ export const MainNav = () => {
               )}
               <div className={"user-profile__textContainer"}>
                 <p className="user-profile__textContainer__profile-name">{profileName}</p>
-                <p className="user-profile__textContainer__pubkey">{FormatPublicKey(selectedAccount)}</p>
+                <p className="user-profile__textContainer__pubkey">{selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount}</p>
               </div>
             </Link>
           )}
