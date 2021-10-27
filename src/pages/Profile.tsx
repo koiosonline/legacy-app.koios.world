@@ -128,8 +128,6 @@ export const Profile = () => {
           }
           <div className="profile__network">
             <p className="profile__address">{FormatPublicKey(selectedAccount)}</p>
-            {/*<a href={'https://3box.io/hub'}><Icon type="edit-profile" className="profile__sign-out" /></a>*/}
-            {/*<div onClick={disconnectProvider}><Icon type="sign-out" className="profile__sign-out" /></div>*/}
           </div>
 
           <div className={"collectibles"}>
