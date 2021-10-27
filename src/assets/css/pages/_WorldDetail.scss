@@ -93,7 +93,7 @@
             fill: white;
             cursor: pointer;
             &:hover {
-              fill: url(#gradient-koios);
+              fill: url(#svg-fill--gradient-koios);
             }
           }
           p {
@@ -338,7 +338,7 @@
 .watched {
   opacity: 0.25;
   svg {
-    fill: url(#gradient-koios) !important;
+    fill: url(#svg-fill--gradient-koios) !important;
   }
 }
 

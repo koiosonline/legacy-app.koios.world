@@ -42,7 +42,7 @@ export const SvgSprite = {
   "globe-europe": (
     <svg id="icon-globe-europe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
       <defs>
-        <linearGradient id="gradient-koios" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+        <linearGradient id="svg-fill--gradient-koios" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#ff0bac" />
           <stop offset="1" stopColor="#2f12dc" />
         </linearGradient>
