@@ -162,7 +162,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        fill: url(#gradient-koios) #424242;
+        fill: url(#svg-fill--gradient-koios) #424242;
       }
 
       &--active {
@@ -170,7 +170,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        fill: url(#gradient-koios) #424242;
+        fill: url(#svg-fill--gradient-koios) #424242;
         p {
           background: $gradient-koios;
           background-clip: text;
