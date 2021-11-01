@@ -9,12 +9,12 @@ const useQuiz = () => {
 
   let data = [];
   switch (worldDetail) {
-    case "blockchain-level-1":
-      data = bc01;
-      break;
-    case "blockchain-level-2":
-      data = bc02;
-      break;
+  case "blockchain-level-1":
+    data = bc01;
+    break;
+  case "blockchain-level-2":
+    data = bc02;
+    break;
   }
   return data.find((element) => element.chapter === videoSlug);
 };

@@ -8,7 +8,7 @@ export const MarkdownEditor = () => {
 
   const saveInputAsFile = () => {
     const blob = new Blob([input], { type: "markdown" });
-    let downloadLink = document.createElement("a");
+    const downloadLink = document.createElement("a");
     downloadLink.download = fileName + ".md";
     downloadLink.href = window.URL.createObjectURL(blob);
     downloadLink.click();

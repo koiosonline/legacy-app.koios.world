@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 type useSizesReturnProps = {
   width: number;
@@ -9,7 +9,7 @@ export const useSizes = (): useSizesReturnProps => {
 
   const onWindowResize = () => {
     setWidth(window.innerWidth);
-  }
+  };
 
   useEffect(() => {
     window.addEventListener("resize", onWindowResize);
@@ -19,4 +19,4 @@ export const useSizes = (): useSizesReturnProps => {
   }, []);
 
   return { width };
-}
+};
