@@ -9,6 +9,7 @@ import { SvgSprite } from "../../Util/SvgSprite";
 import { Connect, Disconnect } from "../../Web3/ConnectionCheck";
 import { web3Modal } from "../../Web3/WalletProvider";
 import { UserContext } from "../../../Context/UserContext";
+import { FormatPublicKey } from "../../Util/FormatPublicKey";
 
 export const MainNav = () => {
   const { user, setUser } = useContext(UserContext);
@@ -24,7 +25,7 @@ export const MainNav = () => {
   };
   isMenuOpen ? (document.body.className = "menu-is-open") : (document.body.className = "");
 
-  const initialDisconnectText = selectedAccount;
+  const initialDisconnectText = selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount;
   const [disconnectButtonText, setDisconnectButtonText] = useState("loading");
 
   const connectProvider = async () => {
@@ -133,7 +134,7 @@ export const MainNav = () => {
               )}
               <div className={"user-profile__textContainer"}>
                 <p className="user-profile__textContainer__profile-name">{profileName}</p>
-                <p className="user-profile__textContainer__pubkey">{selectedAccount}</p>
+                <p className="user-profile__textContainer__pubkey">{selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount}</p>
               </div>
             </Link>
           )}
