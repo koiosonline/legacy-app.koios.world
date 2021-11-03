@@ -5,7 +5,7 @@ import { WorldDetail } from "./pages/WorldDetail/WorldDetail";
 import { Layout } from "./components/Layout/Layout";
 import { Leaderboard } from "./pages/Leaderboard";
 import WorldOverview from "./pages/WorldOverview";
-import { Profile } from "./pages/Profile";
+import { Profile } from "./pages/Profile/Profile";
 import { ComingSoon } from "./pages/ComingSoon";
 import { useMemo, useState } from "react";
 import { UserContext } from "./Context/UserContext";

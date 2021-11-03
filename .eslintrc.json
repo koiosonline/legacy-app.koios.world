@@ -17,6 +17,5 @@
         "indent": ["error", 2],
         "no-multi-spaces": ["error"],
         "semi": ["error", "always"]
-        // "quotes": ["error", "double"]
     }
 }
