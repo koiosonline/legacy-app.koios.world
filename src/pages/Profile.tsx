@@ -9,6 +9,7 @@ import ExploreMore from "../components/ExploreMore";
 import { Connect, Disconnect } from "../components/Web3/ConnectionCheck";
 import { web3Modal } from "../components/Web3/WalletProvider";
 import { UserContext } from "../Context/UserContext";
+import { FormatPublicKey } from "../components/Util/FormatPublicKey";
 
 export const Profile = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -107,7 +108,7 @@ export const Profile = () => {
             <h1 className={"profile__name"}>{profileName}</h1>
           )}
           <div className="profile__network">
-            <p className="profile__address">{selectedAccount}</p>
+            <p className="profile__address">{selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount}</p>
             {/*<a href={'https://3box.io/hub'}><Icon type="edit-profile" className="profile__sign-out" /></a>*/}
             {/*<div onClick={disconnectProvider}><Icon type="sign-out" className="profile__sign-out" /></div>*/}
           </div>
