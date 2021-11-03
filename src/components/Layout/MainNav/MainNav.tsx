@@ -25,7 +25,7 @@ export const MainNav = () => {
   };
   isMenuOpen ? (document.body.className = "menu-is-open") : (document.body.className = "");
 
-  let initialDisconnectText = selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount;
+  const initialDisconnectText = selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount;
   const [disconnectButtonText, setDisconnectButtonText] = useState("loading");
 
   const connectProvider = async () => {

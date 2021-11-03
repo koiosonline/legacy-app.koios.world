@@ -1,6 +1,6 @@
 import Web3 from "web3";
-import { web3Modal } from './WalletProvider';
-import { FindProfile, authenticate, setupIDX } from './Profiles';
+import { web3Modal } from "./WalletProvider";
+import { FindProfile, authenticate, setupIDX } from "./Profiles";
 import { fetchImage } from "./Ipfs";
 
 export let provider;
@@ -27,7 +27,7 @@ const fetchAccountData = async () => {
   if (selectedProfile.name) {
     profileName = selectedProfile.name;
   }
-}
+};
 
 export const connectWeb3 = async () => {
   try {
@@ -44,7 +44,7 @@ const firstRun = async () => {
   if (web3Modal.cachedProvider) {
     await connectWeb3();
   }
-}
+};
 
 firstRun();
 
