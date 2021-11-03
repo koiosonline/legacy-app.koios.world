@@ -35,7 +35,6 @@ const Earn = () => {
       >
         <div className={"earn-header__text-holder"}>
           <h1 className={"earn-header__text-holder__title"}>{earnData.headerTitle}</h1>
-          {/*<p className={'earn-header__text-holder__description'}>{earnData.headerDescription}</p>*/}
         </div>
       </div>
 
