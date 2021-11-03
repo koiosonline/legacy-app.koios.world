@@ -17,42 +17,43 @@ import Earn from "./pages/Earn";
 import VacancyDetail from "./pages/VacancyDetail";
 import { MarkdownEditor } from "./pages/MarkdownEditor";
 
-
 export const App = () => {
   const [user, setUser] = useState(null);
-  const providerValue = useMemo(() => ({user, setUser}), [user, setUser])
+  const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
 
   return (
     <Router>
-        <UserContext.Provider value={providerValue}>
-        <ScrollToTop/>
-      <Switch>
-        <Route path={["/editor"]} exact >
-                <Switch>
-                  <Route path="/editor" exact component={MarkdownEditor}/>
-                </Switch>
-        </Route>
-        
-        <Route>
-          <Layout>
+      <UserContext.Provider value={providerValue}>
+        <ScrollToTop />
+        <Switch>
+          <Route path={["/editor"]} exact>
             <Switch>
-                <Route path="/worlds" exact component={Worlds}/>
-                <Route path="/worlds/:worldContent" exact component={WorldOverview}/>
-                <Route path="/worlds/:worldContent/:worldDetail/:videoSlug?" exact component={WorldDetail}/>
+              <Route path="/editor" exact component={MarkdownEditor} />
+            </Switch>
+          </Route>
+
+          <Route>
+            <Layout>
+              <Switch>
+                <Route path="/worlds" exact component={Worlds} />
+                <Route path="/worlds/:worldContent" exact component={WorldOverview} />
+                <Route path="/worlds/:worldContent/:worldDetail/:videoSlug?" exact component={WorldDetail} />
                 <Route path="/coming-soon" exact component={ComingSoon} />
                 <Route path="/profile" exact component={Profile} />
-                <Route path="/leaderboard" exact component={Leaderboard}/>
-                <Route path="/contribute" exact component={Contribute}/>
-                <Route path="/explanation" exact component={ExplanationVideos}/>
+                <Route path="/leaderboard" exact component={Leaderboard} />
+                <Route path="/contribute" exact component={Contribute} />
+                <Route path="/explanation" exact component={ExplanationVideos} />
                 <Route path="/earn" exact component={Earn} />
                 <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
-                <Route path="/" exact><Redirect to="/worlds"/></Route>
-                <Route component={Error404}/>
-            </Switch>
-          </Layout>
+                <Route path="/" exact>
+                  <Redirect to="/worlds" />
+                </Route>
+                <Route component={Error404} />
+              </Switch>
+            </Layout>
           </Route>
-      </Switch>
-        </UserContext.Provider>
+        </Switch>
+      </UserContext.Provider>
     </Router>
   );
 };

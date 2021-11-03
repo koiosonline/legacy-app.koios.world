@@ -4,24 +4,35 @@ import { FindProfile } from "./Profiles";
 import { selectedAccount } from "./Web3";
 import { GetTokenHoldersJSON } from "./GraphQueries";
 
-
 export const getTokenCountTDFA = async () => {
   const tokenholders = await GetTokenHoldersJSON();
   const tokenholdersTDFA: any = [];
-  let usernamePromises: any = [];
+  const usernamePromises: any = [];
 
   let i = 1;
-  let tdfaAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.tdfaAddresses);
-  for (let user of tokenholders.data.users) {
+  const tdfaAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.tdfaAddresses);
+  for (const user of tokenholders.data.users) {
     if (tdfaAddresses.includes(user.address)) {
       if (user.address === selectedAccount?.toLowerCase()) {
-        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": true };
+        const entry = {
+          address: user.address,
+          balance: Math.round(user.balance / 10 ** 18),
+          image: "default",
+          index: i,
+          selectedAccount: true,
+        };
         tokenholdersTDFA.push(entry);
-        i++
+        i++;
       } else {
-        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": false };
+        const entry = {
+          address: user.address,
+          balance: Math.round(user.balance / 10 ** 18),
+          image: "default",
+          index: i,
+          selectedAccount: false,
+        };
         tokenholdersTDFA.push(entry);
-        i++
+        i++;
       }
     }
   }
@@ -33,8 +44,8 @@ export const getTokenCountTDFA = async () => {
     }
   }
 
-  for (let user of tokenholdersTDFA) {
-    var usernamePromise = FindProfile(user.address);
+  for (const user of tokenholdersTDFA) {
+    const usernamePromise = FindProfile(user.address);
     usernamePromises.push(usernamePromise);
   }
   await Promise.all(usernamePromises).then(async (values: any) => {
@@ -49,25 +60,37 @@ export const getTokenCountTDFA = async () => {
   });
 
   return tokenholdersTDFA;
-}
+};
 
 export const getTokenCountBlockchain = async () => {
   const tokenholders = await GetTokenHoldersJSON();
   const tokenholdersBlockchain: any = [];
-  let usernamePromises: any = [];
+  const usernamePromises: any = [];
 
   let i = 1;
-  let blockchainAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.blockchainAddresses);
-  for (let user of tokenholders.data.users) {
+  const blockchainAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.blockchainAddresses);
+  for (const user of tokenholders.data.users) {
     if (blockchainAddresses.includes(user.address)) {
       if (user.address === selectedAccount?.toLowerCase()) {
-        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": true };
+        const entry = {
+          address: user.address,
+          balance: Math.round(user.balance / 10 ** 18),
+          image: "default",
+          index: i,
+          selectedAccount: true,
+        };
         tokenholdersBlockchain.push(entry);
-        i++
+        i++;
       } else {
-        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "image": "default", "index": i, "selectedAccount": false };
+        const entry = {
+          address: user.address,
+          balance: Math.round(user.balance / 10 ** 18),
+          image: "default",
+          index: i,
+          selectedAccount: false,
+        };
         tokenholdersBlockchain.push(entry);
-        i++
+        i++;
       }
     }
   }
@@ -79,8 +102,8 @@ export const getTokenCountBlockchain = async () => {
     }
   }
 
-  for (let user of tokenholdersBlockchain) {
-    var usernamePromise = FindProfile(user.address);
+  for (const user of tokenholdersBlockchain) {
+    const usernamePromise = FindProfile(user.address);
     usernamePromises.push(usernamePromise);
   }
   await Promise.all(usernamePromises).then(async (values: any) => {
@@ -95,23 +118,35 @@ export const getTokenCountBlockchain = async () => {
   });
 
   return tokenholdersBlockchain;
-}
+};
 
 export const getTokenCountOverall = async () => {
   const tokenholders = await GetTokenHoldersJSON();
   const tokenholdersOverall: any = [];
-  let usernamePromises: any = [];
-  let exclusions: string[] = await stringArrayToLowerCase(LeaderboardAddresses.leaderboardExclusions);
+  const usernamePromises: any = [];
+  const exclusions: string[] = await stringArrayToLowerCase(LeaderboardAddresses.leaderboardExclusions);
   let i = 1;
 
-  for (let user of tokenholders.data.users) {
+  for (const user of tokenholders.data.users) {
     if (!exclusions.includes(user.address)) {
       if (user.address === selectedAccount?.toLowerCase()) {
-        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "index": i, "selectedAccount": true, "image": "default" };
+        const entry = {
+          address: user.address,
+          balance: Math.round(user.balance / 10 ** 18),
+          index: i,
+          selectedAccount: true,
+          image: "default",
+        };
         tokenholdersOverall.push(entry);
         i++;
       } else {
-        let entry = { "address": user.address, "balance": (Math.round(user.balance / 10 ** 18)), "index": i, "selectedAccount": false, "image": "default" };
+        const entry = {
+          address: user.address,
+          balance: Math.round(user.balance / 10 ** 18),
+          index: i,
+          selectedAccount: false,
+          image: "default",
+        };
         tokenholdersOverall.push(entry);
         i++;
       }
@@ -125,8 +160,8 @@ export const getTokenCountOverall = async () => {
     }
   }
 
-  for (let user of tokenholdersOverall) {
-    var usernamePromise = FindProfile(user.address);
+  for (const user of tokenholdersOverall) {
+    const usernamePromise = FindProfile(user.address);
     usernamePromises.push(usernamePromise);
   }
   await Promise.all(usernamePromises).then(async (values: any) => {
@@ -141,28 +176,28 @@ export const getTokenCountOverall = async () => {
   });
 
   return tokenholdersOverall;
-}
+};
 
 export const ProfileTokenInformation = async () => {
   const tokenHolders = await GetTokenHoldersJSON();
-  let resultArray: any = [];
-  for (let user of tokenHolders.data.users) {
+  const resultArray: any = [];
+  for (const user of tokenHolders.data.users) {
     if (selectedAccount) {
       if (selectedAccount.toLowerCase() === user.address) {
-        let contentURI = await fetchJson(user.contentURI);
-        let symbol = user.symbol;
-        let balance = Math.round(user.balance / 10 ** 18);
-        let entry = { "symbol": symbol, "balance": balance, "image": await fetchImage(contentURI.image) };
+        const contentURI = await fetchJson(user.contentURI);
+        const symbol = user.symbol;
+        const balance = Math.round(user.balance / 10 ** 18);
+        const entry = { symbol: symbol, balance: balance, image: await fetchImage(contentURI.image) };
         resultArray.push(entry);
       }
     }
   }
   return resultArray;
-}
+};
 
 const stringArrayToLowerCase = async (array: string[]) => {
   for (let i = 0; i < array.length; i++) {
     array[i] = array[i].toLowerCase();
   }
   return array;
-}
+};

@@ -9,14 +9,14 @@ export const GetTokenHoldersJSON = async () => {
             contentURI
           }
         } 
-          `
-  const URL = 'https://api.thegraph.com/subgraphs/name/koiosonline/titantoken';
-  let body = JSON.stringify({ query: query });
-  var res = await fetch(URL, {
-    method: 'post',
-    headers: { 'Content-Type': 'application/json' },
-    body: body
-  })
-  var json = await res.json()
+          `;
+  const URL = "https://api.thegraph.com/subgraphs/name/koiosonline/titantoken";
+  const body = JSON.stringify({ query: query });
+  const res = await fetch(URL, {
+    method: "post",
+    headers: { "Content-Type": "application/json" },
+    body: body,
+  });
+  const json = await res.json();
   return json;
-}
+};
