@@ -7,7 +7,6 @@ const TabInfo = (props) => {
   const [urlState, setUrlState] = useState(false);
   const [literature] = useState(props.literature);
   const [literatureState, setLiteratureState] = useState(false);
-  // const [podcasts] = useState(props.podcasts);
   const [podcastsState, setpodcastsState] = useState(false);
 
   const changeTabAll = () => {
