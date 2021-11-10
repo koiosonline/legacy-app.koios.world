@@ -26,7 +26,8 @@
 
     .links {
       display: flex;
-      flex-flow: column;
+      flex-direction: column;
+      flex: 1 0 auto;
 
       @include for-size($tablet) {
         display: flex;

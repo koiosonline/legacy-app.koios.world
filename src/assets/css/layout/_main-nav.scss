@@ -57,7 +57,6 @@
   top: 0;
   left: 0;
   background-color: #fff;
-  width: 0px;
   margin-left: 0;
   transition: 0.5s;
   overflow: hidden;
@@ -65,6 +64,7 @@
   border-right: 2px solid #ececec;
   z-index: 2;
   opacity: 0;
+  transform: translateX(-100%);
 
   @include for-size($desktop) {
     width: 300px;
@@ -93,6 +93,11 @@
     flex-wrap: nowrap;
     width: 300px;
     opacity: 1;
+    transform: translateX(0);
+  }
+
+  &--desktop {
+    transform: translateX(0);
   }
 
   &__img-container {

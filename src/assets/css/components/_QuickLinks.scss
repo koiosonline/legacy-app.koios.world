@@ -5,14 +5,11 @@
   grid-column-gap: $spacing-2x;
   grid-row-gap: $spacing-2x;
   width: 100%;
-  height: 100%;
-  //overflow: scroll;
   justify-content: space-between;
   position: relative;
   margin-bottom: $spacing-4x;
 
   @include for-size($desktop) {
-    //padding: 0 $spacing-2x;
     grid-template-columns: repeat(auto-fit, 1fr);
   }
 
@@ -22,7 +19,6 @@
     font-weight: 400;
     text-align: center;
     padding: 0.25em 1em;
-    //margin: 1rem 1rem 1rem 0;
     border-radius: $radius;
     box-shadow: $button-shadow;
     transition: all 0.2s ease;
