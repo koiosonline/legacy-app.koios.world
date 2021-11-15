@@ -8,7 +8,8 @@ export const Profile = () => {
   const modalState = () => {
     setIsModalOpen(!isModalOpen);
   };
-  console.log(isModalOpen);
+
+
   return (
     <div className={"profile"}>
       <h1>Your personal galaxy</h1>
