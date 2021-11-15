@@ -26,21 +26,6 @@ const SetupModal = (props) => {
               />
             </div>
           </div>
-          <div className={"modalContainer__content__row"}>
-            <h2 className={"modalContainer__content__row__number"}>2</h2>
-            <div className={"modalContainer__content__row__column"}>
-              <p className={"modalContainer__content__row__column__videoTitle"}>Create a 3Box profile</p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/QIFDMaiOAIU"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
         </div>
       </div>
       {/*</div>*/}
