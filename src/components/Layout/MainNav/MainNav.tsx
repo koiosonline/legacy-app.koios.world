@@ -3,12 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import { Icon } from "../../Util/Icon";
 import { useSizes } from "../../Util/useSizes";
 import koiosLogo from "../../../assets/images/logos/koios-logo.svg";
-import { selectedAccount, profilePicture, profileName } from "../../Web3/Web3";
+import { selectedAccount, profilePicture, profileName } from "../../Web3/Web3--old";
 import MainNavData from "./static/MainNavData.json";
 import { SvgSprite } from "../../Util/SvgSprite";
 import { Connect, Disconnect } from "../../Web3/ConnectionCheck";
 import { web3Modal } from "../../Web3/WalletProvider";
-import { UserContext } from "../../../Context/UserContext";
+import { UserContext } from "../../../Context/UserContext-old";
 import { FormatPublicKey } from "../../Util/FormatPublicKey";
 
 export const MainNav = () => {

@@ -15,7 +15,7 @@
 @import "src/assets/css/pages/WorldOverview";
 @import "./pages/coming-soon";
 @import "src/assets/css/pages/Worlds";
-@import "src/assets/css/pages/Profile";
+@import "src/assets/css/pages/profile";
 @import "src/assets/css/pages/WorldDetail";
 @import "./pages/leaderboard";
 @import "./pages/404";
@@ -28,6 +28,10 @@
 /* Layout */
 @import "./layout/header";
 @import "./layout/main-nav";
+
+/* Modals */
+@import "src/assets/css/modals/modal";
+@import "src/assets/css/modals/wallet-setup-modal";
 
 /* Components */
 @import "src/assets/css/components/Button";
@@ -47,7 +51,6 @@
 @import "src/assets/css/components/vacanciesIntro";
 @import "src/assets/css/components/VacancyCard";
 @import "src/assets/css/components/markdown";
-@import "src/assets/css/components/modals";
 
 /* Font awesome */
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";

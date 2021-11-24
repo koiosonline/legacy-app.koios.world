@@ -1,4 +1,4 @@
-import { selectedAccount } from "./Web3";
+import { selectedAccount } from "./Web3--old";
 import { fetchImage, fetchJson } from "./Ipfs";
 
 const GetBadges = async () => {

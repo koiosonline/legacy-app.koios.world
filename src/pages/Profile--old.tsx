@@ -1,14 +1,14 @@
 import SetupModal from "../components/SetupModal";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { selectedAccount, profilePicture, profileName } from "../components/Web3/Web3";
+import { selectedAccount, profilePicture, profileName } from "../components/Web3/Web3--old";
 import { ShowBadges } from "../components/Web3/Badges";
 import { ProfileTokenInformation } from "../components/Web3/Tokencount";
 import { Icon } from "../components/Util/Icon";
 import ExploreMore from "../components/ExploreMore";
 import { Connect, Disconnect } from "../components/Web3/ConnectionCheck";
 import { web3Modal } from "../components/Web3/WalletProvider";
-import { UserContext } from "../Context/UserContext";
+import { UserContext } from "../Context/UserContext-old";
 import { FormatPublicKey } from "../components/Util/FormatPublicKey";
 
 export const Profile = () => {

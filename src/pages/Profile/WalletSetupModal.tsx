@@ -14,18 +14,6 @@ export const WalletSetupModal = () => {
           allowFullScreen
         />
       </div>
-      <div>
-        <h2>Create a profile</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/QIFDMaiOAIU"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
     </div>
   );
 };

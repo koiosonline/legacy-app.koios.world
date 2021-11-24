@@ -40,16 +40,12 @@
       transition: 0.6s ease-out;
 
       :hover {
-        -webkit-transform-origin: center center;  /* Chrome, Safari */
-   -webkit-transform: rotate(700deg);
+        transform-origin: center center;
+        -webkit-transform-origin: center center; /* Chrome, Safari */
+        transform: rotate(700deg);
+        -webkit-transform: rotate(700deg);
         fill: red;
       }
     }
-  }
-
-  &__wallet-setup {
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 25px 15px 10px;
   }
 }

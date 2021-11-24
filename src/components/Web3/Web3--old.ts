@@ -32,6 +32,7 @@ const fetchAccountData = async () => {
 export const connectWeb3 = async () => {
   try {
     provider = await web3Modal.connect();
+    // console.log(provider);
     if (!selectedAccount) {
       await fetchAccountData();
     }
@@ -40,13 +41,13 @@ export const connectWeb3 = async () => {
   }
 };
 
-const firstRun = async () => {
-  if (web3Modal.cachedProvider) {
-    await connectWeb3();
-  }
-};
+// const firstRun = async () => {
+//   if (web3Modal.cachedProvider) {
+//     await connectWeb3();
+//   }
+// };
 
-firstRun();
+// firstRun();
 
 export const disconnectWeb3 = async () => {
   if (provider) {

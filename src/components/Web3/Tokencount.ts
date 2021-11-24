@@ -1,7 +1,7 @@
 import LeaderboardAddresses from "./static/addresses.json";
 import { fetchImage, fetchJson } from "./Ipfs";
 import { FindProfile } from "./Profiles";
-import { selectedAccount } from "./Web3";
+import { selectedAccount } from "./Web3--old";
 import { GetTokenHoldersJSON } from "./GraphQueries";
 
 export const getTokenCountTDFA = async () => {

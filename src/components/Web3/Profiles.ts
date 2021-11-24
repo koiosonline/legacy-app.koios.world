@@ -3,7 +3,7 @@ import ThreeIdResolver from "@ceramicnetwork/3id-did-resolver";
 import Ceramic from "@ceramicnetwork/http-client";
 import { IDX, getLegacy3BoxProfileAsBasicProfile } from "@ceramicstudio/idx";
 import { DID } from "dids";
-import { provider } from "./Web3";
+import { provider } from "./Web3--old";
 
 declare const window: any;
 

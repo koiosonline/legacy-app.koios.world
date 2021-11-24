@@ -1,0 +1,286 @@
+.profile {
+  margin: 10vh auto 0;
+  @include for-size($desktop) {
+    margin: 5vh auto 0;
+  }
+
+  .actionContainer {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 750px;
+    margin: 0 auto;
+    &__actions {
+      display: flex;
+      flex-direction: column;
+      &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        text-decoration: none;
+        color: $color-text;
+        margin-bottom: 1em;
+        font-family: $font-family-base;
+        p {
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        svg {
+          transition: all 0.2s ease;
+        }
+        &:hover {
+          p {
+            opacity: 0.5;
+          }
+          p + svg {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    margin: 0 auto 2em;
+    filter: grayscale(100);
+    opacity: 0.25;
+
+    &--active {
+      opacity: unset;
+      filter: grayscale(0);
+    }
+  }
+
+  &__name {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.25em;
+    color: $color-text;
+    margin: 0 15px;
+  }
+
+  &__description {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.125em;
+    color: #d7d7d7;
+    max-width: 20em;
+    margin: 0.4em auto 0;
+  }
+
+  &__network {
+    display: flex;
+    justify-content: center;
+    margin: 0 15px;
+  }
+
+  &__address {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #d7d7d7;
+  }
+
+  &__sign-out {
+    width: 23px;
+    height: 23px;
+    margin-left: 1rem;
+    color: #424242;
+
+    &:hover {
+      color: #000;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+  }
+
+  .wallet-connection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20em;
+    margin: 2em auto;
+
+    &__setup-button {
+      padding: 0.35em 2.5em;
+      border-radius: $radius;
+      box-shadow: $button-shadow;
+      //background: $gradient-koios;
+      //background-clip: unset;
+      //-webkit-background-clip: text;
+      //-webkit-text-fill-color: transparent;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      &:hover {
+        box-shadow: $button-shadow-hover;
+      }
+      &:active {
+        background-color: $button-active-color;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 600;
+        background: $gradient-koios;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &__connect-button {
+      border: none;
+      padding: 5px 20px;
+      border-radius: $radius;
+      font-family: inherit;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      background-image: linear-gradient(to right, #ff0bac, #2f12dc);
+      background-size: 100%;
+      background-position: 25% 50%;
+      box-shadow: $button-shadow;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        box-shadow: $button-shadow-hover;
+        background-size: 200%;
+        background-position: 0 50%;
+      }
+    }
+  }
+
+  .collectibles {
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .achievements {
+      text-align: center;
+      width: 100%;
+      @include for-size ($desktop) {
+      width: unset
+    }
+      &__header {
+        margin-bottom: 15px;
+      }
+      &__list {
+        display: flex;
+
+        &--empty {
+          color: #d7d7d7;
+          font-weight: bold;
+          max-width: 200px;
+        }
+      }
+
+      &__list-item {
+        margin: 0 10px;
+      }
+
+      &__img {
+        width: 55px;
+        height: 55px;
+      }
+
+      &__title {
+        max-width: 55px;
+        text-align: center;
+        font-size: 0.8em;
+      }
+    }
+
+    .fungible-tokens {
+      text-align: center;
+      width: 100%;
+      @include for-size ($desktop) {
+        margin-left: auto;
+        margin-right: 50px;
+        width: unset;
+      }
+      &__header {
+        margin-bottom: 15px;
+      }
+      &__list {
+        display: flex;
+
+        &--empty {
+          color: #d7d7d7;
+          font-weight: bold;
+          max-width: 200px;
+        }
+      }
+
+      &__list-item {
+        margin: 0 10px;
+      }
+
+      &__img {
+        width: 55px;
+        height: 55px;
+      }
+
+      &__title {
+        max-width: 55px;
+        text-align: center;
+        font-size: 0.8em;
+      }
+
+      &__balance {
+        max-width: 55px;
+        text-align: center;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .links {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 5vh auto;
+    padding: 0 15px;
+
+    @include for-size(1096px) {
+      justify-content: space-between;
+    }
+
+    @include for-size($desktop) {
+      margin: 15vh auto;
+    }
+
+    &__item {
+      font-family: $font-family-headings;
+      font-size: 1.5em;
+      text-align: center;
+      box-shadow: $button-shadow;
+      padding: 1em;
+      min-width: 10em;
+      text-decoration: none;
+      color: $color-text;
+      border-radius: $radius;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+      margin: 0.3em;
+      p {
+        background: $gradient-koios;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &:hover {
+        box-shadow: $button-shadow-hover;
+      }
+      &:active {
+        background-color: $button-active-color;
+      }
+    }
+  }
+}

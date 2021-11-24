@@ -1,3 +1,7 @@
+body {
+  background-color: $color-07;
+}
+
 .main {
   width: 100%;
   height: calc(100% - 58px);
@@ -44,4 +48,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
