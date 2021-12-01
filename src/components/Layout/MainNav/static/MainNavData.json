@@ -8,12 +8,12 @@
     {
       "title": "Learning",
       "linkTo": "/worlds",
-      "icon": "learning"
+      "icon": "book"
     },
     {
       "title": "Earning",
       "linkTo": "/earn",
-      "icon": "earning"
+      "icon": "money"
     },
     {
       "title": "Contribute",
