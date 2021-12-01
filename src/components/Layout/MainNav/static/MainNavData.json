@@ -6,9 +6,14 @@
       "icon": "user-circle"
     },
     {
-      "title": "Worlds",
+      "title": "Learning",
       "linkTo": "/worlds",
-      "icon": "globe-europe"
+      "icon": "book"
+    },
+    {
+      "title": "Earning",
+      "linkTo": "/earn",
+      "icon": "money"
     },
     {
       "title": "Contribute",
