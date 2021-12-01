@@ -1,32 +1,45 @@
 import { useContext } from "react";
-import Web3 from "web3";
 import { AuthContext } from "../../Context/AuthContext";
+import { UserContext } from "../../Context/UserContext";
 import { web3Modal } from "./WalletProvider";
-
-// const getUserAccount = async (provider) => {
-//   const web3 = new Web3(provider);
-// };
+import { getUserAccount } from "./getUserAccount";
+import { getDIDAuthenticated } from "./getDIDAuthenticated";
+import { getUserProfile } from "./getUserProfile";
 
 export const useWeb3 = () => {
-  const { isAuthenticating, setIsAuthenticating } = useContext(AuthContext);
-  const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
-  // const [isUnauthenticated, setIsUnauthenticated] = useState<boolean>();
-  // const [userAccount, setUserAccount] = useState(undefined);
+  const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError } = useContext(AuthContext);
+  const { provider, setProvider, userAccount, setUserAccount } = useContext(UserContext);
 
   const connectWallet = async () => {
     try {
       setIsAuthenticating(true);
       const provider = await web3Modal.connect();
-      setIsAuthenticated(provider);
-
-      // if (!userAccount) {
-      //   const userAccountData = await getUserAccount(provider);
-      //   setUserAccount(userAccountData);
-      // }
+      setProvider(provider);
+      const accountAddress = await getUserAccount(provider);
+      setUserAccount(accountAddress);
+      await getDIDAuthenticated(accountAddress, provider); 
+      const userProfile = getUserProfile(accountAddress);
+      setIsAuthenticated(true);
+      setIsAuthenticating(false);
     } catch (e) {
       console.log(e);
+      setAuthError(e);
     }
   };
-  console.log(isAuthenticating);
-  return { connectWallet, isAuthenticated, isAuthenticating };
+
+  const disconnectWallet = async () => {
+    if (isAuthenticated && provider) {
+      await web3Modal.clearCachedProvider();
+      setIsAuthenticated(false);
+    }
+
+    localStorage.removeItem(userAccount);
+    localStorage.removeItem(userAccount + "authenticated");
+    setUserAccount(null);
+  };
+
+  return {
+    connectWallet,
+    disconnectWallet,
+  };
 };

@@ -1,10 +1,12 @@
+import { useWeb3 } from "../../components/Web3/useWeb3";
 
 export const Authenticated = () => {
+  const { disconnectWallet } = useWeb3();
 
   return (
     <div>
       <div>welcome</div>
-      <button>log out</button>
+      <button onClick={() => disconnectWallet()}>log out</button>
     </div>
   );
 };
