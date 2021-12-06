@@ -14,13 +14,14 @@ export const useWeb3 = () => {
     try {
       setIsAuthenticating(true);
       const provider = await web3Modal.connect();
-      setProvider(provider);
       const accountAddress = await getUserAccount(provider);
-      setUserAccount(accountAddress);
       await getDIDAuthenticated(accountAddress, provider); 
-      const userProfile = getUserProfile(accountAddress);
+      const userProfile = await getUserProfile(accountAddress);
+      setProvider(provider);
+      setUserAccount(accountAddress);
       setIsAuthenticated(true);
       setIsAuthenticating(false);
+      console.log(userProfile);
     } catch (e) {
       console.log(e);
       setAuthError(e);
