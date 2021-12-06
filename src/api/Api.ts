@@ -5,7 +5,7 @@ type getLiteratureProps = {
 };
 
 export const getVideoInfo = async (levelAddress) => {
-  const baseUrl = "https://cloudflare-ipfs.com/ipfs/";
+  const baseUrl = "https://srv1.web3examples.com:8081/ipfs/";
   try {
     const getVideos = await fetch(`${baseUrl + levelAddress}`);
     const videos = await getVideos.json();
