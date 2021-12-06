@@ -68,7 +68,7 @@ export const MainNav = () => {
         </header>
       )}
 
-      <nav className={`main-nav ${isMenuOpen ? "main-nav--open" : ""}`}>
+      <nav className={`main-nav ${isMenuOpen ? "main-nav--open" : ""} ${!isMobile ? 'main-nav--desktop' : ''}`}>
         <button className={`main-nav__mobile__toggle ${!isMenuOpen ? "hidden" : ""}`} onClick={toggleMenu}>
           <Icon type={isMenuOpen ? "close" : "hamburger"} />
         </button>
