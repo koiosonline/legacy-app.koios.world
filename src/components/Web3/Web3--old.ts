@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import { web3Modal } from "./WalletProvider";
 import { FindProfile, authenticate, setupIDX } from "./Profiles";
-import { fetchImage } from "./Ipfs";
+import { getCidImage } from "./Ipfs";
 
 export let provider;
 export let selectedAccount;
@@ -22,7 +22,7 @@ const fetchAccountData = async () => {
   }
   selectedProfile = await FindProfile(selectedAccount);
   if (selectedProfile.image) {
-    profilePicture = await fetchImage(selectedProfile.image);
+    profilePicture = await getCidImage(selectedProfile.image);
   }
   if (selectedProfile.name) {
     profileName = selectedProfile.name;

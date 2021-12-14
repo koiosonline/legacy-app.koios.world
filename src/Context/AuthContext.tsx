@@ -6,6 +6,7 @@ export const AuthContextProvider = (props) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [isAuthenticating, setIsAuthenticating] = useState<boolean>(false);
   const [authError, setAuthError] = useState<string>(null);
+  const [provider, setProvider] = useState(null);
 
   const providerValue = {
     isAuthenticated,
@@ -14,6 +15,8 @@ export const AuthContextProvider = (props) => {
     setIsAuthenticating,
     authError,
     setAuthError,
+    provider,
+    setProvider
   };
 
   return (

@@ -1,14 +1,12 @@
 import { createContext, useState } from "react";
+import { UserAccount } from "../types/UserProfile/UserAccount";
 
 export const UserContext = createContext(null);
 
 export const UserContextProvider = (props) => {
-  const [provider, setProvider] = useState(null);
-  const [userAccount, setUserAccount] = useState(null);
+  const [userAccount, setUserAccount] = useState<UserAccount>(null);
 
   const providerValue = {
-    provider,
-    setProvider,
     userAccount,
     setUserAccount
   };

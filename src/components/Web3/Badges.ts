@@ -1,5 +1,5 @@
 import { selectedAccount } from "./Web3--old";
-import { fetchImage, fetchJson } from "./Ipfs";
+import { getCidImage, fetchJson } from "./Ipfs";
 
 const GetBadges = async () => {
   const query = `
@@ -46,7 +46,7 @@ export const ShowBadges = async () => {
   const badgesJson = await BadgesJson();
   const resultArray: any = [];
   for (const badges of badgesJson) {
-    const entry = { name: badges.name, image: await fetchImage(badges.image) };
+    const entry = { name: badges.name, image: await getCidImage(badges.image) };
     resultArray.push(entry);
   }
   return resultArray;

@@ -1,5 +1,5 @@
 import LeaderboardAddresses from "./static/addresses.json";
-import { fetchImage, fetchJson } from "./Ipfs";
+import { getCidImage, fetchJson } from "./Ipfs";
 import { FindProfile } from "./Profiles";
 import { selectedAccount } from "./Web3--old";
 import { GetTokenHoldersJSON } from "./GraphQueries";
@@ -53,7 +53,7 @@ export const getTokenCountTDFA = async () => {
       if (values[i] !== undefined) {
         tokenholdersTDFA[i].address = values[i].name;
         if (values[i].image !== undefined) {
-          tokenholdersTDFA[i].image = await fetchImage(values[i].image);
+          tokenholdersTDFA[i].image = await getCidImage(values[i].image);
         }
       }
     }
@@ -111,7 +111,7 @@ export const getTokenCountBlockchain = async () => {
       if (values[i] !== undefined) {
         tokenholdersBlockchain[i].address = values[i].name;
         if (values[i].image !== undefined) {
-          tokenholdersBlockchain[i].image = await fetchImage(values[i].image);
+          tokenholdersBlockchain[i].image = await getCidImage(values[i].image);
         }
       }
     }
@@ -169,7 +169,7 @@ export const getTokenCountOverall = async () => {
       if (values[i] !== undefined) {
         tokenholdersOverall[i].address = values[i].name;
         if (values[i].image !== undefined) {
-          tokenholdersOverall[i].image = await fetchImage(values[i].image);
+          tokenholdersOverall[i].image = await getCidImage(values[i].image);
         }
       }
     }
@@ -187,7 +187,7 @@ export const ProfileTokenInformation = async () => {
         const contentURI = await fetchJson(user.contentURI);
         const symbol = user.symbol;
         const balance = Math.round(user.balance / 10 ** 18);
-        const entry = { symbol: symbol, balance: balance, image: await fetchImage(contentURI.image) };
+        const entry = { symbol: symbol, balance: balance, image: await getCidImage(contentURI.image) };
         resultArray.push(entry);
       }
     }
