@@ -1,0 +1,25 @@
+.authenticated {
+  max-width: 1060px;
+
+  .profile-banner {
+    border-radius: 20px;
+    height: 280px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    // background-position: center;
+    font-family: $font-family-headings;
+    text-shadow: 2px 2px 4px #000;
+    color: #fff;
+
+    &__user-info {
+      text-align: center;
+    }
+
+    &__name {
+      font-size: 55px;
+    }
+  }
+}

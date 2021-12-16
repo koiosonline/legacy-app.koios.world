@@ -1,6 +1,8 @@
+import { MappedDiscordProfile } from './DiscordProfile';
+
 export type UserAccount = {
   description: string;
-  discordProfile: [];
+  discordProfile: MappedDiscordProfile;
   emoji: string;
   name: string;
   profileBanner: string;
@@ -12,4 +14,4 @@ export type UserAccount = {
 export type UserAccountContext = {
   userAccount: UserAccount;
   setUserAccount: () => void;
-}
+};

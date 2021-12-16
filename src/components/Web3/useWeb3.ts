@@ -23,7 +23,7 @@ export const useWeb3 = () => {
       const decentralizedProfile = await getDecentralizedProfile(accountAddress);
       const discordUsername = await decentralizedProfile.url;
       const discordProfile = await getDiscordProfile(discordUsername);
-      const userProfile = await mapUserData(accountAddress, decentralizedProfile, discordProfile);
+      const userProfile = await mapUserData(accountAddress, decentralizedProfile, discordProfile[0]);
       setUserAccount(userProfile);
       setIsAuthenticated(true);
       setIsAuthenticating(false); 

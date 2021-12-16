@@ -3,10 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { Icon } from '../../Util/Icon';
 import { useSizes } from '../../Util/useSizes';
 import koiosLogo from '../../../assets/images/logos/koios-logo.svg';
-import { profilePicture } from '../../Web3/Web3--old';
 import MainNavData from './static/MainNavData.json';
 import { SvgSprite } from '../../Util/SvgSprite';
-// import { Connect, Disconnect } from "../../Web3/ConnectionCheck";
 import { web3Modal } from '../../Web3/WalletProvider';
 import { UserContext } from '../../../Context/UserContext';
 import { useWeb3 } from '../../../components/Web3/useWeb3';
@@ -17,7 +15,8 @@ export const MainNav = () => {
   const { connectWallet, disconnectWallet } = useWeb3();
   const { width } = useSizes();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [disconnectButtonText, setDisconnectButtonText] = useState<string>('loading');
+  const [disconnectButtonText, setDisconnectButtonText] =
+    useState<string>('loading');
 
   const isMobile = width < 769;
 
@@ -157,19 +156,15 @@ export const MainNav = () => {
           )}
           {userAccount && (
             <Link to={'/profile'} className={'user-profile__link'}>
-              {!profilePicture ? (
-                <img
-                  className="user-profile__profile-picture"
-                  src={'/images/pepe.png'}
-                  alt="Pepe the frog"
-                />
-              ) : (
-                <img
-                  className="user-profile__profile-picture"
-                  src={profilePicture}
-                  alt="404"
-                />
-              )}
+              <img
+                className="user-profile__profile-picture"
+                src={
+                  userAccount.profileImage
+                    ? userAccount.profileImage
+                    : '/images/pepe.png'
+                }
+                alt="Profile image"
+              />
               <div className={'user-profile__textContainer'}>
                 <p className="user-profile__textContainer__profile-name">
                   {userAccount.name}
