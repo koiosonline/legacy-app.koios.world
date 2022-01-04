@@ -7,6 +7,7 @@ import { getDIDAuthenticated } from "../UserProfile/getDIDAuthenticated";
 import { getDecentralizedProfile } from "../UserProfile/getDecentralizedProfile";
 import { mapUserData } from "../UserProfile/mapUserData";
 import { getDiscordProfile } from "../../api/Api";
+import { getTitanTokenCount } from "../UserProfile/getTitanTokenCount";
 
 
 export const useWeb3 = () => {
@@ -21,9 +22,10 @@ export const useWeb3 = () => {
       const accountAddress = await getUserAccount(provider);
       await getDIDAuthenticated(accountAddress, provider); 
       const decentralizedProfile = await getDecentralizedProfile(accountAddress);
+      const titanTokenCount = await getTitanTokenCount(accountAddress);
       const discordUsername = await decentralizedProfile.url;
       const discordProfile = await getDiscordProfile(discordUsername);
-      const userProfile = await mapUserData(accountAddress, decentralizedProfile, discordProfile[0]);
+      const userProfile = await mapUserData(accountAddress, decentralizedProfile, titanTokenCount, discordProfile[0]);
       setUserAccount(userProfile);
       setIsAuthenticated(true);
       setIsAuthenticating(false); 

@@ -10,16 +10,85 @@
     align-items: center;
     background-repeat: no-repeat;
     // background-position: center;
-    font-family: $font-family-headings;
     text-shadow: 2px 2px 4px #000;
     color: #fff;
+    position: relative;
+    margin-bottom: 15px;
 
-    &__user-info {
+    .user-info {
+      font-family: $font-family-headings;
       text-align: center;
+
+      &__name {
+        font-size: 55px;
+      }
     }
 
-    &__name {
-      font-size: 55px;
+    .profile-image-container {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+      margin-top: -75px;
+      position: absolute;
+      bottom: -75px;
+      left: 50px;
+  
+      &__img {
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+      }
+    }
+
+    .user-progress {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      text-align: right;
+      margin: 0 15px 15px 0;
+
+      &__level {
+        line-height: 1;
+        font-size: 16px;
+
+        &--number {
+          font-size: 40px;
+          margin-left: 5px;
+        }
+      }
+
+      &__xp {
+        line-height: 1;
+
+        &--grey {
+          color: $color-09;
+        }
+      }
+
+      &__bar {
+        width: 500px;
+        height: 5px;
+      }
+    }
+  }
+
+  .metablocks {
+    display: flex;
+    margin-left: auto;
+    width: fit-content;
+  }
+
+  .tabs {
+    margin-top: 100px;
+    &-options {
+      display: flex;
+      margin-right: 15px;
+      border-bottom: 1px solid #ccc;
     }
   }
 }

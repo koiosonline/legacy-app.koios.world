@@ -1,23 +1,31 @@
-import { useWeb3 } from '../../components/Web3/useWeb3';
 import { ProfileBanner } from '../../components/UserProfile/ProfileBanner';
 import { useContext } from 'react';
 import { UserContext } from '../../Context/UserContext';
 import { UserAccountContext } from '../../types/UserProfile/UserAccount';
+import { MetaBlocks } from '../../components/MetaBlocks';
+import { OverviewTab } from '../../components/UserProfile/Tabs/OverviewTab';
+import { SettingsTab } from '../../components/UserProfile/Tabs/SettingsTab';
+import { Tabs } from '../../components/UserProfile/Tabs/Tabs';
 
 export const Authenticated = () => {
-  const { disconnectWallet } = useWeb3();
   const { userAccount } = useContext<UserAccountContext>(UserContext);
 
   return (
-    <div className='authenticated container'>
+    <div className="authenticated container">
       <ProfileBanner
         userName={userAccount.name}
+        profileImage={userAccount.profileImage}
         backgroundCover={userAccount.profileBanner}
         discordProfile={userAccount.discordProfile}
       />
-      <div>welcome</div>
-      <button onClick={() => disconnectWallet()}>log out</button>
-      {console.log('test')}
+
+      <MetaBlocks />
+
+      <Tabs>
+        <OverviewTab title="Overview" />
+        <SettingsTab title="Settings" />
+      </Tabs>
+
     </div>
   );
 };

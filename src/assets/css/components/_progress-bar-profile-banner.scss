@@ -1,0 +1,60 @@
+.profile-banner {
+  /* IE10 */
+  .user-progress__bar {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    // color: black;
+
+    /* Get rid of default border in Firefox. */
+    border: none;
+  }
+
+  /* Firefox */
+  // .user-progress__bar::-moz-progress-bar {
+  //   background: black;
+  // }
+
+  // /* Polyfill */
+  // .user-progress__bar[aria-valuenow]:before {
+  //   background: black;
+  // }
+
+  /* Chrome */
+  .user-progress__bar::-webkit-progress-bar {
+    background-color: $color-09;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+  .user-progress__bar::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(
+        -45deg,
+        transparent 33%,
+        rgba(0, 0, 0, 0.1) 33%,
+        rgba(0, 0, 0, 0.1) 66%,
+        transparent 66%
+      ),
+      -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+      -webkit-linear-gradient(left, $color-01, $color-02);
+
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
+
+  /* Firefox */
+  .user-progress__bar::-moz-progress-bar {
+    background-image: -moz-linear-gradient(
+        135deg,
+        transparent 33%,
+        rgba(0, 0, 0, 0.1) 33%,
+        rgba(0, 0, 0, 0.1) 66%,
+        transparent 66%
+      ),
+      -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+      -webkit-linear-gradient(left, $color-01, $color-02);
+
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
+}
