@@ -2,21 +2,35 @@
   .metablock {
     background-color: #fff;
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-12;
 
     &:not(:last-child) {
       margin-right: 15px;
     }
 
     &__title {
-      color: $color-09;
+      color: $color-10;
       font-size: 14px;
+      margin-bottom: 2px;
     }
 
-    &__content {
-      font-size: 18px;
-      font-weight: 600;
-      color: $color-12;
+    &__img {
+      width: 30px;
+      height: 30px;
     }
+  
+    &__balance {
+      margin-left: 10px;
+    }
+
+    &__img,
+    &__balance {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
   }
 }

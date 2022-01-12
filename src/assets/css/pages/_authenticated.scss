@@ -4,16 +4,24 @@
   .profile-banner {
     border-radius: 20px;
     height: 280px;
-    margin-top: 20px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
-    // background-position: center;
+    background-position: center;
     text-shadow: 2px 2px 4px #000;
     color: #fff;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 100px;
+
+    @include for-size($desktop) {
+      margin-bottom: 15px;
+    }
+
+    @include for-size(1200px) {
+      margin-top: 20px;
+    }
 
     .user-info {
       font-family: $font-family-headings;
@@ -21,6 +29,23 @@
 
       &__name {
         font-size: 55px;
+      }
+
+      &__social {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-family: $font-family-base;
+        font-weight: 600;
+
+        .icon {
+          width: 18px;
+          margin-right: 5px;
+          fill: #fff;
+        }
       }
     }
 
@@ -33,11 +58,51 @@
       width: 150px;
       height: 150px;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-      margin-top: -75px;
       position: absolute;
-      bottom: -75px;
-      left: 50px;
-  
+      bottom: -100px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      margin: 0 auto;
+      
+      @include for-size($desktop) {
+        bottom: -75px;
+        left: 50px;
+      }
+
+      &:hover {
+        transition: 2s;
+        transform: rotateY(360deg);
+      }
+      
+      &:after {
+        background-color: #fff;
+        background-image: #fff;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 5px;
+        z-index: -10;
+        transform: rotateY(-90deg);
+        -webkit-transform: rotateY(-90deg);
+        transform-origin: 100% 50%;
+        -webkit-transform-origin: 100% 50%;
+      }
+      
+      &:before {
+        background-color: #fff;
+        background-image: #fff;
+        border-radius: 100%;
+        content: '';
+        height: 150px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 150px;
+        transform: translateZ(-5px);
+        -webkit-transform: translateZ(-5px);
+      }
+
       &__img {
         border-radius: 50%;
         width: 130px;
@@ -46,32 +111,48 @@
     }
 
     .user-progress {
+      display: flex;
+      flex-direction: column-reverse;
       position: absolute;
       right: 0;
-      bottom: 0;
+      top: 0;
+      left: 0;
       text-align: right;
-      margin: 0 15px 15px 0;
+      margin: 15px;
+
+      @include for-size($desktop) {
+        flex-direction: column;
+        top: unset;
+        left: unset;
+        bottom: 0;
+        width: 50%;
+      }
 
       &__level {
         line-height: 1;
         font-size: 16px;
+        display: flex;
+        justify-content: flex-end;
+
+        @include for-size($desktop) {
+          align-items: baseline;
+        }
 
         &--number {
           font-size: 40px;
           margin-left: 5px;
+          margin-top: -5px;
         }
       }
 
       &__xp {
-        line-height: 1;
-
         &--grey {
           color: $color-09;
         }
       }
 
       &__bar {
-        width: 500px;
+        width: 100%;
         height: 5px;
       }
     }
@@ -85,10 +166,23 @@
 
   .tabs {
     margin-top: 100px;
+
     &-options {
       display: flex;
-      margin-right: 15px;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
       border-bottom: 1px solid #ccc;
+      color: $color-10;
+    }
+    
+    &-title {
+      margin: 0 20px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &--active {
+        color: $color-11;
+      }
     }
   }
 }

@@ -8,17 +8,15 @@ import { SvgSprite } from '../../Util/SvgSprite';
 import { web3Modal } from '../../Web3/WalletProvider';
 import { UserContext } from '../../../Context/UserContext';
 import { useWeb3 } from '../../../components/Web3/useWeb3';
-import { UserAccountContext } from '../../../types/UserProfile/UserAccount';
 
 export const MainNav = () => {
-  const { userAccount } = useContext<UserAccountContext>(UserContext);
+  const { userAccount } = useContext(UserContext);
   const { connectWallet, disconnectWallet } = useWeb3();
   const { width } = useSizes();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [disconnectButtonText, setDisconnectButtonText] =
-    useState<string>('loading');
+  const [disconnectButtonText, setDisconnectButtonText] = useState<string>('loading');
 
-  const isMobile = width < 769;
+  const isMobile = width < 1200;
 
   const toggleMenu = () => {
     if (isMobile) {
@@ -33,7 +31,6 @@ export const MainNav = () => {
     ? userAccount.publicKeyFormatted
     : 'selectedAccount';
 
-  console.log(userAccount);
   useEffect(() => {
     if (web3Modal.cachedProvider) {
       connectWallet();

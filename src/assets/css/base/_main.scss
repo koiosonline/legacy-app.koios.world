@@ -15,7 +15,7 @@ body {
   background-repeat: no-repeat;
   margin-top: 60px;
 
-  @include for-size($desktop) {
+  @include for-size(1200px) {
     margin-left: 300px;
     margin-top: 0;
   }

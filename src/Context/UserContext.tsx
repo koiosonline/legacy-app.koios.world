@@ -1,12 +1,12 @@
 import { createContext, useState } from "react";
-import { UserAccount } from "../types/UserProfile/UserAccount";
+import { UserAccount, UserAccountContext } from "../types/UserProfile/UserAccount";
 
-export const UserContext = createContext(null);
+export const UserContext = createContext<UserAccountContext>({} as UserAccountContext);
 
-export const UserContextProvider = (props) => {
+export const UserContextProvider: React.FC = (props) => {
   const [userAccount, setUserAccount] = useState<UserAccount>(null);
 
-  const providerValue = {
+  const providerValue: UserAccountContext = {
     userAccount,
     setUserAccount
   };

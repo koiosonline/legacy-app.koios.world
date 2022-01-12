@@ -1,26 +1,32 @@
-import { useContext } from "react";
-import { UserContext } from "../Context/UserContext";
-import { UserAccountContext } from "../types/UserProfile/UserAccount";
+import { useContext } from 'react';
+import { UserContext } from '../Context/UserContext';
 
 export const MetaBlocks = () => {
-  const { userAccount } = useContext<UserAccountContext>(UserContext);
+  const { userAccount } = useContext(UserContext);
 
   return (
     <ul className="metablocks">
       <li className="metablock">
         <h4 className="metablock__title">Total Titan-tokens</h4>
-        <div>
-          <img src={userAccount.tokenBalance.tokenIcon} alt="Token icon" />
-          <p>{userAccount.tokenBalance.balance}</p>
-        </div>
+        <img
+          className="metablock__img"
+          src={userAccount.tokenBalance.tokenIcon}
+          alt="Token icon"
+        />
+        <p className="metablock__balance">{userAccount.tokenBalance.balance}</p>
       </li>
+
       <li className="metablock">
         <h4 className="metablock__title">Wallet</h4>
-        <p className="metablock__content">{userAccount.publicKeyFormatted}</p>
+        <p>{userAccount.publicKeyFormatted}</p>
       </li>
-      <li className="metablock">
+      {/* <li className="metablock">
         <h4 className="metablock__title">Current network</h4>
-      </li>
+        <select name="" id="">
+          <option value="0">Polygon</option>
+          <option value="1">Rinkeby</option>
+        </select>
+      </li> */}
     </ul>
   );
 };

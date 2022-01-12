@@ -2,6 +2,7 @@ export type MappedDiscordProfile = {
   discordHandle: string;
   level: number;
   messageCount: number;
+  discordRank: string;
   xp: {
     currentXP: number;
     necessaryXP: number;

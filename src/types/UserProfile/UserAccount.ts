@@ -15,5 +15,5 @@ export type UserAccount = {
 
 export type UserAccountContext = {
   userAccount: UserAccount;
-  setUserAccount: () => void;
+  setUserAccount: (userAccount: UserAccount) => void;
 };

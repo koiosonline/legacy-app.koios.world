@@ -3,9 +3,7 @@ import { DiscordProfile } from "../../types/UserProfile/DiscordProfile";
 import { FormatPublicKey } from "../Util/FormatPublicKey";
 import { getCidImage } from "../Web3/Ipfs";
 import { TokenBalance } from "../../types/UserProfile/TokenBalance";
-
-
-
+import { getUserRank } from "./getUserRank";
 
 export const mapUserData = async (accountAddress: string, decentralizedProfile: DecentralizedProfile, titanTokenCount: TokenBalance, discordProfile: DiscordProfile) => {
   return {
@@ -21,6 +19,7 @@ export const mapUserData = async (accountAddress: string, decentralizedProfile: 
       discordHandle: discordProfile.username,
       level: discordProfile.level,
       messageCount: discordProfile.message_count,
+      discordRank: getUserRank(discordProfile.level),
       xp: {
         currentXP: discordProfile.detailed_xp[0],
         necessaryXP: discordProfile.detailed_xp[1],
