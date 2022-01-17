@@ -1,7 +1,12 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const ipfsHttpClient = require("ipfs-http-client");
+import { create } from 'ipfs-http-client';
 
-const ipfs = ipfsHttpClient("https://ipfs.infura.io:5001");
+const ipfs = create({
+  host: 'ipfs.infura.io',
+  port: 5001,
+  protocol: 'https',
+  apiPath: '/api/v0',
+});
 
 const ipfsprefix1 = "https://ipfs.io/ipfs/";
 const ipfsprefix2 = "ipfs://ipfs/";
