@@ -42,7 +42,7 @@ export const useWeb3 = () => {
       setIsAuthenticated(false);
     }
 
-    localStorage.removeItem(userAccount.publicKey + "authenticated");
+    localStorage.removeItem(userAccount?.publicKey + "authenticated");
     setUserAccount(null);
   };
 

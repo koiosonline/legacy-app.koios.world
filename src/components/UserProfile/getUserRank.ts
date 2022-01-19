@@ -1,12 +1,12 @@
 export const getUserRank = (level: number) => {
   switch (true) {
     case level >= 5 && level <= 9:
-      return 'BETA TITAN';
+      return 'Beta Titan';
     case level >= 10 && level <= 24:
-      return 'ALPHA TITAN';
+      return 'Alpha Titan';
     case level >= 25:
-      return 'META TITAN';
+      return 'Meta Titan';
     default:
-      return 'TITAN';
+      return 'Titan';
   }
 };

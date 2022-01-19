@@ -10,33 +10,35 @@ export const SettingsTab: React.FC<SettingsTabProps> = () => {
 
   return (
     <div className="settings-tab">
-      <button className="settings-tab__button">
-        <Icon type="sync" />
-        Sync profile data
-      </button>
-      
-      <a
-        className="settings-tab__button"
-        href="https://clay.self.id/"
-        target={'_blank'}
-        rel={'noreferrer noopener'}
-      >
-        <Icon type="edit-profile" />
-        Edit profile
-      </a>
+      <ul className='settings'>
+        <li className="settings__button">
+          <Icon type="sync" />
+          Sync profile data
+        </li>
 
-      <button className="settings-tab__button">
-        <Icon type="trash" />
-        Delete progress
-      </button>
+        <a
+          className="settings__button"
+          href="https://clay.self.id/"
+          target={'_blank'}
+          rel={'noreferrer noopener'}
+        >
+          <Icon type="edit-profile" />
+          Edit profile
+        </a>
 
-      <button
-        className="settings-tab__button"
-        onClick={() => disconnectWallet()}
-      >
-        <Icon type="sign-out" />
-        Disconnect wallet
-      </button>
+        <li className="settings__button">
+          <Icon type="trash" />
+          Delete progress
+        </li>
+
+        <li
+          className="settings__button"
+          onClick={() => disconnectWallet()}
+        >
+          <Icon type="sign-out" />
+          Disconnect wallet
+        </li>
+      </ul>
     </div>
   );
 };
