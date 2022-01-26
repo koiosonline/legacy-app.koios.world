@@ -16,6 +16,7 @@ export const useWeb3 = () => {
 
   const connectWallet = async () => {
     try {
+      setAuthError(false);
       setIsAuthenticating(true);
       const provider = await web3Modal.connect();
       setProvider(provider);

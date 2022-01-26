@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext";
-import koiosLogo from "../../../assets/images/brands/discord--3d.png";
+import discordLogo from "../../../assets/images/brands/discord--3d.png";
 
 type OverviewTabProps = {
   title: string;
@@ -30,7 +30,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = () => {
   const { userAccount } = useContext(UserContext);
 
   return <div className="overview-tab">
-    <StatisticBlock title={`${userAccount.discordProfile.discordRank}`} subtitle="Discord rank" img={`${koiosLogo}`}/>
+    <StatisticBlock title={`${userAccount.discordProfile.discordRank}`} subtitle="Discord rank" img={`${discordLogo}`}/>
     <StatisticBlock title={`${userAccount.discordProfile.messageCount}`} subtitle="Total Discord messages" />
     <StatisticBlock title={`${userAccount.discordProfile.xp.totalXP}`} subtitle="Total earned XP" />
   </div>;

@@ -1,37 +1,32 @@
 import { MappedDiscordProfile } from '../../types/UserProfile/DiscordProfile';
 import { Icon } from '../Util/Icon';
+import avatarPlaceholder from "../../assets/images/placeholders/avatar-placeholder.png";
+import bannerPlaceholder from "../../assets/images/placeholders/banner-placeholder.png";
 
 type ProfileBannerProps = {
-  backgroundCover: string;
-  profileImage: string;
-  userName: string;
+  backgroundCover?: string;
+  profileImage?: string;
+  userName?: string;
   discordProfile?: MappedDiscordProfile;
 };
 
 export const ProfileBanner = (props: ProfileBannerProps) => {
-  const currentXp = props.discordProfile.xp.currentXP;
-  const necessaryXp = props.discordProfile.xp.necessaryXP;
+  const backgroundCover = props.backgroundCover ? props.backgroundCover : bannerPlaceholder;
+  const profileImage = props.profileImage ? props.profileImage : avatarPlaceholder;
+  const currentXp = props.discordProfile?.xp.currentXP;
+  const necessaryXp = props.discordProfile?.xp.necessaryXP;
   const percentageXp = (100 * currentXp) / necessaryXp;
 
   return (
     <div
       className="profile-banner"
-      style={{ backgroundImage: `url(${props.backgroundCover})` }}
+      style={{ backgroundImage: `url(${backgroundCover})` }}
     >
       <div className="user-info">
-        <h1 className="user-info__name">{props.userName}</h1>
-        {props.discordProfile.discordHandle && (
-          <a
-            className="user-info__social"
-            href={`https://discordapp.com/users/${props.discordProfile.discordHandle}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon type="discord" />
-            {props.discordProfile.discordHandle}
-          </a>
+        {props.userName && (
+          <h1 className="user-info__name">{props.userName}</h1>
         )}
-        {props.discordProfile.discordHandle && (
+        {props.discordProfile && props.discordProfile.discordHandle && (
           <a
             className="user-info__social"
             href={`https://discordapp.com/users/${props.discordProfile.discordHandle}`}
@@ -46,7 +41,7 @@ export const ProfileBanner = (props: ProfileBannerProps) => {
 
       <div className="profile-image-container">
         <img
-          src={props.profileImage}
+          src={profileImage}
           alt="Profile photo"
           className="profile-image-container__img"
         />

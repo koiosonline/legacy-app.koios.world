@@ -26,6 +26,15 @@ body {
   text-decoration: none;
 }
 
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+}
+
 ::-webkit-scrollbar {
   width: 0;
   @include for-size($desktop) {

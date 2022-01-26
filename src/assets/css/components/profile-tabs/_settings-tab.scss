@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
 
     &__button {
       display: flex;
@@ -13,20 +12,45 @@
       padding: 5px 10px;
       margin: 10px 0;
       font-family: $font-family-headings;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: -2px 2px 4px rgb(0 0 0 / 15%);
       border-radius: 8px;
       cursor: pointer;
       font-size: 14px;
-      text-decoration: none;
-      flex-grow: 1;
+      max-width: 200px;
+      width: 100%;
+      text-align: right;
 
-      &:visited {
-        color: inherit;
+      a {
+        display: flex;
+        text-decoration: none;
+        justify-content: space-between;
+        width: 100%;
+
+        &:visited {
+          color: inherit;
+        }
+      }
+
+      &:hover {
+        color: #7645d9;
+        fill: #7645d9;
+        box-shadow: -2px 2px 4px rgb(0 0 0 / 30%);
+
+        a {
+          fill: inherit;
+        }
+      }
+
+      &:focus,
+      &:active {
+        background-color: #fafafa;
       }
 
       .icon {
         width: 20px;
-        margin-right: 5px;
+        height: 20px;
+        margin-right: 10px;
+        flex-shrink: 0;
       }
     }
   }

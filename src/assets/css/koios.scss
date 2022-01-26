@@ -16,6 +16,7 @@
 @import "./pages/coming-soon";
 @import "src/assets/css/pages/Worlds";
 @import "src/assets/css/pages/authenticated";
+@import "./pages/unauthenticated";
 @import "src/assets/css/pages/WorldDetail";
 @import "./pages/leaderboard";
 @import "./pages/404";
@@ -28,6 +29,7 @@
 /* Layout */
 @import "./layout/header";
 @import "./layout/main-nav";
+@import "./layout/buttons";
 
 /* Modals */
 @import "src/assets/css/modals/modal";
@@ -56,6 +58,7 @@
 @import "./components/progress-bar-profile-banner";
 @import "./components/metablocks";
 @import "./components/statistic-block";
+@import "./components/profile-banner";
 
 
 /* Font awesome */
