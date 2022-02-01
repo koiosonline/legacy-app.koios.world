@@ -13,8 +13,8 @@ type ProfileBannerProps = {
 export const ProfileBanner = (props: ProfileBannerProps) => {
   const backgroundCover = props.backgroundCover ? props.backgroundCover : bannerPlaceholder;
   const profileImage = props.profileImage ? props.profileImage : avatarPlaceholder;
-  const currentXp = props.discordProfile?.xp.currentXP;
-  const necessaryXp = props.discordProfile?.xp.necessaryXP;
+  const currentXp = props.discordProfile?.xp?.currentXP;
+  const necessaryXp = props.discordProfile?.xp?.necessaryXP;
   const percentageXp = (100 * currentXp) / necessaryXp;
 
   return (
@@ -47,7 +47,7 @@ export const ProfileBanner = (props: ProfileBannerProps) => {
         />
       </div>
 
-      {props.discordProfile && (
+      {props.discordProfile?.discordHandle && props.discordProfile.level && props.discordProfile.xp && (
         <div className="user-progress">
           <h2 className="user-progress__level">
             Lv.

@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { UserContext } from "../../../Context/UserContext";
-import discordLogo from "../../../assets/images/brands/discord--3d.png";
+import { useContext } from 'react';
+import { UserContext } from '../../../Context/UserContext';
+import discordLogo from '../../../assets/images/brands/discord--3d.png';
 
 type OverviewTabProps = {
   title: string;
@@ -12,12 +12,14 @@ type StatisticBlockProps = {
   subtitle: string;
 };
 
-const StatisticBlock: React.FC<StatisticBlockProps> = ({ img, title, subtitle }) => {
+const StatisticBlock: React.FC<StatisticBlockProps> = ({
+  img,
+  title,
+  subtitle,
+}) => {
   return (
     <div className={`statistic-block ${img ? 'statistic-block--left' : ''}`}>
-      {img &&
-        <img src={`${img}`} className="statistic-block__img" />
-      }
+      {img && <img src={`${img}`} className="statistic-block__img" />}
       <div className="statistic-block__text-wrapper">
         <h2 className="statistic-block__title">{title}</h2>
         <h3 className="statistic-block__subtitle">{subtitle}</h3>
@@ -29,9 +31,40 @@ const StatisticBlock: React.FC<StatisticBlockProps> = ({ img, title, subtitle })
 export const OverviewTab: React.FC<OverviewTabProps> = () => {
   const { userAccount } = useContext(UserContext);
 
-  return <div className="overview-tab">
-    <StatisticBlock title={`${userAccount.discordProfile.discordRank}`} subtitle="Discord rank" img={`${discordLogo}`}/>
-    <StatisticBlock title={`${userAccount.discordProfile.messageCount}`} subtitle="Total Discord messages" />
-    <StatisticBlock title={`${userAccount.discordProfile.xp.totalXP}`} subtitle="Total earned XP" />
-  </div>;
+  return (
+    <div className="overview-tab">
+      {userAccount &&
+      userAccount.discordProfile &&
+      userAccount.discordProfile.isMember ? (
+        <>
+          {userAccount.discordProfile.discordRank && (
+            <StatisticBlock
+              title={`${userAccount.discordProfile.discordRank}`}
+              subtitle="Discord rank"
+              img={`${discordLogo}`}
+            />
+          )}
+          {userAccount.discordProfile.messageCount && (
+            <StatisticBlock
+              title={`${userAccount.discordProfile.messageCount}`}
+              subtitle="Total Discord messages"
+            />
+          )}
+          {userAccount.discordProfile.xp.totalXP && (
+            <StatisticBlock
+              title={`${userAccount.discordProfile.xp.totalXP}`}
+              subtitle="Total earned XP"
+            />
+          )}
+        </>
+      ) : (
+        <h2 className="overview-tab__inactive">
+          {userAccount.discordProfile?.discordHandle && !userAccount.discordProfile?.isMember
+            ? `You're not a member of the Koios Discord yet, join the community to become a Titan and see your contribution back here in the statistics`
+            : 'Connect your Discord profile to see an overview of your statistics'
+          }
+        </h2>
+      )}
+    </div>
+  );
 };

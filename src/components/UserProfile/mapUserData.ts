@@ -1,30 +1,50 @@
-import { DecentralizedProfile } from "../../types/UserProfile/DecentralizedProfile";
-import { DiscordProfile } from "../../types/UserProfile/DiscordProfile";
-import { FormatPublicKey } from "../Util/FormatPublicKey";
-import { getCidImage } from "../Web3/Ipfs";
-import { TokenBalance } from "../../types/UserProfile/TokenBalance";
-import { getUserRank } from "./getUserRank";
+import { DecentralizedProfile } from '../../types/UserProfile/DecentralizedProfile';
+import { DiscordProfile } from '../../types/UserProfile/DiscordProfile';
+import { FormatPublicKey } from '../Util/FormatPublicKey';
+import { getCidImage } from '../Web3/Ipfs';
+import { TokenBalance } from '../../types/UserProfile/TokenBalance';
+import { getUserRank } from './getUserRank';
 
-export const mapUserData = async (accountAddress: string, decentralizedProfile: DecentralizedProfile, titanTokenCount: TokenBalance, discordProfile: DiscordProfile) => {
+const discordProfileData = (discordUsername, discordProfile) => {
+  const checkIsMember = !!discordProfile;
+  const getDiscordRank = checkIsMember ? getUserRank(discordProfile?.level) : undefined;
+
+  if (discordUsername || discordProfile) {
+    return {
+      isMember: checkIsMember,
+      discordHandle: discordProfile?.username || discordUsername,
+      level: discordProfile?.level,
+      messageCount: discordProfile?.message_count,
+      discordRank: getDiscordRank,
+      xp: {
+        currentXP: discordProfile?.detailed_xp[0],
+        necessaryXP: discordProfile?.detailed_xp[1],
+        totalXP: discordProfile?.detailed_xp[2],
+      },
+    };
+  } else {
+    return undefined;
+  }
+};
+
+export const mapUserData = async (
+  accountAddress: string,
+  decentralizedProfile: DecentralizedProfile,
+  titanTokenCount: TokenBalance,
+  discordUsername: string,
+  discordProfile: DiscordProfile
+) => {
   return {
     publicKey: accountAddress,
     publicKeyFormatted: FormatPublicKey(accountAddress),
-    name: decentralizedProfile.name,
-    emoji: decentralizedProfile.emoji,
-    description: decentralizedProfile.description,
-    profileBanner: await getCidImage(decentralizedProfile.background.original.src),
-    profileImage: await getCidImage(decentralizedProfile.image.original.src),
+    name: decentralizedProfile?.name,
+    emoji: decentralizedProfile?.emoji,
+    description: decentralizedProfile?.description,
+    profileBanner: await getCidImage(
+      decentralizedProfile?.background?.original?.src
+    ),
+    profileImage: await getCidImage(decentralizedProfile?.image?.original?.src),
     tokenBalance: titanTokenCount,
-    discordProfile: {
-      discordHandle: discordProfile.username,
-      level: discordProfile.level,
-      messageCount: discordProfile.message_count,
-      discordRank: getUserRank(discordProfile.level),
-      xp: {
-        currentXP: discordProfile.detailed_xp[0],
-        necessaryXP: discordProfile.detailed_xp[1],
-        totalXP: discordProfile.detailed_xp[2]
-      }
-    }
+    discordProfile: discordProfileData(discordUsername, discordProfile),
   };
 };

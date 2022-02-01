@@ -10,15 +10,15 @@ export const MetaBlocks = () => {
         <h4 className="metablock__title">Total Titan-tokens</h4>
         <img
           className="metablock__img"
-          src={userAccount.tokenBalance.tokenIcon}
+          src={userAccount?.tokenBalance.tokenIcon}
           alt="Token icon"
         />
-        <p className="metablock__balance">{userAccount.tokenBalance.balance}</p>
+        <p className="metablock__balance">{userAccount?.tokenBalance.balance}</p>
       </li>
 
       <li className="metablock">
         <h4 className="metablock__title">Wallet</h4>
-        <p>{userAccount.publicKeyFormatted}</p>
+        <p>{userAccount?.publicKeyFormatted}</p>
       </li>
       {/* <li className="metablock">
         <h4 className="metablock__title">Current network</h4>

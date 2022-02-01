@@ -10,6 +10,7 @@ export const Unauthenticated = () => {
   const { connectWallet } = useWeb3();
   const { isAuthenticating, authError } = useContext(AuthContext);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const contactLink = 'https://twitter.com/KoiosDAO';
 
   const modalState = () => {
     setIsModalOpen(!isModalOpen);
@@ -46,9 +47,13 @@ export const Unauthenticated = () => {
           </div>
 
           {authError && (
-            <div className='unauthenticated__error-msg'>
+            <div className="unauthenticated__error-msg">
               Hey space traveller! We're unable to connect your wallet. Please
-              try again or get in touch with us.
+              try again or&nbsp;
+              <a href={contactLink} target="_blank" rel="noreferrer">
+                get in touch with us
+              </a>
+              .
             </div>
           )}
         </div>

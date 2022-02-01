@@ -1,5 +1,5 @@
 export const getUserRank = (level: number) => {
-  switch (true) {
+  switch (isNaN(level)) {
     case level >= 5 && level <= 9:
       return 'Beta Titan';
     case level >= 10 && level <= 24:

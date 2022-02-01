@@ -1,4 +1,5 @@
 export type MappedDiscordProfile = {
+  isMember: boolean;
   discordHandle: string;
   level: number;
   messageCount: number;

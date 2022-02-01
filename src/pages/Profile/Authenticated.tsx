@@ -16,10 +16,10 @@ export const Authenticated = () => {
   return (
     <div className="authenticated container">
       <ProfileBanner
-        userName={userAccount.name}
-        profileImage={userAccount.profileImage}
-        backgroundCover={userAccount.profileBanner}
-        discordProfile={userAccount.discordProfile}
+        userName={userAccount?.name}
+        profileImage={userAccount?.profileImage}
+        backgroundCover={userAccount?.profileBanner}
+        discordProfile={userAccount?.discordProfile}
       />
 
       {isMobile ? (

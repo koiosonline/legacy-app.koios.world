@@ -46,5 +46,6 @@ export const getDiscordProfile = async (discordUsername: string) => {
     return discordProfileData;
   } catch (e) {
     console.log(e);
+    return e; 
   }
 };
