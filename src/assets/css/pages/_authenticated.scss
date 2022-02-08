@@ -114,7 +114,7 @@
         }
       }
       &--active {
-        color: #7645d9;
+        color: $color-06;
 
         &::after {
           transform: scale(1);
