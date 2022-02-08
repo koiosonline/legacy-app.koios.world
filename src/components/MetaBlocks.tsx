@@ -20,13 +20,6 @@ export const MetaBlocks = () => {
         <h4 className="metablock__title">Wallet</h4>
         <p>{userAccount?.publicKeyFormatted}</p>
       </li>
-      {/* <li className="metablock">
-        <h4 className="metablock__title">Current network</h4>
-        <select name="" id="">
-          <option value="0">Polygon</option>
-          <option value="1">Rinkeby</option>
-        </select>
-      </li> */}
     </ul>
   );
 };

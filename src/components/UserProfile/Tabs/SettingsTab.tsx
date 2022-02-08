@@ -43,7 +43,6 @@ export const SettingsTab: React.FC<SettingsTabProps> = () => {
           label="Edit profile"
           link="https://clay.self.id/"
         />
-        {/* <SettingButton icon='trash' label='Delete progress' /> */}
         <SettingButton
           icon="sign-out"
           label="Disconnect wallet"
