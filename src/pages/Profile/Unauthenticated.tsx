@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { Modal } from '../../components/Modal';
-import { WalletSetupModal } from './WalletSetupModal';
+import { ModalWalletSetup } from './ModalWalletSetup';
 import { useWeb3 } from '../../components/Web3/useWeb3';
 import { ProfileBanner } from '../../components/UserProfile/ProfileBanner';
 import { AuthContext } from '../../Context/AuthContext';
@@ -61,7 +61,7 @@ export const Unauthenticated = () => {
 
       {isModalOpen && (
         <Modal modalState={modalState}>
-          <WalletSetupModal />
+          <ModalWalletSetup />
         </Modal>
       )}
     </>

@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   getTokenCountTDFA,
   getTokenCountBlockchain,
   getTokenCountOverall
 } from "../components/Web3/Tokencount";
 import Loading from "../components/Loading";
+import avatarPlaceholder from "../assets/images/placeholders/avatar-placeholder.png";
+import { UserContext } from "../Context/UserContext";
 
 declare global {
   interface Window {
@@ -17,28 +19,32 @@ export const Leaderboard = () => {
   const [leaderboard, showLeaderboard] = useState<any[]>([]);
   const [active, setActive] = useState<string>("Blockchain");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { userAccount } = useContext(UserContext);
+
+  
 
   useEffect(() => {
     updateLeaderboardBlockchain();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateLeaderboardBlockchain = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountBlockchain();
+    const updatedRanking = await getTokenCountBlockchain(userAccount?.publicKey);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };
 
   const updateLeaderboardTDFA = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountTDFA();
+    const updatedRanking = await getTokenCountTDFA(userAccount?.publicKey);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };
 
   const updateLeaderboardOverall = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountOverall();
+    const updatedRanking = await getTokenCountOverall(userAccount?.publicKey);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };
@@ -105,7 +111,7 @@ export const Leaderboard = () => {
                     src={
                       users.image !== "default"
                         ? users.image
-                        : "/images/pepe.png"
+                        : avatarPlaceholder
                     }
                     alt="User profile"
                   />

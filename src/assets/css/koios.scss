@@ -33,15 +33,13 @@
 
 /* Modals */
 @import "src/assets/css/modals/modal";
-@import "src/assets/css/modals/wallet-setup-modal";
+@import "src/assets/css/modals/modal-wallet-setup";
 
 /* Components */
 @import "./components/profile-tabs/overview-tab";
 @import "./components/profile-tabs/settings-tab";
-@import "src/assets/css/components/Button";
 @import "src/assets/css/components/Card";
 @import "src/assets/css/components/QuickLinks";
-@import "src/assets/css/components/LinkCard";
 @import "src/assets/css/components/TabInfo";
 @import "src/assets/css/components/SetupModal";
 @import "src/assets/css/components/Quiz";

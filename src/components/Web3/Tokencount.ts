@@ -1,10 +1,9 @@
-import LeaderboardAddresses from "./static/addresses.json";
-import { getCidImage, fetchJson } from "./Ipfs";
-import { FindProfile } from "./Profiles";
-import { selectedAccount } from "./Web3--old";
-import { GetTokenHoldersJSON } from "./GraphQueries";
+import LeaderboardAddresses from './static/addresses.json';
+import { getCidImage, fetchJson } from './Ipfs';
+import { FindProfile } from './Profiles';
+import { GetTokenHoldersJSON } from './GraphQueries';
 
-export const getTokenCountTDFA = async () => {
+export const getTokenCountTDFA = async (selectedAccount: string) => {
   const tokenholders = await GetTokenHoldersJSON();
   const tokenholdersTDFA: any = [];
   const usernamePromises: any = [];
@@ -17,7 +16,7 @@ export const getTokenCountTDFA = async () => {
         const entry = {
           address: user.address,
           balance: Math.round(user.balance / 10 ** 18),
-          image: "default",
+          image: 'default',
           index: i,
           selectedAccount: true,
         };
@@ -27,7 +26,7 @@ export const getTokenCountTDFA = async () => {
         const entry = {
           address: user.address,
           balance: Math.round(user.balance / 10 ** 18),
-          image: "default",
+          image: 'default',
           index: i,
           selectedAccount: false,
         };
@@ -48,6 +47,7 @@ export const getTokenCountTDFA = async () => {
     const usernamePromise = FindProfile(user.address);
     usernamePromises.push(usernamePromise);
   }
+
   await Promise.all(usernamePromises).then(async (values: any) => {
     for (let i = 0; i < values.length; i++) {
       if (values[i] !== undefined) {
@@ -62,7 +62,7 @@ export const getTokenCountTDFA = async () => {
   return tokenholdersTDFA;
 };
 
-export const getTokenCountBlockchain = async () => {
+export const getTokenCountBlockchain = async (selectedAccount: string) => {
   const tokenholders = await GetTokenHoldersJSON();
   const tokenholdersBlockchain: any = [];
   const usernamePromises: any = [];
@@ -75,7 +75,7 @@ export const getTokenCountBlockchain = async () => {
         const entry = {
           address: user.address,
           balance: Math.round(user.balance / 10 ** 18),
-          image: "default",
+          image: 'default',
           index: i,
           selectedAccount: true,
         };
@@ -85,7 +85,7 @@ export const getTokenCountBlockchain = async () => {
         const entry = {
           address: user.address,
           balance: Math.round(user.balance / 10 ** 18),
-          image: "default",
+          image: 'default',
           index: i,
           selectedAccount: false,
         };
@@ -120,7 +120,7 @@ export const getTokenCountBlockchain = async () => {
   return tokenholdersBlockchain;
 };
 
-export const getTokenCountOverall = async () => {
+export const getTokenCountOverall = async (selectedAccount: string) => {
   const tokenholders = await GetTokenHoldersJSON();
   const tokenholdersOverall: any = [];
   const usernamePromises: any = [];
@@ -135,7 +135,7 @@ export const getTokenCountOverall = async () => {
           balance: Math.round(user.balance / 10 ** 18),
           index: i,
           selectedAccount: true,
-          image: "default",
+          image: 'default',
         };
         tokenholdersOverall.push(entry);
         i++;
@@ -145,7 +145,7 @@ export const getTokenCountOverall = async () => {
           balance: Math.round(user.balance / 10 ** 18),
           index: i,
           selectedAccount: false,
-          image: "default",
+          image: 'default',
         };
         tokenholdersOverall.push(entry);
         i++;
@@ -178,7 +178,7 @@ export const getTokenCountOverall = async () => {
   return tokenholdersOverall;
 };
 
-export const ProfileTokenInformation = async () => {
+export const ProfileTokenInformation = async (selectedAccount) => {
   const tokenHolders = await GetTokenHoldersJSON();
   const resultArray: any = [];
   for (const user of tokenHolders.data.users) {

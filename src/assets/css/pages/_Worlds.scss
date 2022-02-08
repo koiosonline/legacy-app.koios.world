@@ -1,5 +1,5 @@
 .worlds {
-  h1 {
+  &__title {
     display: flex;
     justify-content: center;
     font-family: Righteous, sans-serif;
@@ -8,17 +8,24 @@
     margin: 1em 0 0;
     color: $color-text;
     text-align: center;
+
     @include for-size($desktop) {
       font-size: 3em;
     }
   }
+
   &__subtitle {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
     font-size: 1.4em;
     text-align: center;
     max-width: 25em;
-    margin: 1.5em auto 0;
+    margin: 1.5em auto 15px;
     color: $color-text;
+  }
+
+  .btn {
+    display: block;
+    margin: 0 auto;
   }
 }

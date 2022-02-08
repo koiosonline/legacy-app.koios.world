@@ -12,11 +12,7 @@ type StatisticBlockProps = {
   subtitle: string;
 };
 
-const StatisticBlock: React.FC<StatisticBlockProps> = ({
-  img,
-  title,
-  subtitle,
-}) => {
+const StatisticBlock: React.FC<StatisticBlockProps> = ({ img, title, subtitle }) => {
   return (
     <div className={`statistic-block ${img ? 'statistic-block--left' : ''}`}>
       {img && <img src={`${img}`} className="statistic-block__img" />}
@@ -33,9 +29,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = () => {
 
   return (
     <div className="overview-tab">
-      {userAccount &&
-      userAccount.discordProfile &&
-      userAccount.discordProfile.isMember ? (
+      {userAccount && userAccount.discordProfile && userAccount.discordProfile.isMember ? (
         <>
           {userAccount.discordProfile.discordRank && (
             <StatisticBlock
@@ -45,25 +39,28 @@ export const OverviewTab: React.FC<OverviewTabProps> = () => {
             />
           )}
           {userAccount.discordProfile.messageCount && (
-            <StatisticBlock
-              title={`${userAccount.discordProfile.messageCount}`}
-              subtitle="Total Discord messages"
-            />
+            <StatisticBlock title={`${userAccount.discordProfile.messageCount}`} subtitle="Total Discord messages" />
           )}
           {userAccount.discordProfile.xp.totalXP && (
-            <StatisticBlock
-              title={`${userAccount.discordProfile.xp.totalXP}`}
-              subtitle="Total earned XP"
-            />
+            <StatisticBlock title={`${userAccount.discordProfile.xp.totalXP}`} subtitle="Total earned XP" />
           )}
         </>
       ) : (
-        <h2 className="overview-tab__inactive">
-          {userAccount.discordProfile?.discordHandle && !userAccount.discordProfile?.isMember
-            ? `You're not a member of the Koios Discord yet, join the community to become a Titan and see your contribution back here in the statistics`
-            : 'Connect your Discord profile to see an overview of your statistics'
-          }
-        </h2>
+        <>
+          {userAccount.discordProfile?.discordHandle && !userAccount.discordProfile?.isMember ? (
+            <h2 className="overview-tab__inactive">
+              You're not a member of the Koios Discord yet,{' '}
+              <a href="https://discord.com/invite/jBjudugeBa" target="_blank" rel="noreferrer">
+                join the community
+              </a>{' '}
+              to become a Titan and see your contribution back here in the statistics.
+            </h2>
+          ) : (
+            <h2 className="overview-tab__inactive">
+              Connect your Discord profile to see an overview of your statistics.
+            </h2>
+          )}
+        </>
       )}
     </div>
   );

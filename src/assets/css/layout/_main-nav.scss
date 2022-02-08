@@ -168,6 +168,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        color: $color-01;
         fill: $color-01;
       }
 
@@ -176,6 +177,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        color: $color-01;
         fill: $color-01;
         p {
           background: $gradient-koios;
@@ -189,8 +191,8 @@
     &__icon {
       min-width: 20px;
       width: 20px;
+      height: 20px;
       margin-right: 20px;
-      fill: $gradient-koios;
     }
   }
 

@@ -10,14 +10,8 @@ import { getDiscordProfile } from '../../api/Api';
 import { getTitanTokenCount } from '../UserProfile/getTitanTokenCount';
 
 export const useWeb3 = () => {
-  const {
-    setIsAuthenticating,
-    isAuthenticated,
-    setIsAuthenticated,
-    setAuthError,
-    provider,
-    setProvider,
-  } = useContext(AuthContext);
+  const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider } =
+    useContext(AuthContext);
   const { userAccount, setUserAccount } = useContext(UserContext);
 
   const connectWallet = async () => {
@@ -49,9 +43,7 @@ export const useWeb3 = () => {
 
   const getUserProfile = async (accountAddress: string) => {
     try {
-      const decentralizedProfile = await getDecentralizedProfile(
-        accountAddress
-      );
+      const decentralizedProfile = await getDecentralizedProfile(accountAddress);
       const titanTokenCount = await getTitanTokenCount(accountAddress);
       const discordUsername = await decentralizedProfile?.url;
       const discordProfile = await getDiscordProfile(discordUsername);
@@ -62,7 +54,6 @@ export const useWeb3 = () => {
         discordUsername,
         discordProfile[0]
       );
-      console.log(userProfile);
       setUserAccount(userProfile);
     } catch (e) {
       console.log(e);
@@ -73,5 +64,6 @@ export const useWeb3 = () => {
   return {
     connectWallet,
     disconnectWallet,
+    getUserProfile,
   };
 };
