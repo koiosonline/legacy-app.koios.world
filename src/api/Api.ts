@@ -36,3 +36,16 @@ export const getLiterature = async (props: getLiteratureProps) => {
     console.log(e);
   }
 };
+
+export const getDiscordProfile = async (discordUsername: string) => {
+  const baseUrl = process.env.REACT_APP_DISCORD_LEVELS;
+
+  try {
+    const getDiscordProfileData = await fetch(`${baseUrl + discordUsername}`);
+    const discordProfileData = await getDiscordProfileData.json();
+    return discordProfileData;
+  } catch (e) {
+    console.log(e);
+    return e; 
+  }
+};

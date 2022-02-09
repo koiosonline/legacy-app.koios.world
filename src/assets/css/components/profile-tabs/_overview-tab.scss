@@ -1,0 +1,31 @@
+.overview-tab {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 20px;
+  row-gap: 15px;
+
+  @include for-size(600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-size(930px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__inactive {
+    text-align: center;
+    grid-column: 1 / 4;
+    margin: 50px auto;
+    color: $color-09;
+    width: 400px;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+
+    a {
+      color: $color-06;
+      text-decoration: underline;
+    }
+  }
+}

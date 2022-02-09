@@ -15,7 +15,8 @@
 @import "src/assets/css/pages/world-overview";
 @import "./pages/coming-soon";
 @import "src/assets/css/pages/Worlds";
-@import "src/assets/css/pages/Profile";
+@import "src/assets/css/pages/authenticated";
+@import "./pages/unauthenticated";
 @import "src/assets/css/pages/WorldDetail";
 @import "./pages/leaderboard";
 @import "./pages/404";
@@ -28,12 +29,17 @@
 /* Layout */
 @import "./layout/header";
 @import "./layout/main-nav";
+@import "./layout/buttons";
+
+/* Modals */
+@import "src/assets/css/modals/modal";
+@import "src/assets/css/modals/modal-wallet-setup";
 
 /* Components */
-@import "src/assets/css/components/Button";
+@import "./components/profile-tabs/overview-tab";
+@import "./components/profile-tabs/settings-tab";
 @import "src/assets/css/components/Card";
 @import "src/assets/css/components/QuickLinks";
-@import "src/assets/css/components/LinkCard";
 @import "src/assets/css/components/TabInfo";
 @import "src/assets/css/components/SetupModal";
 @import "src/assets/css/components/Quiz";
@@ -47,6 +53,11 @@
 @import "src/assets/css/components/vacanciesIntro";
 @import "src/assets/css/components/VacancyCard";
 @import "src/assets/css/components/markdown";
+@import "./components/progress-bar-profile-banner";
+@import "./components/metablocks";
+@import "./components/statistic-block";
+@import "./components/profile-banner";
+
 
 /* Font awesome */
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";

@@ -1,51 +1,40 @@
-import { useContext, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { Icon } from "../../Util/Icon";
-import { useSizes } from "../../Util/useSizes";
-import koiosLogo from "../../../assets/images/logos/koios-logo.svg";
-import { selectedAccount, profilePicture, profileName } from "../../Web3/Web3";
-import MainNavData from "./static/MainNavData.json";
-import { SvgSprite } from "../../Util/SvgSprite";
-import { Connect, Disconnect } from "../../Web3/ConnectionCheck";
-import { web3Modal } from "../../Web3/WalletProvider";
-import { UserContext } from "../../../Context/UserContext";
-import { FormatPublicKey } from "../../Util/FormatPublicKey";
+import { useContext, useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { Icon } from '../../Util/Icon';
+import { useSizes } from '../../Util/useSizes';
+import koiosLogo from '../../../assets/images/logos/koios-logo.svg';
+import MainNavData from './static/MainNavData.json';
+import { SvgSprite } from '../../Util/SvgSprite';
+import { web3Modal } from '../../Web3/WalletProvider';
+import { UserContext } from '../../../Context/UserContext';
+import { useWeb3 } from '../../../components/Web3/useWeb3';
+import avatarPlaceholder from '../../../assets/images/placeholders/avatar-placeholder.png';
 
 export const MainNav = () => {
-  const { user, setUser } = useContext(UserContext);
-
+  const { userAccount } = useContext(UserContext);
+  const { connectWallet, disconnectWallet } = useWeb3();
   const { width } = useSizes();
-  const isMobile = width < 769;
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [disconnectButtonText, setDisconnectButtonText] = useState<string>('loading');
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = width < 1200;
+
   const toggleMenu = () => {
     if (isMobile) {
       setIsMenuOpen(!isMenuOpen);
     }
   };
-  isMenuOpen ? (document.body.className = "menu-is-open") : (document.body.className = "");
 
-  const initialDisconnectText = selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount;
-  const [disconnectButtonText, setDisconnectButtonText] = useState("loading");
-
-  const connectProvider = async () => {
-    const checkProvider = await Connect();
-    setUser(checkProvider);
-  };
-
-  const disconnectProvider = async () => {
-    const checkProvider = await Disconnect();
-    setUser(checkProvider);
-  };
+  const initialDisconnectText = userAccount ? userAccount.publicKeyFormatted : 'selectedAccount';
 
   useEffect(() => {
     if (web3Modal.cachedProvider) {
-      connectProvider();
+      connectWallet();
     } else {
-      disconnectProvider();
+      disconnectWallet();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  }, []);
 
   useEffect(() => {
     setDisconnectButtonText(initialDisconnectText);
@@ -53,14 +42,14 @@ export const MainNav = () => {
 
   return (
     <>
-      <div onClick={toggleMenu} className={`body-overlay ${isMenuOpen ? "body-overlay--active" : ""}`}></div>
+      <div onClick={toggleMenu} className={`body-overlay ${isMenuOpen ? 'body-overlay--active' : ''}`}></div>
       {isMobile && (
         <header className="header-mobile container">
           <button
-            className={`header-mobile__toggle ${isMenuOpen ? "header-mobile__toggle--rotate" : ""}`}
+            className={`header-mobile__toggle ${isMenuOpen ? 'header-mobile__toggle--rotate' : ''}`}
             onClick={toggleMenu}
           >
-            <Icon type={isMenuOpen ? "close" : "hamburger"} />
+            <Icon type={isMenuOpen ? 'close' : 'hamburger'} />
           </button>
           <Link to="/" className="header-mobile__img-container">
             <img className="header-mobile__logo" src={koiosLogo} alt="Koios logo" />
@@ -68,26 +57,26 @@ export const MainNav = () => {
         </header>
       )}
 
-      <nav className={`main-nav ${isMenuOpen ? "main-nav--open" : ""} ${!isMobile ? 'main-nav--desktop' : ''}`}>
-        <button className={`main-nav__mobile__toggle ${!isMenuOpen ? "hidden" : ""}`} onClick={toggleMenu}>
-          <Icon type={isMenuOpen ? "close" : "hamburger"} />
+      <nav className={`main-nav ${isMenuOpen ? 'main-nav--open' : ''} ${!isMobile ? 'main-nav--desktop' : ''}`}>
+        <button className={`main-nav__mobile__toggle ${!isMenuOpen ? 'hidden' : ''}`} onClick={toggleMenu}>
+          <Icon type={isMenuOpen ? 'close' : 'hamburger'} />
         </button>
         <Link to="/" className="main-nav__img-container">
           <img className="main-nav__logo" src={koiosLogo} alt="Koios logo" />
         </Link>
 
-        {!user && (
-          <button className="main-nav__wallet" onClick={connectProvider}>
+        {!userAccount && (
+          <button className="main-nav__wallet" onClick={connectWallet}>
             Connect wallet
           </button>
         )}
-        {user && (
+        {userAccount && (
           <>
             <div
               id="disconnect-wallet"
-              className={"main-nav__wallet main-nav__wallet--disconnect"}
-              onClick={disconnectProvider}
-              onMouseEnter={() => setDisconnectButtonText("Disconnect")}
+              className={'main-nav__wallet main-nav__wallet--disconnect'}
+              onClick={disconnectWallet}
+              onMouseEnter={() => setDisconnectButtonText('Disconnect')}
               onMouseLeave={() => setDisconnectButtonText(initialDisconnectText)}
             >
               {disconnectButtonText}
@@ -124,17 +113,17 @@ export const MainNav = () => {
         </div>
 
         <div className="user-profile">
-          {!user && <p className="user-profile__text--inactive">Please connect your wallet first</p>}
-          {user && (
-            <Link to={"/profile"} className={"user-profile__link"}>
-              {!profilePicture ? (
-                <img className="user-profile__profile-picture" src={"/images/pepe.png"} alt="Pepe the frog" />
-              ) : (
-                <img className="user-profile__profile-picture" src={profilePicture} alt="404" />
-              )}
-              <div className={"user-profile__textContainer"}>
-                <p className="user-profile__textContainer__profile-name">{profileName}</p>
-                <p className="user-profile__textContainer__pubkey">{selectedAccount ? FormatPublicKey(selectedAccount) : selectedAccount}</p>
+          {!userAccount && <p className="user-profile__text--inactive">Please connect your wallet first</p>}
+          {userAccount && (
+            <Link to={'/profile'} className={'user-profile__link'}>
+              <img
+                className="user-profile__profile-picture"
+                src={userAccount.profileImage ? userAccount.profileImage : avatarPlaceholder}
+                alt="Profile image"
+              />
+              <div className={'user-profile__textContainer'}>
+                <p className="user-profile__textContainer__profile-name">{userAccount.name}</p>
+                <p className="user-profile__textContainer__pubkey">{initialDisconnectText}</p>
               </div>
             </Link>
           )}

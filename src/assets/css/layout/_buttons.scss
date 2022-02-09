@@ -1,0 +1,77 @@
+.btn {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-family: $font-family-base;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  width: fit-content;
+
+  &-primary {
+    background-color: #fff;
+    box-shadow: $button-shadow;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 10px 20px;
+    
+    p {
+      @include gradient-text;
+    }
+
+    &:hover {
+      box-shadow: $button-shadow-hover;
+    }
+    &:active {
+      background-color: $button-active-color;
+    }
+  }
+
+  &-link {
+    @include gradient-text;
+
+    &:hover {
+      background-size: 200%;
+      background-position: 0% 50%;
+    }
+
+    &:active {
+      background-size: 200%;
+      background-position: 0% 50%;
+      background-image: linear-gradient(
+        to right,
+        darken($color-01, 10),
+        darken($color-02, 10)
+      );
+    }
+  }
+
+  &-gradient {
+    color: #fff;
+    background-image: linear-gradient(to right, $color-01, $color-02);
+    border-radius: 8px;
+    padding: 5px 25px;
+    background-size: 100%;
+
+
+    &:hover {
+      background-size: 200%;
+      background-position: 0% 50%;
+    }
+
+    &:active {
+      background-size: 200%;
+      background-position: 0% 50%;
+      background-image: linear-gradient(to right, darken($color-01, 10), darken($color-02, 10))
+    }
+  }
+
+  // Helpers
+
+  // Font-size modules
+  &--fs-16 {
+    font-size: 16px;
+  }
+}

@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
-import {
-  getTokenCountTDFA,
-  getTokenCountBlockchain,
-  getTokenCountOverall
-} from "../components/Web3/Tokencount";
-import Loading from "../components/Loading";
+import { useContext, useEffect, useState } from 'react';
+import { getTokenCountTDFA, getTokenCountBlockchain, getTokenCountOverall } from '../components/Web3/Tokencount';
+import Loading from '../components/Loading';
+import avatarPlaceholder from '../assets/images/placeholders/avatar-placeholder.png';
+import { UserContext } from '../Context/UserContext';
 
 declare global {
   interface Window {
@@ -15,30 +13,32 @@ declare global {
 
 export const Leaderboard = () => {
   const [leaderboard, showLeaderboard] = useState<any[]>([]);
-  const [active, setActive] = useState<string>("Blockchain");
+  const [active, setActive] = useState<string>('Blockchain');
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { userAccount } = useContext(UserContext);
 
   useEffect(() => {
     updateLeaderboardBlockchain();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateLeaderboardBlockchain = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountBlockchain();
+    const updatedRanking = await getTokenCountBlockchain(userAccount?.publicKey);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };
 
   const updateLeaderboardTDFA = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountTDFA();
+    const updatedRanking = await getTokenCountTDFA(userAccount?.publicKey);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };
 
   const updateLeaderboardOverall = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountOverall();
+    const updatedRanking = await getTokenCountOverall(userAccount?.publicKey);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };
@@ -49,33 +49,33 @@ export const Leaderboard = () => {
       <div className="leaderboard-selector">
         <button
           className={`leaderboard-selector__button ${
-            active === "Blockchain" ? "leaderboard-selector__button--active active-leaderboard" : ""
+            active === 'Blockchain' ? 'leaderboard-selector__button--active active-leaderboard' : ''
           }`}
           onClick={() => {
             updateLeaderboardBlockchain();
-            setActive("Blockchain");
+            setActive('Blockchain');
           }}
         >
           <p>Blockchain leaderboard</p>
         </button>
         <button
           className={`leaderboard-selector__button ${
-            active === "TDFA" ? "leaderboard-selector__button--active active-leaderboard" : ""
+            active === 'TDFA' ? 'leaderboard-selector__button--active active-leaderboard' : ''
           }`}
           onClick={() => {
             updateLeaderboardTDFA();
-            setActive("TDFA");
+            setActive('TDFA');
           }}
         >
           <p>TDFA leaderboard</p>
         </button>
         <button
           className={`leaderboard-selector__button ${
-            active === "Overall" ? "leaderboard-selector__button--active active-leaderboard" : ""
+            active === 'Overall' ? 'leaderboard-selector__button--active active-leaderboard' : ''
           }`}
           onClick={() => {
             updateLeaderboardOverall();
-            setActive("Overall");
+            setActive('Overall');
           }}
         >
           <p>Overall leaderboard</p>
@@ -89,7 +89,7 @@ export const Leaderboard = () => {
           <h2 className="ranking__metadata-title">Titan-tokens</h2>
         </div>
 
-        {isLoading && <Loading/>}
+        {isLoading && <Loading />}
         {!isLoading && (
           <ul>
             {leaderboard.map((users: any, index: number) => {
@@ -97,16 +97,8 @@ export const Leaderboard = () => {
                 <li key={index} className={`${users.selectedAccount ? 'ranking__item__currentUser' : 'ranking__item'}`}>
                   <p className="ranking__position">{users.index}</p>
                   <img
-                    className={`ranking__user-image ${
-                      users.image === "default"
-                        ? "ranking__user-image--not-available"
-                        : ""
-                    }`}
-                    src={
-                      users.image !== "default"
-                        ? users.image
-                        : "/images/pepe.png"
-                    }
+                    className="ranking__user-image"
+                    src={users.image !== 'default' ? users.image : avatarPlaceholder}
                     alt="User profile"
                   />
                   <p className="ranking__username">{users.address}</p>

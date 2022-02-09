@@ -13,26 +13,7 @@
     grid-template-columns: repeat(auto-fit, 1fr);
   }
 
-  &__link {
-    text-decoration: none;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 400;
-    text-align: center;
-    padding: 0.25em 1em;
-    border-radius: $radius;
-    box-shadow: $button-shadow;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    p {
-      background: $gradient-koios;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    &:hover {
-      box-shadow: $button-shadow-hover;
-    }
-    &:active {
-      background-color: $button-active-color;
-    }
+  .btn {
+    width: 100%;
   }
 }

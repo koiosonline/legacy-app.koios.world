@@ -1,0 +1,59 @@
+.modal {
+  &__background {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    animation: fadeIn 0.2s ease forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    z-index: 6;
+    position: relative;
+    margin: 0 auto;
+    overflow: auto;
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    max-height: 100%;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      transform-origin: center center;
+      -webkit-transform-origin: center center; /* Chrome, Safari */
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      color: $color-10;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      background-color: unset;
+    }
+  }
+}
