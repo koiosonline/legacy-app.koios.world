@@ -1,10 +1,10 @@
-.worldOverviewHeader {
+.world-overview-header {
   background-image: linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5)), url(https://images.unsplash.com/photo-1534996858221-380b92700493?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1931&q=80);
   background-size: 100% 300px;
   background-repeat: no-repeat;
   position: relative;
 
-  &__titleRow {
+  &__title-row {
     display: flex;
     flex-flow: column;
     padding: $spacing-4x $spacing-2x;
@@ -27,6 +27,7 @@
         font-size: 48px;
       }
     }
+
     &__description {
       font-family: "Source Sans Pro", sans-serif;
       color: white;
@@ -39,10 +40,11 @@
   }
 }
 
-.worldOverviewContainer {
+.world-overview-container {
   display: flex;
   flex-direction: column;
   margin: 0 auto 150px;
+  padding-bottom: 50px;
 
   @include for-size($tablet) {
     margin: 0 auto;
@@ -51,24 +53,9 @@
   @include for-size($desktop) {
     margin: 0 auto 0;
     max-width: 1080px;
-    padding: 0 $spacing-10x 250px;
+    padding: 0 $spacing-10x 50px;
   }
-  &__titleRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    &__title {
-      font-family: Righteous, sans-serif;
-      font-size: 3em;
-      color: $color-text;
-      margin-bottom: 1rem;
-      padding: 0 1rem;
-    }
-    &__button {
-      padding-left: 1rem;
-    }
-  }
+  
   &__description {
     font-family: "Source Sans Pro", sans-serif;
     line-height: 20.11px;
