@@ -49,10 +49,10 @@ export const OverviewTab: React.FC<OverviewTabProps> = () => {
         <>
           {userAccount.discordProfile?.discordHandle && !userAccount.discordProfile?.isMember ? (
             <h2 className="overview-tab__inactive">
-              You're not a member of the Koios Discord yet,{' '}
+              You're not a member of the Koios Discord yet,&nbsp;
               <a href="https://discord.com/invite/jBjudugeBa" target="_blank" rel="noreferrer">
                 join the community
-              </a>{' '}
+              </a>&nbsp;
               to become a Titan and see your contribution back here in the statistics.
             </h2>
           ) : (

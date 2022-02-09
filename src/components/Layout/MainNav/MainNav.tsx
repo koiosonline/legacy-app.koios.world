@@ -8,8 +8,7 @@ import { SvgSprite } from '../../Util/SvgSprite';
 import { web3Modal } from '../../Web3/WalletProvider';
 import { UserContext } from '../../../Context/UserContext';
 import { useWeb3 } from '../../../components/Web3/useWeb3';
-import avatarPlaceholder from "../../../assets/images/placeholders/avatar-placeholder.png";
-
+import avatarPlaceholder from '../../../assets/images/placeholders/avatar-placeholder.png';
 
 export const MainNav = () => {
   const { userAccount } = useContext(UserContext);
@@ -25,13 +24,8 @@ export const MainNav = () => {
       setIsMenuOpen(!isMenuOpen);
     }
   };
-  isMenuOpen
-    ? (document.body.className = 'menu-is-open')
-    : (document.body.className = '');
 
-  const initialDisconnectText = userAccount
-    ? userAccount.publicKeyFormatted
-    : 'selectedAccount';
+  const initialDisconnectText = userAccount ? userAccount.publicKeyFormatted : 'selectedAccount';
 
   useEffect(() => {
     if (web3Modal.cachedProvider) {
@@ -48,39 +42,23 @@ export const MainNav = () => {
 
   return (
     <>
-      <div
-        onClick={toggleMenu}
-        className={`body-overlay ${isMenuOpen ? 'body-overlay--active' : ''}`}
-      ></div>
+      <div onClick={toggleMenu} className={`body-overlay ${isMenuOpen ? 'body-overlay--active' : ''}`}></div>
       {isMobile && (
         <header className="header-mobile container">
           <button
-            className={`header-mobile__toggle ${
-              isMenuOpen ? 'header-mobile__toggle--rotate' : ''
-            }`}
+            className={`header-mobile__toggle ${isMenuOpen ? 'header-mobile__toggle--rotate' : ''}`}
             onClick={toggleMenu}
           >
             <Icon type={isMenuOpen ? 'close' : 'hamburger'} />
           </button>
           <Link to="/" className="header-mobile__img-container">
-            <img
-              className="header-mobile__logo"
-              src={koiosLogo}
-              alt="Koios logo"
-            />
+            <img className="header-mobile__logo" src={koiosLogo} alt="Koios logo" />
           </Link>
         </header>
       )}
 
-      <nav
-        className={`main-nav ${isMenuOpen ? 'main-nav--open' : ''} ${
-          !isMobile ? 'main-nav--desktop' : ''
-        }`}
-      >
-        <button
-          className={`main-nav__mobile__toggle ${!isMenuOpen ? 'hidden' : ''}`}
-          onClick={toggleMenu}
-        >
+      <nav className={`main-nav ${isMenuOpen ? 'main-nav--open' : ''} ${!isMobile ? 'main-nav--desktop' : ''}`}>
+        <button className={`main-nav__mobile__toggle ${!isMenuOpen ? 'hidden' : ''}`} onClick={toggleMenu}>
           <Icon type={isMenuOpen ? 'close' : 'hamburger'} />
         </button>
         <Link to="/" className="main-nav__img-container">
@@ -99,9 +77,7 @@ export const MainNav = () => {
               className={'main-nav__wallet main-nav__wallet--disconnect'}
               onClick={disconnectWallet}
               onMouseEnter={() => setDisconnectButtonText('Disconnect')}
-              onMouseLeave={() =>
-                setDisconnectButtonText(initialDisconnectText)
-              }
+              onMouseLeave={() => setDisconnectButtonText(initialDisconnectText)}
             >
               {disconnectButtonText}
             </div>
@@ -117,10 +93,7 @@ export const MainNav = () => {
                 to={item.linkTo}
                 onClick={toggleMenu}
               >
-                <Icon
-                  className="nav-list__icon gradient"
-                  type={item.icon as keyof typeof SvgSprite}
-                />
+                <Icon className="nav-list__icon gradient" type={item.icon as keyof typeof SvgSprite} />
                 <p>{item.title}</p>
               </NavLink>
             </li>
@@ -131,16 +104,8 @@ export const MainNav = () => {
           <ul className="social__list">
             {MainNavData.socials.map((item, index) => (
               <li className="social__list-item" key={index}>
-                <a
-                  className="social__link link"
-                  href={item.linkTo}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Icon
-                    className="social__icon"
-                    type={item.icon as keyof typeof SvgSprite}
-                  />
+                <a className="social__link link" href={item.linkTo} target="_blank" rel="noreferrer">
+                  <Icon className="social__icon" type={item.icon as keyof typeof SvgSprite} />
                 </a>
               </li>
             ))}
@@ -148,29 +113,17 @@ export const MainNav = () => {
         </div>
 
         <div className="user-profile">
-          {!userAccount && (
-            <p className="user-profile__text--inactive">
-              Please connect your wallet first
-            </p>
-          )}
+          {!userAccount && <p className="user-profile__text--inactive">Please connect your wallet first</p>}
           {userAccount && (
             <Link to={'/profile'} className={'user-profile__link'}>
               <img
                 className="user-profile__profile-picture"
-                src={
-                  userAccount.profileImage
-                    ? userAccount.profileImage
-                    : avatarPlaceholder
-                }
+                src={userAccount.profileImage ? userAccount.profileImage : avatarPlaceholder}
                 alt="Profile image"
               />
               <div className={'user-profile__textContainer'}>
-                <p className="user-profile__textContainer__profile-name">
-                  {userAccount.name}
-                </p>
-                <p className="user-profile__textContainer__pubkey">
-                  {initialDisconnectText}
-                </p>
+                <p className="user-profile__textContainer__profile-name">{userAccount.name}</p>
+                <p className="user-profile__textContainer__pubkey">{initialDisconnectText}</p>
               </div>
             </Link>
           )}

@@ -38,7 +38,7 @@ export const getLiterature = async (props: getLiteratureProps) => {
 };
 
 export const getDiscordProfile = async (discordUsername: string) => {
-  const baseUrl = "https://koios-middleware.herokuapp.com/discordLevels/";
+  const baseUrl = process.env.REACT_APP_DISCORD_LEVELS;
 
   try {
     const getDiscordProfileData = await fetch(`${baseUrl + discordUsername}`);
