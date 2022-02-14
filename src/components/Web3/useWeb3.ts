@@ -45,14 +45,14 @@ export const useWeb3 = () => {
     try {
       const decentralizedProfile = await getDecentralizedProfile(accountAddress);
       const titanTokenCount = await getTitanTokenCount(accountAddress);
-      const discordUsername = await decentralizedProfile?.url;
+      const discordUsername = decentralizedProfile?.url;
       const discordProfile = await getDiscordProfile(discordUsername);
       const userProfile = await mapUserData(
         accountAddress,
         decentralizedProfile,
         titanTokenCount,
         discordUsername,
-        discordProfile[0]
+        discordProfile
       );
       setUserAccount(userProfile);
     } catch (e) {

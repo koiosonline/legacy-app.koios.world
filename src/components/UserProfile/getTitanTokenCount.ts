@@ -4,7 +4,7 @@ import titanTokenPlaceholder from "../../assets/images/placeholders/titan-token-
 
 export const getTitanTokenCount = async (accountAddress: string) => {
   const tokenHolders = await GetTokenHoldersJSON();
-  const userBalanceData = tokenHolders.data.users.find((user) => user.address === accountAddress.toLowerCase());
+  const userBalanceData = tokenHolders?.data?.users?.find((user) => user.address === accountAddress.toLowerCase());
   const tokenCount = userBalanceData?.balance || 0;
   const contentURI = await fetchJson(userBalanceData?.contentURI);
   const tokenImage = await getCidImage(contentURI?.image) || titanTokenPlaceholder;

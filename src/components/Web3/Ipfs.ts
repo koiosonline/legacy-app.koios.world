@@ -24,38 +24,43 @@ const stripIpfsPrefix = (cid: string) => {
 };
 
 export const getCidImage = async (hash: string) => {
-  try {
-    const cid = stripIpfsPrefix(hash);
-    const ui8arr = [];
+  if (hash) {
+    try {
+      const cid = stripIpfsPrefix(hash);
+      const ui8arr = [];
 
-    for await (const result of ipfs.cat(cid)) {
-      ui8arr.push(result);
+      for await (const result of ipfs.cat(cid)) {
+        ui8arr.push(result);
+      }
+      const blob = new Blob(ui8arr, { type: 'image/jpeg' });
+      const url = URL.createObjectURL(blob);
+      return url;
+    } catch (e) {
+      console.log(e);
     }
-    const blob = new Blob(ui8arr, { type: 'image/jpeg' });
-    const url = URL.createObjectURL(blob);
-    return url;
-  } catch (e) {
-    console.log(e);
   }
+  return undefined;
 };
 
 export const fetchJson = async (hash: string) => {
-  try {
-    let str = '';
-    hash = stripIpfsPrefix(hash);
+  if (hash) {
+    try {
+      let str = '';
+      hash = stripIpfsPrefix(hash);
 
+      for await (const result of ipfs.cat(hash)) {
+        str += String.fromCharCode.apply(null, result);
+      }
 
-    for await (const result of ipfs.cat(hash)) {
-      str += String.fromCharCode.apply(null, result);
+      if (str === '') {
+        return undefined;
+      }
+
+      const json = JSON.parse(str);
+      return json;
+    } catch (e) {
+      console.log(e);
     }
-
-    if (str === '') {
-      return undefined;
-    }
-
-    const json = JSON.parse(str);
-    return json;
-  } catch (e) {
-    console.log(e);
   }
+  return undefined;
 };
