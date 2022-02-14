@@ -22,17 +22,17 @@ const discordProfileData = (discordUsername, discordProfile) => {
         totalXP: discordProfile?.detailed_xp[2],
       },
     };
-  } else {
-    return undefined;
   }
+
+  return undefined;
 };
 
 export const mapUserData = async (
   accountAddress: string,
   decentralizedProfile: DecentralizedProfile,
   titanTokenCount: TokenBalance,
-  discordUsername: string,
-  discordProfile: DiscordProfile
+  discordUsername?: string,
+  discordProfile?: DiscordProfile
 ) => {
   return {
     publicKey: accountAddress,
@@ -40,9 +40,7 @@ export const mapUserData = async (
     name: decentralizedProfile?.name,
     emoji: decentralizedProfile?.emoji,
     description: decentralizedProfile?.description,
-    profileBanner: await getCidImage(
-      decentralizedProfile?.background?.original?.src
-    ),
+    profileBanner: await getCidImage(decentralizedProfile?.background?.original?.src),
     profileImage: await getCidImage(decentralizedProfile?.image?.original?.src),
     tokenBalance: titanTokenCount,
     discordProfile: discordProfileData(discordUsername, discordProfile),

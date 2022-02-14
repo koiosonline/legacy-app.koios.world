@@ -5,7 +5,7 @@ type getLiteratureProps = {
 };
 
 export const getVideoInfo = async (levelAddress) => {
-  const baseUrl = "https://cloudflare-ipfs.com/ipfs/";
+  const baseUrl = 'https://cloudflare-ipfs.com/ipfs/';
   try {
     const getVideos = await fetch(`${baseUrl + levelAddress}`);
     const videos = await getVideos.json();
@@ -16,16 +16,13 @@ export const getVideoInfo = async (levelAddress) => {
 };
 
 export const getLiterature = async (props: getLiteratureProps) => {
-  const baseUrl =
-    "https://raw.githubusercontent.com/koiosonline/literature/main";
+  const baseUrl = 'https://raw.githubusercontent.com/koiosonline/literature/main';
   const world = props.world;
   const worldLevel = props.worldLevel;
   const article = props.article;
 
   try {
-    const fetchLiteratureFile = await fetch(
-      `${baseUrl}/${world}/${worldLevel}/${article}`
-    );
+    const fetchLiteratureFile = await fetch(`${baseUrl}/${world}/${worldLevel}/${article}`);
 
     if (fetchLiteratureFile.ok) {
       return await fetchLiteratureFile.text();
@@ -40,12 +37,16 @@ export const getLiterature = async (props: getLiteratureProps) => {
 export const getDiscordProfile = async (discordUsername: string) => {
   const baseUrl = process.env.REACT_APP_DISCORD_LEVELS;
 
-  try {
-    const getDiscordProfileData = await fetch(`${baseUrl + discordUsername}`);
-    const discordProfileData = await getDiscordProfileData.json();
-    return discordProfileData;
-  } catch (e) {
-    console.log(e);
-    return e; 
+  if (discordUsername) {
+    try {
+      const getDiscordProfileData = await fetch(`${baseUrl + discordUsername}`);
+      const discordProfileData = await getDiscordProfileData.json();
+      return discordProfileData[0];
+    } catch (e) {
+      console.log(e);
+      return e;
+    }
   }
+
+  return undefined;
 };
