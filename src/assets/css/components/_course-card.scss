@@ -1,0 +1,79 @@
+.course-card {
+    display: flex;
+    flex-direction: column;
+    width: 19em;
+    padding: 1em 1em 2em;
+    border-radius: 20px;
+    box-shadow: 0px 0px 21px -10px rgba(110, 110, 110, 0.5);
+    transition: all 0.2s ease;
+    margin-bottom: 2em;
+    background-color: white;
+    text-decoration: none;
+
+    @include for-size($mobile, $desktop) {
+      width: 19em;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 21px -10px rgba(110, 110, 110, 1);
+      transform: translateY(-0.5em);
+    }
+
+    &__img {
+      width: 10em;
+      height: 10em;
+      margin: auto;
+    }
+
+    &__heading {
+      flex-grow: 1;
+    }
+
+    &__title {
+      margin: 1rem 0 0.5em;
+      color: $color-koios-dark-grey;
+    }
+
+    .meta-data {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1.5em;
+
+      &__label {
+        background-color: $color-13;
+        color: $color-14;
+        font-size: 12px;
+        border-radius: 4px;
+        vertical-align: baseline;
+        padding: 2px 10px;
+        font-weight: bold;
+        margin-right: 1em;
+
+        &--duration {
+          display: flex;
+          flex-direction: row;
+
+          .icon {
+            align-self: center;
+            margin-right: 0.5em;
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+          }
+        }
+      }
+    }
+
+    &__description {
+      max-height: 6.5em;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: $color-koios-dark-grey;
+      
+      @include for-size($desktop) {
+        max-height: 6.2em;
+      }
+    }
+}

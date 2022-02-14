@@ -1,5 +1,5 @@
 import worldsData from "../assets/data/courseinfo.json";
-import Card from "../components/Card";
+import CourseCard from "../components/CourseCard";
 import Button from "../components/Button";
 import store from "store";
 
@@ -27,9 +27,9 @@ export const Worlds = () => {
           link={"/worlds/" + continueLearning.world + "/" + continueLearning.level + continueLearning.video}
         />
       )}
-      <div className="cardContainer">
+      <div className="card-container">
         {Object.keys(filtered).map((data, i) => (
-          <Card
+          <CourseCard
             key={i}
             image={worldsData[data].image}
             title={worldsData[data].course}
@@ -37,6 +37,7 @@ export const Worlds = () => {
             linkTitle="Enter world"
             linkUrl={worldsData[data].link}
             duration={worldsData[data].duration}
+            external={worldsData[data].external}
           />
         ))}
       </div>
