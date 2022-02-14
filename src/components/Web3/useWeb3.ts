@@ -54,7 +54,6 @@ export const useWeb3 = () => {
         discordUsername,
         discordProfile
       );
-      console.log(userProfile);
       setUserAccount(userProfile);
     } catch (e) {
       console.log(e);
