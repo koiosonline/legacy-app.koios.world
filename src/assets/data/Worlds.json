@@ -1,6 +1,7 @@
 [
   {
     "course": "Blockchain Technology",
+    "logo": "/images/worlds/blockchain.svg",
     "url": "blockchain",
     "description": "This course encompasses Blockchain Technology. Whether you are an absolute beginner or a professional, this course has something for you. Further information on the level of each course can be found below. Select your course and get educated on this super exciting topic!",
     "quiz": "QmXsnYGKXxrAKiZKQ6AHtiwJq19xQoav9ea5Fs6tmB7xtU",
@@ -99,7 +100,7 @@
           },
           {
             "name": "Jamie Jansen",
-            "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D03AQFuxf2ASN9pyA/profile-displayphoto-shrink_200_200/0/1580551129552?e=1635379200&v=beta&t=bk-lrt4kbXck9N-zI1IwNM074aaVOCUWfCZKaVrX7S4",
+            "imageUrl": "https://cdn.discordapp.com/avatars/452760677418008617/e4e5eb6252c6d4a3af5d2cfed80941f1.webp?size=160",
             "description": "Gamified (digital) Education | DLT & DeFi Lecturer & Researcher",
             "twitterLink": "https://twitter.com/JamieJansen333",
             "twitterHandle": "@JamieJansen333",
@@ -111,6 +112,7 @@
             "imageUrl": "https://cdn.discordapp.com/avatars/801485039611150416/b091019dd6f35c6fe690480eb7992d53.png?size=256",
             "description": "Coordinator Koios minors",
             "linkedinLink": "https://linkedin.com/in/malva-ahmed",
+            "linkedinHandle": "Malva Ahmed",
             "twitterLink": "",
             "twitterHandle": "",
             "discordLink": "https://discord.com/users/801485039611150416",
@@ -118,7 +120,7 @@
           },
           {
             "name": "Jordi Jansen",
-            "imageUrl": "https://www.bspd.nl/sites/default/files/Jordi%20Jansen.PNG",
+            "imageUrl": "https://cdn.discordapp.com/attachments/872750966926110720/942862309360037898/Garrison.jpg",
             "description": "Researcher combining Education, DeFi and Web3",
             "twitterLink": "https://www.twitter.com/jordijansen101",
             "twitterHandle": "@jordijansen101",
@@ -131,6 +133,7 @@
   },
   {
     "course": "Trading Digital & Financial Assets",
+    "logo": "/images/worlds/trading.svg",
     "url": "tdfa01",
     "description": "Learn everything about investing and trading in traditional and digital asset (crypto) markets. Everything from Fundamental to technical analysis to risk management and trading/investing psychology. From Amazon to Gold and from Bitcoin to Decentralized Finance (DeFi)",
     "quickLinks": [
@@ -213,6 +216,7 @@
             "imageUrl": "https://cdn.discordapp.com/avatars/801485039611150416/b091019dd6f35c6fe690480eb7992d53.png?size=256",
             "description": "Coordinator minor",
             "linkedinLink": "https://linkedin.com/in/malva-ahmed",
+            "linkedinHandle": "Malva Ahmed",
             "twitterLink": "",
             "twitterHandle": "",
             "discordLink": "https://discord.com/users/801485039611150416",
@@ -220,7 +224,7 @@
           },
           {
             "name": "Ricardo Eradus",
-            "imageUrl": "https://media-exp1.licdn.com/dms/image/C5603AQG-ZrRkvfq5Pg/profile-displayphoto-shrink_200_200/0/1599399278857?e=1635379200&v=beta&t=QPxadx36MObXXc91ZAY2SgS3UduweB0Y70kDFb6kQm8",
+            "imageUrl": "https://cdn.discordapp.com/avatars/353455876247650305/d88091629b4e3d9a79ef9289d8cf84c5.webp?size=160",
             "description": "Co-initiator Koios & lecturer TDFA/FIT",
             "twitterLink": "https://twitter.com/tdfatweets",
             "twitterHandle": "@tdfatweets",
@@ -229,7 +233,7 @@
           },
           {
             "name": "Jordi Jansen",
-            "imageUrl": "https://www.bspd.nl/sites/default/files/Jordi%20Jansen.PNG",
+            "imageUrl": "https://cdn.discordapp.com/attachments/872750966926110720/942862309360037898/Garrison.jpg",
             "description": "Researcher combining Education, DeFi and Web3",
             "twitterLink": "https://www.twitter.com/jordijansen101",
             "twitterHandle": "@jordijansen101",
@@ -242,6 +246,7 @@
   },
   {
     "course": "Data Science for Business Improvement",
+    "logo": "/images/worlds/python.svg",
     "url": "datascience01",
     "description": "In the minor, students experience the full cycle of a data project: identification of the information need, finding available data sources and improving the quality of that data. Next phase: tools like Python and statistical models help to do advanced analysis (applying Machine Learning algorithms) on the data and create visual reports with data driven recommendations. Legal and ethical aspects of data projects are also covered in the program.",
     "quickLinks": [
@@ -297,6 +302,7 @@
   },
   {
     "course": "Programming Dapps",
+    "logo": "/images/worlds/dapps.svg",
     "url": "programmingdapps01",
     "description": "The course “Programming Dapps” teaches students to program distributed applications (DAPPS) for the public Ethereum blockchain.",
     "content": [

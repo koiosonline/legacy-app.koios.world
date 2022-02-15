@@ -1,0 +1,125 @@
+.authenticated {
+  max-width: 1080px;
+  padding-top: 20px;
+
+  .username {
+    margin-top: 20px;
+    text-align: center;
+    font-family: $font-family-headings;
+    font-size: 24px;
+  }
+
+  .profile-info {
+    margin-top: 15px;
+    border-top: 1px solid $color-08;
+
+    &__list-item {
+      display: flex;
+      align-items: center;
+      margin: 15px 10px 0;
+      color: $color-11;
+      font-weight: bold;
+    }
+
+    &__icon,
+    &__img {
+      width: 20px;
+      margin-right: 10px;
+      fill: $color-10;
+    }
+
+    .icon--discord {
+      margin-bottom: -1px;
+    }
+
+    &__label {
+      color: $color-10;
+      margin-right: 10px;
+      font-weight: normal;
+    }
+  }
+
+  .metablocks {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include for-size($desktop) {
+      width: fit-content;
+      margin-left: auto;
+      justify-content: unset;
+    }
+
+    .metablock {
+      width: 50%;
+      text-align: center;
+
+      @include for-size(400px) {
+        width: 50%;
+      }
+
+      @include for-size($desktop) {
+        width: unset;
+        text-align: left;
+      }
+    }
+  }
+
+  .tabs {
+    margin-top: 90px;
+
+    &-options {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #b8add2;
+      color: #b8add2;
+      position: relative;
+
+      @include for-size(600px) {
+        flex-direction: row;
+        padding-bottom: 0;
+      }
+    }
+
+    &-title {
+      margin: 0 20px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 10px 5px;
+      position: relative;
+      transition: transform 0.25s;
+
+      &::after {
+        content: '';
+        top: 10%;
+        left: -20px;
+        position: absolute;
+        background: $color-05;
+        width: 4px;
+        height: 80%;
+        border-radius: 0 2px 2px 0;
+        transition: transform 0.5s;
+        transform: scale(0);
+        transform-origin: center;
+
+        @include for-size(600px) {
+          top: unset;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 4px;
+          border-radius: 2px 2px 0 0;
+        }
+      }
+      &--active {
+        color: $color-06;
+
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

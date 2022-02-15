@@ -1,12 +1,12 @@
-import worldsData from "../assets/data/courseinfo.json";
-import CourseCard from "../components/CourseCard";
-import Button from "../components/Button";
-import store from "store";
+import worldsData from '../assets/data/courseinfo.json';
+import CourseCard from '../components/CourseCard';
+import store from 'store';
+import { Link } from 'react-router-dom';
 
 export const Worlds = () => {
   const data = worldsData;
-  const allowed = ["blockchain", "tdfa01", "datascience01", "programmingdapps01", "introduction"];
-  const continueLearning = store.get("lastWatched");
+  const allowed = ['blockchain', 'tdfa01', 'datascience01', 'programmingdapps01', 'introduction'];
+  const continueLearning = store.get('lastWatched');
 
   const filtered = Object.keys(data)
     .filter((key) => allowed.includes(key))
@@ -17,15 +17,17 @@ export const Worlds = () => {
 
   return (
     <div className="container worlds">
-      <h1>Select a world</h1>
-      <p className={"worlds__subtitle"}>
+      <h1 className='worlds__title'>Select a world</h1>
+      <p className={'worlds__subtitle'}>
         Discover new worlds and expand your knowledge about different topics or continue where you left off
       </p>
       {continueLearning && (
-        <Button
-          title={"Continue Learning"}
-          link={"/worlds/" + continueLearning.world + "/" + continueLearning.level + continueLearning.video}
-        />
+        <Link
+          to={'/worlds/' + continueLearning.world + '/' + continueLearning.level + continueLearning.video}
+          className="btn btn-primary btn--fs-16"
+        >
+          <p>Continue Learning</p>
+        </Link>
       )}
       <div className="card-container">
         {Object.keys(filtered).map((data, i) => (

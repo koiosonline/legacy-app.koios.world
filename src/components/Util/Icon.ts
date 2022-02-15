@@ -8,6 +8,7 @@ type IconProps = {
 };
 
 export const Icon = ({ type, className, onClick }: IconProps) => {
+
   if (SvgSprite[type]) {
     return cloneElement(SvgSprite[type], { className: `icon icon-${type} ${className}`, onClick });
   }
