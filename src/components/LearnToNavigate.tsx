@@ -4,6 +4,7 @@ import store from "store";
 
 const LearnToNavigate = (props) => {
   const continueLearning = store.get("lastWatched");
+  console.log(props);
 
   return (
     <div className={"learnToNavigate-container"}>
@@ -22,7 +23,7 @@ const LearnToNavigate = (props) => {
         </div>
       </div>
       <div className={"image"}>
-        <img src={"/images/blockchain.svg"} alt={"blockchain"} />
+        <img src={props.world.logo} alt="A logo that represents the course and world" />
       </div>
     </div>
   );

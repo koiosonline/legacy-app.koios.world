@@ -1,6 +1,7 @@
 [
   {
     "course": "Blockchain Technology",
+    "logo": "/images/worlds/blockchain.svg",
     "url": "blockchain",
     "description": "This course encompasses Blockchain Technology. Whether you are an absolute beginner or a professional, this course has something for you. Further information on the level of each course can be found below. Select your course and get educated on this super exciting topic!",
     "quiz": "QmXsnYGKXxrAKiZKQ6AHtiwJq19xQoav9ea5Fs6tmB7xtU",
@@ -131,6 +132,7 @@
   },
   {
     "course": "Trading Digital & Financial Assets",
+    "logo": "/images/worlds/trading.svg",
     "url": "tdfa01",
     "description": "Learn everything about investing and trading in traditional and digital asset (crypto) markets. Everything from Fundamental to technical analysis to risk management and trading/investing psychology. From Amazon to Gold and from Bitcoin to Decentralized Finance (DeFi)",
     "quickLinks": [
@@ -242,6 +244,7 @@
   },
   {
     "course": "Data Science for Business Improvement",
+    "logo": "/images/worlds/python.svg",
     "url": "datascience01",
     "description": "In the minor, students experience the full cycle of a data project: identification of the information need, finding available data sources and improving the quality of that data. Next phase: tools like Python and statistical models help to do advanced analysis (applying Machine Learning algorithms) on the data and create visual reports with data driven recommendations. Legal and ethical aspects of data projects are also covered in the program.",
     "quickLinks": [
@@ -297,6 +300,7 @@
   },
   {
     "course": "Programming Dapps",
+    "logo": "/images/worlds/dapps.svg",
     "url": "programmingdapps01",
     "description": "The course “Programming Dapps” teaches students to program distributed applications (DAPPS) for the public Ethereum blockchain.",
     "content": [
