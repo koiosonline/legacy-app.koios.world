@@ -33,7 +33,7 @@ export const WorldDetail = () => {
   const history = useHistory();
 
   const showFirstVideo = (firstVideo: string) => {
-    history.push(
+    history.replace(
       `${worldDetail}/${Slugify(firstVideo, {
         lowerCase: true,
         replaceAmpersand: "and",

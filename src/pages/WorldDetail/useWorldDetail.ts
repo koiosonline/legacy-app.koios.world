@@ -1,17 +1,17 @@
-import { getVideoInfo } from "../../api/Api";
-import { Slugify } from "../../components/Util/Slugify";
+import { getVideoInfo } from '../../api/Api';
+import { Slugify } from '../../components/Util/Slugify';
 
-export const FindCourseDetail = async (hash, videoInfoAddress) => {
+export const FindCourseDetail = async (videoSlug, videoInfoAddress) => {
   const data = await getVideoInfo(videoInfoAddress);
 
-  if (hash) {
-    const slugifiedHash = Slugify(hash);
+  if (videoSlug) {
+    const slugifiedHash = Slugify(videoSlug);
     const video = data.videos.find(
       (v) =>
         Slugify(v.title, {
           lowerCase: true,
-          replaceDot: "-",
-          replaceAmpersand: "and",
+          replaceDot: '-',
+          replaceAmpersand: 'and',
         }) === slugifiedHash && !v.chapter
     );
     const checkIsVideo = video ? video : data.videos.find((v) => !v.chapter);
