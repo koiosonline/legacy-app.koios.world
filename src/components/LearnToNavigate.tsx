@@ -4,7 +4,6 @@ import store from "store";
 
 const LearnToNavigate = (props) => {
   const continueLearning = store.get("lastWatched");
-  console.log(props);
 
   return (
     <div className={"learnToNavigate-container"}>
