@@ -15,7 +15,7 @@
   }
 
   &__subtitle {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     font-size: 1.4em;
     text-align: center;
@@ -24,8 +24,23 @@
     color: $color-text;
   }
 
-  .btn {
-    display: block;
-    margin: 0 auto;
+  .card-container {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fill, 19em);
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 6em auto 0;
+    max-width: 1080px;
+
+    @include for-size($mobile, $desktop) {
+      padding: 0 2rem;
+    }
   }
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
 }

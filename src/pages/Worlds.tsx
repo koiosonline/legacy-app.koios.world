@@ -1,5 +1,5 @@
 import worldsData from '../assets/data/courseinfo.json';
-import Card from '../components/Card';
+import CourseCard from '../components/CourseCard';
 import store from 'store';
 import { Link } from 'react-router-dom';
 
@@ -29,9 +29,9 @@ export const Worlds = () => {
           <p>Continue Learning</p>
         </Link>
       )}
-      <div className="cardContainer">
+      <div className="card-container">
         {Object.keys(filtered).map((data, i) => (
-          <Card
+          <CourseCard
             key={i}
             image={worldsData[data].image}
             title={worldsData[data].course}
@@ -39,6 +39,7 @@ export const Worlds = () => {
             linkTitle="Enter world"
             linkUrl={worldsData[data].link}
             duration={worldsData[data].duration}
+            external={worldsData[data].external}
           />
         ))}
       </div>
