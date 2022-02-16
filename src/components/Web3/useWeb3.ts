@@ -8,6 +8,8 @@ import { getDecentralizedProfile } from '../UserProfile/getDecentralizedProfile'
 import { mapUserData } from '../UserProfile/mapUserData';
 import { getDiscordProfile } from '../../api/Api';
 import { getTitanTokenCount } from '../UserProfile/getTitanTokenCount';
+import { AutoNetworkSwitch } from './AutoNetworkSwitch';
+
 
 export const useWeb3 = () => {
   const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider } =
@@ -19,6 +21,7 @@ export const useWeb3 = () => {
       setAuthError(false);
       setIsAuthenticating(true);
       const provider = await web3Modal.connect();
+      await AutoNetworkSwitch(provider);
       setProvider(provider);
       const accountAddress = await getUserAccount(provider);
       await getDIDAuthenticated(accountAddress, provider);

@@ -22,21 +22,15 @@ export const Unauthenticated = () => {
         <ProfileBanner />
 
         <div className="unauthenticated__content-wrapper">
-          <h1 className="unauthenticated__title">
-            You haven't setup your profile yet!
-          </h1>
+          <h1 className="unauthenticated__title">You haven't setup your profile yet!</h1>
 
           <p className="unauthenticated__description">
-            Please connect your wallet to track your progress, earn Titan-tokens
-            while learning and grow a collection of NFT’s within the universe of
-            Koios.
+            Please connect your wallet to track your progress, earn Titan-tokens while learning and grow a collection of
+            NFT’s within the universe of Koios.
           </p>
 
           <div className="unauthenticated__c2a">
-            <button
-              onClick={() => connectWallet()}
-              className="btn btn-gradient btn--fs-16"
-            >
+            <button onClick={() => connectWallet()} className="btn btn-gradient btn--fs-16">
               {isAuthenticating && !authError && <Icon type="spinner" />}
               Connect wallet
             </button>
@@ -48,12 +42,10 @@ export const Unauthenticated = () => {
 
           {authError && (
             <div className="unauthenticated__error-msg">
-              Hey space traveller! We're unable to connect your wallet. Please
-              try again or&nbsp;
+              Hey Titan! We're unable to connect your wallet. Please try again or&nbsp;
               <a href={contactLink} target="_blank" rel="noreferrer">
-                get in touch with us
+                get in touch with us.
               </a>
-              .
             </div>
           )}
         </div>
