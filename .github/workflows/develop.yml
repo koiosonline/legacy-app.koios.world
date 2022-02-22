@@ -11,11 +11,6 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    inputs:
-        job:
-          description: 'Manually run deploy job.'
-          required: true
-          default: 'deploy_job'
 
 env:
   REACT_APP_DISCORD_LEVELS: ${{ secrets.REACT_APP_DISCORD_LEVELS }}
@@ -24,7 +19,6 @@ jobs:
   deploy_job:
     runs-on: ubuntu-latest
     name: build&deploy
-    if: github.event.pull_request.merged == true
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
