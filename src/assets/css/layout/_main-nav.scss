@@ -121,22 +121,12 @@
     border-radius: $radius;
     font-family: inherit;
     white-space: nowrap;
-    color: #fff;
     font-weight: bold;
     font-size: 16px;
-    background-image: linear-gradient(to right, #ff0bac, #2f12dc);
-    background-size: 100%;
     cursor: pointer;
     transition: all 0.5s ease;
     text-align: center;
     min-width: 10em;
-    border: 2px solid white;
-
-    &:hover {
-      background-image: linear-gradient(to right, #ff0bac, #2f12dc);
-      background-size: 200%;
-      background-position: 0% 50%;
-    }
 
     &--disconnect {
       background: #fff;

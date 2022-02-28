@@ -9,6 +9,7 @@ import { web3Modal } from '../../Web3/WalletProvider';
 import { UserContext } from '../../../Context/UserContext';
 import { useWeb3 } from '../../../components/Web3/useWeb3';
 import avatarPlaceholder from '../../../assets/images/placeholders/avatar-placeholder.png';
+import { AuthContext } from '../../../Context/AuthContext';
 
 export const MainNav = () => {
   const { userAccount } = useContext(UserContext);
@@ -16,6 +17,7 @@ export const MainNav = () => {
   const { width } = useSizes();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [disconnectButtonText, setDisconnectButtonText] = useState<string>('loading');
+  const { isAuthenticating, authError } = useContext(AuthContext);
 
   const isMobile = width < 1200;
 
@@ -66,7 +68,8 @@ export const MainNav = () => {
         </Link>
 
         {!userAccount && (
-          <button className="main-nav__wallet" onClick={connectWallet}>
+          <button className="main-nav__wallet btn btn-gradient btn--fs-16" onClick={() => connectWallet()}>
+            {isAuthenticating && !authError && <Icon type="spinner" />}
             Connect wallet
           </button>
         )}

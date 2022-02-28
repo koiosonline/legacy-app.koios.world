@@ -36,11 +36,6 @@
 
     .btn {
       margin: 5px 15px;
-
-      .icon {
-        margin-right: 10px;
-        animation: rotate 1.5s linear infinite; 
-      }
     }
   }
 
@@ -58,9 +53,5 @@
         color: lighten($color-red, 20);
       }
     }
-  }
-
-  @keyframes rotate{
-    to{ transform: rotate(360deg); }
   }
 }
