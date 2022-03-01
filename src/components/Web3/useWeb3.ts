@@ -47,9 +47,10 @@ export const useWeb3 = () => {
   const getUserProfile = async (accountAddress: string) => {
     try {
       const decentralizedProfile = await getDecentralizedProfile(accountAddress);
+      console.log(decentralizedProfile);
       const titanTokenCount = await getTitanTokenCount(accountAddress);
-      const discordUsername = decentralizedProfile?.url;
-      const discordProfile = await getDiscordProfile(discordUsername);
+      const discordUsername = " Fiera";
+      const discordProfile = undefined;
       const userProfile = await mapUserData(
         accountAddress,
         decentralizedProfile,

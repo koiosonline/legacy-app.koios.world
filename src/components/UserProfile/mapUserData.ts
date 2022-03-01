@@ -17,9 +17,9 @@ const discordProfileData = (discordUsername, discordProfile) => {
       messageCount: discordProfile?.message_count,
       discordRank: getDiscordRank,
       xp: {
-        currentXP: discordProfile?.detailed_xp[0] || 0,
-        necessaryXP: discordProfile?.detailed_xp[1] || 0,
-        totalXP: discordProfile?.detailed_xp[2] || 0,
+        currentXP: discordProfile?.detailed_xp[0],
+        necessaryXP: discordProfile?.detailed_xp[1],
+        totalXP: discordProfile?.detailed_xp[2],
       },
     };
   }

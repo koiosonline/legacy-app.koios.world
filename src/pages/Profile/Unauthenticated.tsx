@@ -5,6 +5,7 @@ import { useWeb3 } from '../../components/Web3/useWeb3';
 import { ProfileBanner } from '../../components/UserProfile/ProfileBanner';
 import { AuthContext } from '../../Context/AuthContext';
 import { Icon } from '../../components/Util/Icon';
+import { noop } from '../../components/Util/noop';
 
 export const Unauthenticated = () => {
   const { connectWallet } = useWeb3();
@@ -30,7 +31,7 @@ export const Unauthenticated = () => {
           </p>
 
           <div className="unauthenticated__c2a">
-            <button onClick={() => connectWallet()} className="btn btn-gradient btn--fs-16">
+            <button onClick={!isAuthenticating ? () => connectWallet() : noop} className="btn btn-gradient btn--fs-16">
               {isAuthenticating && !authError && <Icon type="spinner" />}
               Connect wallet
             </button>
