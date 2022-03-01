@@ -13,7 +13,7 @@ export type MappedDiscordProfile = {
 
 export type DiscordProfile = {
   avatar: string;
-  detailed_xp?: any;
+  detailed_xp: number[];
   discriminator: string;
   guild_id: string;
   id: string;

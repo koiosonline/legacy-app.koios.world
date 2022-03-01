@@ -10,6 +10,7 @@ import { UserContext } from '../../../Context/UserContext';
 import { useWeb3 } from '../../../components/Web3/useWeb3';
 import avatarPlaceholder from '../../../assets/images/placeholders/avatar-placeholder.png';
 import { AuthContext } from '../../../Context/AuthContext';
+import { noop } from '../../Util/noop';
 
 export const MainNav = () => {
   const { userAccount } = useContext(UserContext);
@@ -68,7 +69,10 @@ export const MainNav = () => {
         </Link>
 
         {!userAccount && (
-          <button className="main-nav__wallet btn btn-gradient btn--fs-16" onClick={() => connectWallet()}>
+          <button
+            className="main-nav__wallet btn btn-gradient btn--fs-16"
+            onClick={!isAuthenticating ? () => connectWallet() : noop}
+          >
             {isAuthenticating && !authError && <Icon type="spinner" />}
             Connect wallet
           </button>
