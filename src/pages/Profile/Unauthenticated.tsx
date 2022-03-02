@@ -36,9 +36,9 @@ export const Unauthenticated = () => {
               Connect wallet
             </button>
             or
-            <button onClick={modalState} className="btn btn-link btn--fs-16">
+            <span onClick={modalState} className="btn btn-link btn--fs-16">
               create a wallet
-            </button>
+            </span>
           </div>
 
           {authError && (

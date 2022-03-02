@@ -1,8 +1,8 @@
-import Ceramic from "@ceramicnetwork/http-client";
-import { IDX } from "@ceramicstudio/idx";
-import { EthereumAuthProvider, ThreeIdConnect } from "@3id/connect";
-import { DID } from "dids";
-import ThreeIdResolver from "@ceramicnetwork/3id-did-resolver";
+import Ceramic from '@ceramicnetwork/http-client';
+import { IDX } from '@ceramicstudio/idx';
+import { EthereumAuthProvider, ThreeIdConnect } from '@3id/connect';
+import { DID } from 'dids';
+import ThreeIdResolver from '@ceramicnetwork/3id-did-resolver';
 
 declare global {
   interface Window {
@@ -13,8 +13,9 @@ declare global {
 }
 
 export const getDIDAuthenticated = async (accountAddress: string, provider: any) => {
-  const CERAMIC_URL = process.env.CERAMIC_API || "https://gateway-clay.ceramic.network";
-  const isAuthenticated = localStorage.getItem(accountAddress + "authenticated") === "authenticated";
+  const CERAMIC_URL = 'https://gateway-clay.ceramic.network' || 'https://ceramic-clay.3boxlabs.com';
+
+  const isAuthenticated = localStorage.getItem(accountAddress + 'authenticated') === 'authenticated';
 
   if (!isAuthenticated) {
     const ethProvider = provider;
@@ -35,7 +36,7 @@ export const getDIDAuthenticated = async (accountAddress: string, provider: any)
     window.idx = new IDX({ ceramic });
     window.ceramic = ceramic;
     window.did = ceramic.did.id;
-    localStorage.setItem(accountAddress + "authenticated", "authenticated");
+    localStorage.setItem(accountAddress + 'authenticated', 'authenticated');
   } else {
     const ceramic = new Ceramic(CERAMIC_URL);
     window.idx = new IDX({ ceramic });
