@@ -10,7 +10,6 @@ import { getDiscordProfile } from '../../api/Api';
 import { getTitanTokenCount } from '../UserProfile/getTitanTokenCount';
 import { AutoNetworkSwitch } from './AutoNetworkSwitch';
 
-
 export const useWeb3 = () => {
   const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider } =
     useContext(AuthContext);
@@ -47,7 +46,6 @@ export const useWeb3 = () => {
   const getUserProfile = async (accountAddress: string) => {
     try {
       const decentralizedProfile = await getDecentralizedProfile(accountAddress);
-      console.log(decentralizedProfile);
       const titanTokenCount = await getTitanTokenCount(accountAddress);
       const discordUsername = decentralizedProfile?.url;
       const discordProfile = await getDiscordProfile(discordUsername);
