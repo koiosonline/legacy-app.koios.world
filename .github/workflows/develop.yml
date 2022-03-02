@@ -14,7 +14,7 @@ on:
 
 env:
   REACT_APP_DISCORD_LEVELS: ${{ secrets.REACT_APP_DISCORD_LEVELS }}
-
+  
 jobs:
   deploy_job:
     runs-on: ubuntu-latest
