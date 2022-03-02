@@ -1,4 +1,3 @@
-/* eslint @typescript-eslint/no-var-requires: "off" */
 import { create } from 'ipfs-http-client';
 
 const ipfs = create({
@@ -8,48 +7,60 @@ const ipfs = create({
   apiPath: '/api/v0',
 });
 
-const ipfsprefix1 = "https://ipfs.io/ipfs/";
-const ipfsprefix2 = "ipfs://ipfs/";
-const ipfsprefix3 = "ipfs://";
+const ipfsPrefix1 = 'https://ipfs.io/ipfs/';
+const ipfsPrefix2 = 'ipfs://ipfs/';
+const ipfsPrefix3 = 'ipfs://';
 
-const stripipfsprefix = (cid) => {
-  if (cid.includes(ipfsprefix1)) {
-    cid = cid.replace(ipfsprefix1, ""); // just keep the cid
+const stripIpfsPrefix = (cid: string) => {
+  if (cid.includes(ipfsPrefix1)) {
+    return cid.replace(ipfsPrefix1, '');
   }
-  if (cid.includes(ipfsprefix2)) {
-    cid = cid.replace(ipfsprefix2, ""); // just keep the cid
+  if (cid.includes(ipfsPrefix2)) {
+    return cid.replace(ipfsPrefix2, '');
   }
-  if (cid.includes(ipfsprefix3)) {
-    cid = cid.replace(ipfsprefix3, ""); // just keep the cid
-  }
-  return cid;
+  if (cid.includes(ipfsPrefix3)) {
+    return cid.replace(ipfsPrefix3, '');
+  } else return cid;
 };
 
-export const fetchImage = async (hash: string) => {
-  hash = stripipfsprefix(hash);
+export const getCidImage = async (hash: string) => {
+  if (hash) {
+    try {
+      const cid = stripIpfsPrefix(hash);
+      const ui8arr = [];
 
-  const ui8arr: any = [];
-  for await (const result of ipfs.cat(hash)) {
-    ui8arr.push(result);
+      for await (const result of ipfs.cat(cid)) {
+        ui8arr.push(result);
+      }
+      const blob = new Blob(ui8arr, { type: 'image/jpeg' });
+      const url = URL.createObjectURL(blob);
+      return url;
+    } catch (e) {
+      console.log(e);
+    }
   }
-  const blob = new Blob(ui8arr, { type: "image/jpeg" });
-  const url = URL.createObjectURL(blob);
-  return url;
+  return undefined;
 };
 
 export const fetchJson = async (hash: string) => {
-  hash = stripipfsprefix(hash);
+  if (hash) {
+    try {
+      let str = '';
+      hash = stripIpfsPrefix(hash);
 
-  let str = "";
+      for await (const result of ipfs.cat(hash)) {
+        str += String.fromCharCode.apply(null, result);
+      }
 
-  for await (const result of ipfs.cat(hash)) {
-    str += String.fromCharCode.apply(null, result);
+      if (str === '') {
+        return undefined;
+      }
+
+      const json = JSON.parse(str);
+      return json;
+    } catch (e) {
+      console.log(e);
+    }
   }
-
-  if (str === "") {
-    return undefined;
-  }
-
-  const json = JSON.parse(str);
-  return json;
+  return undefined;
 };

@@ -12,10 +12,10 @@
     "description": "A quick introduction about the Koios platform itself and how you can use it to learn, earn and/or connect with a community to take on open source projects.",
     "goal": "",
     "start": "now",
-    "image": "/images/world_introduction.svg",
+    "image": "/images/worlds/world_introduction.svg",
     "community": "",
     "communityinvite": "",
-    "link": "/explanation"
+    "link": "#/explanation"
   },
   "blockchain": {
     "course": "Blockchain Technology",
@@ -30,10 +30,10 @@
     "description": "This course encompasses Blockchain Technology. Whether you are an absolute beginner or a professional, this course has something for you. Further information on the level of each course can be found below. Select your course and get educated on this super exciting topic!",
     "goal": "Solidity IPFS",
     "start": "now",
-    "image": "/images/blockchain.svg",
+    "image": "/images/worlds/blockchain.svg",
     "community": "https://discord.com/invite/SBpZhEDHFR",
     "communityinvite": "https://discord.com/invite/SBpZhEDHFR",
-    "link": "/worlds/blockchain"
+    "link": "#/worlds/blockchain"
   },
   "tdfa01": {
     "course": "Trading Digital & Financial Assets",
@@ -44,11 +44,11 @@
     "duration": "16707",
     "slides": "QmRGWvHn3wksXEf2s8Cod3Kw9TWzDXb84MWAZEADPKwz3A",
     "quizinfo": "QmXsnYGKXxrAKiZKQ6AHtiwJq19xQoav9ea5Fs6tmB7xtU",
-    "image": "/images/trading.svg",
+    "image": "/images/worlds/trading.svg",
     "community": "https://discord.com/invite/SBpZhEDHFR",
     "communityinvite": "https://discord.com/invite/SBpZhEDHFR",
     "description": "Learn everything about investing and trading in traditional and digital asset (crypto) markets. Everything from Fundamental to technical analysis to risk management and trading/investing psychology. From Amazon to Gold and from Bitcoin to Decentralized Finance (DeFi)",
-    "link": "/worlds/tdfa01"
+    "link": "#/worlds/tdfa01"
   },
   "bclevel01": {
     "course": "Mastering Blockchain",
@@ -105,6 +105,7 @@
   },
   "datascience01": {
     "course": "Datascience & Python",
+    "external": true,
     "courselevel": "Introduction to Python",
     "level": "intermediate",
     "contributer": "Leon",
@@ -112,13 +113,13 @@
     "description": "In the minor, students experience the full cycle of a data project: identification of the information need, finding available data sources and improving the quality of that data. Next phase: tools like Python and statistical models help to do advanced analysis (applying Machine Learning algorithms) on the data and create visual reports with data driven recommendations. Legal and ethical aspects of data projects are also covered in the program.",
     "goal": "TBA",
     "start": "Soon",
-    "image": "/images/python.svg",
+    "image": "/images/worlds/python.svg",
     "videoinfo": "QmQoQk5zLkWjhTW8kAQRkgx65i5he1cq4oESEd6XyGmaR3",
     "duration": "10464",
     "slides":	"QmZDDygn5qGus5wGfu7oskjVQP4JLrAL4sMbeg1HijmUQu",
     "community":"https://discord.com/invite/SBpZhEDHFR",
     "communityinvite":"https://discord.com/invite/SBpZhEDHFR",
-    "link": "/worlds/datascience01"
+    "link": "https://moodle.koios.world/"
   },
   "security01": {
     "course": "Security Essentials",
@@ -151,10 +152,10 @@
     "fullDescription": "The course “Programming Dapps” teaches students to program distributed applications (DAPPS) for the public Ethereum blockchain. After explaining the architecture of blockchain applications, the programming language “Solidity” is explained. With this student practice to create a smart contract, with several dedicated tools. They also learn how to access the smart contracts from JavaScript programs and websites; both from pc’s and from mobile phones. The installation and management of blockchain software is also part of the course. Additionally programming patterns, security, key management and best practices are learned. This also includes creating unit tests for smart contracts. Building blocks like tokens, the Ethereum name services, IPFS (distributed storage), multisig wallets are also an essential element of the course. It is important to be able to program (in any programming language). JavaScript experience is a big help. Also you need a (fairly capable) laptop on which all the tools are installed. After every theory lesson the student have to make practical assignment to get experience with the Ethereum blockchain and tools.",
     "goal": "Solidity IPFS",
     "start": "now",
-    "image": "/images/Dapps.svg",
+    "image": "/images/worlds/dapps.svg",
     "community": "https://discord.com/invite/SBpZhEDHFR",
     "communityinvite": "https://discord.com/invite/SBpZhEDHFR",
-    "link": "/worlds/programmingdapps01"
+    "link": "#/worlds/programmingdapps01"
   },
   "testing01": {
     "course": "Testing the viewer",

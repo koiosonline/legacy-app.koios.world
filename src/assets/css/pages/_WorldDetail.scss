@@ -67,7 +67,7 @@
         }
         h2 {
           color: white;
-          font-family: "Source Sans Pro", sans-serif;
+          font-family: 'Source Sans Pro', sans-serif;
           font-weight: 600;
           font-size: 1.125em;
           margin: 0.5em 0;
@@ -233,6 +233,7 @@
         text-decoration: none;
         color: #262626;
         border-radius: 10px;
+        background-color: #fff;
 
         &:hover {
           color: $color-koios-blue;

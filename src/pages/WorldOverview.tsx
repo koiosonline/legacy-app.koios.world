@@ -29,10 +29,10 @@ const WorldOverview = () => {
 
   return (
     <>
-      <div className={"worldOverviewHeader"}>
-        <div className={"worldOverviewHeader__titleRow"}>
-          <h1 className={"worldOverviewHeader__titleRow__title"}>{world?.course}</h1>
-          <p className={"worldOverviewHeader__titleRow__description"}>{world?.description}</p>
+      <div className={"world-overview-header"}>
+        <div className={"world-overview-header__title-row"}>
+          <h1 className={"world-overview-header__title-row__title"}>{world?.course}</h1>
+          <p className={"world-overview-header__title-row__description"}>{world?.description}</p>
         </div>
         <div className={"smallCard-container"}>
           {cardData.map((data, index) => {
@@ -71,7 +71,7 @@ const WorldOverview = () => {
           })}
         </div>
       </div>
-      <div className={"container worldOverviewContainer"}>
+      <div className={"container world-overview-container"}>
         <div className={"feedback"}>
           <a className={"feedback__link"} href={"https://c0c6pmb4lmw.typeform.com/FeedbackButton"}>
             <p>Feedback?</p>

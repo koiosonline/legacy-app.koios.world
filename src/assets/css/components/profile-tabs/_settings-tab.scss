@@ -1,0 +1,56 @@
+.settings-tab {
+  .settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 5px 10px;
+      margin: 10px 0;
+      box-shadow: -2px 2px 4px rgb(0 0 0 / 15%);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      max-width: 200px;
+      width: 100%;
+      text-align: right;
+
+      a {
+        display: flex;
+        text-decoration: none;
+        justify-content: space-between;
+        width: 100%;
+
+        &:visited {
+          color: inherit;
+        }
+      }
+
+      &:hover {
+        color: $color-06;
+        fill: $color-06;
+        box-shadow: -2px 2px 4px rgb(0 0 0 / 30%);
+
+        a {
+          fill: inherit;
+        }
+      }
+
+      &:focus,
+      &:active {
+        background-color: #fafafa;
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

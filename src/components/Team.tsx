@@ -22,14 +22,17 @@ const Team = (props) => {
                   {memberData.linkedinLink && (
                     <a href={memberData.linkedinLink} className={"socials__link"}>
                       <Icon className={"socials__icon"} type={"linkedin"} />
+                      <p className={"socials__handle"}>{memberData.linkedinHandle}</p>
                     </a>
                   )}
+
                   {memberData.twitterLink && (
                     <a href={memberData.twitterLink} className={"socials__link"}>
                       <Icon className={"socials__icon"} type={"twitter"} />
                       <p className={"socials__handle"}>{memberData.twitterHandle}</p>
                     </a>
                   )}
+
                   {memberData.discordLink && (
                     <a href={memberData.discordLink} className={"socials__link"}>
                       <Icon className={"socials__icon"} type={"discord"} />

@@ -11,6 +11,11 @@ $color-09: #d7d7d7;
 $color-10: #bdbdbd;
 $color-11: #424242;
 $color-12: #262626;
+$color-13: #f0f5f9;
+$color-14: #657795;
+
+// 
+$color-red: red;
 
 /* Old color support */
 $color-koios-pink: $color-01;
@@ -19,7 +24,7 @@ $color-koios-dark-grey: $color-11;
 $color-text: $color-12;
 
 /* Gradients */
-$gradient-koios: linear-gradient(to right, $color-koios-pink, $color-koios-blue);
+$gradient-koios: linear-gradient(to right, $color-koios-pink 0%, $color-koios-blue 100%);
 $gradient-koios-transparent: linear-gradient(to right, rgba(255, 11, 172, 0.5), rgba(47, 18, 220, 0.5));
 $gradient-koios-transparent-02: linear-gradient(to right, rgba(255, 11, 172, 0.3), rgba(47, 18, 220, 0.3));
 $gradient-koios-transparent-03: linear-gradient(to right, rgba(255, 11, 172, 0.05), rgba(47, 18, 220, 0.05));
