@@ -1,0 +1,18 @@
+.nft-tab {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    column-gap: 15px;
+    justify-content: space-between;
+    row-gap: 20px;
+  }
+
+  &__list-item {
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 0px 21px -10px rgba(110, 110, 110, 1);
+      transform: translateY(-0.5em);
+    }
+  }
+}

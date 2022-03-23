@@ -1,0 +1,17 @@
+.card-mint {
+  background-color: $color-13;
+  color: $color-14;
+  padding: 15px;
+  border-radius: 15px;
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}

@@ -1,11 +1,11 @@
 export type CourseContentParams = {
-    worldContent: string;
-  };
-  
-export type CourseDetailParams = {
-    worldDetail: string;
-  };
+  worldContent: string;
+};
 
-  export type VideoSlugParams = {
-    videoSlug: string;
-  };
+export type CourseDetailParams = {
+  worldDetail: string;
+};
+
+export type VideoSlugParams = {
+  videoSlug: string;
+};

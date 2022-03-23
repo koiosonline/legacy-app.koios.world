@@ -37,6 +37,7 @@
 /* Components */
 @import "src/assets/css/components/course-card";
 @import "./components/profile-tabs/overview-tab";
+@import "./components/profile-tabs/nft-tab";
 @import "./components/profile-tabs/settings-tab";
 @import "src/assets/css/components/QuickLinks";
 @import "src/assets/css/components/TabInfo";
@@ -56,7 +57,8 @@
 @import "./components/metablocks";
 @import "./components/statistic-block";
 @import "./components/profile-banner";
-
+@import "./components/cards/cards";
+@import "./components/cards/card-mint";
 
 /* Font awesome */
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";

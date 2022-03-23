@@ -1,3 +1,4 @@
+import Web3 from 'web3';
 import { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthContext';
 import { UserContext } from '../../Context/UserContext';
@@ -11,8 +12,7 @@ import { getTitanTokenCount } from '../UserProfile/getTitanTokenCount';
 import { AutoNetworkSwitch } from './AutoNetworkSwitch';
 
 export const useWeb3 = () => {
-  const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider } =
-    useContext(AuthContext);
+  const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider, setWeb3 } = useContext(AuthContext);
   const { userAccount, setUserAccount } = useContext(UserContext);
 
   const connectWallet = async () => {
@@ -22,7 +22,9 @@ export const useWeb3 = () => {
       const provider = await web3Modal.connect();
       await AutoNetworkSwitch(provider);
       setProvider(provider);
-      const accountAddress = await getUserAccount(provider);
+      const web3 = new Web3(provider);
+      setWeb3(web3);
+      const accountAddress = await getUserAccount(web3);
       await getDIDAuthenticated(accountAddress, provider);
       await getUserProfile(accountAddress);
       setIsAuthenticated(true);
