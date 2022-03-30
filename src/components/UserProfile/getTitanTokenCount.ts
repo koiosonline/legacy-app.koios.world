@@ -1,6 +1,6 @@
 import { GetTokenHoldersJSON } from '../Web3/GraphQueries';
 import { fetchJson, getCidImage } from '../Web3/Ipfs';
-import titanTokenPlaceholder from '../../assets/images/placeholders/titan-token-placeholder.png';
+import titanTokenPlaceholder from '../../assets/images/placeholders/placeholder-titan-token.png';
 
 export const getTitanTokenCount = async (accountAddress: string) => {
   const tokenHolders = await GetTokenHoldersJSON();

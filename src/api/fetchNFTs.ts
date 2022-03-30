@@ -26,7 +26,7 @@ const fetchNFTData = async (contentUri: string) => {
   };
 };
 
-export const getNFTs = async (authenticatedPublicKey: string) => {
+export const fetchNFTs = async (authenticatedPublicKey: string) => {
   const url = 'https://api.thegraph.com/subgraphs/name/koiosonline/titan-nft-rinkeby';
   const getQuery = (authenticatedPublicKey: string) => {
     return `

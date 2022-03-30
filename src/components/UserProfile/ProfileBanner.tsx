@@ -1,7 +1,7 @@
 import { MappedDiscordProfile } from '../../types/UserProfile/DiscordProfile';
 import { Icon } from '../Util/Icon';
-import avatarPlaceholder from "../../assets/images/placeholders/avatar-placeholder.png";
-import bannerPlaceholder from "../../assets/images/placeholders/banner-placeholder.png";
+import avatarPlaceholder from "../../assets/images/placeholders/placeholder-avatar.png";
+import bannerPlaceholder from "../../assets/images/placeholders/placeholder-banner.png";
 
 type ProfileBannerProps = {
   backgroundCover?: string;

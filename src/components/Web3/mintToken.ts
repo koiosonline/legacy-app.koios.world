@@ -3,11 +3,14 @@ import titanContractABI from '../../contracts/TitanContractABI';
 import { AbiItem } from 'web3-utils';
 import { Dispatch, SetStateAction } from 'react';
 import { Web3InstanceProps } from '../../types/Web3InstanceProps';
+import { Transfer } from '../../types/Receipt';
 
 export const mintToken = async (
   web3: Web3InstanceProps,
   currentAccount: string,
-  setIsMinting: Dispatch<SetStateAction<boolean>>
+  setIsMinting: Dispatch<SetStateAction<boolean>>,
+  setTransactionHash: Dispatch<SetStateAction<string>>,
+  getNFTs: () => void
 ) => {
   setIsMinting(true);
   const contractAddress = process.env.REACT_APP_TITAN_NFT_CONTRACT_ADDRESS_RINKEBY;
@@ -23,13 +26,25 @@ export const mintToken = async (
     contract.methods
       .mint()
       .send({ from: currentAccount })
-      .on('error', (error: Error) => {
+      .on('error', () => {
         setIsMinting(false);
+      })
+      .on('transactionHash', (transactionHash: string) => {
+        setTransactionHash(transactionHash);
       })
       .on('confirmation', (confirmationNumber: number, receipt: any) => {
         if (confirmationNumber === 0) {
           setIsMinting(false);
+          getNFTs();
+          // setConfirmation(true);
+          const transfere: Transfer = receipt.events.Transfer;
+          console.log(receipt);
+          console.log('Token ID: ' + transfere.returnValues.tokenId);
+
         }
+      })
+      .then(() => {
+        setTransactionHash("n/a");
       });
   };
 

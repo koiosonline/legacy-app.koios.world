@@ -9,6 +9,48 @@
 
   &__title {
     font-family: $font-family-headings;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  &__product {
+    &-container {
+      display: flex;
+      margin-top: 15px;
+      margin-bottom: auto;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $color-08;
+    }
+
+    &-img {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin: 0 10px 0 0;
+    }
+
+    &-header {
+      margin: auto 0;
+    }
+
+    &-title {
+      font-family: $font-family-headings;
+      font-size: 16px;
+    }
+
+    &-token-id {
+      font-size: 12px;
+      color: $color-15;
+    }
+  }
+
+  &__name {
+    font-family: $font-family-headings;
     margin-bottom: 5px;
   }
 
@@ -24,18 +66,58 @@
     width: fit-content;
   }
 
+  &__description {
+    margin-top: 15px;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0;
+    font-size: 14px;
+
+    &-key {
+      font-weight: bold;
+      color: $color-17;
+    }
+
+    &-value {
+      color: $color-15;
+    }
+    
+    &-token-icon {
+      width: 25px;
+      height: 25px;
+      margin-bottom: -7px;
+    }
+  }
+
+  &__disclaimer {
+    font-size: 12px;
+    color: $color-14;
+
+    a {
+      color: $color-16;
+      text-decoration: none;
+    }
+  }
+
   &--nft {
     border-radius: 10px;
     padding: 10px;
     max-width: 350px;
+  }
 
-    .card__img {
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
+  &--mint {
+    border-radius: 10px;
+    padding: 15px 15px 10px;
+    color: $color-17;
 
-    .card__description {
-      margin-top: 15px;
+    .btn {
+      width: 100%;
+      padding: 10px 40px;
+      font-size: 16px;
+      margin: 15px auto 10px;
     }
   }
 }

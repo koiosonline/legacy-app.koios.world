@@ -15,8 +15,8 @@ type NFTCardProps = {
 export const CardNFT = ({ metadata, size, onClick }: NFTCardProps) => {
   return (
     <div className="card card--nft" onClick={e => onClick ? onClick(e) : noop()}>
-      <img className="card__img" src={metadata.image} alt="" />
-      <h3 className="card__title">{metadata.name}</h3>
+      <img className="card__img" src={metadata.image} alt="NFT Image" />
+      <h3 className="card__name">{metadata.name}</h3>
       <span className="card__metatag">{metadata.value}</span>
 
       {size === CardSize.REGULAR && <p className="card__description">{metadata.description}</p>}

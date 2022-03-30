@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { getTokenCountTDFA, getTokenCountBlockchain, getTokenCountOverall } from '../components/Web3/Tokencount';
 import Loading from '../components/Loading';
-import avatarPlaceholder from '../assets/images/placeholders/avatar-placeholder.png';
+import avatarPlaceholder from '../assets/images/placeholders/placeholder-avatar.png';
 import { UserContext } from '../Context/UserContext';
 
 declare global {

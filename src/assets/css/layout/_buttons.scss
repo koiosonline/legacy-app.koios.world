@@ -68,7 +68,24 @@
     }
   }
 
+  &--purple {
+    background-color: $color-16;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($color-16, 10);
+    }
+
+    &:active {
+      background-color: darken($color-16, 10);
+    }
+  }
+
   // Helpers
+  // Border-radius modules
+  &--rounded {
+    border-radius: 8px;
+  }
 
   // Font-size modules
   &--fs-16 {
