@@ -16,6 +16,7 @@ import { ArticlePageLinks } from "../../components/ArticlePageLinks";
 import { compiler } from "markdown-to-jsx";
 import { ContentPlayer } from "../../components/ContentPlayer";
 import { hasHomework } from "../../components/Util/Assignment";
+import { Icon } from "../../components/Util/Icon";
 
 export const WorldDetail = () => {
   const [videoContent, setVideoContent] = useState<SingleVideo>();
@@ -203,7 +204,7 @@ export const WorldDetail = () => {
                     tableOfContents.find(c=>c.title.includes("Portfolio assignment"))?.id
                   )?.scrollIntoView()} 
                   className={"cta-button"}>
-                    <img className="cta-button__img" src={"/images/file-word-solid.svg"} alt={"homework"} />
+                    <Icon type="file_word" className="cta-button__img" />
                     <p className="cta-button__text">Homework</p>
                   </button>
                 )}
