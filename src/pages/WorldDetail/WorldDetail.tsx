@@ -119,10 +119,10 @@ export const WorldDetail = () => {
   };
 
   const generateTableOfContents = async () => {
-    const compiledMarkdown = await compiler(`${literatureOfVideo}`, {
+    const compiledMarkdown = compiler(`${literatureOfVideo}`, {
       forceBlock: true,
     });
-    const filterHeadings = await compiledMarkdown.props.children.filter(
+    const filterHeadings = compiledMarkdown.props.children.filter(
       (item) =>
         item.type === "h1" ||
         item.type === "h2" ||
@@ -131,7 +131,7 @@ export const WorldDetail = () => {
         item.type === "h5" ||
         item.type === "h6"
     );
-    const headings = await filterHeadings.map((item) => {
+    const headings = filterHeadings.map((item) => {
       return {
         id: item.props.id,
         title: item.props.children[0],
