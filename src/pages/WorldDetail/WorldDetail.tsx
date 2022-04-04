@@ -15,6 +15,7 @@ import { Markdown } from "../../components/Markdown";
 import { ArticlePageLinks } from "../../components/ArticlePageLinks";
 import { compiler } from "markdown-to-jsx";
 import { ContentPlayer } from "../../components/ContentPlayer";
+import { hasHomework } from "../../components/Util/Assignment";
 
 export const WorldDetail = () => {
   const [videoContent, setVideoContent] = useState<SingleVideo>();
@@ -24,6 +25,7 @@ export const WorldDetail = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [courseData, setCourseData] = useState<any[]>();
   const [literatureOfVideo, setliteratureOfVideo] = useState<string>();
+  const [videoHasHomework, setHomework] = useState<boolean>();
   const [videoList, setVideoList] = useState<any[]>();
   const [extraInfo, setExtraInfo] = useState<any[]>();
   const [quizState, setQuizState] = useState<boolean>(false);
@@ -75,6 +77,7 @@ export const WorldDetail = () => {
     setliteratureOfVideo(literature);
     const getCourseData = await getVideoInfo(courseLevel.data);
     setCourseData(getCourseData);
+    setHomework(hasHomework(literature));
     setIsLoading(false);
   };
 
@@ -192,6 +195,16 @@ export const WorldDetail = () => {
                   <button onClick={openQuiz} className={"cta-button"}>
                     <img className="cta-button__img" src={"/images/scroll-solid.svg"} alt={"sheets"} />
                     <p className="cta-button__text">Quiz</p>
+                  </button>
+                )}
+
+                {videoHasHomework && (
+                  <button onClick={()=>document.getElementById(
+                    tableOfContents.find(c=>c.title.includes("Portfolio assignment"))?.id
+                  )?.scrollIntoView()} 
+                  className={"cta-button"}>
+                    <img className="cta-button__img" src={"/images/file-word-solid.svg"} alt={"homework"} />
+                    <p className="cta-button__text">Homework</p>
                   </button>
                 )}
               </div>
