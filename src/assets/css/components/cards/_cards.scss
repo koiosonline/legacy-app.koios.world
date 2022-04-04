@@ -83,8 +83,15 @@
 
     &-value {
       color: $color-15;
+
+      &.hash {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 65px;
+      }
     }
-    
+
     &-token-icon {
       width: 25px;
       height: 25px;
@@ -115,7 +122,7 @@
 
     .btn {
       width: 100%;
-      padding: 10px 40px;
+      padding: 10px 10px;
       font-size: 16px;
       margin: 15px auto 10px;
     }

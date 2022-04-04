@@ -8,7 +8,7 @@ import { SvgSprite } from '../../Util/SvgSprite';
 import { web3Modal } from '../../Web3/WalletProvider';
 import { UserContext } from '../../../Context/UserContext';
 import { useWeb3 } from '../../../components/Web3/useWeb3';
-import avatarPlaceholder from '../../../assets/images/placeholders/placeholder-avatar.png';
+import avatarPlaceholder from '../../../assets/images/placeholders/placeholder-titan.png';
 import { AuthContext } from '../../../Context/AuthContext';
 import { noop } from '../../Util/noop';
 

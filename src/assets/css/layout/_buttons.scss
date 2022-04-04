@@ -68,6 +68,12 @@
     }
   }
 
+  &-disabled {
+    background-color: $color-08;
+    color: $color-10;
+    cursor: not-allowed;
+  }
+
   &--purple {
     background-color: $color-16;
     color: #fff;

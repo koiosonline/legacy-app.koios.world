@@ -12,7 +12,8 @@ import { getTitanTokenCount } from '../UserProfile/getTitanTokenCount';
 import { AutoNetworkSwitch } from './AutoNetworkSwitch';
 
 export const useWeb3 = () => {
-  const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider, setWeb3 } = useContext(AuthContext);
+  const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider, setWeb3 } =
+    useContext(AuthContext);
   const { userAccount, setUserAccount } = useContext(UserContext);
 
   const connectWallet = async () => {
@@ -31,6 +32,8 @@ export const useWeb3 = () => {
       setIsAuthenticating(false);
     } catch (e) {
       console.log(e);
+      web3Modal.clearCachedProvider();
+      setIsAuthenticating(false);
       setAuthError(e);
     }
   };
@@ -60,8 +63,7 @@ export const useWeb3 = () => {
       );
       setUserAccount(userProfile);
     } catch (e) {
-      console.log(e);
-      setAuthError(e);
+      throw new Error(e);
     }
   };
 

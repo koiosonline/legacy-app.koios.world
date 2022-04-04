@@ -3,7 +3,6 @@ import titanContractABI from '../../contracts/TitanContractABI';
 import { AbiItem } from 'web3-utils';
 import { Dispatch, SetStateAction } from 'react';
 import { Web3InstanceProps } from '../../types/Web3InstanceProps';
-import { Transfer } from '../../types/Receipt';
 
 export const mintToken = async (
   web3: Web3InstanceProps,
@@ -32,15 +31,10 @@ export const mintToken = async (
       .on('transactionHash', (transactionHash: string) => {
         setTransactionHash(transactionHash);
       })
-      .on('confirmation', (confirmationNumber: number, receipt: any) => {
+      .on('confirmation', (confirmationNumber: number) => {
         if (confirmationNumber === 0) {
           setIsMinting(false);
           getNFTs();
-          // setConfirmation(true);
-          const transfere: Transfer = receipt.events.Transfer;
-          console.log(receipt);
-          console.log('Token ID: ' + transfere.returnValues.tokenId);
-
         }
       })
       .then(() => {

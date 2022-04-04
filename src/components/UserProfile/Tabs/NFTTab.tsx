@@ -23,18 +23,14 @@ export const NFTTab: React.FC<NFTTabProps> = () => {
   const [titanTokenBalance, setTitanTokenBalance] = useState<number>(0);
   const titanTokenContractAddress = process.env.REACT_APP_TITAN_TOKEN_CONTRACT_ADDRESS_RINKEBY;
   const { userAccount } = useContext(UserContext);
-
-
+  const reachedMintLimit = nftsQuery.data?.length >= 2;
+  const insufficientLiquidity = titanTokenBalance < 1;
   const totalPlaceholders = 4;
-
 
   (async () => {
     const titanBalance = await getUserBalance(titanTokenContractABI, titanTokenContractAddress, userAccount.publicKey);
     setTitanTokenBalance(titanBalance);
   })();
-
-  console.log(titanTokenBalance);
-
 
   const modalState = (item?: NFTProps) => {
     if (item) {
@@ -44,20 +40,25 @@ export const NFTTab: React.FC<NFTTabProps> = () => {
   };
 
   if (nftsQuery.status === 'loading') {
-    // key plaatsen
-    return <ul className="nft-tab__list">{Array(totalPlaceholders).fill(<CardPlaceholderNFT />)}</ul>;
+    return (
+      <ul className="nft-tab__list">
+        {Array.from({ length: totalPlaceholders }, (_, i) => (
+          <CardPlaceholderNFT key={i} />
+        ))}
+      </ul>
+    );
   }
 
   if (nftsQuery.error === 'error') {
-    return <p>error!</p>;
+    return <p>Couldn't load NFTs</p>;
   }
 
   return (
     <>
       <div className="nft-tab">
         <ul className="nft-tab__list">
-          <NFTCards nfts={nftsQuery.data} onClick={(item: NFTProps) => modalState(item)} />
-          <CardMint />
+          {nftsQuery.data && <NFTCards nfts={nftsQuery.data} onClick={(item: NFTProps) => modalState(item)} />}
+          <CardMint insufficientLiquidity={insufficientLiquidity} reachedMintLimit={reachedMintLimit} />
         </ul>
       </div>
 
