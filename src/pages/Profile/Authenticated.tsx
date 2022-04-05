@@ -25,11 +25,11 @@ export const Authenticated = () => {
 
       {isMobile ? (
         <>
-          <h1 className="username">{userAccount.name}</h1>
+          {userAccount.name && <h1 className="username">{userAccount.name}</h1>}
           <ProfileInfo
-            walletAddress={userAccount.publicKeyFormatted}
-            tokenBalance={userAccount.tokenBalance}
-            discordUsername={userAccount.discordProfile.discordHandle}
+            walletAddress={userAccount?.publicKeyFormatted}
+            tokenBalance={userAccount?.tokenBalance}
+            discordUsername={userAccount?.discordProfile?.discordHandle}
           />
         </>
       ) : (

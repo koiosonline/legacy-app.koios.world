@@ -23,7 +23,7 @@ export const CardMint = ({ insufficientLiquidity, reachedMintLimit }) => {
       return setMintStatus('Minting...');
     }
     if (reachedMintLimit) {
-      return setMintStatus('You reached max number of Titans in this collection');
+      return setMintStatus('You reached max number of Titans');
     }
     if (insufficientLiquidity) {
       return setMintStatus('Insufficient liquidity');
@@ -83,7 +83,7 @@ export const CardMint = ({ insufficientLiquidity, reachedMintLimit }) => {
       </button>
 
       <span className="card__disclaimer">
-        Please ensure you <Link to="">understand the risks</Link> before minting.
+        Please ensure you <Link to="terms">understand the risks</Link> before minting.
       </span>
     </div>
   );

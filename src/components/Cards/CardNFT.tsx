@@ -13,13 +13,15 @@ type NFTCardProps = {
 };
 
 export const CardNFT = ({ metadata, size, onClick }: NFTCardProps) => {
+  const regularCardSize = size === CardSize.REGULAR;
+  
   return (
     <div className="card card--nft" onClick={e => onClick ? onClick(e) : noop()}>
       <img className="card__img" src={metadata.image} alt="NFT Image" />
-      <h3 className="card__name">{metadata.name}</h3>
+      <h3 className={`card__name ${!regularCardSize ? 'card__name--ellipsis' : ''}`}>{metadata.name}</h3>
       <span className="card__metatag">{metadata.value}</span>
 
-      {size === CardSize.REGULAR && <p className="card__description">{metadata.description}</p>}
+      {regularCardSize && <p className="card__description">{metadata.description}</p>}
     </div>
   );
 };

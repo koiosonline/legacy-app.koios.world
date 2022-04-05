@@ -1,18 +1,51 @@
 .nft-tab {
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 250px);
+    // grid-template-columns: repeat(4, 250px);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
     column-gap: 15px;
-    justify-content: space-between;
     row-gap: 20px;
+
+    @include for-size(390px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include for-size($desktop) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @include for-size(1000px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   &__list-item {
     cursor: pointer;
 
-    &:hover {
-      box-shadow: 0px 0px 21px -10px rgba(110, 110, 110, 1);
-      transform: translateY(-0.5em);
+    .card {
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        box-shadow: 0px 0px 21px -10px rgba(110, 110, 110, 1);
+        transform: translateY(-0.5em);
+      }
+
+    }
+  }
+  
+  .card--mint {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include for-size(390px) {
+      grid-column: 1 / 3;
+    }
+
+    @include for-size(500px) {
+      grid-column: unset;
     }
   }
 }
