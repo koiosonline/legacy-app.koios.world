@@ -235,6 +235,10 @@
         border-radius: 10px;
         background-color: #fff;
 
+        @include for-size(0, $desktop) {
+          width: 100%;
+        }
+
         &:hover {
           color: $color-koios-blue;
           border: 1px solid $color-koios-blue;
