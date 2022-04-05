@@ -1,9 +1,9 @@
 import { Slugify } from "./Util/Slugify";
 import { YouTubeEmbed } from "./YouTubeEmbed";
 import { HashLink } from "react-router-hash-link";
-import store from "store";
 import { useEffect, useState } from "react";
 import { Icon } from "./Util/Icon";
+import { store } from "./Util/Storage";
 
 type ContentPlayerProps = {
   worldContent: string;
@@ -45,12 +45,12 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
       replaceAmpersand: "and",
     });
 
-    if (store.get(video)) {
+    if (store.getJson(video)) {
       store.remove(video);
       setVideoCheck(!videoCheck);
     } else {
-      store.set(video, { hash: `/${props.videoSlug}`, videoId: video });
-      store.set("lastWatched", {
+      store.setJson(video, { hash: `/${props.videoSlug}`, videoId: video });
+      store.setJson("lastWatched", {
         world: props.worldContent,
         level: props.worldDetail,
         video: `/${slugifiedTitle}`,
@@ -81,6 +81,7 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
                 replaceAmpersand: "and",
               });
 
+              console.log(video);
               return video.chapter ? (
                 <h2 key={index}>{video.title}</h2>
               ) : (
@@ -88,7 +89,7 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
                   key={index}
                   id={slugifiedVideoTitle}
                   className={`
-                    ${store.get(video.videoid) ? "watched" : ""} 
+                    ${store.getJson(video.videoid) ? "watched" : ""} 
                     ${props.videoSlug === slugifiedVideoTitle ? "active-state" : ""}`}
                 >
                   <Icon type="check-in-circle" onClick={() => activeVideo(video.videoid, video.title)} />
