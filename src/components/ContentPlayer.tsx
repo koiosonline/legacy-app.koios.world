@@ -81,7 +81,6 @@ export const ContentPlayer = (props: ContentPlayerProps) => {
                 replaceAmpersand: "and",
               });
 
-              console.log(video);
               return video.chapter ? (
                 <h2 key={index}>{video.title}</h2>
               ) : (
