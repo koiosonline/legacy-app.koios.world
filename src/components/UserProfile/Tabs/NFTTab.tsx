@@ -8,7 +8,7 @@ import { Modal } from '../../Modal';
 import { NFTCards } from '../../NFTCards';
 import { useNFTs } from '../Hooks/useNFTs';
 import { useUserInfo } from '../Hooks/useUserInfo';
-import titanTokenContractABI from '../../../contracts/TitanContractABI';
+import titanTokenContractABI from '../../../contracts/polygon/TokenTitanContractABIPolygon';
 import { UserContext } from '../../../Context/UserContext';
 
 type NFTTabProps = {
@@ -21,7 +21,7 @@ export const NFTTab: React.FC<NFTTabProps> = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [clickedNFT, setClickedNFT] = useState<NFTProps>();
   const [titanTokenBalance, setTitanTokenBalance] = useState<number>(0);
-  const titanTokenContractAddress = process.env.REACT_APP_TITAN_TOKEN_CONTRACT_ADDRESS_RINKEBY;
+  const titanTokenContractAddress = process.env.REACT_APP_TITAN_TOKEN_CONTRACT_ADDRESS_POLYGON;
   const { userAccount } = useContext(UserContext);
   const reachedMintLimit = nftsQuery.data?.length >= 2;
   const insufficientLiquidity = titanTokenBalance < 1;

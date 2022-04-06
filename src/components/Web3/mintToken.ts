@@ -1,5 +1,5 @@
-import contractABI from '../../contracts/ContractABI';
-import titanContractABI from '../../contracts/TitanContractABI';
+import contractABI from '../../contracts/polygon/NFTTitanContractABIPolygon';
+import titanContractABI from '../../contracts/polygon/TokenTitanContractABIPolygon';
 import { AbiItem } from 'web3-utils';
 import { Dispatch, SetStateAction } from 'react';
 import { Web3InstanceProps } from '../../types/Web3InstanceProps';
@@ -12,8 +12,8 @@ export const mintToken = async (
   getNFTs: () => void
 ) => {
   setIsMinting(true);
-  const contractAddress = process.env.REACT_APP_TITAN_NFT_CONTRACT_ADDRESS_RINKEBY;
-  const tokenAddress = process.env.REACT_APP_TITAN_TOKEN_CONTRACT_ADDRESS_RINKEBY;
+  const contractAddress = process.env.REACT_APP_TITAN_NFT_CONTRACT_ADDRESS_POLYGON;
+  const tokenAddress = process.env.REACT_APP_TITAN_TOKEN_CONTRACT_ADDRESS_POLYGON;
   const contract = await new web3.eth.Contract(contractABI as AbiItem[], contractAddress as string);
   const tokenContract = await new web3.eth.Contract(titanContractABI as AbiItem[], tokenAddress as string);
 

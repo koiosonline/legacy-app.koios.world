@@ -17,7 +17,6 @@ import { MarkdownEditor } from './pages/MarkdownEditor';
 import { AuthContextProvider } from './Context/AuthContext';
 import { UserContextProvider } from './Context/UserContext';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { Terms } from './pages/Terms/Terms';
 
 export const App = () => {
   const queryClient = new QueryClient();
@@ -47,7 +46,6 @@ export const App = () => {
                     <Route path="/explanation" exact component={ExplanationVideos} />
                     <Route path="/earn" exact component={Earn} />
                     <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
-                    <Route path="/terms" exact component={Terms} />
                     <Route path="/" exact>
                       <Redirect to="/worlds" />
                     </Route>

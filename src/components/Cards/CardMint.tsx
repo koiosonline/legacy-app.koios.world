@@ -3,7 +3,6 @@ import { AuthContext } from '../../Context/AuthContext';
 import { UserContext } from '../../Context/UserContext';
 import { mintToken } from '../Web3/mintToken';
 import placeholderNFT from '../../assets/images/placeholders/placeholder-titan.png';
-import { Link } from 'react-router-dom';
 import titanTokenPlaceholder from '../../assets/images/placeholders/placeholder-titan-token.png';
 import { useNFTs } from '../UserProfile/Hooks/useNFTs';
 import { noop } from '../Util/noop';
@@ -83,7 +82,11 @@ export const CardMint = ({ insufficientLiquidity, reachedMintLimit }) => {
       </button>
 
       <span className="card__disclaimer">
-        Please ensure you <Link to="terms">understand the risks</Link> before minting.
+        Please ensure you{' '}
+        <a href="https://wiki.koios.world/important-info/disclaimers" target="_blank" rel="noreferrer">
+          understand the risks
+        </a>{' '}
+        before minting.
       </span>
     </div>
   );
