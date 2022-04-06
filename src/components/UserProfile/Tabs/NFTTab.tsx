@@ -8,7 +8,9 @@ import { Modal } from '../../Modal';
 import { NFTCards } from '../../NFTCards';
 import { useNFTs } from '../Hooks/useNFTs';
 import { useUserInfo } from '../Hooks/useUserInfo';
-import titanTokenContractABI from '../../../contracts/polygon/TokenTitanContractABIPolygon';
+// import titanTokenContractABI from '../../../contracts/rinkeby/TokenTitanContractABIRinkeby';
+// import titanTokenContractABI from '../../../contracts/rinkeby/token-titan-contract-abi-rinkeby.json';
+import titanTokenContractABI from '../../../contracts/polygon/token-titan-contract-abi-polygon.json';
 import { UserContext } from '../../../Context/UserContext';
 
 type NFTTabProps = {
@@ -26,7 +28,9 @@ export const NFTTab: React.FC<NFTTabProps> = () => {
   const reachedMintLimit = nftsQuery.data?.length >= 2;
   const insufficientLiquidity = titanTokenBalance < 1;
   const totalPlaceholders = 4;
-
+  
+  // console.log(titanTokenContractABI);
+  
   (async () => {
     const titanBalance = await getUserBalance(titanTokenContractABI, titanTokenContractAddress, userAccount.publicKey);
     setTitanTokenBalance(titanBalance);

@@ -1,12 +1,14 @@
 import { AddNetworkToWallet } from './AddNetworkToWallet';
 
 export const AutoNetworkSwitch = async (provider) => {
-  const rinkebyChainId = '0x4';
+  // const chainId = '0x4'; // Rinkeby
+  const chainId = '0x89'; // Polygon
+
 
   try {
     await provider.request({
       method: 'wallet_switchEthereumChain',
-      params: [{ chainId: rinkebyChainId }],
+      params: [{ chainId: chainId }],
     });
     console.log('You have succefully switched to Rinkeby Test network');
   } catch (switchNetworkError) {
