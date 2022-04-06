@@ -1,5 +1,6 @@
 import React from "react";
 import MarkdownToJsx from "markdown-to-jsx";
+import { Icon } from "./Util/Icon";
 
 type MarkdownProps = {
   value: string;
@@ -7,7 +8,8 @@ type MarkdownProps = {
 
 const OpenLinkInNewTab = ({ href, children }) => (
   <a href={href} rel="noreferrer" target="_blank">
-    {children}
+    <Icon type="arrow-right" />
+    <span>{children}</span>
   </a>
 );
 
