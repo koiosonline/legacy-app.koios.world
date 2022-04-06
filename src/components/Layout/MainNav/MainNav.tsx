@@ -107,12 +107,14 @@ export const MainNav = () => {
             </li>
           ))}
 
-          <li>
-            <div className="nav-list__link link" onClick={()=>AddTokenToWallet(window.ethereum)}>
-              <img src="/images/MetaMask_Fox.svg" className="nav-list__icon" />
-              <p>Add to wallet</p>
-            </div>
-          </li>
+          {window.ethereum && (
+            <li>
+              <div className="nav-list__link link" onClick={()=>AddTokenToWallet(window.ethereum)}>
+                <img src="/images/MetaMask_Fox.svg" className="nav-list__icon" />
+                <p>Add to wallet</p>
+              </div>
+            </li>
+          )}
 
         </ul>
 
