@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { UserContext } from '../Context/UserContext';
+import { AddTokenToWallet } from './Web3/AddTokenToWallet';
 
 export const MetaBlocks = () => {
   const { userAccount } = useContext(UserContext);
 
   return (
     <ul className="metablocks">
-      <li className="metablock">
+      <li className="metablock" onClick={()=>window.ethereum && AddTokenToWallet(window.ethereum)}>
         <h4 className="metablock__title">Total Titan-tokens</h4>
         <img
           className="metablock__img"
