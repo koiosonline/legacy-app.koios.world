@@ -1,5 +1,6 @@
 body {
-  background-color: $color-07;
+  // background-color: $color-07;
+  // background-color: red;
 }
 
 .main {
@@ -15,9 +16,23 @@ body {
   background-repeat: no-repeat;
   margin-top: 60px;
 
+  @include themify($themes) {
+    background-color: themed(elevation1);
+  }
+
   @include for-size(1200px) {
     margin-left: 300px;
     margin-top: 0;
+  }
+}
+
+.main-nav {
+  @include themify($themes) {
+    background-color: themed(elevation2);
+  }
+  
+  @include themify($themes) {
+    border-right: 2px solid themed(border);
   }
 }
 

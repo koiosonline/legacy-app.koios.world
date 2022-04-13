@@ -127,6 +127,10 @@
       font-weight: 700;
       color: #8e8e8e;
 
+      @include themify($themes) {
+        background-color: themed(elevation2);
+      }
+
       &:hover {
         border: 2px solid $color-koios-pink;
         color: $color-koios-pink;

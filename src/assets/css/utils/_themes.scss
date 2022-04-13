@@ -1,0 +1,28 @@
+$themes: (
+  light: (
+    elevation0: #f8fbfe,
+    elevation1: #ffff,
+    elevation2: #ffff,
+    elevation3: #ffff,
+    elevation4: #ffff,
+    elevation5: #ffff,
+    textColor: $color-11,
+    buttonTextColor: $color-11,
+    border: $color-08,
+    buttonColor: #fff,
+    buttonBorder: 2px solid #fff,
+  ),
+  dark: (
+    elevation0: #121212,
+    elevation1: #242424,
+    elevation2: #363636,
+    elevation3: #484848,
+    elevation4: #606060,
+    elevation5: #727272,
+    textColor: $color-08,
+    buttonTextColor: $color-08,
+    border: #242424,
+    buttonColor: #333,
+    buttonBorder: 1px solid #aaa,
+  ),
+);

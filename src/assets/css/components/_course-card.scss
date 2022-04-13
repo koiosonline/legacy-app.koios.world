@@ -10,6 +10,10 @@
     background-color: white;
     text-decoration: none;
 
+    @include themify($themes) {
+      background-color: themed(elevation2);
+    }
+
     @include for-size($mobile, $desktop) {
       width: 19em;
     }
@@ -31,7 +35,11 @@
 
     &__title {
       margin: 1rem 0 0.5em;
-      color: $color-koios-dark-grey;
+      // color: $color-koios-dark-grey;
+
+      @include themify($themes) {
+        color: themed(textColor);
+      }
     }
 
     .meta-data {
@@ -70,7 +78,11 @@
       -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      color: $color-koios-dark-grey;
+      // color: $color-koios-dark-grey;
+
+      @include themify($themes) {
+        color: themed(textColor);
+      }
       
       @include for-size($desktop) {
         max-height: 6.2em;
