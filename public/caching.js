@@ -1,4 +1,4 @@
-const cacheName = 'v1';
+let cacheName = 'default';
 const console = this.console;
 
 const CACHE_FLAGS = [
@@ -7,7 +7,7 @@ const CACHE_FLAGS = [
 ];
 
 function cachable(url){
-  return CACHE_FLAGS.some(r=>r.test(url)); // TODO: can we shrink?
+  return CACHE_FLAGS.some(r=>r.test(url));
 }
 
 this.addEventListener('install', e => {
@@ -16,13 +16,12 @@ this.addEventListener('install', e => {
 
 
 this.addEventListener('activate', e => {
-  console.log('Service Worker: Activated');
+  console.log('SW Activated');
   e.waitUntil(
     this.caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cache => {
           if (cache !== cacheName) {
-            console.log('Service Worker: Clearing Old Cache');
             return this.caches.delete(cache); // Remove unwanted caches
           }
         })
@@ -62,4 +61,23 @@ this.addEventListener('fetch', e => {
       }
     })()
   );
+});
+
+function emptyOldCache() {
+  this.caches.keys().then(cacheNames => {
+    return Promise.all(
+      cacheNames.map(cache => {
+        if (cache !== cacheName) {
+          return this.caches.delete(cache);
+        }
+      })
+    );
+  });
+}
+this.addEventListener('message', e => {
+  if(cacheName !== e.data){
+    console.log(`Updating SW version to ${e.data}`);
+    cacheName = e.data;
+    emptyOldCache();
+  }
 });
