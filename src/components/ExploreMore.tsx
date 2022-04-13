@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import store from "store";
+import { store } from "./Util/Storage";
 
 const ExploreMore = (props) => {
-  const continueLearning = store.get("lastWatched");
+  const continueLearning = store.getJson("lastWatched");
 
   return (
     <>

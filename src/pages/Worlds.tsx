@@ -1,12 +1,12 @@
 import worldsData from '../assets/data/courseinfo.json';
 import CourseCard from '../components/CourseCard';
-import store from 'store';
 import { Link } from 'react-router-dom';
+import { store } from '../components/Util/Storage';
 
 export const Worlds = () => {
   const data = worldsData;
   const allowed = ['blockchain', 'tdfa01', 'datascience01', 'programmingdapps01', 'introduction'];
-  const continueLearning = store.get('lastWatched');
+  const continueLearning = store.getJson('lastWatched');
 
   const filtered = Object.keys(data)
     .filter((key) => allowed.includes(key))

@@ -1,7 +1,7 @@
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
-import store from "store";
 import { CourseContentParams, CourseDetailParams, VideoSlugParams } from "../types/Params";
+import { store } from "./Util/Storage";
 
 type YouTubeEmbedProps = {
   videoId: string;
@@ -13,12 +13,12 @@ export const YouTubeEmbed = (props: YouTubeEmbedProps) => {
   const { videoSlug } = useParams<VideoSlugParams>();
 
   const watched = () => {
-    store.set(props.videoId, { hash: `/${videoSlug}`, videoId: props.videoId });
-    store.set("lastWatched", { world: worldContent, level: worldDetail, video: `/${videoSlug}` });
+    store.setJson(props.videoId, { hash: `/${videoSlug}`, videoId: props.videoId });
+    store.setJson("lastWatched", { world: worldContent, level: worldDetail, video: `/${videoSlug}` });
   };
 
   const activeVideo = () => {
-    store.set("active", { hash: `/${videoSlug}`, videoId: props.videoId });
+    store.setJson("active", { hash: `/${videoSlug}`, videoId: props.videoId });
   };
 
   const opts = {
