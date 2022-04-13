@@ -48,13 +48,10 @@ this.addEventListener('fetch', e => {
       }else{
         return await this.fetch(e.request).then(res => {
           if(cachable(e.request.url)){
-            console.log(`Stored result of ${e.request.url}`);
             const responseClone = res.clone();
             this.caches.open(cacheName).then(cache => {
               cache.put(e.request, responseClone);
             });
-          } else {
-            console.log(`NOT STORING... url (${e.request.url})`);
           }
           return res;
         });
