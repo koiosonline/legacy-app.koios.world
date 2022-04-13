@@ -48,6 +48,17 @@
     }
   }
 
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    .icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
   &__name {
     font-family: $font-family-headings;
     margin-bottom: 5px;
@@ -59,20 +70,27 @@
     }
   }
 
-  &__metatag {
-    background-color: $color-13;
-    color: $color-14;
-    font-size: 12px;
-    border-radius: 4px;
-    vertical-align: baseline;
-    padding: 2px 10px;
-    font-weight: 700;
-    margin-right: 1em;
-    width: fit-content;
+  &__metatags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    &--tag {
+      background-color: $color-13;
+      color: $color-14;
+      font-size: 12px;
+      border-radius: 4px;
+      vertical-align: baseline;
+      padding: 2px 10px;
+      font-weight: 700;
+      width: fit-content;
+    }
   }
 
   &__description {
     margin-top: 15px;
+    max-height: 105px;
+    overflow: scroll;
   }
 
   &__summary {

@@ -11,7 +11,7 @@ export const mintToken = async (
   currentAccount: string,
   setIsMinting: Dispatch<SetStateAction<boolean>>,
   setTransactionHash: Dispatch<SetStateAction<string>>,
-  getNFTs: () => void
+  refetchNFTs: () => void
 ) => {
   setIsMinting(true);
   const contractAddress = process.env.REACT_APP_TITAN_NFT_CONTRACT_ADDRESS_POLYGON;
@@ -36,7 +36,7 @@ export const mintToken = async (
       .on('confirmation', (confirmationNumber: number) => {
         if (confirmationNumber === 0) {
           setIsMinting(false);
-          getNFTs();
+          refetchNFTs();
         }
       })
       .then(() => {

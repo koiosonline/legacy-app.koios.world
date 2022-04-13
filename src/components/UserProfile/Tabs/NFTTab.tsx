@@ -28,9 +28,7 @@ export const NFTTab: React.FC<NFTTabProps> = () => {
   const reachedMintLimit = nftsQuery.data?.length >= 2;
   const insufficientLiquidity = titanTokenBalance < 1;
   const totalPlaceholders = 4;
-  
-  // console.log(titanTokenContractABI);
-  
+
   (async () => {
     const titanBalance = await getUserBalance(titanTokenContractABI, titanTokenContractAddress, userAccount.publicKey);
     setTitanTokenBalance(titanBalance);
@@ -61,7 +59,11 @@ export const NFTTab: React.FC<NFTTabProps> = () => {
     <>
       <div className="nft-tab">
         <ul className="nft-tab__list">
-          {nftsQuery.data && <NFTCards nfts={nftsQuery.data} onClick={(item: NFTProps) => modalState(item)} />}
+          {nftsQuery.data && (
+            <>
+              <NFTCards nfts={nftsQuery.data} onClick={(item: NFTProps) => modalState(item)} />
+            </>
+          )}
           <CardMint insufficientLiquidity={insufficientLiquidity} reachedMintLimit={reachedMintLimit} />
         </ul>
       </div>

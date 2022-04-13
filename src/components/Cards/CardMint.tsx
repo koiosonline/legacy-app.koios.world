@@ -8,7 +8,7 @@ import { useNFTs } from '../UserProfile/Hooks/useNFTs';
 import { noop } from '../Util/noop';
 
 export const CardMint = ({ insufficientLiquidity, reachedMintLimit }) => {
-  const { getNFTs } = useNFTs();
+  const { refetchNFTs } = useNFTs();
   const { web3 } = useContext(AuthContext);
   const { userAccount } = useContext(UserContext);
   const [isMinting, setIsMinting] = useState<boolean>(false);
@@ -62,7 +62,7 @@ export const CardMint = ({ insufficientLiquidity, reachedMintLimit }) => {
         ) : (
           <a
             className="card__summary-value hash"
-            href={`https://etherscan.io/tx/${transactionHash}`}
+            href={`https://polygonscan.com/tx/${transactionHash}`}
             target="_blank"
             rel="noreferrer"
           >
@@ -75,7 +75,7 @@ export const CardMint = ({ insufficientLiquidity, reachedMintLimit }) => {
         className={`btn btn--rounded ${isDisabled ? 'btn-disabled' : 'btn--purple'}`}
         disabled={isMinting}
         onClick={
-          !isDisabled ? () => mintToken(web3, userAccount.publicKey, setIsMinting, setTransactionHash, getNFTs) : noop
+          !isDisabled ? () => mintToken(web3, userAccount.publicKey, setIsMinting, setTransactionHash, refetchNFTs) : noop
         }
       >
         {mintStatus}

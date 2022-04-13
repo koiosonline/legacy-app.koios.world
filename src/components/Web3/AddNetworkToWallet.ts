@@ -1,3 +1,5 @@
+import Web3 from 'web3';
+
 // const rinkebyChain = {
 //   chainId: '0x4',
 //   chainName: 'Ethereum Rinkeby Testnet RPC',
@@ -10,14 +12,15 @@
 // };
 
 const polygonChain = {
-  chainId: '137',
-  chainName: 'Polygon',
-  rpcUrls: ['https://polygon-rpc.com'],
-  blockExplorerUrls: ['https://polygonscan.com/'],
+  chainId: Web3.utils.toHex('137'),
+  chainName: 'Polygon Mainnet',
   nativeCurrency: {
+    name: 'MATIC',
     symbol: 'MATIC',
     decimals: 18,
   },
+  rpcUrls: ['https://polygon-rpc.com'],
+  blockExplorerUrls: ['https://polygonscan.com']
 };
 
 export const AddNetworkToWallet = async (provider) => {
@@ -26,8 +29,12 @@ export const AddNetworkToWallet = async (provider) => {
       method: 'wallet_addEthereumChain',
       params: [polygonChain],
     });
-  } catch (addNetworkError) {
-    console.log(addNetworkError);
-    throw addNetworkError.message;
+    await provider.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: polygonChain.chainId }],
+    });
+
+  } catch (e) {
+    throw e.message;
   }
 };
