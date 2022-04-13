@@ -7,11 +7,13 @@ export function registerCachingSw(){
         .register('./caching.js')
         .catch(err => console.warn(`Failed to register SW: ${err}`));
     });
-    
+    // poll for potential new versions.
     navigator.serviceWorker.ready.then( reg => {
       fetch("https://api.github.com/repos/koiosonline/app.koios.world/releases/latest")
         .then(_=>_.json())
-        .then(d=>reg.active.postMessage(d.name || "default"))
+        .then(d=> {
+          if(d?.name !== undefined) reg.active.postMessage(d.name);
+        })
         .catch(()=>noop);
     });
   }
