@@ -13,8 +13,9 @@ function cachable(url){
   return CACHE_FLAGS.some(r=>r.test(url));
 }
 
-this.addEventListener('install', e => {
-  console.log('Service Worker: Installed');
+this.addEventListener('install', async e => {
+  e.waitUntil(cacheName);
+  console.log('Service Worker installed with cache version: ', await cacheName);
 });
 
 
