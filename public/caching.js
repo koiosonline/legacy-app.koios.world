@@ -1,4 +1,7 @@
-let cacheName = 'default';
+let cacheName = this.fetch("https://api.github.com/repos/koiosonline/app.koios.world/releases/latest")
+  .then(_=>_.json())
+  .then(d=>d.name || "ERR");
+
 const console = this.console;
 
 const CACHE_FLAGS = [
@@ -20,8 +23,8 @@ this.addEventListener('activate', e => {
   e.waitUntil(
     this.caches.keys().then(cacheNames => {
       return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== cacheName) {
+        cacheNames.map(async cache => {
+          if (cache !== await cacheName) {
             return this.caches.delete(cache); // Remove unwanted caches
           }
         })
@@ -31,25 +34,24 @@ this.addEventListener('activate', e => {
 });
 
 // fetch used.
-this.addEventListener('fetch', e => {
+this.addEventListener('fetch', async e => {
   // storing non GET reqs not 'really' supported.
   if (e.request.method != "GET") return;
 
-  console.log(`Service worker fetch for (${e.request.url})`);
   e.respondWith(
     (async function () {
       // Try to get the response from a cache.
-      const cache = await this.caches.open(cacheName);
+      const cache = await this.caches.open(await cacheName);
       const cachedResponse = await cache.match(e.request);
 
       if (cachedResponse) {
         e.waitUntil(cache.add(e.request));
         return cachedResponse;
       }else{
-        return await this.fetch(e.request).then(res => {
+        return await this.fetch(e.request).then(async res => {
           if(cachable(e.request.url)){
             const responseClone = res.clone();
-            this.caches.open(cacheName).then(cache => {
+            this.caches.open(await cacheName).then(cache => {
               cache.put(e.request, responseClone);
             });
           }
@@ -63,16 +65,16 @@ this.addEventListener('fetch', e => {
 function emptyOldCache() {
   this.caches.keys().then(cacheNames => {
     return Promise.all(
-      cacheNames.map(cache => {
-        if (cache !== cacheName) {
+      cacheNames.map(async cache => {
+        if (cache !== await cacheName) {
           return this.caches.delete(cache);
         }
       })
     );
   });
 }
-this.addEventListener('message', e => {
-  if(cacheName !== e.data){
+this.addEventListener('message', async e => {
+  if(await cacheName !== e.data){
     console.log(`Updating SW version to ${e.data}`);
     cacheName = e.data;
     emptyOldCache();
