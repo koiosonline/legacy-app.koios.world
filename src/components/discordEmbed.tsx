@@ -1,4 +1,4 @@
-import WidgetBot from '@widgetbot/react-embed'
+import WidgetBot from '@widgetbot/react-embed';
 
 const DiscordEmbed = () => {
   return (
@@ -17,7 +17,7 @@ const DiscordEmbed = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DiscordEmbed
+export default DiscordEmbed;
