@@ -134,6 +134,10 @@
       border: 2px solid lightgray;
       transition: border 0.2s ease;
 
+      @include themify($themes) {
+        background: unset;
+      }
+
       &:hover {
         background-image: unset;
         background-size: unset;

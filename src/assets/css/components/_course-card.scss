@@ -57,6 +57,11 @@
         font-weight: bold;
         margin-right: 1em;
 
+        @include themify($themes) {
+          background-color: themed(elevation3);
+          color: themed(textColor);
+        }
+
         &--duration {
           display: flex;
           flex-direction: row;
@@ -67,6 +72,10 @@
             width: 1em;
             height: 1em;
             fill: currentColor;
+
+            @include themify($themes) {
+              fill: themed(textColor);
+            }
           }
         }
       }

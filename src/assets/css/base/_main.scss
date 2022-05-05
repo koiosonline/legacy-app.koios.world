@@ -17,7 +17,7 @@ body {
   margin-top: 60px;
 
   @include themify($themes) {
-    background-color: themed(elevation1);
+    background-color: themed(elevation0);
   }
 
   @include for-size(1200px) {
