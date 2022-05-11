@@ -9,8 +9,10 @@ $themes: (
     textColor: $color-11,
     buttonTextColor: $color-11,
     border: $color-08,
+    textActive: $color-06,
     buttonColor: #fff,
     buttonBorder: 2px solid #fff,
+    cardiconfill: #6D59E6
   ),
   dark: (
     elevation0: #242424,
@@ -21,8 +23,10 @@ $themes: (
     elevation5: #727272,
     textColor: $color-08,
     buttonTextColor: $color-08,
+    textActive: #d0bcff,
     border: #242424,
     buttonColor: #333,
     buttonBorder: 1px solid #aaa,
+    cardiconfill: $color-08
   ),
 );

@@ -25,6 +25,10 @@
   z-index: 1;
   max-width: 100%;
 
+  @include themify($themes) {
+    background-color: themed(elevation2);
+  }
+
   &__toggle {
     width: 30px;
     height: 30px;
@@ -32,6 +36,10 @@
     svg {
       width: 30px;
       height: 30px;
+
+      @include themify($themes) {
+        fill: themed(textColor);
+      }
     }
   }
 
@@ -82,6 +90,10 @@
     svg {
       width: 30px;
       height: 30px;
+
+      @include themify($themes) {
+        fill: themed(textColor);
+      }
     }
   }
 
@@ -209,6 +221,10 @@
       background-color: #d7d7d7;
       transition: 0.3s;
 
+      @include themify($themes) {
+        background-color: themed(elevation4);
+      }
+
       &:first-child {
         border-radius: 5px 0 0 5px;
       }
@@ -235,6 +251,10 @@
     align-items: center;
     height: 80px;
 
+    @include themify($themes) {
+      border-top: 2px solid themed(elevation5);
+    }
+
     &__link {
       display: flex;
       flex-flow: row;
@@ -252,6 +272,10 @@
       &__profile-name {
         font-weight: 600;
         color: $color-text;
+
+        @include themify($themes) {
+          color: themed(textColor);
+        }
       }
       &__pubkey {
         color: #d7d7d7;

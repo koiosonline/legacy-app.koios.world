@@ -19,6 +19,11 @@
       width: 100%;
       text-align: right;
 
+      @include themify($themes) {
+        background-color: themed(elevation5);
+        color: themed(textColor);
+      }
+
       a {
         display: flex;
         text-decoration: none;
@@ -27,6 +32,10 @@
 
         &:visited {
           color: inherit;
+
+          @include themify($themes) {
+            color: themed(textColor);
+          }
         }
       }
 
