@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { UserContext } from '../../Context/UserContext';
 import { MetaBlocks } from '../../components/MetaBlocks';
 import { OverviewTab } from '../../components/UserProfile/Tabs/OverviewTab';
+import { NFTTab } from '../../components/UserProfile/Tabs/NFTTab';
 import { SettingsTab } from '../../components/UserProfile/Tabs/SettingsTab';
 import { Tabs } from '../../components/UserProfile/Tabs/Tabs';
 import { useSizes } from '../../components/Util/useSizes';
@@ -24,11 +25,11 @@ export const Authenticated = () => {
 
       {isMobile ? (
         <>
-          <h1 className="username">{userAccount.name}</h1>
+          {userAccount.name && <h1 className="username">{userAccount.name}</h1>}
           <ProfileInfo
-            walletAddress={userAccount.publicKeyFormatted}
-            tokenBalance={userAccount.tokenBalance}
-            discordUsername={userAccount.discordProfile.discordHandle}
+            walletAddress={userAccount?.publicKeyFormatted}
+            userBalance={userAccount?.userBalance}
+            discordUsername={userAccount?.discordProfile?.discordHandle}
           />
         </>
       ) : (
@@ -37,6 +38,7 @@ export const Authenticated = () => {
 
       <Tabs>
         <OverviewTab title="Overview" />
+        <NFTTab title="NFTs" />
         <SettingsTab title="Settings" />
       </Tabs>
     </div>

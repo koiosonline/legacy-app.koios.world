@@ -2,7 +2,6 @@ import { DecentralizedProfile } from '../../types/UserProfile/DecentralizedProfi
 import { DiscordProfile } from '../../types/UserProfile/DiscordProfile';
 import { FormatPublicKey } from '../Util/FormatPublicKey';
 import { getCidImage } from '../Web3/Ipfs';
-import { TokenBalance } from '../../types/UserProfile/TokenBalance';
 import { getUserRank } from './getUserRank';
 
 const discordProfileData = (discordUsername, discordProfile) => {
@@ -30,7 +29,7 @@ const discordProfileData = (discordUsername, discordProfile) => {
 export const mapUserData = async (
   accountAddress: string,
   decentralizedProfile: DecentralizedProfile,
-  titanTokenCount: TokenBalance,
+  userBalance: number,
   discordUsername?: string,
   discordProfile?: DiscordProfile
 ) => {
@@ -42,7 +41,7 @@ export const mapUserData = async (
     description: decentralizedProfile?.description,
     profileBanner: await getCidImage(decentralizedProfile?.background?.original?.src),
     profileImage: await getCidImage(decentralizedProfile?.image?.original?.src),
-    tokenBalance: titanTokenCount,
+    userBalance: userBalance,
     discordProfile: discordProfileData(discordUsername, discordProfile),
   };
 };

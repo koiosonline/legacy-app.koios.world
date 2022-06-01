@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { UserContext } from '../../../Context/UserContext';
 import discordLogo from '../../../assets/images/brands/discord--3d.png';
+import { Alert } from '../../Util/Alert';
 
 type OverviewTabProps = {
   title: string;
@@ -48,17 +49,15 @@ export const OverviewTab: React.FC<OverviewTabProps> = () => {
       ) : (
         <>
           {userAccount?.discordProfile?.discordHandle && !userAccount?.discordProfile?.isMember ? (
-            <h2 className="overview-tab__inactive">
-              You're not a member of the Koios Discord yet,&nbsp;
+            <Alert type="info">
+              You're not a member of the Koios Discord yet,{' '}
               <a href="https://discord.com/invite/jBjudugeBa" target="_blank" rel="noreferrer">
                 join the community
-              </a>&nbsp;
+              </a>{' '}
               to become a Titan and see your contribution back here in the statistics.
-            </h2>
+            </Alert>
           ) : (
-            <h2 className="overview-tab__inactive">
-              Connect your Discord profile to see an overview of your statistics.
-            </h2>
+            <Alert type="info">Connect your Discord profile to see an overview of your statistics</Alert>
           )}
         </>
       )}
