@@ -1,5 +1,4 @@
 import { MappedDiscordProfile } from './DiscordProfile';
-import { TokenBalance } from './TokenBalance';
 
 export type UserAccount = {
   description: string;
@@ -10,7 +9,7 @@ export type UserAccount = {
   profileImage: string;
   publicKey: string;
   publicKeyFormatted: string;
-  tokenBalance: TokenBalance;
+  userBalance: number;
 };
 
 export type UserAccountContext = {

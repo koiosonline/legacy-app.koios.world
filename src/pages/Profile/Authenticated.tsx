@@ -28,7 +28,7 @@ export const Authenticated = () => {
           {userAccount.name && <h1 className="username">{userAccount.name}</h1>}
           <ProfileInfo
             walletAddress={userAccount?.publicKeyFormatted}
-            tokenBalance={userAccount?.tokenBalance}
+            userBalance={userAccount?.userBalance}
             discordUsername={userAccount?.discordProfile?.discordHandle}
           />
         </>

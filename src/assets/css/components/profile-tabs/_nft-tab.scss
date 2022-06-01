@@ -34,18 +34,4 @@
 
     }
   }
-  
-  .card--mint {
-    max-width: 350px;
-    width: 100%;
-    margin: 0 auto;
-
-    @include for-size(390px) {
-      grid-column: 1 / 3;
-    }
-
-    @include for-size(500px) {
-      grid-column: unset;
-    }
-  }
 }

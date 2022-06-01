@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { UserContext } from '../Context/UserContext';
+import titanCoin from '../assets/images/placeholders/placeholder-titan-token.png';
 
 export const MetaBlocks = () => {
   const { userAccount } = useContext(UserContext);
@@ -10,10 +11,10 @@ export const MetaBlocks = () => {
         <h4 className="metablock__title">Total Titan-tokens</h4>
         <img
           className="metablock__img"
-          src={userAccount?.tokenBalance.tokenIcon}
+          src={titanCoin}
           alt="Token icon"
         />
-        <p className="metablock__balance">{userAccount?.tokenBalance.balance}</p>
+        <p className="metablock__balance">{userAccount?.userBalance}</p>
       </li>
 
       <li className="metablock">

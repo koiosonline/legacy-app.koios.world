@@ -8,13 +8,14 @@ import { getDIDAuthenticated } from '../UserProfile/getDIDAuthenticated';
 import { getDecentralizedProfile } from '../UserProfile/getDecentralizedProfile';
 import { mapUserData } from '../UserProfile/mapUserData';
 import { getDiscordProfile } from '../../api/Api';
-import { getTitanTokenCount } from '../UserProfile/getTitanTokenCount';
 import { autoNetworkSwitch } from './AutoNetworkSwitch';
+import { useCoinContract } from '../../Web3/hooks/useTitanCoinContract';
 
 export const useWeb3 = () => {
   const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider, setWeb3 } =
     useContext(AuthContext);
   const { userAccount, setUserAccount } = useContext(UserContext);
+  const { getUserBalance } = useCoinContract();
 
   const connectWallet = async () => {
     try {
@@ -51,13 +52,13 @@ export const useWeb3 = () => {
   const getUserProfile = async (accountAddress: string) => {
     try {
       const decentralizedProfile = await getDecentralizedProfile(accountAddress);
-      const titanTokenCount = await getTitanTokenCount(accountAddress);
+      const userBalance = await getUserBalance(accountAddress);
       const discordUsername = decentralizedProfile?.url;
       const discordProfile = await getDiscordProfile(discordUsername);
       const userProfile = await mapUserData(
         accountAddress,
         decentralizedProfile,
-        titanTokenCount,
+        userBalance,
         discordUsername,
         discordProfile
       );
