@@ -6,7 +6,9 @@ import abiCoinContract from '../../assets/contracts/polygon/abi-titan-coin-contr
 export const useCoinContract = () => {
   const { polygonProvider } = useProvider();
   const web3 = new Web3(polygonProvider());
+  console.log("before", process.env.REACT_APP_TITAN_COIN_CONTRACT_ADDRESS_POLYGON);
   const contractAddress = process.env.REACT_APP_TITAN_COIN_CONTRACT_ADDRESS_POLYGON;
+  console.log("after", contractAddress);
 
   const getUserBalance = async (publicKey: string) => {
     const tokenInst = new web3.eth.Contract(abiCoinContract as AbiItem[], contractAddress as string);
