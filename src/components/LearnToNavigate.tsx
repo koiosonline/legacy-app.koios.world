@@ -1,9 +1,9 @@
 import data from "../assets/data/learnToNavigate.json";
 import QuickLinks from "./QuickLinks";
-import store from "store";
+import { store } from "./Util/Storage";
 
 const LearnToNavigate = (props) => {
-  const continueLearning = store.get("lastWatched");
+  const continueLearning = store.getJson("lastWatched");
 
   return (
     <div className={"learnToNavigate-container"}>

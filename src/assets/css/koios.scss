@@ -3,6 +3,7 @@
 /* Utils */
 @import "./utils/mixins";
 @import "./utils/variables";
+@import "./utils/alert";
 
 /* Base */
 @import "./base/main";
@@ -37,6 +38,7 @@
 /* Components */
 @import "src/assets/css/components/course-card";
 @import "./components/profile-tabs/overview-tab";
+@import "./components/profile-tabs/nft-tab";
 @import "./components/profile-tabs/settings-tab";
 @import "src/assets/css/components/QuickLinks";
 @import "src/assets/css/components/TabInfo";
@@ -56,11 +58,5 @@
 @import "./components/metablocks";
 @import "./components/statistic-block";
 @import "./components/profile-banner";
-
-
-/* Font awesome */
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/brands";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/v4-shims";
+@import "./components/cards/cards";
+@import "./components/cards/skeleton";

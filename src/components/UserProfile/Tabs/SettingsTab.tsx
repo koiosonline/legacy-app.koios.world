@@ -19,7 +19,7 @@ const SettingButton: React.FC<SettingProps> = (props) => {
   return (
     <li className="btn btn-primary" onClick={onClick}>
       {link ? (
-        <a href={link} target="_blank" rel={'noreferrer noopener'}>
+        <a className='link' href={link} target="_blank" rel={'noreferrer noopener'}>
           <Icon type={icon} />
           {label}
         </a>

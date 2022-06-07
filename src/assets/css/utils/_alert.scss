@@ -1,0 +1,13 @@
+.alert {
+    &-success {
+        color: $color-action-valid;
+    }
+
+    &-warning {
+        color: $color-action-warning;
+    }
+
+    &-error {
+        color: $color-action-error;
+    }
+}
