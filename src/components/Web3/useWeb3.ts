@@ -52,13 +52,13 @@ export const useWeb3 = () => {
   const getUserProfile = async (accountAddress: string) => {
     try {
       const decentralizedProfile = await getDecentralizedProfile(accountAddress);
-      // const userBalance = await getUserBalance(accountAddress);
+      const userBalance = await getUserBalance(accountAddress);
       const discordUsername = decentralizedProfile?.url;
       const discordProfile = await getDiscordProfile(discordUsername);
       const userProfile = await mapUserData(
         accountAddress,
         decentralizedProfile,
-        0,
+        userBalance,
         discordUsername,
         discordProfile
       );
