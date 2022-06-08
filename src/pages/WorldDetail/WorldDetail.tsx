@@ -26,7 +26,7 @@ export const WorldDetail = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [courseData, setCourseData] = useState<any[]>();
   const [literatureOfVideo, setliteratureOfVideo] = useState<string>();
-  const [videoHasHomework, setHomework] = useState<boolean>();
+  const [videoHasHomework, setVideoHasHomework] = useState<boolean>();
   const [videoList, setVideoList] = useState<any[]>();
   const [extraInfo, setExtraInfo] = useState<any[]>();
   const [quizState, setQuizState] = useState<boolean>(false);
@@ -78,7 +78,7 @@ export const WorldDetail = () => {
     setliteratureOfVideo(literature);
     const getCourseData = await getVideoInfo(courseLevel.data);
     setCourseData(getCourseData);
-    setHomework(hasHomework(literature));
+    setVideoHasHomework(hasHomework(literature));
     setIsLoading(false);
   };
 
