@@ -74,6 +74,7 @@
 
   .tabs {
     margin-top: 90px;
+    padding-bottom: 90px;
 
     &-options {
       display: flex;
@@ -136,6 +137,21 @@
           transform: scale(1);
         }
       }
+    }
+  }
+
+  .alert {
+    text-align: center;
+    margin: 50px auto;
+    color: $color-09;
+    width: 400px;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+
+    a {
+      color: $color-06;
+      text-decoration: underline;
     }
   }
 }
