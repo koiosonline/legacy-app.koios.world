@@ -8,7 +8,6 @@ export enum Themes {
 
 export const useTheme = () => {
   const { theme, setTheme } = useContext<ThemeContextProps>(ThemeContext);
-  console.log(theme);
 
   const switchTheme = () => {
     if (theme === Themes.LIGHT_THEME) {
@@ -22,8 +21,7 @@ export const useTheme = () => {
 
   useEffect(() => {
     setTheme(localStorage.getItem("theme") || theme);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [setTheme, theme]);
 
   return {
     switchTheme,

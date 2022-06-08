@@ -86,6 +86,10 @@
       font-size: 16px;
       cursor: pointer;
 
+      @include themify($themes) {
+        background-color: themed(pinkButton);
+      }
+
       &:hover {
         background-color: rgba(204, 8, 137, 80%);
       }

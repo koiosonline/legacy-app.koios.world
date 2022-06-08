@@ -23,6 +23,10 @@
 
     p {
       @include gradient-text;
+
+      @include themify($themes) {
+        background-color: themed(elevation3);
+      }
     }
 
     &:hover {

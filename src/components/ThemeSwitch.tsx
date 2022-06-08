@@ -9,12 +9,12 @@ export const ThemeSwitch = () => {
   const darkMode = theme === Themes.DARK_THEME;
 
   return (
-    <div className="theme-switch">
-      <input id="theme-switch__input" type="checkbox" defaultChecked={darkMode} onClick={switchTheme} />
+    <div className="theme-switch btn">
+      <input id="theme-switch__input" type="checkbox" defaultChecked={darkMode} onClick={switchTheme} className="theme-switch__input"/>
       <label className="theme-switch__trail" htmlFor="theme-switch__input">
         <span className="theme-switch__handler">
-          {/* <Icon name={darkMode ? "moon" : "sun"} /> */}
-          <p>Switch</p>
+          <Icon type={darkMode ? "sun" : "moon"} />
+          <p>{darkMode ? "Light mode" : "Dark mode"}</p>
         </span>
       </label>
     </div>

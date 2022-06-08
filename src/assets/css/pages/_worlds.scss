@@ -43,7 +43,7 @@
     max-width: 1080px;
 
     @include for-size($mobile, $desktop) {
-      padding: 0 2rem;
+      padding: 0 2rem $spacing-10x;
     }
   }
 }

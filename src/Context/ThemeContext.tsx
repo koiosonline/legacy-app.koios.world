@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import { Themes, useTheme } from "../components/Util/useTheme";
 
 export type ThemeContextProps = {
   theme: string;
@@ -21,7 +20,6 @@ export const ThemeContextProvider: React.FC = (props) => {
   };
 
   const [theme, setTheme] = useState(handleInitialState());
-  const themeState = localStorage.getItem("theme");
 
   const handleSystemState = () => {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
