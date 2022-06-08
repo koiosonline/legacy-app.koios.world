@@ -204,7 +204,7 @@ export const WorldDetail = () => {
                     tableOfContents.find(c=>c.title.includes("Portfolio assignment"))?.id
                   )?.scrollIntoView()} 
                   className={"cta-button"}>
-                    <Icon type="file_word" className="cta-button__img" />
+                    <Icon type="file-word" className="cta-button__img" />
                     <p className="cta-button__text">Homework</p>
                   </button>
                 )}
