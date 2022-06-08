@@ -105,6 +105,7 @@ export const MainNav = () => {
               </NavLink>
             </li>
           ))}
+
         </ul>
 
         <div className="social">
