@@ -1,86 +1,133 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MDEditor, { commands } from '@uiw/react-md-editor';
 import { Icon } from '../../components/Util/Icon';
-
-const title3 = {
-  name: 'title3',
-  keyCommand: 'title3',
-  buttonProps: { 'aria-label': 'Insert title3' },
-  icon: (
-    <svg width="12" height="12" viewBox="0 0 520 520">
-      <path fill="currentColor" d="M15.7083333,468 C7.03242448,468 0,462.030833 0,454.666667 L0,421.333333 C0,413.969167 7.03242448,408 15.7083333,408 L361.291667,408 C369.967576,408 377,413.969167 377,421.333333 L377,454.666667 C377,462.030833 369.967576,468 361.291667,468 L15.7083333,468 Z M21.6666667,366 C9.69989583,366 0,359.831861 0,352.222222 L0,317.777778 C0,310.168139 9.69989583,304 21.6666667,304 L498.333333,304 C510.300104,304 520,310.168139 520,317.777778 L520,352.222222 C520,359.831861 510.300104,366 498.333333,366 L21.6666667,366 Z M136.835938,64 L136.835937,126 L107.25,126 L107.25,251 L40.75,251 L40.75,126 L-5.68434189e-14,126 L-5.68434189e-14,64 L136.835938,64 Z M212,64 L212,251 L161.648438,251 L161.648438,64 L212,64 Z M378,64 L378,126 L343.25,126 L343.25,251 L281.75,251 L281.75,126 L238,126 L238,64 L378,64 Z M449.047619,189.550781 L520,189.550781 L520,251 L405,251 L405,64 L449.047619,64 L449.047619,189.550781 Z" />
-    </svg>
-  ),
-  execute: (state, api) => {
-    let modifyText = `### ${state.selectedText}\n`;
-    if (!state.selectedText) {
-      modifyText = `### `;
-    }
-    api.replaceSelection(modifyText);
-  },
-};
+import { useParams } from 'react-router-dom';
+import { getVideoInfo, getLiterature } from '../../api/Api';
+import { SingleVideo } from '../../types/Courses/SingleVideo';
+import { CourseContentParams, CourseDetailParams, VideoSlugParams } from '../../types/Params';
+import { FindCourseDetail } from '../WorldDetail/useWorldDetail';
+import { Slugify } from '../../components/Util/Slugify';
+import courseInfo from '../../assets/data/Worlds.json';
+import Loading from '../../components/Loading';
 
 export const ContentEditor = () => {
-  const [input, setInput] = useState('');
-  const [fileName, setFileName] = useState('');
+  const [editorInput, setEditorInput] = useState<string>('');
 
-  const saveInputAsFile = () => {
-    const blob = new Blob([input], { type: 'markdown' });
-    const downloadLink = document.createElement('a');
-    downloadLink.download = fileName + '.md';
-    downloadLink.href = window.URL.createObjectURL(blob);
-    downloadLink.click();
+  const { worldContent, worldDetail, videoSlug } = useParams<
+    CourseContentParams & CourseDetailParams & VideoSlugParams
+  >();
+
+  const [videoContent, setVideoContent] = useState<SingleVideo>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [courseData, setCourseData] = useState<any[]>();
+  const [videoList, setVideoList] = useState<any[]>();
+  const [extraInfo, setExtraInfo] = useState<any[]>();
+  const [quizState, setQuizState] = useState<boolean>(false);
+
+
+  const course = courseInfo.find(
+    (item) => Slugify(item.url, { lowerCase: true, replaceAmpersand: 'and' }) === worldContent
+  );
+
+  const courseLevel = course.content.find(
+    (item) => Slugify(item.title, { lowerCase: true, replaceAmpersand: 'and' }) === worldDetail
+  );
+
+  const fetchEditorData = async () => {
+    setIsLoading(true);
+    const d = await FindCourseDetail(videoSlug, courseLevel.videoInfo);
+    setVideoContent(d);
+    const getVideoList = await getVideoInfo(courseLevel.videoInfo);
+    setExtraInfo(getVideoList.literature);
+    setVideoList(getVideoList.videos);
+    const literature = await getLiterature({
+      world: worldContent,
+      worldLevel: worldDetail,
+      article: videoSlug?.replace('#', '') + '.md',
+    });
+    setEditorInput(literature);
+    const getCourseData = await getVideoInfo(courseLevel.data);
+    setCourseData(getCourseData);
+    console.log('done loading', getVideoList);
+    setIsLoading(false);
   };
+  useEffect(() => {
+    fetchEditorData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [videoSlug, worldDetail]);
 
   return (
-    <>
-      <main className="main">
-        <div className="markdown-editor container">
+    <div className="container">
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <h1 className="worlds__title">Content editor</h1>
 
-          <section className="editor">
-            <div className="editor__window">
-              <MDEditor
-                value={input}
-                onChange={setInput}
-                commands={[
-                  // text manipulation commands
-                  commands.group(
-                    [
-                      commands.title1,
-                      commands.title2,
-                      commands.title3,
-                      commands.title4,
-                      commands.title5,
-                      commands.title6,
-                    ],
-                    {
-                      name: 'title',
-                      groupName: 'title',
-                      buttonProps: { 'aria-label': 'Insert title' },
-                      icon: (<Icon type='heading' />)
-                    }
-                  ),
-                  commands.bold,
-                  commands.italic,
-                  commands.strikethrough,
-                  commands.hr,
-                  commands.divider,
-                  // insertion tools
-                  commands.link,
-                  commands.quote,
-                  commands.codeBlock,
-                  commands.image,
-                  commands.divider,
-                  // list creation
-                  commands.unorderedListCommand,
-                  commands.orderedListCommand,
-                  commands.checkedListCommand
-                ]}
-              />
+          <main className="main content-editor-container">
+
+            <div className='flex--row justify--center gap--3 mt--1'>
+              <button className='btn-primary'>Upload to IPFS</button>
+              <button className='btn-primary'>Upload to Github</button>
+              <button className='btn-primary'>Save to disk</button>
             </div>
-          </section>
-        </div>
-      </main>
-    </>
+
+            <section className="markdown-editor">
+              {/* Buttons, e.g., github publish goes here */}
+
+              <div className="editor__window">
+                <MDEditor
+                  value={editorInput}
+                  onChange={setEditorInput}
+                  height={500}
+                  commands={[
+                    // text manipulation commands
+                    commands.group(
+                      [
+                        commands.title1,
+                        commands.title2,
+                        commands.title3,
+                        commands.title4,
+                        commands.title5,
+                        commands.title6,
+                      ],
+                      {
+                        name: 'title',
+                        groupName: 'title',
+                        buttonProps: { 'aria-label': 'Insert title' },
+                        icon: <Icon type="heading" />,
+                      }
+                    ),
+                    commands.bold,
+                    commands.italic,
+                    commands.strikethrough,
+                    commands.hr,
+                    commands.divider,
+                    // insertion tools
+                    commands.link,
+                    commands.quote,
+                    commands.codeBlock,
+                    commands.image,
+                    commands.divider,
+                    // list creation
+                    commands.unorderedListCommand,
+                    commands.orderedListCommand,
+                    commands.checkedListCommand,
+                  ]}
+                />
+              </div>
+            </section>
+
+            <section>
+              <h2>Video details</h2>
+              <div className="labeled-input-container">
+                <h3 className="label">URL:</h3>
+                <input />
+              </div>
+            </section>
+          </main>
+        </>
+      )}
+    </div>
   );
 };
