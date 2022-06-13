@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { FindCourseDetail } from "./useWorldDetail";
 import courseInfo from "../../assets/data/Worlds.json";
 import { Slugify } from "../../components/Util/Slugify";
@@ -15,6 +15,7 @@ import { Markdown } from "../../components/Markdown";
 import { ArticlePageLinks } from "../../components/ArticlePageLinks";
 import { compiler } from "markdown-to-jsx";
 import { ContentPlayer } from "../../components/ContentPlayer";
+import { Icon } from "../../components/Util/Icon";
 
 export const WorldDetail = () => {
   const [videoContent, setVideoContent] = useState<SingleVideo>();
@@ -163,7 +164,7 @@ export const WorldDetail = () => {
   });
 
   return (
-    <div className={"container"}>
+    <div className={'container'}>
       <div className="world-detail">
         {isLoading ? (
           <Loading />
@@ -177,10 +178,10 @@ export const WorldDetail = () => {
                 videoContent={videoContent}
                 videoList={videoList}
               />
-              <div className={"cta-button-container"}>
+              <div className={'cta-button-container'}>
                 <a
                   href="https://c0c6pmb4lmw.typeform.com/FeedbackButton"
-                  className={"cta-button"}
+                  className={'cta-button'}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -189,11 +190,17 @@ export const WorldDetail = () => {
                 </a>
 
                 {quiz && (
-                  <button onClick={openQuiz} className={"cta-button"}>
-                    <img className="cta-button__img" src={"/images/scroll-solid.svg"} alt={"sheets"} />
+                  <button onClick={openQuiz} className={'cta-button'}>
+                    <img className="cta-button__img" src={'/images/scroll-solid.svg'} alt={'sheets'} />
                     <p className="cta-button__text">Quiz</p>
                   </button>
                 )}
+
+                {/* TODO: only show edit button if connector is publisher or admin.. */}
+                <Link to={`/editor/${worldContent}/${worldDetail}/${videoSlug}`} className='cta-button'>
+                  <Icon className="cta-button__img" type="edit-page" />
+                  <p className="cta-button__text">Edit</p>
+                </Link>
               </div>
 
               {quizState && <Quiz quizData={quiz} modalState={openQuiz} />}
@@ -206,13 +213,13 @@ export const WorldDetail = () => {
                     ) : (
                       <>
                         <h2>{videoContent.title}</h2>
-                        <p>{videoContent.description.replace(/___(.*?)___/g, "")}</p>
+                        <p>{videoContent.description.replace(/___(.*?)___/g, '')}</p>
                       </>
                     )}
                   </article>
 
                   <ArticlePageLinks
-                    pathname={"/worlds/" + worldContent + "/" + worldDetail}
+                    pathname={'/worlds/' + worldContent + '/' + worldDetail}
                     previousVideo={previousVideo ? previousVideo : null}
                     nextVideo={nextVideo ? nextVideo : null}
                   />
