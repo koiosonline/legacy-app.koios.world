@@ -19,23 +19,25 @@
 
 .flex {
   display: flex;
-  &.row {
+  &--row {
+    display: flex;
     flex-direction: row;
   }
-  &.column {
+  &--column {
+    display: flex;
     flex-direction: column;
   }
 }
 
 .justify {
-  &-center{
+  &--center{
     justify-content: center;
   }
 }
 
 .gap {
   @for $i from 1 through 10 {
-    &-#{$i} {
+    &--#{$i} {
       gap: #{$i*8}px;
     }
   }
