@@ -40,11 +40,7 @@ export const App = () => {
                     <Route path="/explanation" exact component={ExplanationVideos} />
                     <Route path="/earn" exact component={Earn} />
                     <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
-                    <Route path={['/editor']} exact>
-                      <Switch>
-                        <Route path="/editor" exact component={ContentEditor} />
-                      </Switch>
-                    </Route>
+                    <Route path="/editor/:worldContent/:worldDetail/:videoSlug" exact component={ContentEditor} />
 
                     <Route path="/" exact>
                       <Redirect to="/worlds" />
