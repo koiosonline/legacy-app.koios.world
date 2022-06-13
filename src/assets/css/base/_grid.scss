@@ -38,7 +38,7 @@
 .gap {
   @for $i from 1 through 10 {
     &--#{$i} {
-      gap: #{$i*8}px;
+      gap: #{$i*$spacing-pace}px;
     }
   }
 }
