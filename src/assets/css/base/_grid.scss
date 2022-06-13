@@ -16,3 +16,27 @@
     margin-top: 5vh;
   }
 }
+
+.flex {
+  display: flex;
+  &.row {
+    flex-direction: row;
+  }
+  &.column {
+    flex-direction: column;
+  }
+}
+
+.justify {
+  &-center{
+    justify-content: center;
+  }
+}
+
+.gap {
+  @for $i from 1 through 10 {
+    &-#{$i} {
+      gap: #{$i*8}px;
+    }
+  }
+}
