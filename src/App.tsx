@@ -13,10 +13,10 @@ import ScrollToTop from './components/Util/scrollTop';
 import ExplanationVideos from './pages/ExplanationVideos';
 import Earn from './pages/Earn';
 import VacancyDetail from './pages/VacancyDetail';
-import { MarkdownEditor } from './pages/MarkdownEditor';
 import { AuthContextProvider } from './Context/AuthContext';
 import { UserContextProvider } from './Context/UserContext';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ContentEditor } from './pages/CMS/ContentEditor';
 
 export const App = () => {
   const queryClient = new QueryClient();
@@ -29,7 +29,7 @@ export const App = () => {
             <Switch>
               <Route path={['/editor']} exact>
                 <Switch>
-                  <Route path="/editor" exact component={MarkdownEditor} />
+                  <Route path="/editor" exact component={ContentEditor} />
                 </Switch>
               </Route>
 
