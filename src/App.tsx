@@ -27,12 +27,6 @@ export const App = () => {
           <UserContextProvider>
             <ScrollToTop />
             <Switch>
-              <Route path={['/editor']} exact>
-                <Switch>
-                  <Route path="/editor" exact component={ContentEditor} />
-                </Switch>
-              </Route>
-
               <Route>
                 <Layout>
                   <Switch>
@@ -46,6 +40,12 @@ export const App = () => {
                     <Route path="/explanation" exact component={ExplanationVideos} />
                     <Route path="/earn" exact component={Earn} />
                     <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
+                    <Route path={['/editor']} exact>
+                      <Switch>
+                        <Route path="/editor" exact component={ContentEditor} />
+                      </Switch>
+                    </Route>
+
                     <Route path="/" exact>
                       <Redirect to="/worlds" />
                     </Route>
