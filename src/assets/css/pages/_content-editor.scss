@@ -1,0 +1,31 @@
+.markdown-editor {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.labeled-input-container {
+  display: flex;
+  flex-direction: row;
+  .label {
+    padding: 8px 15px 8px 8px;
+    border-radius:$radius 0px 0px $radius;
+    background:  $color-09;
+  }
+  input {
+    border-radius: 0px $radius $radius 0px;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-right: 2px;
+    border-style: solid;
+    border-color: $color-09;
+
+  }
+}
+
+.content-editor-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2x;
+}
