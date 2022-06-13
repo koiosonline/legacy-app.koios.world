@@ -1,0 +1,7 @@
+.mt {
+    @for $i from 1 through 10 {
+      &--#{$i} {
+        margin-top: #{$i}em;
+      }
+    }
+}
