@@ -10,6 +10,8 @@ import { Slugify } from '../../components/Util/Slugify';
 import courseInfo from '../../assets/data/Worlds.json';
 import Loading from '../../components/Loading';
 
+import LoginGithub from 'react-login-github';
+
 export const ContentEditor = () => {
   const [editorInput, setEditorInput] = useState<string>('');
 
@@ -23,7 +25,6 @@ export const ContentEditor = () => {
   const [videoList, setVideoList] = useState<any[]>();
   const [extraInfo, setExtraInfo] = useState<any[]>();
   const [quizState, setQuizState] = useState<boolean>(false);
-
 
   const course = courseInfo.find(
     (item) => Slugify(item.url, { lowerCase: true, replaceAmpersand: 'and' }) === worldContent
@@ -56,6 +57,9 @@ export const ContentEditor = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoSlug, worldDetail]);
 
+  const onSuccess = (response) => console.log(response);
+  const onFailure = (response) => console.error(response);
+
   return (
     <div className="container">
       {isLoading ? (
@@ -63,13 +67,15 @@ export const ContentEditor = () => {
       ) : (
         <>
           <h1 className="worlds__title">Content editor</h1>
+          <LoginGithub clientId="b66eabae7230d5daa54e" onSuccess={onSuccess} onFailure={onFailure} />
 
           <main className="main content-editor-container">
-
-            <div className='flex--row justify--center gap--3 mt--1'>
-              <button className='btn-primary'>Upload to IPFS</button>
-              <button className='btn-primary'>Upload to Github</button>
-              <button className='btn-primary'>Save to disk</button>
+            <div className="flex--row justify--center gap--3 mt--1">
+              <button className="btn-primary">Upload to IPFS</button>
+              <button className="btn-primary">
+                Upload to Github
+              </button>
+              <button className="btn-primary">Save to disk</button>
             </div>
 
             <section className="markdown-editor">
