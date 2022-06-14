@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { UserContext } from '../Context/UserContext';
 import { AddTokenToWallet } from './Web3/AddTokenToWallet';
-import titanCoin from '../assets/images/placeholders/placeholder-titan-token.png';
+import titanCoin from '../assets/images/logos/koios-circle.svg';
 
 export const MetaBlocks = () => {
   const { userAccount } = useContext(UserContext);
