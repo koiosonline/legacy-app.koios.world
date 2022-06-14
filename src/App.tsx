@@ -17,12 +17,14 @@ import { MarkdownEditor } from './pages/MarkdownEditor';
 import { AuthContextProvider } from './Context/AuthContext';
 import { UserContextProvider } from './Context/UserContext';
 import { ThemeContextProvider } from './Context/ThemeContext';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 export const App = () => {
-
+  const queryClient = new QueryClient();
   return (
     <Router>
-      <ThemeContextProvider>
+     <ThemeContextProvider>
+      <QueryClientProvider client={queryClient}>
         <AuthContextProvider>
           <UserContextProvider>
             <ScrollToTop />
@@ -56,7 +58,8 @@ export const App = () => {
             </Switch>
           </UserContextProvider>
         </AuthContextProvider>
-      </ThemeContextProvider>
+      </QueryClientProvider>
+     </ThemeContextProvider>
     </Router>
   );
 };

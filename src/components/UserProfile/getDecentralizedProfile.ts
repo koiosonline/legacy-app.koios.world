@@ -7,7 +7,6 @@ export const getDecentralizedProfile = async (accountAddress: string) => {
     );
     return profile;
   } catch (e) {
-    console.log(e);
-    throw new Error('No IDX profile available');
+    throw new Error(e);
   }
 };

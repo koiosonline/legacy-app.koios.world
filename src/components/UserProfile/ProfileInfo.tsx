@@ -1,9 +1,9 @@
-import { TokenBalance } from '../../types/UserProfile/TokenBalance';
 import { Icon } from '../Util/Icon';
+import titanCoin from '../../assets/images/placeholders/placeholder-titan-token.png';
 
 type ProfileInfoProps = {
   walletAddress: string;
-  tokenBalance: TokenBalance;
+  userBalance: number;
   discordUsername?: string;
 };
 
@@ -18,12 +18,12 @@ export const ProfileInfo: React.FC<ProfileInfoProps> = (props) => {
 
       <li className="profile-info__list-item">
         <img
-          src={props.tokenBalance.tokenIcon}
+          src={titanCoin}
           alt="Token Icon"
           className="profile-info__img"
         />
         <span className="profile-info__label">Titan-tokens:</span>
-        {props.tokenBalance.balance}
+        {props.userBalance}
       </li>
 
       {props.discordUsername && (
