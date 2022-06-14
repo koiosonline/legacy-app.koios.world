@@ -4,7 +4,7 @@ import { getTitanNftsQuery } from "./queries/getTitanNftsQuery";
 export const NonFungibleTokens = () => {
 
   const getTitanNfts = async (publicKey: string) => {
-    const url = 'https://api.thegraph.com/subgraphs/name/koiosonline/titan-nft-polygon';
+    const url = 'https://api.thegraph.com/subgraphs/name/koiosonline/titan-nft-rinkeby';
     const query = getTitanNftsQuery(publicKey);
     const body = JSON.stringify({ query });
 
