@@ -3,6 +3,7 @@ export const getTitanNftsQuery = (authenticatedPublicKey: string) => {
 {
   nfts(where: {owner: "${authenticatedPublicKey.toLowerCase()}"}) {
     id
+    tokenID
     contentURI
     to
     from
