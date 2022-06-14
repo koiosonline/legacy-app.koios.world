@@ -40,7 +40,6 @@
 
     &__title {
       margin: 1rem 0 0.5em;
-      // color: $color-koios-dark-grey;
 
       @include themify($themes) {
         color: themed(textColor);
@@ -92,7 +91,6 @@
       -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      // color: $color-koios-dark-grey;
 
       @include themify($themes) {
         color: themed(textColor);
