@@ -27,7 +27,8 @@ export const CardNFT = ({ metadata, size, onClick }: NFTCardProps) => {
         {regularCardSize && (
           <a
             className="card__icon-link"
-            href={`https://testnets.opensea.io/assets/rinkeby/0x762e5600ddeb2e60fd247d4d66613c8afaf6968a/${metadata.tokenId}`}
+            href={`https://opensea.io/assets/ethereum/0x2762e676a9f17c7de34fe4b124424837c7e18e1c/${metadata.tokenId}`}
+            
             target="_blank"
             rel="noreferrer"
           >
