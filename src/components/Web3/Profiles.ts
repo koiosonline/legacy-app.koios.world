@@ -4,7 +4,7 @@ export const FindProfile = async (address: string) => {
   try {
     try {
       //getting the IDX profile
-      const profile = await window.idx.get('basicProfile', `${address}@eip155:4`);
+      const profile = await window.idx.get('basicProfile', `${address}@eip155:137`);
       const profilename: string = profile.name ? profile.name : address;
       let picturesource;
       if (profile.image) {
