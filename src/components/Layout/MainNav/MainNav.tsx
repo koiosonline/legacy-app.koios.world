@@ -11,6 +11,7 @@ import { useWeb3 } from '../../../components/Web3/useWeb3';
 import avatarPlaceholder from '../../../assets/images/placeholders/placeholder-titan.png';
 import { AuthContext } from '../../../Context/AuthContext';
 import { noop } from '../../Util/noop';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export const MainNav = () => {
   const { userAccount } = useContext(UserContext);
@@ -77,6 +78,8 @@ export const MainNav = () => {
             Connect wallet
           </button>
         )}
+
+        <ConnectButton />
         {userAccount && (
           <>
             <div
@@ -105,7 +108,6 @@ export const MainNav = () => {
               </NavLink>
             </li>
           ))}
-
         </ul>
 
         <div className="social">
