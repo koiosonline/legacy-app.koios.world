@@ -122,7 +122,7 @@ export const MainNav = () => {
 
         <div className="user-profile">
           {!userAccount && <p className="user-profile__text--inactive">Please connect your wallet first</p>}
-          {userAccount && (
+          {/* {userAccount && (
             <Link to={'/profile'} className={'user-profile__link'}>
               <img
                 className="user-profile__profile-picture"
@@ -134,7 +134,7 @@ export const MainNav = () => {
                 <p className="user-profile__textContainer__pubkey">{initialDisconnectText}</p>
               </div>
             </Link>
-          )}
+          )} */}
         </div>
       </nav>
     </>

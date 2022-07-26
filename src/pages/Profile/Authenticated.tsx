@@ -17,15 +17,11 @@ export const Authenticated = () => {
   return (
     <div className="authenticated container">
       <ProfileBanner
-        userName={userAccount?.name}
-        profileImage={userAccount?.profileImage}
-        backgroundCover={userAccount?.profileBanner}
         discordProfile={userAccount?.discordProfile}
       />
 
       {isMobile ? (
         <>
-          {userAccount.name && <h1 className="username">{userAccount.name}</h1>}
           <ProfileInfo
             walletAddress={userAccount?.publicKeyFormatted}
             userBalance={userAccount?.userBalance}

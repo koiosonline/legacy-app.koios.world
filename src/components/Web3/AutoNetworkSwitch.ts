@@ -10,7 +10,7 @@ export const autoNetworkSwitch = async (provider) => {
       method: 'wallet_switchEthereumChain',
       params: [{ chainId: chainId }],
     });
-    console.log('You have succefully switched to Polygon Mainnet');
+    console.log('You have successfully switched to Polygon Mainnet');
   } catch (switchNetworkError) {
     // This error code indicates that the chain has not been added to MetaMask.
     if (switchNetworkError.code === 4902) {

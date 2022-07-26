@@ -4,8 +4,8 @@ import { AuthContext } from '../../Context/AuthContext';
 import { UserContext } from '../../Context/UserContext';
 import { web3Modal } from './WalletProvider';
 import { getUserAccount } from '../UserProfile/getUserAccount';
-import { getDIDAuthenticated } from '../UserProfile/getDIDAuthenticated';
-import { getDecentralizedProfile } from '../UserProfile/getDecentralizedProfile';
+// import { getDIDAuthenticated } from '../UserProfile/getDIDAuthenticated';
+// import { getDecentralizedProfile } from '../UserProfile/getDecentralizedProfile';
 import { mapUserData } from '../UserProfile/mapUserData';
 import { getDiscordProfile } from '../../api/Api';
 import { autoNetworkSwitch } from './AutoNetworkSwitch';
@@ -13,7 +13,7 @@ import { useCoinContract } from '../../Web3/hooks/useTitanCoinContract';
 
 export const useWeb3 = () => {
   const { setIsAuthenticating, isAuthenticated, setIsAuthenticated, setAuthError, provider, setProvider, setWeb3 } =
-    useContext(AuthContext);
+  useContext(AuthContext);
   const { userAccount, setUserAccount } = useContext(UserContext);
   const { getUserBalance } = useCoinContract();
 
@@ -27,14 +27,12 @@ export const useWeb3 = () => {
       const web3 = new Web3(provider);
       setWeb3(web3);
       const accountAddress = await getUserAccount(web3);
-      await getDIDAuthenticated(accountAddress, provider);
       await getUserProfile(accountAddress);
       setIsAuthenticated(true);
       setIsAuthenticating(false);
     } catch (e) {
       console.log(e);
       web3Modal.clearCachedProvider();
-      setIsAuthenticating(false);
       setAuthError(e);
     }
   };
@@ -51,13 +49,12 @@ export const useWeb3 = () => {
 
   const getUserProfile = async (accountAddress: string) => {
     try {
-      const decentralizedProfile = await getDecentralizedProfile(accountAddress);
+      
       const userBalance = await getUserBalance(accountAddress);
-      const discordUsername = decentralizedProfile?.url;
+      const discordUsername = "";
       const discordProfile = await getDiscordProfile(discordUsername);
       const userProfile = await mapUserData(
         accountAddress,
-        decentralizedProfile,
         userBalance,
         discordUsername,
         discordProfile
