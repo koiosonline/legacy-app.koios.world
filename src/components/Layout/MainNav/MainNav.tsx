@@ -130,7 +130,7 @@ export const MainNav = () => {
                 alt="Profile image"
               />
               <div className={'user-profile__textContainer'}>
-                <p className="user-profile__textContainer__profile-name">{userAccount.publicKey.substring(0, 5)}</p>
+                <p className="user-profile__textContainer__profile-name">{userAccount.publicKeyFormatted}</p>
                 <p className="user-profile__textContainer__pubkey">{initialDisconnectText}</p>
               </div>
             </Link>
