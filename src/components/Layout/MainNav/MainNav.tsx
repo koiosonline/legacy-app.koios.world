@@ -122,19 +122,13 @@ export const MainNav = () => {
 
         <div className="user-profile">
           {!userAccount && <p className="user-profile__text--inactive">Please connect your wallet first</p>}
-          {/* {userAccount && (
+          {userAccount && (
             <Link to={'/profile'} className={'user-profile__link'}>
-              <img
-                className="user-profile__profile-picture"
-                src={userAccount.profileImage ? userAccount.profileImage : avatarPlaceholder}
-                alt="Profile image"
-              />
               <div className={'user-profile__textContainer'}>
-                <p className="user-profile__textContainer__profile-name">{userAccount.name}</p>
                 <p className="user-profile__textContainer__pubkey">{initialDisconnectText}</p>
               </div>
             </Link>
-          )} */}
+          )}
         </div>
       </nav>
     </>

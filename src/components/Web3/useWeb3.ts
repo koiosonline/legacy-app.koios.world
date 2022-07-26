@@ -4,8 +4,6 @@ import { AuthContext } from '../../Context/AuthContext';
 import { UserContext } from '../../Context/UserContext';
 import { web3Modal } from './WalletProvider';
 import { getUserAccount } from '../UserProfile/getUserAccount';
-// import { getDIDAuthenticated } from '../UserProfile/getDIDAuthenticated';
-// import { getDecentralizedProfile } from '../UserProfile/getDecentralizedProfile';
 import { mapUserData } from '../UserProfile/mapUserData';
 import { getDiscordProfile } from '../../api/Api';
 import { autoNetworkSwitch } from './AutoNetworkSwitch';
