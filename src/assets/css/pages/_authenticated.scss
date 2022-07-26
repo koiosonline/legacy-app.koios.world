@@ -39,28 +39,13 @@
     }
   }
 
-  .metablocks {
-    display: flex;
-    justify-content: space-evenly;
+  &__connect {
+    margin: 0 auto;
+    width: fit-content;
 
-    @include for-size($desktop) {
-      width: fit-content;
-      margin-left: auto;
-      justify-content: unset;
-    }
+    @include for-size(768px) {
+      margin: 0 0 0 auto;
 
-    .metablock {
-      width: 50%;
-      text-align: center;
-
-      @include for-size(400px) {
-        width: 50%;
-      }
-
-      @include for-size($desktop) {
-        width: unset;
-        text-align: left;
-      }
     }
   }
 

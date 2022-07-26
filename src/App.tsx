@@ -17,10 +17,10 @@ import { MarkdownEditor } from './pages/MarkdownEditor';
 import { AuthContextProvider } from './Context/AuthContext';
 import { UserContextProvider } from './Context/UserContext';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import avatarPlaceholder from './assets/images/placeholders/placeholder-titan.png';
 
-// import '@rainbow-me/rainbowkit/styles.css';
-
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import '@rainbow-me/rainbowkit/dist/index.css';
+import { getDefaultWallets, RainbowKitProvider, AvatarComponent, lightTheme } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
@@ -41,11 +41,28 @@ const wagmiClient = createClient({
   provider,
 });
 
+const CustomAvatar: AvatarComponent = ({ ensImage, size }) => {
+  return ensImage ? (
+    <img src={ensImage} width={size} height={size} style={{ borderRadius: 999 }} />
+  ) : (
+    <img src={avatarPlaceholder} width={size} height={size} style={{ borderRadius: 999 }} />
+  );
+};
+
 export const App = () => {
   const queryClient = new QueryClient();
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider
+        chains={chains}
+        avatar={CustomAvatar}
+        theme={lightTheme({
+          accentColor: '#7645d9',
+          accentColorForeground: 'white',
+          borderRadius: 'medium',
+          fontStack: 'system',
+        })}
+      >
         <Router>
           <QueryClientProvider client={queryClient}>
             <AuthContextProvider>

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Icon } from '../../Util/Icon';
 import { SvgSprite } from '../../Util/SvgSprite';
 import { AddTokenToWallet } from '../../Web3/AddTokenToWallet';
-import { useWeb3 } from '../../Web3/useWeb3';
 import { ModalDiscordName } from './ModalDiscordName';
 import { Modal } from '../../../components/Modal';
 
@@ -43,7 +42,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  const { disconnectWallet } = useWeb3();
+
   return (
     <>
       <div className="settings-tab">
@@ -60,11 +59,6 @@ export const SettingsTab: React.FC<SettingsTabProps> = () => {
             icon="edit-profile"
             label="Edit profile"
             onClick={modalState}
-          />
-          <SettingButton
-            icon="sign-out"
-            label="Disconnect wallet"
-            onClick={() => disconnectWallet()}
           />
         </ul>
       </div>

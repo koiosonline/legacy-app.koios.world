@@ -1,12 +1,11 @@
-import { useContext } from 'react';
 import { useQuery } from 'react-query';
 import { NonFungibleTokens } from '../../../api/NonFungibleTokens';
-import { UserContext } from '../../../Context/UserContext';
 import { NftRawMetadataProps } from '../../../types/NFTProps';
 import { fetchJson, getCidImage } from '../../Web3/Ipfs';
+import { useAccount } from 'wagmi';
 
 export const useNFTs = () => {
-  const { userAccount } = useContext(UserContext);
+  const { address } = useAccount();
   const { getTitanNfts } = NonFungibleTokens();
   const nftsQuery = useQuery('nfts', () => fetchNfts());
 
@@ -27,7 +26,7 @@ export const useNFTs = () => {
   };
 
   const fetchNfts = async () => {
-    const nftsRawData = await getTitanNfts(userAccount.publicKey);
+    const nftsRawData = await getTitanNfts(address);
     const nftsData = nftsRawData.data.nfts.map((nft) => ({ contentURI: nft.contentURI, tokenId: nft.tokenID }));
     const nftsMetadata = nftsData.map(async (data) => await getNftMetaData(data.contentURI, data.tokenId));
     return await Promise.all(nftsMetadata);
