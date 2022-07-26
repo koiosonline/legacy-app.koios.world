@@ -47,7 +47,6 @@ export const useWeb3 = () => {
 
   const getUserProfile = async (accountAddress: string) => {
     try {
-      
       const userBalance = await getUserBalance(accountAddress);
       const discordUsername = "";
       const discordProfile = await getDiscordProfile(discordUsername);
