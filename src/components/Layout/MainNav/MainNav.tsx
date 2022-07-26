@@ -124,7 +124,13 @@ export const MainNav = () => {
           {!userAccount && <p className="user-profile__text--inactive">Please connect your wallet first</p>}
           {userAccount && (
             <Link to={'/profile'} className={'user-profile__link'}>
+              <img
+                className="user-profile__profile-picture"
+                src={avatarPlaceholder}
+                alt="Profile image"
+              />
               <div className={'user-profile__textContainer'}>
+                <p className="user-profile__textContainer__profile-name">{userAccount.publicKey.substring(0, 5)}</p>
                 <p className="user-profile__textContainer__pubkey">{initialDisconnectText}</p>
               </div>
             </Link>

@@ -47,11 +47,6 @@ export const SettingsTab: React.FC<SettingsTabProps> = () => {
           </li>
         )}
         <SettingButton
-          icon="edit-profile"
-          label="Edit profile"
-          link="https://clay.self.id/"
-        />
-        <SettingButton
           icon="sign-out"
           label="Disconnect wallet"
           onClick={() => disconnectWallet()}
