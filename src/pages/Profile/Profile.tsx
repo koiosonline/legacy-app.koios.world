@@ -6,39 +6,25 @@ import { NFTTab } from '../../components/UserProfile/Tabs/NFTTab';
 import { SettingsTab } from '../../components/UserProfile/Tabs/SettingsTab';
 import { Tabs } from '../../components/UserProfile/Tabs/Tabs';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { useAccount } from 'wagmi';
+import { MetaBlocks } from '../../components/MetaBlocks';
 
 export const Profile = () => {
   const { userAccount } = useContext(UserContext);
-  const { address } = useAccount();
 
   return (
-    <div className="authenticated container">
+    <div className="my-profile container">
       <ProfileBanner discordProfile={userAccount?.discordProfile} />
 
-      {/* {isMobile ? (
-        <>
-          <ProfileInfo
-            walletAddress={userAccount?.publicKeyFormatted}
-            userBalance={userAccount?.userBalance}
-            discordUsername={userAccount?.discordProfile?.discordHandle}
-          />
-        </>
-      ) : (
-        <MetaBlocks />
-      )} */}
-
-      <div className="authenticated__connect">
+      <div className="my-profile__meta">
+        <MetaBlocks balance />
         <ConnectButton />
       </div>
 
-      {address && (
-        <Tabs>
-          <OverviewTab title="Overview" />
-          <NFTTab title="NFTs" />
-          <SettingsTab title="Settings" />
-        </Tabs>
-      )}
+      <Tabs>
+        <OverviewTab title="Overview" />
+        <NFTTab title="NFTs" />
+        <SettingsTab title="Settings" />
+      </Tabs>
     </div>
   );
 };

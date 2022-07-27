@@ -1,4 +1,4 @@
-.authenticated {
+.my-profile {
   max-width: 1080px;
   padding-top: 20px;
 
@@ -9,43 +9,16 @@
     font-size: 24px;
   }
 
-  .profile-info {
-    margin-top: 15px;
-    border-top: 1px solid $color-08;
-
-    &__list-item {
-      display: flex;
-      align-items: center;
-      margin: 15px 10px 0;
-      color: $color-11;
-      font-weight: bold;
-    }
-
-    &__icon,
-    &__img {
-      width: 20px;
-      margin-right: 10px;
-      fill: $color-10;
-    }
-
-    .icon--discord {
-      margin-bottom: -1px;
-    }
-
-    &__label {
-      color: $color-10;
-      margin-right: 10px;
-      font-weight: normal;
-    }
-  }
-
-  &__connect {
+  &__meta {
     margin: 0 auto;
     width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
 
     @include for-size(768px) {
       margin: 0 0 0 auto;
-
     }
   }
 

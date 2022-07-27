@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { useAccount } from 'wagmi';
 import { NFTProps } from '../../../types/NFTProps';
 import { CardNFT, CardSize } from '../../Cards/CardNFT';
 import { CardPlaceholderNFT } from '../../Cards/CardPlaceholderNFT';
@@ -18,6 +19,7 @@ export const NFTTab: React.FC<NFTTabProps> = () => {
   const [clickedNFT, setClickedNFT] = useState<NFTProps>();
   const hasNfts = nftsQuery.data?.length > 0;
   const totalPlaceholders = 4;
+  const { address } = useAccount();
 
   const modalState = (item?: NFTProps) => {
     if (item) {
@@ -40,7 +42,7 @@ export const NFTTab: React.FC<NFTTabProps> = () => {
     return <Alert type="error" >Couldn't load items</Alert>;
   }
 
-  if (!hasNfts) {
+  if (!hasNfts || !address) {
     return <Alert type="info" >No items to display</Alert>;
   }
 

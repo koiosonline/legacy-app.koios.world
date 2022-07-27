@@ -56,30 +56,6 @@ export const MainNav = () => {
           <img className="main-nav__logo" src={koiosLogo} alt="Koios logo" />
         </Link>
 
-        {/* {!userAccount && (
-          <button
-            className="main-nav__wallet btn btn-gradient btn--fs-16"
-            onClick={!isAuthenticating ? () => connectWallet() : noop}
-          >
-            {isAuthenticating && !authError && <Icon type="spinner" />}
-            Connect wallet
-          </button>
-        )}
-
-        {userAccount && (
-          <>
-            <div
-              id="disconnect-wallet"
-              className={'main-nav__wallet main-nav__wallet--disconnect'}
-              onClick={disconnectWallet}
-              onMouseEnter={() => setDisconnectButtonText('Disconnect')}
-              onMouseLeave={() => setDisconnectButtonText(initialDisconnectText)}
-            >
-              {disconnectButtonText}
-            </div>
-          </>
-        )} */}
-
         <div className='main-nav__connect'>
           <ConnectButton chainStatus="none" showBalance={false} />
         </div>

@@ -7,7 +7,7 @@ import { useAccount } from 'wagmi';
 export const useNFTs = () => {
   const { address } = useAccount();
   const { getTitanNfts } = NonFungibleTokens();
-  const nftsQuery = useQuery('nfts', () => fetchNfts());
+  const nftsQuery = useQuery('nfts', () => fetchNfts(), {enabled: address !== undefined});
 
   const refetchNFTs = () => {
     nftsQuery.refetch();
