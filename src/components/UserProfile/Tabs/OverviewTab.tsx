@@ -4,7 +4,7 @@ import { MappedDiscordProfile } from '../../../types/UserProfile/DiscordProfile'
 
 type OverviewTabProps = {
   title: string;
-  discordProfile: MappedDiscordProfile;
+  discordProfile?: MappedDiscordProfile;
 };
 
 type StatisticBlockProps = {
