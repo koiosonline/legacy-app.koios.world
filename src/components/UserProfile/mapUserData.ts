@@ -2,7 +2,7 @@ import { DiscordProfile } from '../../types/UserProfile/DiscordProfile';
 import { FormatPublicKey } from '../Util/FormatPublicKey';
 import { getUserRank } from './getUserRank';
 
-const discordProfileData = (discordUsername, discordProfile) => {
+export const mapDiscordProfileData = (discordUsername, discordProfile) => {
   const checkIsMember = !!discordProfile;
   const getDiscordRank = checkIsMember ? getUserRank(discordProfile?.level) : undefined;
 
@@ -34,6 +34,6 @@ export const mapUserData = async (
     publicKey: accountAddress,
     publicKeyFormatted: FormatPublicKey(accountAddress),
     userBalance: userBalance,
-    discordProfile: discordProfileData(discordUsername, discordProfile),
+    discordProfile: mapDiscordProfileData(discordUsername, discordProfile),
   };
 };

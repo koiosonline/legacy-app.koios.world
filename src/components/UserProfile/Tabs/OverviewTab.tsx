@@ -1,10 +1,10 @@
-import { useContext } from 'react';
-import { UserContext } from '../../../Context/UserContext';
 import discordLogo from '../../../assets/images/brands/discord--3d.png';
 import { Alert } from '../../Util/Alert';
+import { MappedDiscordProfile } from '../../../types/UserProfile/DiscordProfile';
 
 type OverviewTabProps = {
   title: string;
+  discordProfile: MappedDiscordProfile;
 };
 
 type StatisticBlockProps = {
@@ -25,30 +25,29 @@ const StatisticBlock: React.FC<StatisticBlockProps> = ({ img, title, subtitle })
   );
 };
 
-export const OverviewTab: React.FC<OverviewTabProps> = () => {
-  const { userAccount } = useContext(UserContext);
+export const OverviewTab: React.FC<OverviewTabProps> = ({discordProfile}) => {
 
   return (
     <div className="overview-tab">
-      {userAccount && userAccount.discordProfile && userAccount.discordProfile.isMember ? (
+      {discordProfile && discordProfile.isMember ? (
         <>
-          {userAccount.discordProfile.discordRank && (
+          {discordProfile.discordRank && (
             <StatisticBlock
-              title={`${userAccount.discordProfile.discordRank}`}
+              title={`${discordProfile.discordRank}`}
               subtitle="Discord rank"
               img={`${discordLogo}`}
             />
           )}
-          {userAccount.discordProfile.messageCount && (
-            <StatisticBlock title={`${userAccount.discordProfile.messageCount}`} subtitle="Total Discord messages" />
+          {discordProfile.messageCount && (
+            <StatisticBlock title={`${discordProfile.messageCount}`} subtitle="Total Discord messages" />
           )}
-          {userAccount.discordProfile.xp.totalXP && (
-            <StatisticBlock title={`${userAccount.discordProfile.xp.totalXP}`} subtitle="Total earned XP" />
+          {discordProfile.xp.totalXP && (
+            <StatisticBlock title={`${discordProfile.xp.totalXP}`} subtitle="Total earned XP" />
           )}
         </>
       ) : (
         <>
-          {userAccount?.discordProfile?.discordHandle && !userAccount?.discordProfile?.isMember ? (
+          {discordProfile?.discordHandle && !discordProfile?.isMember ? (
             <Alert type="info">
               You're not a member of the Koios Discord yet,{' '}
               <a href="https://discord.com/invite/jBjudugeBa" target="_blank" rel="noreferrer">

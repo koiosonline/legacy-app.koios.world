@@ -14,8 +14,6 @@ import ExplanationVideos from './pages/ExplanationVideos';
 import Earn from './pages/Earn';
 import VacancyDetail from './pages/VacancyDetail';
 import { MarkdownEditor } from './pages/MarkdownEditor';
-import { AuthContextProvider } from './Context/AuthContext';
-import { UserContextProvider } from './Context/UserContext';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RainbowKitConfigProvider } from './providers/RainbowKitConfig';
 
@@ -26,39 +24,35 @@ export const App = () => {
     <RainbowKitConfigProvider>
       <Router>
         <QueryClientProvider client={queryClient}>
-          <AuthContextProvider>
-            <UserContextProvider>
-              <ScrollToTop />
+          <ScrollToTop />
+          <Switch>
+            <Route path={['/editor']} exact>
               <Switch>
-                <Route path={['/editor']} exact>
-                  <Switch>
-                    <Route path="/editor" exact component={MarkdownEditor} />
-                  </Switch>
-                </Route>
-
-                <Route>
-                  <Layout>
-                    <Switch>
-                      <Route path="/worlds" exact component={Worlds} />
-                      <Route path="/worlds/:worldContent" exact component={WorldOverview} />
-                      <Route path="/worlds/:worldContent/:worldDetail/:videoSlug?" exact component={WorldDetail} />
-                      <Route path="/coming-soon" exact component={ComingSoon} />
-                      <Route path="/profile" exact component={Profile} />
-                      <Route path="/leaderboard" exact component={Leaderboard} />
-                      <Route path="/contribute" exact component={Contribute} />
-                      <Route path="/explanation" exact component={ExplanationVideos} />
-                      <Route path="/earn" exact component={Earn} />
-                      <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
-                      <Route path="/" exact>
-                        <Redirect to="/worlds" />
-                      </Route>
-                      <Route component={Error404} />
-                    </Switch>
-                  </Layout>
-                </Route>
+                <Route path="/editor" exact component={MarkdownEditor} />
               </Switch>
-            </UserContextProvider>
-          </AuthContextProvider>
+            </Route>
+
+            <Route>
+              <Layout>
+                <Switch>
+                  <Route path="/worlds" exact component={Worlds} />
+                  <Route path="/worlds/:worldContent" exact component={WorldOverview} />
+                  <Route path="/worlds/:worldContent/:worldDetail/:videoSlug?" exact component={WorldDetail} />
+                  <Route path="/coming-soon" exact component={ComingSoon} />
+                  <Route path="/profile" exact component={Profile} />
+                  <Route path="/leaderboard" exact component={Leaderboard} />
+                  <Route path="/contribute" exact component={Contribute} />
+                  <Route path="/explanation" exact component={ExplanationVideos} />
+                  <Route path="/earn" exact component={Earn} />
+                  <Route path="/earn/:vacancyDetail" exact component={VacancyDetail} />
+                  <Route path="/" exact>
+                    <Redirect to="/worlds" />
+                  </Route>
+                  <Route component={Error404} />
+                </Switch>
+              </Layout>
+            </Route>
+          </Switch>
         </QueryClientProvider>
       </Router>
     </RainbowKitConfigProvider>

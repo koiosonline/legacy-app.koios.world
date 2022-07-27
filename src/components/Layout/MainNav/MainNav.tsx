@@ -1,16 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Icon } from '../../Util/Icon';
 import { useSizes } from '../../Util/useSizes';
 import koiosLogo from '../../../assets/images/logos/koios-logo.svg';
 import MainNavData from './static/MainNavData.json';
 import { SvgSprite } from '../../Util/SvgSprite';
-import { web3Modal } from '../../Web3/WalletProvider';
-import { useWeb3 } from '../../../components/Web3/useWeb3';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export const MainNav = () => {
-  const { connectWallet, disconnectWallet } = useWeb3();
   const { width } = useSizes();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
@@ -21,15 +18,6 @@ export const MainNav = () => {
       setIsMenuOpen(!isMenuOpen);
     }
   };
-
-  useEffect(() => {
-    if (web3Modal.cachedProvider) {
-      connectWallet();
-    } else {
-      disconnectWallet();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <>
@@ -56,7 +44,7 @@ export const MainNav = () => {
           <img className="main-nav__logo" src={koiosLogo} alt="Koios logo" />
         </Link>
 
-        <div className='main-nav__connect'>
+        <div className="main-nav__connect">
           <ConnectButton chainStatus="none" showBalance={false} />
         </div>
 
