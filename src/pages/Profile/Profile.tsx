@@ -1,22 +1,21 @@
 import { ProfileBanner } from '../../components/UserProfile/ProfileBanner';
-import { useContext } from 'react';
-import { UserContext } from '../../Context/UserContext';
 import { OverviewTab } from '../../components/UserProfile/Tabs/OverviewTab';
 import { NFTTab } from '../../components/UserProfile/Tabs/NFTTab';
 import { SettingsTab } from '../../components/UserProfile/Tabs/SettingsTab';
 import { Tabs } from '../../components/UserProfile/Tabs/Tabs';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { MetaBlocks } from '../../components/MetaBlocks';
+import { useAccount } from 'wagmi';
 
 export const Profile = () => {
-  const { userAccount } = useContext(UserContext);
+  const { address } = useAccount();
 
   return (
     <div className="my-profile container">
-      <ProfileBanner discordProfile={userAccount?.discordProfile} />
+      <ProfileBanner />
 
       <div className="my-profile__meta">
-        <MetaBlocks balance />
+        {address && <MetaBlocks balance />}
         <ConnectButton />
       </div>
 
