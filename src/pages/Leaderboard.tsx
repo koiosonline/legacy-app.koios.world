@@ -1,21 +1,17 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getTokenCountTDFA, getTokenCountBlockchain, getTokenCountOverall } from '../components/Web3/Tokencount';
 import Loading from '../components/Loading';
 import avatarPlaceholder from '../assets/images/placeholders/placeholder-titan.png';
-import { UserContext } from '../Context/UserContext';
+import { useAccount } from 'wagmi';
 
-declare global {
-  interface Window {
-    ethereum: any;
-    web3: any;
-  }
-}
+
 
 export const Leaderboard = () => {
   const [leaderboard, showLeaderboard] = useState<any[]>([]);
   const [active, setActive] = useState<string>('Blockchain');
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { userAccount } = useContext(UserContext);
+  const { address } = useAccount();
+
 
   useEffect(() => {
     updateLeaderboardBlockchain();
@@ -24,21 +20,21 @@ export const Leaderboard = () => {
 
   const updateLeaderboardBlockchain = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountBlockchain(userAccount?.publicKey);
+    const updatedRanking = await getTokenCountBlockchain(address);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };
 
   const updateLeaderboardTDFA = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountTDFA(userAccount?.publicKey);
+    const updatedRanking = await getTokenCountTDFA(address);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };
 
   const updateLeaderboardOverall = async () => {
     setIsLoading(true);
-    const updatedRanking = await getTokenCountOverall(userAccount?.publicKey);
+    const updatedRanking = await getTokenCountOverall(address);
     showLeaderboard(updatedRanking);
     setIsLoading(false);
   };

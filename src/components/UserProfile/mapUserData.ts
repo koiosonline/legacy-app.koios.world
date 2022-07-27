@@ -1,10 +1,8 @@
-import { DecentralizedProfile } from '../../types/UserProfile/DecentralizedProfile';
 import { DiscordProfile } from '../../types/UserProfile/DiscordProfile';
 import { FormatPublicKey } from '../Util/FormatPublicKey';
-import { getCidImage } from '../Web3/Ipfs';
 import { getUserRank } from './getUserRank';
 
-const discordProfileData = (discordUsername, discordProfile) => {
+export const mapDiscordProfileData = (discordUsername, discordProfile) => {
   const checkIsMember = !!discordProfile;
   const getDiscordRank = checkIsMember ? getUserRank(discordProfile?.level) : undefined;
 
@@ -28,7 +26,6 @@ const discordProfileData = (discordUsername, discordProfile) => {
 
 export const mapUserData = async (
   accountAddress: string,
-  decentralizedProfile: DecentralizedProfile,
   userBalance: number,
   discordUsername?: string,
   discordProfile?: DiscordProfile
@@ -36,12 +33,7 @@ export const mapUserData = async (
   return {
     publicKey: accountAddress,
     publicKeyFormatted: FormatPublicKey(accountAddress),
-    name: decentralizedProfile?.name,
-    emoji: decentralizedProfile?.emoji,
-    description: decentralizedProfile?.description,
-    profileBanner: await getCidImage(decentralizedProfile?.background?.original?.src),
-    profileImage: await getCidImage(decentralizedProfile?.image?.original?.src),
     userBalance: userBalance,
-    discordProfile: discordProfileData(discordUsername, discordProfile),
+    discordProfile: mapDiscordProfileData(discordUsername, discordProfile),
   };
 };
