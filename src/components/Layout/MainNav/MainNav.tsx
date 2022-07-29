@@ -1,24 +1,15 @@
-import { useContext, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Icon } from '../../Util/Icon';
 import { useSizes } from '../../Util/useSizes';
 import koiosLogo from '../../../assets/images/logos/koios-logo.svg';
 import MainNavData from './static/MainNavData.json';
 import { SvgSprite } from '../../Util/SvgSprite';
-import { web3Modal } from '../../Web3/WalletProvider';
-import { UserContext } from '../../../Context/UserContext';
-import { useWeb3 } from '../../../components/Web3/useWeb3';
-import avatarPlaceholder from '../../../assets/images/placeholders/placeholder-titan.png';
-import { AuthContext } from '../../../Context/AuthContext';
-import { noop } from '../../Util/noop';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export const MainNav = () => {
-  const { userAccount } = useContext(UserContext);
-  const { connectWallet, disconnectWallet } = useWeb3();
   const { width } = useSizes();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [disconnectButtonText, setDisconnectButtonText] = useState<string>('loading');
-  const { isAuthenticating, authError } = useContext(AuthContext);
 
   const isMobile = width < 1200;
 
@@ -27,21 +18,6 @@ export const MainNav = () => {
       setIsMenuOpen(!isMenuOpen);
     }
   };
-
-  const initialDisconnectText = userAccount ? userAccount.publicKeyFormatted : 'selectedAccount';
-
-  useEffect(() => {
-    if (web3Modal.cachedProvider) {
-      connectWallet();
-    } else {
-      disconnectWallet();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    setDisconnectButtonText(initialDisconnectText);
-  }, [initialDisconnectText]);
 
   return (
     <>
@@ -68,28 +44,9 @@ export const MainNav = () => {
           <img className="main-nav__logo" src={koiosLogo} alt="Koios logo" />
         </Link>
 
-        {!userAccount && (
-          <button
-            className="main-nav__wallet btn btn-gradient btn--fs-16"
-            onClick={!isAuthenticating ? () => connectWallet() : noop}
-          >
-            {isAuthenticating && !authError && <Icon type="spinner" />}
-            Connect wallet
-          </button>
-        )}
-        {userAccount && (
-          <>
-            <div
-              id="disconnect-wallet"
-              className={'main-nav__wallet main-nav__wallet--disconnect'}
-              onClick={disconnectWallet}
-              onMouseEnter={() => setDisconnectButtonText('Disconnect')}
-              onMouseLeave={() => setDisconnectButtonText(initialDisconnectText)}
-            >
-              {disconnectButtonText}
-            </div>
-          </>
-        )}
+        <div className="main-nav__connect">
+          <ConnectButton chainStatus="none" showBalance={false} />
+        </div>
 
         <ul className="nav-list">
           {MainNavData.nav.map((item, index) => (
@@ -105,7 +62,6 @@ export const MainNav = () => {
               </NavLink>
             </li>
           ))}
-
         </ul>
 
         <div className="social">
@@ -118,23 +74,6 @@ export const MainNav = () => {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="user-profile">
-          {!userAccount && <p className="user-profile__text--inactive">Please connect your wallet first</p>}
-          {userAccount && (
-            <Link to={'/profile'} className={'user-profile__link'}>
-              <img
-                className="user-profile__profile-picture"
-                src={userAccount.profileImage ? userAccount.profileImage : avatarPlaceholder}
-                alt="Profile image"
-              />
-              <div className={'user-profile__textContainer'}>
-                <p className="user-profile__textContainer__profile-name">{userAccount.name}</p>
-                <p className="user-profile__textContainer__pubkey">{initialDisconnectText}</p>
-              </div>
-            </Link>
-          )}
         </div>
       </nav>
     </>

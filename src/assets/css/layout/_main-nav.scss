@@ -101,6 +101,11 @@
     transform: translateX(0);
   }
 
+  &__connect {
+    margin: 50px auto 30px;
+    width: fit-content;
+  }
+
   &__img-container {
     display: flex;
     width: 110px;
@@ -112,34 +117,6 @@
   &__logo {
     width: 100%;
     height: auto;
-  }
-
-  &__wallet {
-    display: block;
-    margin: 50px auto 30px;
-    padding: 5px 20px;
-    border-radius: $radius;
-    font-family: inherit;
-    white-space: nowrap;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    text-align: center;
-    min-width: 10em;
-
-    &--disconnect {
-      background: #fff;
-      color: #d7d7d7;
-      border: 2px solid lightgray;
-      transition: border 0.2s ease;
-
-      &:hover {
-        background-image: unset;
-        background-size: unset;
-        background-position: unset;
-      }
-    }
   }
 
   .nav-list {
@@ -217,45 +194,6 @@
     &__icon {
       fill: #fff;
       width: 15px;
-    }
-  }
-
-  .user-profile {
-    border-top: 1px solid #ececec;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-
-    &__link {
-      display: flex;
-      flex-flow: row;
-      text-decoration: none;
-    }
-
-    &__text--inactive {
-      color: #d7d7d7;
-      text-align: center;
-      max-width: 150px;
-      font-weight: bold;
-    }
-
-    &__textContainer {
-      &__profile-name {
-        font-weight: 600;
-        color: $color-text;
-      }
-      &__pubkey {
-        color: #d7d7d7;
-        font-weight: 600;
-      }
-
-    }
-    &__profile-picture {
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-      margin-right: 1em;
     }
   }
 }

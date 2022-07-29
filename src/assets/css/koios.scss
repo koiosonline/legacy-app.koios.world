@@ -15,8 +15,7 @@
 @import "./pages/worlds";
 @import "./pages/world-overview";
 @import "./pages/coming-soon";
-@import "./pages/authenticated";
-@import "./pages/unauthenticated";
+@import "./pages/my-profile";
 @import "./pages/WorldDetail";
 @import "./pages/leaderboard";
 @import "./pages/404";
@@ -34,6 +33,7 @@
 /* Modals */
 @import "src/assets/css/modals/modal";
 @import "src/assets/css/modals/modal-wallet-setup";
+@import "src/assets/css/modals/modal-discord-name";
 
 /* Components */
 @import "src/assets/css/components/course-card";
