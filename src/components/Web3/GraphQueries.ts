@@ -1,16 +1,15 @@
 export const GetTokenHoldersJSON = async () => {
   const query = `
         {
-          users(first: 1000, orderBy:balance, orderDirection:desc) {
+          users(orderBy:balance, orderDirection:desc) {
             id
             address
             balance
             erc20Symbol
-            contentURI
           }
         } 
           `;
-  const URL = "https://api.thegraph.com/subgraphs/name/koiosonline/titantoken";
+  const URL = "https://api.thegraph.com/subgraphs/name/koiosonline/titan-token-polygon";
   const body = JSON.stringify({ query: query });
   const res = await fetch(URL, {
     method: "post",
