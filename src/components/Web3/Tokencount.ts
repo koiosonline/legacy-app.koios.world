@@ -1,128 +1,11 @@
 import LeaderboardAddresses from './static/addresses.json';
-import { getCidImage, fetchJson } from './Ipfs';
+import { FormatPublicKey } from '../Util/FormatPublicKey';
 import { GetTokenHoldersJSON } from './GraphQueries';
-
-export const getTokenCountTDFA = async (selectedAccount: string) => {
-  const tokenholders = await GetTokenHoldersJSON();
-  const tokenholdersTDFA: any = [];
-  const usernamePromises: any = [];
-
-  let i = 1;
-  const tdfaAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.tdfaAddresses);
-  for (const user of tokenholders.data.users) {
-    if (tdfaAddresses.includes(user.address)) {
-      if (user.address === selectedAccount?.toLowerCase()) {
-        const entry = {
-          address: user.address,
-          balance: Math.round(user.balance / 10 ** 18),
-          image: 'default',
-          index: i,
-          selectedAccount: true,
-        };
-        tokenholdersTDFA.push(entry);
-        i++;
-      } else {
-        const entry = {
-          address: user.address,
-          balance: Math.round(user.balance / 10 ** 18),
-          image: 'default',
-          index: i,
-          selectedAccount: false,
-        };
-        tokenholdersTDFA.push(entry);
-        i++;
-      }
-    }
-  }
-
-  for (let i = 10; i < tokenholdersTDFA.length; i++) {
-    if (!tokenholdersTDFA[i].selectedAccount) {
-      tokenholdersTDFA.splice(i, 1);
-      i--;
-    }
-  }
-
-  for (const user of tokenholdersTDFA) {
-    const usernamePromise = user.address;
-    usernamePromises.push(usernamePromise);
-  }
-
-  await Promise.all(usernamePromises).then(async (values: any) => {
-    for (let i = 0; i < values.length; i++) {
-      if (values[i] !== undefined) {
-        tokenholdersTDFA[i].address = values[i].name;
-        if (values[i].image !== undefined) {
-          tokenholdersTDFA[i].image = await getCidImage(values[i].image);
-        }
-      }
-    }
-  });
-
-  return tokenholdersTDFA;
-};
-
-export const getTokenCountBlockchain = async (selectedAccount: string) => {
-  const tokenholders = await GetTokenHoldersJSON();
-  const tokenholdersBlockchain: any = [];
-  const usernamePromises: any = [];
-
-  let i = 1;
-  const blockchainAddresses: string[] = await stringArrayToLowerCase(LeaderboardAddresses.blockchainAddresses);
-  for (const user of tokenholders.data.users) {
-    if (blockchainAddresses.includes(user.address)) {
-      if (user.address === selectedAccount?.toLowerCase()) {
-        const entry = {
-          address: user.address,
-          balance: Math.round(user.balance / 10 ** 18),
-          image: 'default',
-          index: i,
-          selectedAccount: true,
-        };
-        tokenholdersBlockchain.push(entry);
-        i++;
-      } else {
-        const entry = {
-          address: user.address,
-          balance: Math.round(user.balance / 10 ** 18),
-          image: 'default',
-          index: i,
-          selectedAccount: false,
-        };
-        tokenholdersBlockchain.push(entry);
-        i++;
-      }
-    }
-  }
-
-  for (let i = 10; i < tokenholdersBlockchain.length; i++) {
-    if (!tokenholdersBlockchain[i].selectedAccount) {
-      tokenholdersBlockchain.splice(i, 1);
-      i--;
-    }
-  }
-
-  for (const user of tokenholdersBlockchain) {
-    const usernamePromise = user.address;
-    usernamePromises.push(usernamePromise);
-  }
-  await Promise.all(usernamePromises).then(async (values: any) => {
-    for (let i = 0; i < values.length; i++) {
-      if (values[i] !== undefined) {
-        tokenholdersBlockchain[i].address = values[i].name;
-        if (values[i].image !== undefined) {
-          tokenholdersBlockchain[i].image = await getCidImage(values[i].image);
-        }
-      }
-    }
-  });
-
-  return tokenholdersBlockchain;
-};
 
 export const getTokenCountOverall = async (selectedAccount: string) => {
   const tokenholders = await GetTokenHoldersJSON();
   const tokenholdersOverall: any = [];
-  const usernamePromises: any = [];
+  // Exclude the distribution wallets, token contract and NFT whitelist address
   const exclusions: string[] = await stringArrayToLowerCase(LeaderboardAddresses.leaderboardExclusions);
   let i = 1;
 
@@ -130,7 +13,7 @@ export const getTokenCountOverall = async (selectedAccount: string) => {
     if (!exclusions.includes(user.address)) {
       if (user.address === selectedAccount?.toLowerCase()) {
         const entry = {
-          address: user.address,
+          address: FormatPublicKey(user.address),
           balance: Math.round(user.balance / 10 ** 18),
           index: i,
           selectedAccount: true,
@@ -140,7 +23,7 @@ export const getTokenCountOverall = async (selectedAccount: string) => {
         i++;
       } else {
         const entry = {
-          address: user.address,
+          address: FormatPublicKey(user.address),
           balance: Math.round(user.balance / 10 ** 18),
           index: i,
           selectedAccount: false,
@@ -159,39 +42,7 @@ export const getTokenCountOverall = async (selectedAccount: string) => {
     }
   }
 
-  for (const user of tokenholdersOverall) {
-    const usernamePromise = user.address;
-    usernamePromises.push(usernamePromise);
-  }
-  await Promise.all(usernamePromises).then(async (values: any) => {
-    for (let i = 0; i < values.length; i++) {
-      if (values[i] !== undefined) {
-        tokenholdersOverall[i].address = values[i].name;
-        if (values[i].image !== undefined) {
-          tokenholdersOverall[i].image = await getCidImage(values[i].image);
-        }
-      }
-    }
-  });
-
   return tokenholdersOverall;
-};
-
-export const ProfileTokenInformation = async (selectedAccount) => {
-  const tokenHolders = await GetTokenHoldersJSON();
-  const resultArray: any = [];
-  for (const user of tokenHolders.data.users) {
-    if (selectedAccount) {
-      if (selectedAccount.toLowerCase() === user.address) {
-        const contentURI = await fetchJson(user.contentURI);
-        const symbol = user.symbol;
-        const balance = Math.round(user.balance / 10 ** 18);
-        const entry = { symbol: symbol, balance: balance, image: await getCidImage(contentURI.image) };
-        resultArray.push(entry);
-      }
-    }
-  }
-  return resultArray;
 };
 
 const stringArrayToLowerCase = async (array: string[]) => {
