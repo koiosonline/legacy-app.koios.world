@@ -1,5 +1,4 @@
 import { ProfileBanner } from '../../components/UserProfile/ProfileBanner';
-import { OverviewTab } from '../../components/UserProfile/Tabs/OverviewTab';
 import { NFTTab } from '../../components/UserProfile/Tabs/NFTTab';
 import { SettingsTab } from '../../components/UserProfile/Tabs/SettingsTab';
 import { Tabs } from '../../components/UserProfile/Tabs/Tabs';
@@ -35,7 +34,7 @@ export const Profile = () => {
       </div>
 
       <Tabs>
-        <OverviewTab title="Overview" discordProfile={discordProfile} />
+        {/* <OverviewTab title="Overview" discordProfile={discordProfile} /> */}
         <NFTTab title="NFTs" />
         <SettingsTab title="Settings" />
       </Tabs>
