@@ -3,13 +3,16 @@ import { Link, NavLink } from 'react-router-dom';
 import { Icon } from '../../Util/Icon';
 import { useSizes } from '../../Util/useSizes';
 import koiosLogo from '../../../assets/images/logos/koios-logo.svg';
-import MainNavData from './static/MainNavData.json';
 import { SvgSprite } from '../../Util/SvgSprite';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { mainNavData } from './static/mainNavData';
+import { useAccount } from 'wagmi';
 
 export const MainNav = () => {
   const { width } = useSizes();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { address } = useAccount();
+  const navigation = mainNavData(address);
 
   const isMobile = width < 1200;
 
@@ -18,6 +21,8 @@ export const MainNav = () => {
       setIsMenuOpen(!isMenuOpen);
     }
   };
+
+  console.log(navigation.nav);
 
   return (
     <>
@@ -49,7 +54,7 @@ export const MainNav = () => {
         </div>
 
         <ul className="nav-list">
-          {MainNavData.nav.map((item, index) => (
+          {navigation.nav.map((item, index) => (
             <li key={index}>
               <NavLink
                 className="nav-list__link link"
@@ -66,7 +71,7 @@ export const MainNav = () => {
 
         <div className="social">
           <ul className="social__list">
-            {MainNavData.socials.map((item, index) => (
+            {navigation.socials.map((item, index) => (
               <li className="social__list-item" key={index}>
                 <a className="social__link link" href={item.linkTo} target="_blank" rel="noreferrer">
                   <Icon className="social__icon" type={item.icon as keyof typeof SvgSprite} />

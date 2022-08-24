@@ -7,7 +7,7 @@ import avatarPlaceholder from '../assets/images/placeholders/placeholder-titan.p
 
 
 export const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon],
+  [chain.polygon, chain.mainnet],
   [alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }), publicProvider()]
 );
 
