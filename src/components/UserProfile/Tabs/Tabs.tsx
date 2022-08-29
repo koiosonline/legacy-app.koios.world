@@ -9,7 +9,7 @@ type TabsProps = {
 export const Tabs: React.FC<TabsProps> = ({ children }) => {
   const searchQuery = useLocation().search;
   const queryStringTab = new URLSearchParams(searchQuery).get('tab');
-  const indexOfTab = children.findIndex(activeTab => activeTab.props.title.toLowerCase() === queryStringTab);
+  const indexOfTab = children.findIndex(activeTab => activeTab?.props?.title.toLowerCase() === queryStringTab);
   const getCurrentTab = queryStringTab ? indexOfTab : 0;
   const [selectedTab, setSelectedTab] = useState(getCurrentTab);
   
@@ -23,7 +23,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
         {children.map((item, index) => (
           <TabButton
             key={index}
-            title={item.props.title}
+            title={item?.props?.title}
             index={index}
             setSelectedTab={setSelectedTab}
             isActive={selectedTab === index}

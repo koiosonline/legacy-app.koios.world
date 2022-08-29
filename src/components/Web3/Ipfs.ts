@@ -11,7 +11,7 @@ const ipfsPrefix1 = 'https://ipfs.io/ipfs/';
 const ipfsPrefix2 = 'ipfs://ipfs/';
 const ipfsPrefix3 = 'ipfs://';
 
-const stripIpfsPrefix = (cid: string) => {
+export const stripIpfsPrefix = (cid: string) => {
   if (cid.includes(ipfsPrefix1)) {
     return cid.replace(ipfsPrefix1, '');
   }
