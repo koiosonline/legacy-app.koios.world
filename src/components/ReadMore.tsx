@@ -2,28 +2,42 @@ import { useState } from 'react';
 import { Icon } from './Util/Icon';
 
 type ReadMoreProps = {
+  children: string;
   className?: string;
+  maxCharacters?: number;
 };
 
-export const ReadMore: React.FC<ReadMoreProps> = ({ children, className }) => {
-  const [isReadMore, setIsReadMore] = useState(true);
-  const text = children as string;
-  const slicedText = text.slice(0, 150);
+export const ReadMore = (props: ReadMoreProps) => {
+  const maxCharacters = props.maxCharacters ? props.maxCharacters : 150;
+  const isLongerThanMaxCharacters = props.children.length > maxCharacters;
+  const text = props.children;
+  const slicedText = props.children.slice(0, maxCharacters);
+  const [isReadMore, setIsReadMore] = useState<boolean>(isLongerThanMaxCharacters);
 
-  const toggleReadMore = () => {
+  const toggleIsReadMore = () => {
     setIsReadMore(!isReadMore);
   };
 
   return (
-    <p className={`read-more ${className ? className : ''}`}>
+    <p className={`read-more ${props.className ? props.className : ''}`}>
       {isReadMore ? slicedText : text}
 
-      <span onClick={toggleReadMore} className={`read-more--toggle ${className ? `${className}--toggle` : ''}`}>
-        {isReadMore 
-        ? (<>Read more <Icon type="angle-down" /></>) 
-        : (<>Show less <Icon type="angle-up" /></>)
-        }
-      </span>
+      {isLongerThanMaxCharacters && (
+        <span
+          onClick={toggleIsReadMore}
+          className={`read-more--toggle ${props.className ? `${props.className}--toggle` : ''}`}
+        >
+          {isReadMore ? (
+            <>
+              Read more <Icon type="angle-down" />
+            </>
+          ) : (
+            <>
+              Show less <Icon type="angle-up" />
+            </>
+          )}
+        </span>
+      )}
     </p>
   );
 };

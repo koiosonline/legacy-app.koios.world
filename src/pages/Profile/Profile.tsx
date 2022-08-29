@@ -17,6 +17,8 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ExternalLinks } from './ExternalLinks';
 import { ReadMore } from '../../components/ReadMore';
 import { FormatPublicKey } from '../../components/Util/FormatPublicKey';
+import { MetaBlocks } from '../../components/MetaBlocks';
+import { Alert } from '../../components/Util/Alert';
 
 export const Profile = () => {
   const history = useHistory();
@@ -37,10 +39,6 @@ export const Profile = () => {
   const profile = data?.defaultProfile;
   const totalFollowers = profile?.stats?.totalFollowers;
   const totalFollowing = profile?.stats?.totalFollowing;
-
-  console.log('account data:', data);
-  console.log('pubkey param:', userId);
-  console.log('pers acc:', isPersonalAccount);
 
   useEffect(() => {
     const retrieveDiscordProfile = async () => {
@@ -64,21 +62,34 @@ export const Profile = () => {
     }
   }, [address, history]);
 
+  if (error) {
+    return (
+      <div className="my-profile my-profile--error container">
+        <Alert type="error">This account does not exist. Please try another search.</Alert>
+      </div>
+    );
+  }
+
   return (
     <div className="my-profile">
-      <ProfileBanner backgroundCover={backgroundCover} discordProfile={discordProfile} />
+      <ProfileBanner backgroundCover={backgroundCover} discordProfile={discordProfile} isLoading={loading} />
 
       <div className="container">
-
         <section className="profile-info">
           <div className="profile-image-container">
-            <img 
-              src={data?.defaultProfile?.picture?.original?.url || avatarPlaceholder} 
-              alt="Profile photo" className="profile-image-container__img" />
+            {loading ? (
+              <div className="profile-image-container__img skeleton-item" />
+            ) : (
+              <img
+                src={data?.defaultProfile?.picture?.original?.url || avatarPlaceholder}
+                alt="Profile photo"
+                className="profile-image-container__img"
+              />
+            )}
           </div>
 
           <div className="profile-info__meta">
-            {/* {(userId || !profileDoesNotExist ) && <MetaBlocks balance />} */}
+            {userId && <MetaBlocks balance userId={userId} />}
 
             {isPersonalAccount && (
               <span>
@@ -87,11 +98,28 @@ export const Profile = () => {
             )}
           </div>
 
-          {(profile?.name || userId) && <h2 className="profile-info__name">{profile?.name ? profile.name : FormatPublicKey(userId)}</h2>}
-          {(!data || error ) && <h2>Does not exist</h2>}
+          {loading && (
+            <h2 className="profile-info__name profile-info__name--loading">
+              <div className="skeleton-item" />
+            </h2>
+          )}
 
-          {(totalFollowers || totalFollowing) && (
+          {(profile?.name || userId) && (
+            <h2 className="profile-info__name">{profile?.name ? profile.name : FormatPublicKey(userId)}</h2>
+          )}
+
+          {(totalFollowers || totalFollowing || loading) && (
             <ul className="profile-info__stats">
+              {loading && (
+                <>
+                  <li className="profile-info__stats-item profile-info__stats-item--loading">
+                    <div className="skeleton-item" />
+                  </li>
+                  <li className="profile-info__stats-item profile-info__stats-item--loading">
+                    <div className="skeleton-item" />
+                  </li>
+                </>
+              )}
               {totalFollowers && (
                 <li className="profile-info__stats-item">
                   <strong>{totalFollowers}</strong> followers
@@ -105,24 +133,7 @@ export const Profile = () => {
             </ul>
           )}
 
-          {profile?.bio && (
-            <ReadMore className="profile-info__bio">
-              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a malesuada est. Sed semper erat nec porttitor
-          fermentum. Donec fermentum blandit velit quis blandit. Aliquam imperdiet lorem tincidunt nisi pellentesque,
-          non tincidunt leo auctor. Nulla in mollis tortor, ornare ullamcorper felis. In sodales tincidunt hendrerit.
-          Proin laoreet elit et pharetra porta. Curabitur tempus pharetra blandit. Nam dignissim tellus eget nunc
-          porttitor, sit amet semper diam pulvinar. Vestibulum euismod massa eu odio molestie dapibus. Praesent blandit
-          fringilla metus, ac semper ex ullamcorper ac. Sed eu gravida quam. Sed id lorem posuere, lacinia dolor ac,
-          condimentum sapien. In vel aliquam purus. Cras et molestie sem, at malesuada nisl. Maecenas bibendum cursus
-          imperdiet. Quisque et interdum arcu. Quisque feugiat, turpis nec maximus vestibulum, neque diam dapibus dolor,
-          vel laoreet orci diam id tortor. Cras non risus dapibus, dignissim dolor vitae, mollis orci. Sed nec ligula
-          quam. Pellentesque euismod tempus arcu, eu mollis dolor lobortis nec. Pellentesque nisi nulla, molestie sit
-          amet justo id, cursus maximus elit. Fusce sagittis vehicula odio, sed vulputate erat imperdiet eu. Sed sit
-          amet interdum odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Etiam eu purus nulla. Nullam quis placerat urna. Pellentesque sodales posuere. */}
-              {profile.bio}
-            </ReadMore>
-          )}
+          {profile?.bio && <ReadMore className="profile-info__bio">{profile.bio}</ReadMore>}
 
           {profile?.attributes && <ExternalLinks links={profile.attributes} />}
         </section>

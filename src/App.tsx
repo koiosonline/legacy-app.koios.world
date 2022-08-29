@@ -18,8 +18,6 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { RainbowKitConfigProvider } from './providers/RainbowKitConfig';
 import { ConnectedApolloProvider } from './providers/ApolloProvider';
 
-
-
 export const App = () => {
   const queryClient = new QueryClient();
 

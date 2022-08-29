@@ -3,12 +3,21 @@ import { MappedDiscordProfile } from '../../types/UserProfile/DiscordProfile';
 type ProfileBannerProps = {
   backgroundCover: string;
   discordProfile?: MappedDiscordProfile;
+  isLoading?: boolean;
 };
 
 export const ProfileBanner = (props: ProfileBannerProps) => {
   const currentXp = props.discordProfile?.xp?.currentXP;
   const necessaryXp = props.discordProfile?.xp?.necessaryXP;
   const percentageXp = (100 * currentXp) / necessaryXp;
+
+  if (props.isLoading) {
+    return (
+      <div className="profile-banner">
+        <div className="skeleton-item" />
+      </div>
+    );
+  }
 
   return (
     <div className="profile-banner" style={{ backgroundImage: `url(${props.backgroundCover})` }}>

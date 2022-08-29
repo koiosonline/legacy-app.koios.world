@@ -22,8 +22,6 @@ export const MainNav = () => {
     }
   };
 
-  console.log(navigation.nav);
-
   return (
     <>
       <div onClick={toggleMenu} className={`body-overlay ${isMenuOpen ? 'body-overlay--active' : ''}`}></div>
