@@ -57,10 +57,10 @@ export const Profile = () => {
   }, [data]);
 
   useEffect(() => {
-    if (address) {
+    if (address && !userId) {
       history.push(`/profile/${address}`);
     }
-  }, [address, history]);
+  }, [address, userId, history]);
 
   if (error) {
     return (
@@ -89,7 +89,7 @@ export const Profile = () => {
           </div>
 
           <div className="profile-info__meta">
-            {userId && <MetaBlocks balance userId={userId} />}
+            {(userId && data) && <MetaBlocks balance userId={userId} />}
 
             {isPersonalAccount && (
               <span>
