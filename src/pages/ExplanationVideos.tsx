@@ -33,7 +33,7 @@ const ExplanationVideos = () => {
       setIntervalUpdateVid1(false);
     }
     if (!intervalUpdateVid1) {
-      clearInterval();
+      clearInterval(playerTimeVid1);
     }
   };
 
@@ -48,7 +48,7 @@ const ExplanationVideos = () => {
       setIntervalUpdateVid2(false);
     }
     if (!intervalUpdateVid2) {
-      clearInterval();
+      clearInterval(playerTimeVid2);
     }
   };
 
@@ -63,7 +63,7 @@ const ExplanationVideos = () => {
       setIntervalUpdateVid3(false);
     }
     if (!intervalUpdateVid3) {
-      clearInterval();
+      clearInterval(playerTimeVid3);
     }
   };
 
