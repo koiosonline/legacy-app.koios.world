@@ -40,6 +40,8 @@ export const Profile = () => {
   const totalFollowers = profile?.stats?.totalFollowers;
   const totalFollowing = profile?.stats?.totalFollowing;
 
+  console.log("data", data);
+
   useEffect(() => {
     const retrieveDiscordProfile = async () => {
       const discordProfileLink = data?.defaultProfile?.attributes?.find(
@@ -69,6 +71,7 @@ export const Profile = () => {
       </div>
     );
   }
+
 
   return (
     <div className="my-profile">
@@ -135,7 +138,7 @@ export const Profile = () => {
 
           {profile?.bio && <ReadMore className="profile-info__bio">{profile.bio}</ReadMore>}
 
-          {profile?.attributes && <ExternalLinks links={profile.attributes} />}
+          {profile?.attributes && profile?.handle && <ExternalLinks links={profile.attributes} lensHandle={profile.handle} />}
         </section>
 
         <Tabs>

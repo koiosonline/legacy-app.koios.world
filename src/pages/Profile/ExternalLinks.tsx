@@ -3,12 +3,14 @@ import { SvgSprite } from '../../components/Util/SvgSprite';
 
 type ExternalLinksProps = {
   links: any;
+  lensHandle: string;
   className?: string;
 };
 
 type ExternalLinkItemProps = {
   item: string;
-  icon: keyof typeof SvgSprite;
+  icon?: keyof typeof SvgSprite;
+  children?: React.ReactNode;
   link: string;
 };
 
@@ -21,13 +23,13 @@ const ExternalLinkItem = (props: ExternalLinkItemProps) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon type={props.icon} />
+        {props.icon ? <Icon type={props.icon} /> : props.children}
       </a>
     </li>
   );
 };
 
-const getExternalLinkItem = (link: any) => {
+const getExternalLinkItem = (link: any, lensHandle: string) => {
   const itemName = link.key.toLowerCase();
 
   switch (itemName) {
@@ -41,11 +43,13 @@ const getExternalLinkItem = (link: any) => {
       return <ExternalLinkItem item={itemName} icon="globe" link={link.value} key={itemName} />;
     case 'github':
       return <ExternalLinkItem item={itemName} icon="github" link={link.value} key={itemName} />;
+    case 'app':
+      return <ExternalLinkItem item={itemName} link={`https://www.lensfrens.xyz/${lensHandle}`} key={itemName} >🌿</ExternalLinkItem>;
     default:
       return undefined;
   }
 };
 
-export const ExternalLinks = ({ links }: ExternalLinksProps) => {
-  return <ul className={`external-links`}>{links.map((link) => getExternalLinkItem(link))}</ul>;
+export const ExternalLinks = ({ links, lensHandle }: ExternalLinksProps) => {
+  return <ul className={`external-links`}>{links.map((link) => getExternalLinkItem(link, lensHandle))}</ul>;
 };
