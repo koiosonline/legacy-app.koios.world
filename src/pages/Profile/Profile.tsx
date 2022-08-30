@@ -40,8 +40,6 @@ export const Profile = () => {
   const totalFollowers = profile?.stats?.totalFollowers;
   const totalFollowing = profile?.stats?.totalFollowing;
 
-  console.log("data", data);
-
   useEffect(() => {
     const retrieveDiscordProfile = async () => {
       const discordProfileLink = data?.defaultProfile?.attributes?.find(
