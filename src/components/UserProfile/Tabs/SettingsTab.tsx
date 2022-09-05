@@ -1,45 +1,40 @@
-import { useState } from 'react';
 import { AddTokenToWallet } from '../../Web3/AddTokenToWallet';
-import { ModalDiscordName } from './ModalDiscordName';
-import { Modal } from '../../../components/Modal';
+import { Icon } from '../../Util/Icon';
+import { SvgSprite } from '../../Util/SvgSprite';
 
-// type SettingProps = {
-//   label: string;
-//   icon: keyof typeof SvgSprite;
-//   link?: string;
-//   onClick?: () => void;
-// };
-type SettingsTabProps = {
-  title: string;
+type SettingProps = {
+  label: string;
+  icon: keyof typeof SvgSprite;
+  link?: string;
+  onClick?: () => void;
 };
 
-// const SettingButton: React.FC<SettingProps> = (props) => {
-//   const { label, icon, link, onClick } = props;
+type SettingsTabProps = {
+  title: string;
+  lensHandle?: string;
+};
 
-//   return (
-//     <li className="btn btn-primary" onClick={onClick}>
-//       {link ? (
-//         <a className='link' href={link} target="_blank" rel={'noreferrer noopener'}>
-//           <Icon type={icon} />
-//           {label}
-//         </a>
-//       ) : (
-//         <>
-//           <Icon type={icon} />
-//           {label}
-//         </>
-//       )}
-//     </li>
-//   );
-// };
+const SettingButton: React.FC<SettingProps> = (props) => {
+  const { label, icon, link, onClick } = props;
 
-export const SettingsTab: React.FC<SettingsTabProps> = () => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  return (
+    <li className="btn btn-primary" onClick={onClick}>
+      {link ? (
+        <a className="link" href={link} target="_blank" rel={'noreferrer noopener'}>
+          <Icon type={icon} />
+          {label}
+        </a>
+      ) : (
+        <>
+          <Icon type={icon} />
+          {label}
+        </>
+      )}
+    </li>
+  );
+};
 
-  const modalState = () => {
-    setIsModalOpen(!isModalOpen);
-  };
-
+export const SettingsTab: React.FC<SettingsTabProps> = (props) => {
 
   return (
     <>
@@ -47,25 +42,20 @@ export const SettingsTab: React.FC<SettingsTabProps> = () => {
         <ul className="settings">
           {window.ethereum && (
             <li className="btn btn-primary" onClick={() => AddTokenToWallet(window.ethereum)}>
-              <>
-                <img src="/images/MetaMask_Fox.svg" className="icon" />
-                Add to MetaMask
-              </>
+              <img src="/images/MetaMask_Fox.svg" className="icon" />
+              Add to MetaMask
             </li>
           )}
-          {/* <SettingButton
-            icon="edit-profile"
-            label="Edit profile"
-            onClick={modalState}
-          /> */}
+
+          {props.lensHandle && (
+            <SettingButton
+              icon="edit-profile"
+              label="Edit profile"
+              link={`https://www.lensfrens.xyz/${props.lensHandle}/edit`}
+            />
+          )}
         </ul>
       </div>
-
-      {isModalOpen && (
-        <Modal modalState={modalState}>
-          <ModalDiscordName />
-        </Modal>
-      )}
     </>
   );
 };

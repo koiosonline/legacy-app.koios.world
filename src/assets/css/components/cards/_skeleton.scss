@@ -6,6 +6,8 @@ $color-highlight: lighten($color-base, 7%);
   overflow: hidden;
   width: 100%;
   background: $color-base;
+  height: 100%;
+  border-radius: 3px;
   
   &::after {
     content: '';
@@ -19,7 +21,7 @@ $color-highlight: lighten($color-base, 7%);
   }
 
   &--image {
-    max-height: 250px;
+    max-height: 230px;
     padding-top: 100%;
   }
 

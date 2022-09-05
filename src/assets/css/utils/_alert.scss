@@ -1,13 +1,25 @@
 .alert {
+    background-color: $color-13;
+    color: $color-14;
+    border: 1px solid $color-14;
+    padding: 3px 4px;
+    border-radius: 5px;
+    width: fit-content;
+
+
     &-success {
         color: $color-action-valid;
+        border-color: $color-action-valid;
     }
 
     &-warning {
         color: $color-action-warning;
+        border-color: $color-action-warning;
     }
 
     &-error {
         color: $color-action-error;
+        border-color: $color-action-error;
+        background-color: lighten($color-action-error, 40);
     }
 }

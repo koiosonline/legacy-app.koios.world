@@ -1,11 +1,11 @@
 import { AddTokenToWallet } from './Web3/AddTokenToWallet';
 import titanCoin from '../assets/images/logos/koios-circle.svg';
-import { useAccount } from 'wagmi';
 import { useCoinContract } from '../Web3/hooks/useTitanCoinContract';
 import { useEffect, useState } from 'react';
 
 type MetaBlocksProps = {
   balance?: boolean;
+  userId: string;
 };
 
 type SingleMetaBlockProps = {
@@ -29,15 +29,14 @@ const SingleMetaBlock = ({ title, image, content }: SingleMetaBlockProps) => {
 
 export const MetaBlocks = (props: MetaBlocksProps) => {
   const { getUserBalance } = useCoinContract();
-  const { address } = useAccount();
   const [titanCoinBalance, setTitanCoinBalance] = useState<number>(0);
 
   useEffect(() => {
     const retrieveTitanCoinBalance = async () => {
-      setTitanCoinBalance(await getUserBalance(address));
+      setTitanCoinBalance((await getUserBalance(props.userId)) || 0);
     };
     retrieveTitanCoinBalance();
-  }, [address, getUserBalance]);
+  }, [props.userId, getUserBalance]);
 
   if (!props.balance) {
     return null;
