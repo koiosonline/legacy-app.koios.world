@@ -3,9 +3,7 @@ import { getDefaultWallets, RainbowKitProvider, AvatarComponent, lightTheme } fr
 import { chain, configureChains, createClient, useAccount, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import avatarPlaceholder from '../assets/images/placeholders/placeholder-titan.png';
-import { LENS_GET_PROFILE_IMAGE } from '../api/Apollo/queries/LENS_GET_PROFILE_IMAGE';
-import { useQuery } from '@apollo/client';
+import { useLensProfile } from '../components/UserProfile/Hooks/useLensProfile';
 
 export const { chains, provider } = configureChains(
   [chain.polygon, chain.mainnet],
@@ -25,10 +23,10 @@ export const wagmiClient = createClient({
 
 export const CustomAvatar: AvatarComponent = ({ size }) => {
   const { address } = useAccount();
-  const { data } = useQuery(LENS_GET_PROFILE_IMAGE(address), { skip: !address });
+  const { profilePicture } = useLensProfile(address);  
 
   return (
-    <img src={data?.defaultProfile?.picture?.original?.url || avatarPlaceholder} width={size} height={size} style={{ borderRadius: 999 }} />
+    <img src={profilePicture} width={size} height={size} style={{ borderRadius: 999 }} />
   ) ;
 };
 
