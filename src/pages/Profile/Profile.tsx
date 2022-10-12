@@ -9,9 +9,8 @@ import { getDiscordProfile } from '../../api/Api';
 import { mapDiscordProfileData } from '../../components/UserProfile/mapUserData';
 import { useQuery } from '@apollo/client';
 import { LENS_GET_PROFILE } from '../../api/Apollo/queries/LENS_GET_PROFILE';
-import avatarPlaceholder from '../../assets/images/placeholders/placeholder-titan.png';
 import bannerPlaceholder from '../../assets/images/placeholders/placeholder-banner.png';
-import { ipfsPrefix1, ipfsPrefix2, ipfsPrefix3, stripIpfsPrefix } from '../../components/Web3/Ipfs';
+import { stripIpfsPrefix } from '../../components/Web3/Ipfs';
 import { useHistory, useParams } from 'react-router-dom';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ExternalLinks } from './ExternalLinks';
@@ -19,6 +18,7 @@ import { ReadMore } from '../../components/ReadMore';
 import { FormatPublicKey } from '../../components/Util/FormatPublicKey';
 import { MetaBlocks } from '../../components/MetaBlocks';
 import { Alert } from '../../components/Util/Alert';
+import { useLensProfile } from '../../components/UserProfile/Hooks/useLensProfile';
 
 export const Profile = () => {
   const history = useHistory();
@@ -26,14 +26,13 @@ export const Profile = () => {
   const { address } = useAccount();
   const isPersonalAccount = address === userId;
   const [discordProfile, setDiscordProfile] = useState<MappedDiscordProfile>();
-  const [profilePicture, setProfilePicture] = useState<string>(avatarPlaceholder);
   const { loading, error, data } = useQuery(LENS_GET_PROFILE(userId), { skip: !userId });
+  const { profilePicture } = useLensProfile(userId);
 
   // Profile definitions
   const profile = data?.defaultProfile;
   const totalFollowers = profile?.stats?.totalFollowers;
   const totalFollowing = profile?.stats?.totalFollowing;
-  const rawProfilePicture = data?.defaultProfile?.picture?.original?.url;
 
   const backgroundCoverUrlFormatted = data?.defaultProfile?.coverPicture?.original?.url
     ? stripIpfsPrefix(data.defaultProfile.coverPicture.original.url)
@@ -43,18 +42,6 @@ export const Profile = () => {
       ? 'https://lens.infura-ipfs.io/ipfs/' + backgroundCoverUrlFormatted
       : bannerPlaceholder;
 
-  const checkIfProfilePictureIsIpfsAddress =
-    rawProfilePicture?.startsWith(ipfsPrefix1) ||
-    rawProfilePicture?.startsWith(ipfsPrefix2) ||
-    rawProfilePicture?.startsWith(ipfsPrefix3);
-
-  useEffect(() => {
-    if (rawProfilePicture && checkIfProfilePictureIsIpfsAddress) {
-      setProfilePicture('https://lens.infura-ipfs.io/ipfs/' + stripIpfsPrefix(rawProfilePicture));
-    } else if (rawProfilePicture && !checkIfProfilePictureIsIpfsAddress) {
-      setProfilePicture(rawProfilePicture);
-    }
-  }, [checkIfProfilePictureIsIpfsAddress, rawProfilePicture]);
 
   useEffect(() => {
     const retrieveDiscordProfile = async () => {
