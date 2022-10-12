@@ -7,9 +7,9 @@ const ipfs = create({
   apiPath: '/api/v0',
 });
 
-const ipfsPrefix1 = 'https://ipfs.io/ipfs/';
-const ipfsPrefix2 = 'ipfs://ipfs/';
-const ipfsPrefix3 = 'ipfs://';
+export const ipfsPrefix1 = 'https://ipfs.io/ipfs/';
+export const ipfsPrefix2 = 'ipfs://ipfs/';
+export const ipfsPrefix3 = 'ipfs://';
 
 export const stripIpfsPrefix = (cid: string) => {
   if (cid.includes(ipfsPrefix1)) {
