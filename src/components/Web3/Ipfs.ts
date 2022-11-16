@@ -1,7 +1,7 @@
 import { create } from 'ipfs-http-client';
 
 const ipfs = create({
-  host: 'ipfs.infura.io',
+  host: 'ipfs.io/ipfs',
   port: 5001,
   protocol: 'https',
   apiPath: '/api/v0',
@@ -47,7 +47,7 @@ export const fetchJson = async (hash: string) => {
     try {
       let str = '';
       hash = stripIpfsPrefix(hash);
-
+      
       for await (const result of ipfs.cat(hash)) {
         str += String.fromCharCode.apply(null, result);
       }
@@ -63,4 +63,17 @@ export const fetchJson = async (hash: string) => {
     }
   }
   return undefined;
+};
+
+export const fetchNftJson = async (hash: string) => {
+  const baseUrl = 'https://cloudflare-ipfs.com/ipfs/';
+  hash = stripIpfsPrefix(hash);
+
+  try {
+    const rawNftJson = await fetch(`${baseUrl + hash}`);
+    const nftJson = await rawNftJson.json();
+    return nftJson;
+  } catch (e) {
+    console.log(e);
+  }
 };

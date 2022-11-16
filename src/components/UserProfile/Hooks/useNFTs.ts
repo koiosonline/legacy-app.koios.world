@@ -1,8 +1,8 @@
 import { useQuery } from 'react-query';
 import { NonFungibleTokens } from '../../../api/NonFungibleTokens';
 import { NftRawMetadataProps } from '../../../types/NFTProps';
-import { fetchJson, getCidImage } from '../../Web3/Ipfs';
 import { useParams } from 'react-router-dom';
+import { fetchNftJson, getCidImage } from '../../Web3/Ipfs';
 
 export const useNFTs = () => {
   const { userId } = useParams<{ userId: string }>();
@@ -14,7 +14,7 @@ export const useNFTs = () => {
   };
 
   const getNftMetaData = async (contentUri: string, tokenId: number) => {
-    const metadata: NftRawMetadataProps = await fetchJson(contentUri);
+    const metadata: NftRawMetadataProps = await fetchNftJson(contentUri);
 
     return {
       name: metadata.name,
